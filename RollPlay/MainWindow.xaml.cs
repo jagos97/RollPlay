@@ -59,46 +59,23 @@ namespace RollPlay
             }
             if(e.Key == Key.Right)
             {
-                Window2 _window2 = new Window2()
-                {
-                    Title = "Britt",
-                    Topmost = true,
-                    ResizeMode = ResizeMode.NoResize,
-                    ShowInTaskbar = false,
-                    Owner = this
-                };
-                
-                Application.Current.MainWindow = _window2;
-                _window2.Show();
+                Window2 britt = new Window2();
+                britt.Show();
+                this.Close();
             }
 
             if (e.Key == Key.Left)
             {
-                Window2 _window2 = new Window2()
-                {
-                    Title = "ApplePie",
-                    Topmost = true,
-                    ResizeMode = ResizeMode.NoResize,
-                    ShowInTaskbar = false,
-                    Owner = this
-                };
-
-                Application.Current.MainWindow = _window2;
-                _window2.Show();
+                Window3 applePie = new Window3();
+                applePie.Show();
+                this.Close();
 
             }
             if (e.Key == Key.Up)
             {
-                Window2 _window2 = new Window2()
-                {
-                    Title = "Poncho",
-                    Topmost = true,
-                    ResizeMode = ResizeMode.NoResize,
-                    ShowInTaskbar = false,
-                    Owner = this
-                };
-                Application.Current.MainWindow = _window2;
-                _window2.Show();
+                Window1 poncho = new Window1();
+                poncho.Show();
+                this.Close();
             }
 
         }
