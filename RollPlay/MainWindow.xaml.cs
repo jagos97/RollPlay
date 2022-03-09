@@ -70,7 +70,6 @@ namespace RollPlay
                 
                 Application.Current.MainWindow = _window2;
                 _window2.Show();
-                Visibility = Visibility.Collapsed;
             }
 
             if (e.Key == Key.Left)
@@ -83,7 +82,7 @@ namespace RollPlay
                     ShowInTaskbar = false,
                     Owner = this
                 };
-       
+
                 Application.Current.MainWindow = _window2;
                 _window2.Show();
 
@@ -100,7 +99,6 @@ namespace RollPlay
                 };
                 Application.Current.MainWindow = _window2;
                 _window2.Show();
-                //this.Close();
             }
 
         }
