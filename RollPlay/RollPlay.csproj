@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="chats.png" />
+    <None Remove="defaultCharacter.png" />
+    <None Remove="defaultpartyicon.png" />
+    <None Remove="hamburger.png" />
+    <None Remove="image-1.png %2814%29.png" />
+    <None Remove="meatball.png" />
+    <None Remove="mug.png" />
+    <None Remove="pics\mug.png" />
+    <None Remove="settings.png" />
+    <None Remove="star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pics\defaultpartyicon.png" />
+    <Resource Include="pics\meatball.png" />
+    <Resource Include="pics\settings.png" />
+    <Resource Include="pics\defaultCharacter.png" />
+    <Resource Include="pics\hamburger.png" />
+    <Resource Include="pics\notifications.png" />
+    <Resource Include="pics\star.png" />
+    <Resource Include="pics\chats.png" />
+    <Resource Include="pics\mug.png" />
+  </ItemGroup>
+
+</Project>
