@@ -32,7 +32,6 @@ namespace RollPlay
             noCharacterMessage.Visibility = Visibility.Collapsed;
             MainGrid.Focus();
             ChangNavBarSelected();
-            //PartiesCollectionSubMenuSelector.BorderBrush = lightBlue;
 
         }
 
@@ -47,6 +46,7 @@ namespace RollPlay
                 {
                    navbarSelected = 0;
                 }
+                ChangNavBarSelected();
             }
             if (e.Key == Key.A)
             {
@@ -55,8 +55,54 @@ namespace RollPlay
                 {
                     navbarSelected = 4;
                 }
+                ChangNavBarSelected();
             }
-            ChangNavBarSelected();
+            if(e.Key == Key.Right)
+            {
+                Window2 _window2 = new Window2()
+                {
+                    Title = "Britt",
+                    Topmost = true,
+                    ResizeMode = ResizeMode.NoResize,
+                    ShowInTaskbar = false,
+                    Owner = this
+                };
+                
+                Application.Current.MainWindow = _window2;
+                _window2.Show();
+                Visibility = Visibility.Collapsed;
+            }
+
+            if (e.Key == Key.Left)
+            {
+                Window2 _window2 = new Window2()
+                {
+                    Title = "ApplePie",
+                    Topmost = true,
+                    ResizeMode = ResizeMode.NoResize,
+                    ShowInTaskbar = false,
+                    Owner = this
+                };
+       
+                Application.Current.MainWindow = _window2;
+                _window2.Show();
+
+            }
+            if (e.Key == Key.Up)
+            {
+                Window2 _window2 = new Window2()
+                {
+                    Title = "Poncho",
+                    Topmost = true,
+                    ResizeMode = ResizeMode.NoResize,
+                    ShowInTaskbar = false,
+                    Owner = this
+                };
+                Application.Current.MainWindow = _window2;
+                _window2.Show();
+                //this.Close();
+            }
+
         }
 
         private void ChangNavBarSelected()
