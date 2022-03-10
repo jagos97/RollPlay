@@ -13,6 +13,8 @@
     <None Remove="defaultpartyicon.png" />
     <None Remove="hamburger.png" />
     <None Remove="image-1.png %2814%29.png" />
+    <None Remove="image-1.png %2820%29.png" />
+    <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
     <None Remove="pics\mug.png" />
@@ -21,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="pics\magnifyingGlass.png" />
+    <Resource Include="pics\darkChat.png" />
     <Resource Include="pics\defaultpartyicon.png" />
     <Resource Include="pics\meatball.png" />
     <Resource Include="pics\settings.png" />
@@ -30,6 +34,17 @@
     <Resource Include="pics\star.png" />
     <Resource Include="pics\chats.png" />
     <Resource Include="pics\mug.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="FriendsWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PartiesWindow.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>

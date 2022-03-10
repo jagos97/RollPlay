@@ -24,7 +24,6 @@ namespace RollPlay
         private static int navbarSelected = 0;
         private static Thickness blank = new Thickness(0, 0, 0, 0);
         private static Thickness active = new Thickness(0, 4, 0, 0);
-        private static SolidColorBrush lightBlue = new SolidColorBrush(Color.FromArgb(0xFF, 0x95, 0xDA, 0xDE));
 
         public MainWindow()
         {
@@ -75,6 +74,8 @@ namespace RollPlay
             {
                 Window1 poncho = new Window1();
                 poncho.Show();
+                poncho.Top = this.Top;
+                poncho.Left = this.Left;
                 this.Close();
             }
 
@@ -127,6 +128,24 @@ namespace RollPlay
                 MenuNavBar.BorderThickness = active;
 
             }
+        }
+
+        private void PartiesCollectionSubMenuSelector_Click(object sender, RoutedEventArgs e)
+        {
+            PartiesWindow window = new PartiesWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void FriendsCollectionSubMenuSelector_Click(object sender, RoutedEventArgs e)
+        {
+            FriendsWindow window = new FriendsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
     }
 }
