@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Collections" Height="564" Width="320">
 
-    <Grid x:Name="MainGrid" Margin="0,0,-12,-6" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True">
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Margin="0,0,6,0" Width="320" HorizontalAlignment="Left">
+    <Grid x:Name="MainGrid" Margin="0,0,0,-6" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
             <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
@@ -86,7 +86,7 @@
             </Button.Background>
         </Button>
         <Label Content="USERNAME#000" HorizontalAlignment="Center" Height="43" Margin="0,27,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
-        <StackPanel x:Name="CollectionSubMenuSelector" Margin="45,79,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="265" Panel.ZIndex="10">
+        <StackPanel x:Name="CollectionSubMenuSelector" Margin="0,75,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="240" Panel.ZIndex="10">
             <Button x:Name="CharactersCollectionSubMenuSelector" Content="Characters" Background="White" BorderThickness="0,0,0,3" BorderBrush="#FF95DADE" Width="70" FontSize="14" Margin="5,0,5,0"/>
             <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="PartiesCollectionSubMenuSelector_Click"/>
             <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="FriendsCollectionSubMenuSelector_Click" />
