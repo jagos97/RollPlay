@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="Collections" Height="564" Width="320">
 
-    <Grid x:Name="MainGrid" Margin="0,0,-12,-6" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True">
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Margin="0,0,6,0" Width="320" HorizontalAlignment="Left">
+    <Grid x:Name="MainGrid" Margin="0,0,0,0" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True">
+
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
             <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
@@ -86,15 +87,15 @@
             </Button.Background>
         </Button>
         <Label Content="USERNAME#000" HorizontalAlignment="Center" Height="43" Margin="0,27,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
-        <StackPanel x:Name="CollectionSubMenuSelector" Margin="45,79,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="265" Panel.ZIndex="10">
+        <StackPanel x:Name="CollectionSubMenuSelector" Margin="0,75,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="240" Panel.ZIndex="10">
             <Button x:Name="CharactersCollectionSubMenuSelector" Content="Characters" Background="White" BorderThickness="0,0,0,3" BorderBrush="#FF95DADE" Width="70" FontSize="14" Margin="5,0,5,0"/>
             <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="PartiesCollectionSubMenuSelector_Click"/>
             <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="FriendsCollectionSubMenuSelector_Click" />
         </StackPanel>
         <Button x:Name="CreateNewCharacter" Content="                                              Create New Character" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="272" Height="28" BorderThickness="0,1,0,1" BorderBrush="#FFE5E4E3" Foreground="Black" Background="White"/>
-        <ScrollViewer x:Name="Characters" Margin="21,164,27,93" VerticalScrollBarVisibility="Hidden">
+        <ScrollViewer x:Name="Characters" Margin="24,150,24,107" VerticalScrollBarVisibility="Hidden">
             <StackPanel Height="449">
-                <Border x:Name="noCharacterMessage" Background="GhostWhite" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" Visibility="Visible">
+                <Border x:Name="noCharacterMessage" Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" Visibility="Visible">
                     <StackPanel Height="103" Orientation="Horizontal" VerticalAlignment="Top" Margin="9,0,4,0">
                         <Grid Height="100" Width="243" VerticalAlignment="Top">
                             <Label Content="Whats an adventure without an adventurer?" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="226" FontStyle="Italic" FontSize="11"/>
@@ -104,7 +105,7 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <Border Background="GhostWhite" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
+                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
                         <Canvas Width="80" Height="80">
                             <Canvas.Background>
@@ -130,7 +131,7 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <Border Background="GhostWhite" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
+                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
                         <Canvas Width="80" Height="80">
                             <Canvas.Background>
@@ -156,7 +157,7 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <Border Background="GhostWhite" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
+                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5">
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
                         <Canvas Width="80" Height="80">
                             <Canvas.Background>

@@ -24,7 +24,6 @@ namespace RollPlay
         public FriendsWindow()
         {
             InitializeComponent();
-            noCharacterMessage.Visibility = Visibility.Collapsed;
             MainGrid.Focus();
         }
 
