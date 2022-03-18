@@ -147,5 +147,6 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
+
     }
 }
