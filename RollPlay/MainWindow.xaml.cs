@@ -28,7 +28,6 @@ namespace RollPlay
         public MainWindow()
         {
             InitializeComponent();
-            noCharacterMessage.Visibility = Visibility.Collapsed;
             MainGrid.Focus();
             ChangNavBarSelected();
 

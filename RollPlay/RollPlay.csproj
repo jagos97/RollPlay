@@ -17,12 +17,24 @@
     <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
+    <None Remove="pics\addtoparty.png" />
+    <None Remove="pics\edit.png" />
+    <None Remove="pics\leave.png" />
     <None Remove="pics\mug.png" />
+    <None Remove="pics\trash.png" />
+    <None Remove="pics\Vector.svg" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="pics\trash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pics\addToParty.png" />
+    <Resource Include="pics\edit.png" />
+    <Resource Include="pics\leave.png" />
     <Resource Include="pics\magnifyingGlass.png" />
     <Resource Include="pics\darkChat.png" />
     <Resource Include="pics\defaultpartyicon.png" />
@@ -34,6 +46,10 @@
     <Resource Include="pics\star.png" />
     <Resource Include="pics\chats.png" />
     <Resource Include="pics\mug.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pics\Vector.svg" />
   </ItemGroup>
 
   <ItemGroup>
