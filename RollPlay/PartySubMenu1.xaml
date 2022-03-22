@@ -11,44 +11,28 @@
         <StackPanel>
             <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
-                    <Canvas Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,20,0">
-                        <Canvas.Background>
-                            <ImageBrush ImageSource="/pics/addToParty.png"/>
-                        </Canvas.Background>
-                    </Canvas>
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/addToParty.png"/>
                     <Label Content="INVITE USER TO PARTY" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" BorderBrush="#FFCC1010" Height="44" />
                 </StackPanel>
             </Button>
-            <Border HorizontalAlignment="Right" Height="1" Width="260" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
+            <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
             <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
-                    <Canvas Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,20,0">
-                        <Canvas.Background>
-                            <ImageBrush ImageSource="/pics/edit.png"/>
-                        </Canvas.Background>
-                    </Canvas>
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/edit.png"/>
                     <Label Content="EDIT PARTY" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
-            <Border HorizontalAlignment="Right" Height="1" Width="260" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
+            <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
             <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
-                    <Canvas Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,20,0">
-                        <Canvas.Background>
-                            <ImageBrush ImageSource="/pics/leave.png"/>
-                        </Canvas.Background>
-                    </Canvas>
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/leave.png"/>
                     <Label Content="LEAVE PARTY" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
-            <Border HorizontalAlignment="Right" Height="1" Width="260" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
+            <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
             <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
-                    <Canvas Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,20,0">
-                        <Canvas.Background>
-                            <ImageBrush ImageSource="/pics/trash.png"/>
-                        </Canvas.Background>
-                    </Canvas>
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/trash.png"/>
                     <Label Content="DELETE PARTY" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
