@@ -17,9 +17,9 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class TavernMenuWindow : Window
+    public partial class FindFriendsMenuWindow : Window
     {
-        public TavernMenuWindow()
+        public FindFriendsMenuWindow()
         {
             InitializeComponent();
         }
@@ -33,9 +33,9 @@ namespace RollPlay
             this.Close();
         }
 
-        private void FindfriendsSelector_Click(object sender, RoutedEventArgs e)
+        private void BackToMain_Click(object sender, RoutedEventArgs e)
         {
-            FindFriendsMenuWindow window = new FindFriendsMenuWindow();
+            TavernMenuWindow window = new TavernMenuWindow();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

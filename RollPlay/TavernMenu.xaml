@@ -99,7 +99,8 @@
         </Button>
 
         <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10"></Border>
-        <Button BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,245,0,-1">
+        <Button x:Name="FindfriendsSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,245,0,-1" Click="FindfriendsSelector_Click"
+                >
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I'm looking for players and/or a dungeon master to play with</TextBlock>
         </Button>
     </Grid>
