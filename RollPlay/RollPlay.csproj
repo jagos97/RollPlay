@@ -17,12 +17,14 @@
     <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
+    <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="pics\backarrow.png" />
     <Resource Include="pics\magnifyingGlass.png" />
     <Resource Include="pics\darkChat.png" />
     <Resource Include="pics\defaultpartyicon.png" />
