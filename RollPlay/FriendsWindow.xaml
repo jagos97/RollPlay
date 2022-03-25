@@ -80,12 +80,14 @@
                 </Button.Background>
             </Button>
         </StackPanel>
+        
         <Button x:Name="Settings" HorizontalAlignment="Right" Margin="0,17,30,0" VerticalAlignment="Top" Height="20" Width="20" BorderBrush="White">
             <Button.Background>
                 <ImageBrush ImageSource="/pics/settings.png"/>
             </Button.Background>
         </Button>
         <Label Content="USERNAME#000" HorizontalAlignment="Center" Height="43" Margin="0,27,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
+        
         <StackPanel x:Name="CollectionSubMenuSelector"  Margin="0,75,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="240" Panel.ZIndex="10">
             <Button x:Name="CharactersCollectionSubMenuSelector" Content="Characters" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" FontSize="14" Margin="5,0,5,0" Click="CharactersCollectionSubMenuSelector_Click"/>
             <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="PartiesCollectionSubMenuSelector_Click"/>
