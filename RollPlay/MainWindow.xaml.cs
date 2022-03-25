@@ -57,7 +57,7 @@ namespace RollPlay
             }
             if(e.Key == Key.Right)
             {
-                Window2 britt = new Window2();
+                TavernMenuWindow britt = new TavernMenuWindow();
                 britt.Show();
                 this.Close();
             }

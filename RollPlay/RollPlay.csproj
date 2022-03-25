@@ -20,6 +20,7 @@
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\edit.png" />
     <None Remove="pics\leave.png" />
+    <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\Vector.svg" />
@@ -35,6 +36,7 @@
     <Resource Include="pics\addToParty.png" />
     <Resource Include="pics\edit.png" />
     <Resource Include="pics\leave.png" />
+    <Resource Include="pics\backarrow.png" />
     <Resource Include="pics\magnifyingGlass.png" />
     <Resource Include="pics\darkChat.png" />
     <Resource Include="pics\defaultpartyicon.png" />
@@ -60,6 +62,15 @@
     <Page Update="PartiesWindow.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CommonerMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="BarkeeperInformation.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="FindFriendsMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>
 
