@@ -9,16 +9,21 @@
 
     <Grid>
         <StackPanel Panel.ZIndex="10">
+            
+            <!--back button-->
             <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-275,5,0,0" Click="BackToMain_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/whitebackarrow.png"/>
                 </Button.Background>
             </Button>
+            
+            <!--directional buttons-->
             <Button x:Name="scrollRight" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-280,200,0,0" Opacity="0.5">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/whitedirectional.png"/>
                 </Button.Background>
             </Button>
+            
             <Button x:Name="scrollLeft" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="280,-25,0,0" Opacity="0.5" RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
                     <TransformGroup>
@@ -33,11 +38,50 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" VerticalAlignment="Top">
+        
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden" VerticalAlignment="Top" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
             <StackPanel Width="1080" Height="540">
                 <StackPanel.Background>
                     <ImageBrush ImageSource="/pics/tavern.jpeg"/>
                 </StackPanel.Background>
+
+                <!--text prompts-->
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="175" Margin="63,300,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="150" Foreground="White" FontWeight="Light" FontSize="16">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="115" Margin="67,-450,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="100" Foreground="White" FontWeight="Light" FontSize="12">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="115" Margin="350,-400,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="115" Margin="625,-425,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="175" Margin="625,-125,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="150" Foreground="White" FontWeight="Light" FontSize="16">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="50" Width="100" Margin="900,-425,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="75" Foreground="White" FontWeight="Light" FontSize="11">
+                        <TextBlock>RP Prompt Here</TextBlock>
+                    </Button>
+                </Border>
+
             </StackPanel>
         </ScrollViewer>
     </Grid>
