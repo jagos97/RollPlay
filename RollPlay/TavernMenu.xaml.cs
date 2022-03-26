@@ -41,5 +41,14 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
+
+        private void RPMenuSelector_Click(object sender, RoutedEventArgs e)
+        {
+            ExploreTavernWindow window = new ExploreTavernWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
     }
 }

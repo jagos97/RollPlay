@@ -22,13 +22,17 @@
     <None Remove="pics\leave.png" />
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
+    <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\Vector.svg" />
+    <None Remove="pics\whitebackarrow.png" />
+    <None Remove="pics\whitedirectional.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="pics\tavern.jpeg" />
     <Resource Include="pics\trash.png" />
   </ItemGroup>
 
@@ -52,9 +56,14 @@
 
   <ItemGroup>
     <Resource Include="pics\Vector.svg" />
+    <Resource Include="pics\whitebackarrow.png" />
+    <Resource Include="pics\whitedirectional.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="ExploreTavern.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="FriendsWindow.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>

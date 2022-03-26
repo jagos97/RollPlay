@@ -94,7 +94,7 @@
         </Button>
 
         <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10"></Border>
-        <Button BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,325,0,-1">
+        <Button x:Name="RPMenuSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,325,0,-1" Click="RPMenuSelector_Click">
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I want to hang out in the Tavern and roleplay with other random users - just for fun!</TextBlock>
         </Button>
 
