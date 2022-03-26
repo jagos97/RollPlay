@@ -80,9 +80,9 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-
+        
         <StackPanel Panel.ZIndex="10">
-            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="280" Height=" 110">
+            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="290" Height=" 110">
                 <Label Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="50" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="11" FontStyle="Italic">SO, YOU WANT TO FIND AN ADVENTURING PARTY. WE'VE GOT PLENTY OF TRAVELLERS HERE... ARE YOU LOOKIN' FOR ANYONE SPECIFIC?</TextBlock>
@@ -93,50 +93,91 @@
             </Button>
         </StackPanel>
 
+
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top">
-            <StackPanel Height="925">
-                
-                <Label Content="AVAILABILITY" FontWeight="Bold" FontSize="14" Margin="25,120,0,0"/>
-                <CheckBox Name="Mon" Content="Monday" FontSize="12" Margin="35, 10, 0, 0"/>
-                <CheckBox Name="Tue" Content="Tuesday" FontSize="12" Margin="35, 10, 0 , 0"/>
-                <CheckBox Name="Wed" Content="Wednesday" FontSize="12" Margin="35, 10, 0, 0"/>
-                <CheckBox Name="Thu" Content="Thursday" FontSize="12" Margin="35, 10, 0, 0"/>
-                <CheckBox Name="Fri" Content="Friday" FontSize="12" Margin="150, -85, 0, 0" Width="147"/>
-                <CheckBox Name="Sat" Content="Saturday" FontSize="12" Margin="150, -60, 0, 0" Width="147"/>
-                <CheckBox Name="Sun" Content="Sunday" FontSize="12" Margin="150, -35, 0, 0" Width="147"/>
-                <Line  Y1="20" X2="250" Y2="20" Stroke="#FFE0E0E0" HorizontalAlignment="Center" />
-                <CheckBox Name="AM" Content="Morning" FontSize="12" Margin="35, 20, 0, 0" Width="147" HorizontalAlignment="Left"/>
-                <CheckBox Name="Noon" Content="Afternoon" FontSize="12" Margin="35, 10, 0, 0" Width="147" HorizontalAlignment="Left"/>
-                <CheckBox Name="PM" Content="Evening" FontSize="12" Margin="150, -40, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Border Background="White" BorderThickness="0,0,0,0" Width="275" Height="750" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0, 125" CornerRadius="10">
+                <Border.Effect>
+                    <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
+                </Border.Effect>
+                <StackPanel Height="925" Orientation="Vertical">
 
-                <Label Content="EXPERIENCE LEVEL" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
-                <RadioButton Name="Beginner" Content="Commoner" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <RadioButton Name="Intermediate" Content="Adventurer" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <RadioButton Name="Expert" Content="Hero" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Label Content="AVAILABILITY" FontWeight="Bold" FontSize="14" Margin="25,10,0,0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Name="Mon" Content="Monday" FontSize="12" Margin="35, 10, 0, 0"/>
+                            <CheckBox Name="Tue" Content="Tuesday" FontSize="12" Margin="35, 10, 0 , 0"/>
+                            <CheckBox Name="Wed" Content="Wednesday" FontSize="12" Margin="35, 10, 0, 0"/>
+                            <CheckBox Name="Thu" Content="Thursday" FontSize="12" Margin="35, 10, 0, 0"/>
+                        </StackPanel>
 
-                <Label Content="PREFERRED PLAYER ROLE" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
-                <CheckBox Name="PC" Content="Player Character" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <CheckBox Name="DM" Content="Dungeon Master" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Name="Fri" Content="Friday" FontSize="12" Margin="35, 10, 0, 0"/>
+                            <CheckBox Name="Sat" Content="Saturday" FontSize="12" Margin="35, 10, 0, 0"/>
+                            <CheckBox Name="Sun" Content="Sunday" FontSize="12" Margin="35, 10, 0, 0"/>
+                        </StackPanel>
+                    </StackPanel>
 
-                <Label Content="PLAY ENVIRONMENT" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
-                <CheckBox Name="Online" Content="Online" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <CheckBox Name="IRL" Content="In-Person" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <CheckBox Name="Hybrid" Content="Hybrid" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <Line  Y1="15" X2="240" Y2="15" Stroke="#FFE0E0E0" HorizontalAlignment="Center" />
 
-                <Label Content="LOCATION" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
-                <TextBox Name="Location" Width="150" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="30, 5" >Your Location</TextBox>
-                <TextBox Name="Within" Width="85" Height="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="30, 5" >Within 0km</TextBox>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Name="AM" Content="Morning" FontSize="12" Margin="35, 15, 0, 0"/>
+                            <CheckBox Name="Noon" Content="Afternoon" FontSize="12" Margin="35, 10, 0, 0"/>
+                        </StackPanel>
 
-                <Border BorderBrush="#3094CC" BorderThickness="8" CornerRadius="6.25" Width="150" Margin="15">
-                    <Button x:Name="FilterUsers" Background="#3094CC" Foreground="White" BorderThickness="0,0,0,0">
-                        <TextBlock FontSize="14" FontWeight="ExtraBold"> Filter Users</TextBlock>
-                    </Button>
-                </Border>
-            </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Name="PM" Content="Evening" FontSize="12" Margin="44, 15, 0, 0"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Label Content="EXPERIENCE LEVEL" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
+                    <RadioButton Name="Beginner" Content="Commoner" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton Name="Intermediate" Content="Adventurer" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <RadioButton Name="Expert" Content="Hero" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Content="PREFERRED PLAYER ROLE" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
+                    <CheckBox Name="PC" Content="Player Character" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <CheckBox Name="DM" Content="Dungeon Master" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Content="PLAY ENVIRONMENT" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
+                    <CheckBox Name="Online" Content="Online" FontSize="12" Margin="30, 5, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <CheckBox Name="IRL" Content="In-Person" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <CheckBox Name="Hybrid" Content="Hybrid" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+                    <Label Content="LOCATION" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
+                    <TextBox x:Name="Location" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Padding="5" Margin="30, 5" BorderBrush="#A0C8CD" Background="#FBFBFB" >
+                        Your Location
+                        <TextBox.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity=".1" />
+                        </TextBox.Effect>
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5.5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                    <TextBox Name="Within" Width="85" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" HorizontalAlignment="Left" Margin="30, 5" BorderBrush="#A0C8CD" Background="#FBFBFB">
+                        Within 0km
+                        <TextBox.Effect>
+                            <DropShadowEffect ShadowDepth="1" Opacity=".1" />
+                        </TextBox.Effect>
+                        <TextBox.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5.5"/>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+
+                    <Border BorderBrush="#3094CC" BorderThickness="8" CornerRadius="6.25" Width="150" Margin="15">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".1" />
+                        </Border.Effect>
+                        <Button x:Name="FilterUsers" Background="#3094CC" Foreground="White" BorderThickness="0,0,0,0">
+                            <TextBlock FontSize="14" FontWeight="ExtraBold"> Filter Users</TextBlock>
+                        </Button>
+                    </Border>
+                </StackPanel>
+            </Border>
         </ScrollViewer>
-
-        
-
-
     </Grid>
 </Window>

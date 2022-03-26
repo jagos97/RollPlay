@@ -83,22 +83,35 @@
 
         <StackPanel Panel.ZIndex="10">
             <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="280" Height=" 110">
+                
                 <Label Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="16" FontStyle="Italic">WELCOME TO THE TAVERN. WHAT CAN I DO FOR YOU ADVENTURER?</TextBlock>
         </StackPanel>
         
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10"></Border>
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity=".35" />
+            </Border.Effect>
+        </Border>
         <Button x:Name="CommonerMenuSelector"  BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,165,0,-1" Click="CommonerMenuSelector_Click">
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I would like to learn the basic rules of Dungeons and Dragons</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10"></Border>
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity=".35" />
+            </Border.Effect>
+        </Border>
         <Button x:Name="RPMenuSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,325,0,-1" Click="RPMenuSelector_Click">
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I want to hang out in the Tavern and roleplay with other random users - just for fun!</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10"></Border>
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity=".35" />
+            </Border.Effect>
+        </Border>
         <Button x:Name="FindfriendsSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,245,0,-1" Click="FindfriendsSelector_Click"
                 >
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I'm looking for players and/or a dungeon master to play with</TextBlock>

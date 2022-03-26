@@ -92,26 +92,41 @@
 
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top">
             <StackPanel Height="625">
-                <Label Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="15,130,0,0"/>
+                <Label Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="15,120,0,0"/>
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="86" Width="278" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
+                    </Border.Effect>
                     <TextBlock Text="{Binding ElementName=barWindow, Path=desc1}" TextWrapping="Wrap" TextAlignment="Left" Height="86" Width="270" Margin="5,10,0,0" FontSize="12" FontWeight="Light"/>
                 </Border>
 
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="86" Width="278" Margin="0,10,0,0" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
+                    </Border.Effect>
                     <TextBlock Text="{Binding ElementName=barWindow, Path=desc2}" TextWrapping="Wrap" TextAlignment="Left" Height="86" Width="270" Margin="5,10,0,0" FontSize="12" FontWeight="Light"/>
                 </Border>
 
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="278" Margin="0,10,0,0" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
+                    </Border.Effect>
                     <TextBlock Text="{Binding ElementName=barWindow, Path=desc3}" TextWrapping="Wrap" TextAlignment="Left" Height="70" Width="270" Margin="5,6,0,0" FontSize="12" FontWeight="Light"/>
                 </Border>
 
                 <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,10,0,0" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
+                    </Border.Effect>
                     <Button BorderBrush ="#556D7A" BorderThickness="0,0,0,0" Background="#556D7A" Height="80" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Please, tell me more!</TextBlock>
                     </Button>
                 </Border>
 
                 <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="75" Margin="0,10,0,0" CornerRadius="10">
+                    <Border.Effect>
+                        <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
+                    </Border.Effect>
                     <Button x:Name="BackToMenu" BorderBrush ="#556D7A" Background="#556D7A" Height="45" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Click="BackToMenu_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I've heard enough, I want to learn about something else</TextBlock>
                     </Button>
