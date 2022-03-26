@@ -17,11 +17,14 @@
     <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
+    <None Remove="pics\addcircle.png" />
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\edit.png" />
+    <None Remove="pics\kebabmenu.png" />
     <None Remove="pics\leave.png" />
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
+    <None Remove="pics\mutenotifications.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\Vector.svg" />
@@ -32,6 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="pics\addcircle.png" />
+    <Resource Include="pics\kebabmenu.png" />
+    <Resource Include="pics\mutenotifications.png" />
     <Resource Include="pics\tavern.jpeg" />
     <Resource Include="pics\trash.png" />
   </ItemGroup>
@@ -79,6 +85,9 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="FindFriendsMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="PartyPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>

@@ -10,7 +10,7 @@
     <Grid>
         <!-- navbar -->
         <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" Margin="0,271,0,0" Grid.Row="1">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
                         <ImageBrush.RelativeTransform>

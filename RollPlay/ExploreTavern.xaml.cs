@@ -35,13 +35,13 @@ namespace RollPlay
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            ScrollViewer scrollviewer = sender as ScrollViewer;
+            ScrollViewer scrollViewer = (ScrollViewer)sender;
             if (e.Delta > 0)
             {
-                scrollviewer.LineLeft();
+                scrollViewer.LineLeft();
             } else
             {
-                scrollviewer.LineRight();
+                scrollViewer.LineRight();
             }
             e.Handled = true;
         }
