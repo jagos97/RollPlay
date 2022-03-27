@@ -91,7 +91,6 @@
             <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="White" BorderThickness="0,0,0,3" BorderBrush="#FF95DADE" Width="70" Margin="5,0,5,0"/>
             <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="FriendsCollectionSubMenuSelector_Click" />
         </StackPanel>
-
         <Button x:Name="CreateNewCharacter" Content="                                          Pending Party Invites" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Height="28" BorderThickness="0,1,0,1" BorderBrush="#FFE5E4E3" Foreground="Black" Background="White"/>
         <Ellipse HorizontalAlignment="Right" Height="6" Margin="0,128,15,0" Stroke="#FFA71D31" VerticalAlignment="Top" Width="5" Fill="#FFA71D31"/>
         <ScrollViewer x:Name="Characters" Margin="0,150,0,0" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Height="255">
@@ -100,13 +99,19 @@
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" />
                     </Border.Effect>
-                    
+
                     <StackPanel Height="103" Orientation="Horizontal" VerticalAlignment="Top" Margin="9,0,4,0">
                         <Grid Height="100" Width="243" VerticalAlignment="Top">
-                            <Label Content="It's dangerous to go alone!" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="135" FontStyle="Italic" FontSize="11"/>
-                            <Button Content="CREATE A PARTY" HorizontalAlignment="Center" Margin="0,67,0,15" Width="123" BorderBrush="#FF3094CC" RenderTransformOrigin="-0.367,-0.117" Background="#FF3094CC" FontSize="10" FontStretch="Normal" Foreground="White" FontWeight="Bold"/>
-                            <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="15" FontSize="9" FontStyle="Normal" Text="Before setting off on your next adventure, why not"/>
-                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="94" Height="16" FontSize="9" FontStyle="Normal" Text="bring a party with you?"/>
+                            <Label Content="It's dangerous to go alone!" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="153" FontStyle="Italic"/>
+                            <Button Content="CREATE A PARTY" HorizontalAlignment="Center" Margin="0,63,0,15" Width="123" BorderBrush="#FF3094CC" RenderTransformOrigin="-0.367,-0.117" Background="#FF3094CC" FontSize="10" FontStretch="Normal" Foreground="White" FontWeight="Bold">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" Height="15" FontSize="10" FontStyle="Normal" Text="Before setting off on your next adventure, why not"/>
+                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="102" Height="16" FontSize="10" FontStyle="Normal" Text="bring a party with you?"/>
                         </Grid>
                     </StackPanel>
                 </Border>
@@ -123,7 +128,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Label x:Name="PartyName" Content="CURSE OF STRAHD" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <Label x:Name="PlayerName" Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
-                                <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="Button_Click">
+                                <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="PartySubmenu_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -152,7 +157,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Label x:Name="PartyName2" Content="OUT OF THE ABYSS" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                                 <Label x:Name="PlayerName2" Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
-                                <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="Button_Click">
+                                <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="PartySubmenu_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
                                     </Button.Background>

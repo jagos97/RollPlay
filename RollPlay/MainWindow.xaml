@@ -109,7 +109,7 @@
                     <StackPanel Height="103" Orientation="Horizontal" VerticalAlignment="Top" Margin="9,0,4,0">
                         <Grid Height="100" Width="243" VerticalAlignment="Top">
                             <Label Content="Whats an adventure without an adventurer?" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="243" FontStyle="Italic"/>
-                            <Button Content="CREATE A CHARACTER" HorizontalAlignment="Center" Margin="0,63,0,15" Width="123" BorderBrush="#FF3094CC" RenderTransformOrigin="-0.367,-0.117" Background="#FF3094CC" FontSize="10" FontStretch="Normal" Foreground="White" FontWeight="Bold">
+                            <Button Content="CREATE A CHARACTER" HorizontalAlignment="Center" Margin="0,63,0,15" Width="123" BorderBrush="#FF3094CC"  Background="#FF3094CC" FontSize="10" FontStretch="Normal" Foreground="White" FontWeight="Bold">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
