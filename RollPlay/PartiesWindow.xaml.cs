@@ -19,8 +19,10 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class PartiesWindow : Window
     {
+        private static bool innerButtonPressed= true;
 
         private static bool popupShown = false;
         public PartiesWindow()
@@ -50,12 +52,13 @@ namespace RollPlay
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void PartySubmenu_Click(object sender, RoutedEventArgs e)
         {
             if (popupShown)
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
+                innerButtonPressed = false;
             }
             else
             {
@@ -64,7 +67,7 @@ namespace RollPlay
                 SubMenuHolder.Children.Add(partySubMenu1);
                 popupShown = true;
             }
-            
+            e.Handled = true;  
         }
 
         private void TavernNavBar_Click(object sender, RoutedEventArgs e)
@@ -86,7 +89,7 @@ namespace RollPlay
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
-            this.Close();
+            this.Close();   
         }
 
         private void ToParty2_Click(object sender, RoutedEventArgs e)
