@@ -22,7 +22,6 @@ namespace RollPlay
     
     public partial class PartiesWindow : Window
     {
-        private static bool innerButtonPressed= true;
 
         private static bool popupShown = false;
         public PartiesWindow()
@@ -58,7 +57,6 @@ namespace RollPlay
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
-                innerButtonPressed = false;
             }
             else
             {

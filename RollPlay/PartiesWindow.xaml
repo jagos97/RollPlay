@@ -181,8 +181,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
-        </StackPanel>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>
     
