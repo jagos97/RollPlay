@@ -47,6 +47,14 @@ namespace RollPlay
             this.Close();
         }
 
+        private void CollectionNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
 
+        }
     }
 }
