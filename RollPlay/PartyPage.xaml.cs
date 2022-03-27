@@ -19,11 +19,40 @@ namespace RollPlay
     /// </summary>
     public partial class PartyPageWindow : Window
     {
-        public PartyPageWindow()
+
+        public string PartyName { get; set; } 
+
+        public string PlayerName { get; set; } 
+
+        public PartyPageWindow(string PartyName, string PlayerName)
         {
+            this.PartyName = PartyName;
+            this.PlayerName = PlayerName;
             InitializeComponent();
         }
 
-      
+        private void MainChat_Click(object sender, RoutedEventArgs e)
+        {
+            return;
+        }
+
+        private void BackToMain_Click(object sender, RoutedEventArgs e)
+        {
+            PartiesWindow window = new PartiesWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void TavernNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            TavernMenuWindow window = new TavernMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+
+        }
     }
 }
