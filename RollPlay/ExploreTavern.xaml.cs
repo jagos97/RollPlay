@@ -19,8 +19,22 @@ namespace RollPlay
     /// </summary>
     public partial class ExploreTavernWindow : Window
     {
-        public ExploreTavernWindow()
+
+       public string Prompt1 { get; set; }
+        public string Prompt2 { get; set; }
+        public string Prompt3 { get; set; }
+        public string Prompt4 { get; set; }
+        public string Prompt5 { get; set; }
+        public string Prompt6 { get; set; } 
+
+        public ExploreTavernWindow(string Prompt1, string Prompt2, string Prompt3, string Prompt4, string Prompt5, string Prompt6)
         {
+            this.Prompt1 = Prompt1;
+            this.Prompt2 = Prompt2;
+            this.Prompt3 = Prompt3;
+            this.Prompt4 = Prompt4;
+            this.Prompt5 = Prompt5;
+            this.Prompt6 = Prompt6;
             InitializeComponent();
         }
 
@@ -32,6 +46,7 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
+            
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
