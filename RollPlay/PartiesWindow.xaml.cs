@@ -76,5 +76,29 @@ namespace RollPlay
             this.Close();
 
         }
+
+        private void ToParty_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)PartyName.Content;
+            string Player = (string)PlayerName.Content;
+
+            PartyPageWindow window = new PartyPageWindow(Name, Player);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void ToParty2_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)PartyName2.Content;
+            string Player = (string)PlayerName2.Content;
+
+            PartyPageWindow window = new PartyPageWindow(Name, Player);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
     }
 }

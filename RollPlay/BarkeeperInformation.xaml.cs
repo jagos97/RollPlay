@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Windows.Navigation;
 
 namespace RollPlay
 {
@@ -24,9 +26,9 @@ namespace RollPlay
         public string desc1 { get; set; }
         public string desc2 { get; set; }
         public string desc3 { get; set; }
-        public string redirect { get; set; }
+        public Uri redirect { get; set; }
 
-        public BarkeeperInformationWindow(string title, string desc1, string desc2, string desc3, string redirect)
+        public BarkeeperInformationWindow(string title, string desc1, string desc2, string desc3, Uri redirect)
         {
             this.title = title;
             this.desc1 = desc1;
@@ -55,6 +57,29 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            GoBack.Visibility = Visibility.Collapsed;
+            Redirect.Visibility = Visibility.Visible;
+            Response.Visibility = Visibility.Visible;
+
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true});
+            e.Handled = true;
+        }
+
+        private void BackToMain_Click(object sender, RoutedEventArgs e)
+        {
+            CommonerMenuWindow window = new CommonerMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
     }
 }
