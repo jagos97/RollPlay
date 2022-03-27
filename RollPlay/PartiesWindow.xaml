@@ -121,8 +121,8 @@
                                     <ColumnDefinition Width="14*"/>
                                     <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Content="CURSE OF STRAHD" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <Label Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
+                                <Label x:Name="PartyName" Content="CURSE OF STRAHD" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                                <Label x:Name="PlayerName" Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
                                 <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="Button_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
@@ -150,8 +150,8 @@
                                     <ColumnDefinition Width="14*"/>
                                     <ColumnDefinition Width="3*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Content="OUT OF THE ABYSS" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                                <Label Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
+                                <Label x:Name="PartyName2" Content="OUT OF THE ABYSS" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                                <Label x:Name="PlayerName2" Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="0,24,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="114"/>
                                 <Button Content="" HorizontalAlignment="Right" Margin="0,15,10,13" Width="25" Height="12" BorderBrush="White" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="Button_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
@@ -171,5 +171,15 @@
         </ScrollViewer>
         <Button x:Name="CreateNewParty" Content="CREATE PARTY" VerticalAlignment="Bottom" BorderThickness="0,1,0,1" BorderBrush="#FFE5E4E3" Foreground="White" Background="#FF3094CC" Height="30" FontWeight="Bold" Margin="0,0,0,80" HorizontalAlignment="Center" Width="154">
             <Button.Resources>
-       
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+        </StackPanel>
+    </Grid>
+</Window>
+    
+
     
