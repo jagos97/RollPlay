@@ -119,7 +119,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -142,7 +142,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click" >
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -165,7 +165,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -188,7 +188,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -211,7 +211,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -234,7 +234,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -257,7 +257,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -280,7 +280,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -303,7 +303,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -326,7 +326,7 @@
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
+                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -341,30 +341,6 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="RandomName#420" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8">
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="90"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/meatball.png"/>
-                            </Button.Background>
-                        </Button>
-                    </StackPanel>
-                </Border>
-
             </StackPanel>
         </ScrollViewer>
         <Border HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="272" Height="28" BorderThickness="0,1,0,1" BorderBrush="#FFE5E4E3" Background="White">
@@ -395,6 +371,7 @@
                 </Canvas>
             </Grid>
         </Border>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>
     

@@ -21,6 +21,7 @@ namespace RollPlay
     /// </summary>
     public partial class FriendsWindow : Window
     {
+        private static bool popupShown = false;
         public FriendsWindow()
         {
             InitializeComponent();
@@ -57,6 +58,23 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void PartySubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (popupShown)
+            {
+                SubMenuHolder.Children.Clear();
+                popupShown = false;
+            }
+            else
+            {
+                FriendSubMenu subMenu = new FriendSubMenu();
+                SubMenuHolder.Children.Clear();
+                SubMenuHolder.Children.Add(subMenu);
+                popupShown = true;
+            }
+            e.Handled = true;
         }
     }
 }
