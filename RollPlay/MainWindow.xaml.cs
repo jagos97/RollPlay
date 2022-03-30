@@ -22,6 +22,7 @@ namespace RollPlay
     public partial class MainWindow : Window
     {
         private static int navbarSelected = 0;
+        private static bool popupShown = false;
         private static Thickness blank = new Thickness(0, 0, 0, 0);
         private static Thickness active = new Thickness(0, 4, 0, 0);
 
@@ -154,6 +155,23 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void CharacterSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (popupShown)
+            {
+                SubMenuHolder.Children.Clear();
+                popupShown = false;
+            }
+            else
+            {
+                CharacterSubMenu subMenu = new CharacterSubMenu();
+                SubMenuHolder.Children.Clear();
+                SubMenuHolder.Children.Add(subMenu);
+                popupShown = true;
+            }
+            e.Handled = true;
         }
     }
 }

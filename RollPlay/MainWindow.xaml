@@ -134,7 +134,7 @@
                         <Grid Height="100" Width="150" VerticalAlignment="Top">
                             <Label Content="CHARACTER NAME" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                             <Label Content="PARTY NAME" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="85"/>
-                            <Button Content="" HorizontalAlignment="Left" Margin="125,73,0,15" Width="25" BorderBrush="White" Height="12" RenderTransformOrigin="1.02,-0.08">
+                            <Button Margin="125,73,0,15" BorderBrush="White" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
                                 </Button.Background>
@@ -163,7 +163,7 @@
                         <Grid Height="100" Width="150" VerticalAlignment="Top">
                             <Label Content="CHARACTER NAME" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
                             <Label Content="PARTY NAME" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="85"/>
-                            <Button Content="" HorizontalAlignment="Left" Margin="125,73,0,15" Width="25" BorderBrush="White" Height="12" RenderTransformOrigin="1.02,-0.08">
+                            <Button Content="" HorizontalAlignment="Left" Margin="125,73,0,15" Width="25" BorderBrush="White" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
                                 </Button.Background>
@@ -181,6 +181,7 @@
                 </Border>
             </StackPanel>
         </ScrollViewer>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
     </Grid>
 </Window>
     
