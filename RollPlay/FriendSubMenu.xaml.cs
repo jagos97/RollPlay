@@ -30,5 +30,13 @@ namespace RollPlay
             FriendsWindow parentWindow = Window.GetWindow(this) as FriendsWindow;
             parentWindow.DeleteFriend();
         }
+        public void AddUserToParty_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+        public void NotImplemented_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under Construction");
+        }
     }
 }
