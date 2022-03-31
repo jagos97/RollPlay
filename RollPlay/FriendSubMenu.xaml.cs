@@ -24,5 +24,11 @@ namespace RollPlay
         {
             InitializeComponent();
         }
+
+        public void DeleteFriend_Click(object sender, RoutedEventArgs e)
+        {
+            FriendsWindow parentWindow = Window.GetWindow(this) as FriendsWindow;
+            parentWindow.DeleteFriend();
+        }
     }
 }

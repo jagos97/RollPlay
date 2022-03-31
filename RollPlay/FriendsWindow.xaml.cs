@@ -22,6 +22,7 @@ namespace RollPlay
     public partial class FriendsWindow : Window
     {
         private static bool popupShown = false;
+        public static Border friendSelected = null;
         public FriendsWindow()
         {
             InitializeComponent();
@@ -66,6 +67,7 @@ namespace RollPlay
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
+                friendSelected = null;
             }
             else
             {
@@ -73,8 +75,16 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
+                friendSelected = (Border)((StackPanel)((Button)sender).Parent).Parent;
             }
             e.Handled = true;
+        }
+
+        public void DeleteFriend()
+        {
+            popupShown = false;
+            FriendHolder.Children.Remove(friendSelected);
+            SubMenuHolder.Children.Clear();
         }
     }
 }
