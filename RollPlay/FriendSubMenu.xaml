@@ -9,28 +9,28 @@
     <Grid>
         <Rectangle  Fill="#FF504B43" RadiusX="10" RadiusY="10"/>
         <StackPanel>
-            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000">
+            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="AddUserToParty_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/addToParty.png"/>
                     <Label Content="INVITE USER TO PARTY" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" BorderBrush="#FFCC1010" Height="44" />
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="DeleteFriend_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/removeFriend.png"/>
                     <Label Content="REMOVE FRIEND" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="NotImplemented_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/blockUser.png"/>
                     <Label Content="BLOCK USER" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="NotImplemented_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/reportuser.png"/>
                     <Label Content="REPORT USER" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
