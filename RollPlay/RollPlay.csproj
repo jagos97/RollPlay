@@ -21,12 +21,14 @@
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\blockUser.png" />
     <None Remove="pics\copy.png" />
+    <None Remove="pics\delete.png" />
     <None Remove="pics\edit.png" />
     <None Remove="pics\kebabmenu.png" />
     <None Remove="pics\leave.png" />
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\mutenotifications.png" />
+    <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
     <None Remove="pics\reportuser.png" />
     <None Remove="pics\tavern.jpeg" />
@@ -42,8 +44,10 @@
     <Resource Include="pics\addcircle.png" />
     <Resource Include="pics\blockUser.png" />
     <Resource Include="pics\copy.png" />
+    <Resource Include="pics\delete.png" />
     <Resource Include="pics\kebabmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
+    <Resource Include="pics\remove.png" />
     <Resource Include="pics\removeFriend.png" />
     <Resource Include="pics\reportuser.png" />
     <Resource Include="pics\tavern.jpeg" />
@@ -100,6 +104,9 @@
     <Page Update="InviteToParty.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditParty.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="PartyPageSubMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>

@@ -20,18 +20,32 @@ namespace RollPlay
     /// </summary>
     public partial class PartyPageSubMenu : UserControl
     {
-        public PartyPageSubMenu()
+
+        public string PartyName { get; set; }
+        public string PlayerName { get; set; }
+ 
+       
+        public PartyPageSubMenu(string PartyName, string PlayerName)
         {
             InitializeComponent();
+            this.PartyName = PartyName;
+            this.PlayerName = PlayerName;
         }
 
         public void SwapCharacter_Click(object sender, RoutedEventArgs e)
         {
             //TODO
         }
-        public void EditPrty_Click(object sender, RoutedEventArgs e)
+        public void EditParty_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            
+            EditPartyWindow window = new EditPartyWindow(PartyName, PlayerName);
+            window.Show();
+            window.Top = Window.GetWindow(this).Top;
+            window.Left = Window.GetWindow(this).Left;
+            Window.GetWindow(this).Close();
+
+
         }
 
         public void LeaveParty_Click(object sender, RoutedEventArgs e)

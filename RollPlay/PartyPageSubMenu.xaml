@@ -16,7 +16,7 @@
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="EditParty_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/edit.png"/>
                     <Label Content="EDIT PARTY" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" />

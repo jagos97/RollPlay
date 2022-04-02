@@ -74,7 +74,7 @@
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="STOCK" FontWeight="Bold" FontSize="16" Width="Auto" Height="Auto" HorizontalAlignment="Left" Margin="20,0,0,0" />
 
-                                <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="-2,2,0,0">
+                                <Button Name="AddStock" Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="-2,2,0,0" Click="AddStock_Click">
                                     <Button.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/pics/addcircle.png"/>
                                     </Button.Background>
@@ -109,7 +109,7 @@
 
 
 
-                        <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14">
+                        <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="CreateChat_Click">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="6.25"/>

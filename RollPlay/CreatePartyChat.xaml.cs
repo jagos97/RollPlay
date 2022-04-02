@@ -43,7 +43,7 @@ namespace RollPlay
         private void Shop_Selected(object sender, RoutedEventArgs e)
         {
             this.ShopInfo.Visibility = Visibility.Visible;
-            //FINSI
+            //FINSH
             
         }
 
@@ -57,6 +57,34 @@ namespace RollPlay
         {
             this.ShopInfo.Visibility = Visibility.Collapsed;
             //FINISH
+        }
+
+        private void AddStock_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+        private void CreateChat_Click(object sender, RoutedEventArgs e)
+        {
+            if (Shop.IsSelected)
+            {
+                //TODO
+            }
+
+            if (Camp.IsSelected)
+            {
+                //TODO
+            }
+
+            if (Inn.IsSelected)
+            {
+                //TODO
+            }
+
+            if (Other.IsSelected)
+            {
+                //TODO
+            }
+
         }
     }
 }
