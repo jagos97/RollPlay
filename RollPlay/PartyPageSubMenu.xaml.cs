@@ -44,6 +44,7 @@ namespace RollPlay
             window.Top = Window.GetWindow(this).Top;
             window.Left = Window.GetWindow(this).Left;
             Window.GetWindow(this).Close();
+            PartyPageWindow.popupShown = false;
 
 
         }

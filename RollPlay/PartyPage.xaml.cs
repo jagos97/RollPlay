@@ -83,7 +83,7 @@ namespace RollPlay
 
         private void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
-            if (popupShown)
+            if (invitePopupShown)
             {
                 InviteToParty inviteMenu = new InviteToParty();
                 overlay.Children.Clear();
