@@ -18,22 +18,23 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for CharacterSubMenu.xaml
     /// </summary>
-    public partial class FriendSubMenu : UserControl
+    public partial class PartyPageSubMenu : UserControl
     {
-
-        public static bool popupShown = false;
-
-        public FriendSubMenu()
+        public PartyPageSubMenu()
         {
             InitializeComponent();
         }
 
-        public void DeleteFriend_Click(object sender, RoutedEventArgs e)
+        public void SwapCharacter_Click(object sender, RoutedEventArgs e)
         {
-            FriendsWindow parentWindow = Window.GetWindow(this) as FriendsWindow;
-            parentWindow.DeleteFriend();
+            //TODO
         }
-        public void AddUserToParty_Click(object sender, RoutedEventArgs e)
+        public void EditPrty_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+
+        public void LeaveParty_Click(object sender, RoutedEventArgs e)
         {
             //TODO
         }

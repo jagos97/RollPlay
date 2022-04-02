@@ -10,7 +10,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace RollPlay
 {
@@ -20,9 +22,16 @@ namespace RollPlay
     public partial class PartyPageWindow : Window
     {
 
+      
+
         public string PartyName { get; set; } 
 
         public string PlayerName { get; set; } 
+
+        public static bool invitePopupShown = false;
+        public static bool popupShown = false;
+        public static bool chatPopupShown = false;
+        public static Border partySelected = null;
 
         public PartyPageWindow(string PartyName, string PlayerName)
         {
@@ -53,6 +62,76 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
 
+        }
+
+        private void PartyPageSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (popupShown)
+            {
+                SubMenuHolder.Children.Clear();
+                popupShown = false;
+      
+            }
+            else
+            {
+                PartyPageSubMenu subMenu = new PartyPageSubMenu();
+                SubMenuHolder.Children.Clear();
+                SubMenuHolder.Children.Add(subMenu);
+                popupShown = true;
+ 
+            }
+            e.Handled = true;
+        }
+
+        private void InviteToParty_Click(object sender, RoutedEventArgs e)
+        {
+            if (popupShown)
+            {
+                InviteToParty inviteMenu = new InviteToParty();
+                overlay.Children.Clear();
+                invitePopupShown = false;
+            }
+            else
+            {
+                InviteToParty inviteMenu = new InviteToParty();
+                overlay.Children.Clear();
+                overlay.Children.Add(inviteMenu);
+                invitePopupShown = true;
+
+            }
+        }
+
+        private void CreatePartyChat_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (chatPopupShown)
+            {
+                overlay.Children.Clear();
+                chatPopupShown = false;
+            }
+            else
+            {
+
+                CreatePartyChat chatMenu = new CreatePartyChat();
+                overlay.Children.Clear();
+                overlay.Children.Add(chatMenu);
+                chatPopupShown = true;
+            }
+        }
+
+
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            ScrollViewer scrollViewer = (ScrollViewer)sender;
+            if (e.Delta > 0)
+            {
+                scrollViewer.LineLeft();
+            }
+            else
+            {
+                scrollViewer.LineRight();
+            }
+            e.Handled = true;
         }
     }
 }

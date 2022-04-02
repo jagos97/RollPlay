@@ -75,6 +75,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CreatePartyChat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InvitetoParty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PartyPageSubMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FriendSubMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -84,6 +93,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="CreatePartyChat.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InviteToParty.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PartyPageSubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="FriendSubMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>

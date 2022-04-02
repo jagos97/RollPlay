@@ -94,7 +94,7 @@
                     </Button.Background>
                 </Button>
 
-                <Button x:Name="MeatballMenu" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="270,-100,10,0">
+                <Button x:Name="MeatballMenu" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="270,-100,10,0" Click="PartyPageSubMenu_Click">
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="/pics/meatball.png"/>
                     </Button.Background>
@@ -107,43 +107,54 @@
                     <Label Content="UPCOMING SESSION" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,0,0,0" Width="150" Height="25" FontWeight="Bold" FontSize="14"/>
                     <TextBlock Margin="15,0,0,0" FontSize="12" FontWeight="Light"> Tuesday, March 5 @ 5pm-6pm</TextBlock>
 
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="30">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="Auto">
                         <Label Content="PARTY MEMBERS" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,5,0,0" Width="150" Height="25" FontWeight="Bold" FontSize="14"/>
-                        <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-28,10,0,0">
+                        <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-28,10,0,0" Click="InviteToParty_Click">
                             <Button.Background>
                                 <ImageBrush Stretch="Uniform" ImageSource="/pics/addcircle.png"/>
                             </Button.Background>
                         </Button>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <StackPanel Orientation="Vertical">
-                            <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="75" Text="{Binding ElementName=PartyWindow, Path=PlayerName}" Margin="-5"/>
-                        </StackPanel>
+                    <ScrollViewer Height="Auto" Width="Auto" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="Auto">
+                            <StackPanel Orientation="Vertical" Height="Auto">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="75" Text="{Binding ElementName=PartyWindow, Path=PlayerName}" Margin="-5"/>
+                            </StackPanel>
 
-                        <StackPanel Orientation="Vertical">
-                            <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                            <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
-                        </StackPanel>
+                            <StackPanel Orientation="Vertical">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
+                            </StackPanel>
 
-                        <StackPanel Orientation="Vertical">
-                            <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                            <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
+                            <StackPanel Orientation="Vertical">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
 
                     <Border BorderThickness="10,8,8,8" CornerRadius="6" Width="150" Height="30" BorderBrush="#3094CC" Margin="20">
                         <Button Width="140" Height="40" Background="#3094CC" Foreground="White" FontWeight="ExtraBold" FontSize="13" BorderBrush="#3094CC" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,0,-2,0">
@@ -157,7 +168,7 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <Label HorizontalAlignment="Right" Content="CREATE CHAT" Margin="20, 0" FontWeight="SemiBold" />
-                        <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-24,0,20,0">
+                        <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-24,0,20,0" Click="CreatePartyChat_Click">
                             <Button.Background>
                                 <ImageBrush Stretch="Uniform" ImageSource="/pics/addcircle.png"/>
                             </Button.Background>
@@ -185,7 +196,7 @@
                                 <TextBlock TextWrapping="Wrap" Width="225" FontWeight="light" Margin="-30,0,0,0">
                            The Standard group chat that is included with every party. All members of a party are given access to this chat and it is intended for general chat.
                                 </TextBlock>
-                                <Button Height="20" Width="20" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Margin="10,-30, 5, 0">
+                                <Button Height="20" Width="20" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Margin="10,-30, 5, 0" >
                                     <Button.Background>
                                         <ImageBrush Stretch="Uniform" ImageSource="/pics/kebabmenu.png"/>
                                     </Button.Background>
@@ -225,8 +236,11 @@
                     </Border>
                 </StackPanel>
             </ScrollViewer>
-            
-         
+                     
         </StackPanel>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" Height="Auto" MaxHeight="138" HorizontalAlignment="Stretch" Panel.ZIndex="20"/>
+        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
     </Grid>
 </Window>
+    
+    
