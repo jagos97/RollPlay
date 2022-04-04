@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="RollPlay.HamburgerMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d">
+    
+        <Grid>
+        <StackPanel Background="#FF504B43" Orientation="Vertical" Width="200" Height="458">
+            <Button Content="MY CHARACTERS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,20,10,0"/>
+            <Button Content="Character 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="Character 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="Character 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+
+            <Button Content="MY PARTIES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,5,10,0"/>
+            <Button Content="Party 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="Party 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="Party 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+            
+            <Button Content="MY FRIENDS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
+            <Button Content="MY MESSAGES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
+            <Button Content="THE TAVERN" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
+            <Button Content="NOTIFICATIONS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

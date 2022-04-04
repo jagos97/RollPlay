@@ -21,6 +21,8 @@ namespace RollPlay
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static bool navBarMenuShown = false;
+
         private static int navbarSelected = 0;
         private static bool popupShown = false;
         private static Thickness blank = new Thickness(0, 0, 0, 0);
@@ -41,9 +43,9 @@ namespace RollPlay
             if (e.Key == Key.D)
             {
                 navbarSelected = navbarSelected + 1;
-                if(navbarSelected > 4)
+                if (navbarSelected > 4)
                 {
-                   navbarSelected = 0;
+                    navbarSelected = 0;
                 }
                 ChangNavBarSelected();
             }
@@ -56,7 +58,7 @@ namespace RollPlay
                 }
                 ChangNavBarSelected();
             }
-            if(e.Key == Key.Right)
+            if (e.Key == Key.Right)
             {
                 TavernMenuWindow britt = new TavernMenuWindow();
                 britt.Show();
@@ -83,7 +85,7 @@ namespace RollPlay
 
         private void ChangNavBarSelected()
         {
-            if(navbarSelected == 0)
+            if (navbarSelected == 0)
             {
                 CollectionNavBar.BorderThickness = active;
                 TavernNavBar.BorderThickness = blank;
@@ -101,7 +103,7 @@ namespace RollPlay
                 MenuNavBar.BorderThickness = blank;
 
             }
-            else if(navbarSelected == 2)
+            else if (navbarSelected == 2)
             {
                 CollectionNavBar.BorderThickness = blank;
                 TavernNavBar.BorderThickness = blank;
@@ -110,7 +112,7 @@ namespace RollPlay
                 MenuNavBar.BorderThickness = blank;
 
             }
-            else if(navbarSelected == 3)
+            else if (navbarSelected == 3)
             {
                 CollectionNavBar.BorderThickness = blank;
                 TavernNavBar.BorderThickness = blank;
@@ -119,7 +121,7 @@ namespace RollPlay
                 MenuNavBar.BorderThickness = blank;
 
             }
-            else if(navbarSelected == 4)
+            else if (navbarSelected == 4)
             {
                 CollectionNavBar.BorderThickness = blank;
                 TavernNavBar.BorderThickness = blank;
@@ -172,6 +174,24 @@ namespace RollPlay
                 popupShown = true;
             }
             e.Handled = true;
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
+
         }
     }
 }

@@ -66,7 +66,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -118,8 +118,9 @@
 
                     <ScrollViewer Height="Auto" Width="Auto" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="Auto">
-                            <StackPanel Orientation="Vertical" Height="Auto">
-                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                            
+                            <StackPanel Name="Player1" Orientation="Vertical" Height="Auto">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10" Click="Button_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -127,7 +128,7 @@
                                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="75" Text="{Binding ElementName=PartyWindow, Path=PlayerName}" Margin="-5"/>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player2" Orientation="Vertical" >
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
@@ -136,7 +137,7 @@
                                 <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player3" Orientation="Vertical">
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
@@ -145,7 +146,7 @@
                                 <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player4" Orientation="Vertical">
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
@@ -204,42 +205,14 @@
                             </StackPanel>
                         </Button>
                     </Border>
-
-                    <Border Background="White" BorderThickness="0,0,0,0" Height="110" Width="275" HorizontalAlignment="Center" CornerRadius="10" Margin="0, 5">
-                        <Border.Effect>
-                            <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
-                        </Border.Effect>
-
-                        <Button x:Name="OtherChat" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,0" Height="110" Click="MainChat_Click">
-
-                            <StackPanel Orientation="Vertical">
-
-                                <StackPanel Orientation="Horizontal">
-                                    <Label Content="MAIN PARTY CHAT" FontWeight="Bold" FontSize="14" Margin="5,-5"/>
-                                    <Button Height="20" Width="20" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Margin="100,0, 5, 0">
-                                        <Button.Background>
-                                            <ImageBrush Stretch="Uniform" ImageSource="/pics/mutenotifications.png"/>
-                                        </Button.Background>
-                                    </Button>
-                                </StackPanel>
-
-                                <TextBlock TextWrapping="Wrap" Width="225" FontWeight="light" Margin="-30,0,0,0">
-                           The Standard group chat that is included with every party. All members of a party are given access to this chat and it is intended for general chat.
-                                </TextBlock>
-                                <Button Height="20" Width="20" BorderThickness="0,0,0,0" HorizontalAlignment="Right" Margin="10,-30, 5, 0">
-                                    <Button.Background>
-                                        <ImageBrush Stretch="Uniform" ImageSource="/pics/kebabmenu.png"/>
-                                    </Button.Background>
-                                </Button>
-                            </StackPanel>
-                        </Button>
-                    </Border>
                 </StackPanel>
             </ScrollViewer>
                      
         </StackPanel>
         <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" Height="Auto" MaxHeight="138" HorizontalAlignment="Stretch" Panel.ZIndex="20"/>
-        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
+      <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+
     </Grid>
 </Window>
     

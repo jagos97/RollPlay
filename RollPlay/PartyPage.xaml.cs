@@ -21,14 +21,13 @@ namespace RollPlay
     /// </summary>
     public partial class PartyPageWindow : Window
     {
+        private static bool navBarMenuShown = false;
 
-        public string PartyName { get; set; } 
+        public string PartyName { get; set; }
 
-        public string PlayerName { get; set; } 
+        public string PlayerName { get; set; }
 
-        public static bool invitePopupShown = false;
         public static bool popupShown = false;
-        public static bool chatPopupShown = false;
         public static Border partySelected = null;
 
         public PartyPageWindow(string PartyName, string PlayerName)
@@ -40,7 +39,7 @@ namespace RollPlay
 
         private void MainChat_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            //TODO
         }
 
         private void BackToMain_Click(object sender, RoutedEventArgs e)
@@ -68,7 +67,7 @@ namespace RollPlay
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
-      
+
             }
             else
             {
@@ -76,45 +75,25 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
- 
+
             }
             e.Handled = true;
         }
 
         private void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
-            if (invitePopupShown)
-            {
-                InviteToParty inviteMenu = new InviteToParty();
-                overlay.Children.Clear();
-                invitePopupShown = false;
-            }
-            else
-            {
-                InviteToParty inviteMenu = new InviteToParty();
-                overlay.Children.Clear();
-                overlay.Children.Add(inviteMenu);
-                invitePopupShown = true;
 
-            }
+            InviteToParty inviteMenu = new InviteToParty();
+            overlay.Children.Clear();
+            overlay.Children.Add(inviteMenu);
         }
 
         private void CreatePartyChat_Click(object sender, RoutedEventArgs e)
         {
+            CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName);
+            overlay.Children.Clear();
+            overlay.Children.Add(chatMenu);
 
-            if (chatPopupShown)
-            {
-                overlay.Children.Clear();
-                chatPopupShown = false;
-            }
-            else
-            {
-
-                CreatePartyChat chatMenu = new CreatePartyChat();
-                overlay.Children.Clear();
-                overlay.Children.Add(chatMenu);
-                chatPopupShown = true;
-            }
         }
 
 
@@ -130,6 +109,29 @@ namespace RollPlay
                 scrollViewer.LineRight();
             }
             e.Handled = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
+
         }
     }
 }

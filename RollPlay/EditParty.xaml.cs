@@ -22,9 +22,14 @@ namespace RollPlay
     public partial class EditPartyWindow : Window
     {
 
-        public string PartyName { get; set; } 
+        private static bool navBarMenuShown = false;
 
-        public string PlayerName { get; set; } 
+        public static StackPanel playerSelected = null;
+
+        public string PartyName { get; set; }
+        public string InitialName { get; set; }
+
+        public string PlayerName { get; set; }
 
         public static bool invitePopupShown = false;
         public static bool popupShown = false;
@@ -35,6 +40,7 @@ namespace RollPlay
         {
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
+            this.InitialName = PartyName;
             InitializeComponent();
         }
 
@@ -84,6 +90,38 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
 
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            this.PartyName = this.InitialName;
+            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void RemovePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
         }
     }
 }

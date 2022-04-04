@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RollPlay"
              mc:Ignorable="d" 
-             Height="Auto" MinHeight="405" Width="320">
+             Height="Auto" MinHeight="405" Width="320"
+             Name="CreateChatWindow">
 
     <Grid>
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
@@ -54,7 +55,7 @@
                         <StackPanel Name="ShopInfo" Visibility="Collapsed">
                             <Label Content="Shopkeep Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
 
-                            <TextBox Text="" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                            <TextBox Name="ShopKeepName" Text="" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
                                 <TextBox.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="8"/>
@@ -86,24 +87,27 @@
                                 <Label Content="Item Price" FontSize="8" Margin="125,0,0,-10" HorizontalAlignment="Left" />
                             </StackPanel>
 
+                            
+                            <StackPanel Name="AddStockPanel" Orientation="Vertical">
+                                
+                                <StackPanel Name="stackPanel0" Orientation="Horizontal">
+                                    <TextBox Name ="stock0" BorderBrush="#A0C8CD" Width="171" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10, 0, 0" Margin="20, 8, 0, 0">
+                                        <TextBox.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="8"/>
+                                            </Style>
+                                        </TextBox.Resources>
+                                    </TextBox>
 
-                            <StackPanel Orientation="Horizontal">
-
-                                <TextBox BorderBrush="#A0C8CD" Width="171" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="20, 8">
-                                    <TextBox.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="8"/>
-                                        </Style>
-                                    </TextBox.Resources>
-                                </TextBox>
-
-                                <TextBox BorderBrush="#A0C8CD" Width="68" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="-15, 8">
-                                    <TextBox.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="8"/>
-                                        </Style>
-                                    </TextBox.Resources>
-                                </TextBox>
+                                    <TextBox Name="price0" BorderBrush="#A0C8CD" Width="68" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10, 0, 0" Margin="5, 8, 0, 0">
+                                        <TextBox.Resources>
+                                            <Style TargetType="Border">
+                                                <Setter Property="CornerRadius" Value="8"/>
+                                            </Style>
+                                        </TextBox.Resources>
+                                    </TextBox>
+                                </StackPanel>
+                                
                             </StackPanel>
                         </StackPanel>
 
