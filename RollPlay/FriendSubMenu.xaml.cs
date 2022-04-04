@@ -20,6 +20,9 @@ namespace RollPlay
     /// </summary>
     public partial class FriendSubMenu : UserControl
     {
+
+        public static bool popupShown = false;
+
         public FriendSubMenu()
         {
             InitializeComponent();
@@ -34,6 +37,7 @@ namespace RollPlay
         {
             //TODO
         }
+
         public void NotImplemented_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Under Construction");

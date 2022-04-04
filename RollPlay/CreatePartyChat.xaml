@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="RollPlay.CreatePartyChat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="Auto" MinHeight="405" Width="320">
+
+    <Grid>
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+
+           <!-- <Rectangle  Fill="White" RadiusX="10" RadiusY="10" Height="405" Width="288" Margin="0,0,0,100" Panel.ZIndex="-1" /> -->
+        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,0" Background="White" Width="288" Height="Auto" MinHeight="405" MaxHeight="500" VerticalAlignment="Center">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" MaxHeight="500" Height="Auto" MinHeight="405" Margin="0,0,0,0" BorderBrush="white">
+                    <StackPanel>
+                        <Label Content="CREATE NEW CHAT" HorizontalAlignment="Center" FontWeight="Bold" FontSize="17" Margin="0, 10, 0, 0"/>
+                        <Label Content="Chat Room Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
+                        <TextBox Name="NameSearch" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                       
+                        <ListBox Name="ChatTypes" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" ItemStringFormat="">
+                            <ListBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="OverridesDefaultStyle" Value="true"/>
+                                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ListBoxItem">
+                                                <RadioButton GroupName="ChatType" IsChecked="{Binding IsSelected, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBoxItem}}}" Margin="5, 5" VerticalAlignment="Center">
+                                                    <ContentPresenter/>
+                                                </RadioButton>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </ListBox.Resources>
+
+                            <ListBoxItem Name="Camp" FontSize="14" FontWeight="light" Selected="Camp_Selected">Camp</ListBoxItem>
+                            <ListBoxItem Name="Shop" FontSize="14" FontWeight="light" Selected="Shop_Selected">Shop</ListBoxItem>
+                            <ListBoxItem Name="Inn" FontSize="14" FontWeight="light" Selected="Inn_Selected">Inn/Tavern</ListBoxItem>
+                            <ListBoxItem Name ="Other" FontSize="14" FontWeight="light" Selected="Other_Selected">Other</ListBoxItem>
+                        </ListBox>
+
+                        <StackPanel Name="ShopInfo" Visibility="Collapsed">
+                            <Label Content="Shopkeep Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
+
+                            <TextBox Text="" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                                <TextBox.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="8"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <Label Content="Description" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
+                            <TextBox Text="" BorderBrush="#A0C8CD" Width="245" Height="88" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                                <TextBox.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="8"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="STOCK" FontWeight="Bold" FontSize="16" Width="Auto" Height="Auto" HorizontalAlignment="Left" Margin="20,0,0,0" />
+
+                                <Button Name="AddStock" Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="-2,2,0,0" Click="AddStock_Click">
+                                    <Button.Background>
+                                        <ImageBrush Stretch="Uniform" ImageSource="/pics/addcircle.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Item Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
+                                <Label Content="Item Price" FontSize="8" Margin="125,0,0,-10" HorizontalAlignment="Left" />
+                            </StackPanel>
+
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBox BorderBrush="#A0C8CD" Width="171" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="20, 8">
+                                    <TextBox.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="8"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+
+                                <TextBox BorderBrush="#A0C8CD" Width="68" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="-15, 8">
+                                    <TextBox.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="8"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+                        </StackPanel>
+
+
+
+                        <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="CreateChat_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="6.25"/>
+                                </Style>
+                            </Button.Resources>
+                            <Label Content="CREATE CHAT" Foreground="white" FontWeight="ExtraBold"/>
+                        </Button>
+
+                        <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Click="Cancel_Click" Margin="0,0,0,25">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="6.25"/>
+                                </Style>
+                            </Button.Resources>
+                            <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>
