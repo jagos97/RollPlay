@@ -21,10 +21,11 @@ namespace RollPlay
     /// </summary>
     public partial class PartyPageWindow : Window
     {
+        private static bool navBarMenuShown = false;
 
-        public string PartyName { get; set; } 
+        public string PartyName { get; set; }
 
-        public string PlayerName { get; set; } 
+        public string PlayerName { get; set; }
 
         public static bool popupShown = false;
         public static Border partySelected = null;
@@ -66,7 +67,7 @@ namespace RollPlay
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
-      
+
             }
             else
             {
@@ -74,7 +75,7 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
- 
+
             }
             e.Handled = true;
         }
@@ -82,18 +83,17 @@ namespace RollPlay
         private void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
 
-                InviteToParty inviteMenu = new InviteToParty();
-                overlay.Children.Clear();
-                overlay.Children.Add(inviteMenu);
-                invitePopupShown = true;
+            InviteToParty inviteMenu = new InviteToParty();
+            overlay.Children.Clear();
+            overlay.Children.Add(inviteMenu);
         }
 
         private void CreatePartyChat_Click(object sender, RoutedEventArgs e)
         {
-                CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName);
-                overlay.Children.Clear();
-                overlay.Children.Add(chatMenu);
-            
+            CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName);
+            overlay.Children.Clear();
+            overlay.Children.Add(chatMenu);
+
         }
 
 
@@ -114,6 +114,24 @@ namespace RollPlay
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //TODO
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
+
         }
     }
 }

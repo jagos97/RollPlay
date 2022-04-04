@@ -8,6 +8,78 @@
         Name="MainShop" Height="568" Width="320">
 
     <Grid>
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="TavernNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
         
         <StackPanel Orientation="Vertical">
             <StackPanel Panel.ZIndex="10">
@@ -47,5 +119,8 @@
             </Border>
 
         </StackPanel>
+
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+
     </Grid>
 </Window>

@@ -27,6 +27,9 @@ namespace RollPlay
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
 
+        private static bool navBarMenuShown = false;
+
+
 
 
         public ShopWindow(string ShopName, string ShopKeep, List<string> items, List<string> prices, string PartyName, string PlayerName)
@@ -79,6 +82,32 @@ namespace RollPlay
         public void ChatSubMenu_Click(object sender, RoutedEventArgs e)
         {
             //TODO
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
+        }
+
+        private void TavernNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            TavernMenuWindow window = new TavernMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
 
     }

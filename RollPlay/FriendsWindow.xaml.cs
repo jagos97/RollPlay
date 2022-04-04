@@ -21,6 +21,9 @@ namespace RollPlay
     /// </summary>
     public partial class FriendsWindow : Window
     {
+
+        private static bool navBarMenuShown = false;
+
         private static bool popupShown = false;
         public static Border friendSelected = null;
         public FriendsWindow()
@@ -85,6 +88,23 @@ namespace RollPlay
             popupShown = false;
             FriendHolder.Children.Remove(friendSelected);
             SubMenuHolder.Children.Clear();
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
         }
     }
 }
