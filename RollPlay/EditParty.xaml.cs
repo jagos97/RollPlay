@@ -21,8 +21,10 @@ namespace RollPlay
     /// </summary>
     public partial class EditPartyWindow : Window
     {
+        public static StackPanel playerSelected = null;
 
         public string PartyName { get; set; } 
+        public string InitialName { get; set; }
 
         public string PlayerName { get; set; } 
 
@@ -35,6 +37,7 @@ namespace RollPlay
         {
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
+            this.InitialName = PartyName;
             InitializeComponent();
         }
 
@@ -84,6 +87,21 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
 
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            this.PartyName = this.InitialName;
+            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void RemovePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
         }
     }
 }

@@ -118,8 +118,9 @@
 
                     <ScrollViewer Height="Auto" Width="Auto" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="Auto">
-                            <StackPanel Orientation="Vertical" Height="Auto">
-                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
+                            
+                            <StackPanel Name="Player1" Orientation="Vertical" Height="Auto">
+                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10" Click="Button_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -127,7 +128,7 @@
                                 <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="75" Text="{Binding ElementName=PartyWindow, Path=PlayerName}" Margin="-5"/>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player2" Orientation="Vertical" >
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
@@ -136,7 +137,7 @@
                                 <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player3" Orientation="Vertical">
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>
@@ -145,7 +146,7 @@
                                 <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="-10">Character</Label>
                             </StackPanel>
 
-                            <StackPanel Orientation="Vertical">
+                            <StackPanel Name="Player4" Orientation="Vertical">
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="10,10">
                                     <Button.Background>
                                         <ImageBrush ImageSource="/pics/defaultCharacter.png" Stretch="Uniform"/>

@@ -26,9 +26,7 @@ namespace RollPlay
 
         public string PlayerName { get; set; } 
 
-        public static bool invitePopupShown = false;
         public static bool popupShown = false;
-        public static bool chatPopupShown = false;
         public static Border partySelected = null;
 
         public PartyPageWindow(string PartyName, string PlayerName)
@@ -40,7 +38,7 @@ namespace RollPlay
 
         private void MainChat_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            //TODO
         }
 
         private void BackToMain_Click(object sender, RoutedEventArgs e)
@@ -83,38 +81,19 @@ namespace RollPlay
 
         private void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
-            if (invitePopupShown)
-            {
-                InviteToParty inviteMenu = new InviteToParty();
-                overlay.Children.Clear();
-                invitePopupShown = false;
-            }
-            else
-            {
+
                 InviteToParty inviteMenu = new InviteToParty();
                 overlay.Children.Clear();
                 overlay.Children.Add(inviteMenu);
                 invitePopupShown = true;
-
-            }
         }
 
         private void CreatePartyChat_Click(object sender, RoutedEventArgs e)
         {
-
-            if (chatPopupShown)
-            {
-                overlay.Children.Clear();
-                chatPopupShown = false;
-            }
-            else
-            {
-
-                CreatePartyChat chatMenu = new CreatePartyChat();
+                CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName);
                 overlay.Children.Clear();
                 overlay.Children.Add(chatMenu);
-                chatPopupShown = true;
-            }
+            
         }
 
 
@@ -130,6 +109,11 @@ namespace RollPlay
                 scrollViewer.LineRight();
             }
             e.Handled = true;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
         }
     }
 }
