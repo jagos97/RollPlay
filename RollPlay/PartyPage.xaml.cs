@@ -136,7 +136,9 @@ namespace RollPlay
 
         private void Availability_Click(object sender, RoutedEventArgs e)
         {
-            EditAvailabilityWindow window = new EditAvailabilityWindow(PartyName);
+          
+
+            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
