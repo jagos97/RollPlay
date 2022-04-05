@@ -22,27 +22,162 @@ namespace RollPlay
     public partial class EditAvailabilityWindow : Window
     {
 
+        Color color = (Color)ColorConverter.ConvertFromString("#87A397");
+        System.Drawing.Color myColor = System.Drawing.ColorTranslator.FromHtml("#87A397");
 
 
         public string PartyName { get; set; }
+        public string PlayerName { get; set; }
+
+        public Grid inputGrid = null;
 
 
 
 
-        public EditAvailabilityWindow(string PartyName)
+        public EditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
         {
-            this.PartyName = PartyName;
-            InitializeComponent();
+
+            Brush brush = Brushes.Black;
+            if (brush.IsFrozen)
+            {
+                brush = brush.Clone();
+            }
+            brush.Opacity = 0.35;
+
+            if (inputGrid == null)
+            {
+                this.PartyName = PartyName;
+                this.PlayerName = PlayerName;
+
+                InitializeComponent();
+            } else
+            {
+
+                this.PartyName = PartyName;
+                this.PlayerName = PlayerName;
+                this.inputGrid = inputGrid;
+                Border border = new Border();
+                Label label = new Label();
+                Button button = new Button();
+                InitializeComponent();
+
+                for (int index = this.Calendar.Children.Count - 1; index >= 0; index--)
+                {
+                    this.Calendar.Children.RemoveAt(index);
+                }
+
+
+
+                for (int i = inputGrid.Children.Count - 1; i >= 0; i--)
+                {
+
+
+                    UIElement item = inputGrid.Children[i];
+                    int r = Grid.GetRow(item);
+                    int c = Grid.GetColumn(item);
+
+
+                    if (item is Border)
+                    {
+
+                        Border itemBorder = item as Border;
+                        Label itemLabel = itemBorder.Child as Label;
+
+                        border = itemBorder;
+                        label = itemLabel;
+                        border.Child = label;
+
+                        border.SetValue(Grid.RowProperty, r);
+                        border.SetValue(Grid.ColumnProperty, c);
+
+                        Grid parent = border.Parent as Grid;
+
+                        if (parent != null)
+                        {
+                            parent.Children.Remove(border);
+                        }
+
+                        this.Calendar.Children.Add(border);
+
+                    }
+
+                    if (item is Label)
+                    {
+
+                        Button itemButton = new Button();
+                        Label itemLabel = item as Label;
+
+                        itemButton.BorderBrush = brush; 
+                        itemButton.BorderThickness = itemLabel.BorderThickness;
+                        itemButton.Content = itemLabel.Content;
+                        itemButton.Background = itemLabel.Background;
+                        itemButton.Foreground = itemLabel.Foreground;
+                        itemButton.Click += Button_Click;
+
+                        itemButton.SetValue(Grid.RowProperty, r);
+                        itemButton.SetValue(Grid.ColumnProperty, c);
+
+                        Grid parent = itemButton.Parent as Grid;
+
+                        if (parent != null)
+                        {
+                            parent.Children.Remove(itemButton);
+                        }
+
+                        this.Calendar.Children.Add(itemButton);
+
+                    }
+
+                    if (!(item is Label) && !(item is Border))
+                    {
+
+                        Button itemButton = new Button();
+
+                        itemButton.BorderBrush = brush;
+                        itemButton.BorderThickness = new Thickness(0,0,.5,.5);
+                        itemButton.Content = "x";
+                        itemButton.Background = Brushes.Transparent;
+                        itemButton.Foreground = Brushes.Transparent;
+                        itemButton.Click += Button_Click;
+
+
+                        itemButton.SetValue(Grid.RowProperty, r);
+                        itemButton.SetValue(Grid.ColumnProperty, c);
+
+                        Grid parent = itemButton.Parent as Grid;
+                        if (parent != null)
+                        {
+                            parent.Children.Remove(itemButton);
+                        }
+
+                        this.Calendar.Children.Add(itemButton);
+
+
+                    }
+
+                }
+
+            }
         }
+        
 
         public void UpdateAvailability_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, Calendar);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+
         }
 
         public void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, null);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close(); 
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
@@ -50,8 +185,6 @@ namespace RollPlay
             Button someButton = sender as Button;
             if (someButton.Content.Equals("x"))
             {
-                Color color = (Color)ColorConverter.ConvertFromString("#87A397");
-                System.Drawing.Color myColor = System.Drawing.ColorTranslator.FromHtml("#87A397");
                 someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
                 int index = Grid.GetRow(someButton);
                 UIElement timeLabel = null;
@@ -77,9 +210,53 @@ namespace RollPlay
                 someButton.Content = "x";
 
             }
-            {
+        }
 
+        public void ClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (UIElement item in Calendar.Children)
+            {
+                if (item is Button)
+                {
+                    Button button = item as Button;
+                    button.Background = Brushes.Transparent;
+                    button.Foreground = Brushes.Transparent;
+                    button.Content = "x";
+                }
             }
         }
+
+        public void SelectAll_Click(object sender, RoutedEventArgs e)
+        {
+
+            UIElement timeLabel = null;
+
+            foreach (UIElement item in Calendar.Children)
+            {
+                if (item is Button)
+                {
+                    Button button = item as Button;
+
+                    int r = Grid.GetRow(button);
+                    int c = 0;
+
+                    for (int i = 0; i < Calendar.Children.Count; i++)
+                    {
+                        UIElement a = Calendar.Children[i];
+                        if (Grid.GetRow(a) == r && Grid.GetColumn(a) == 0)
+                        {
+                            timeLabel = a;
+                            Border border1 = timeLabel as Border;
+                            Label label1 = border1.Child as Label;
+                            button.Content = label1.Content;
+                            button.Foreground = Brushes.White;
+                            button.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
