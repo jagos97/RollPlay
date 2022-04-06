@@ -19,7 +19,7 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class EditAvailabilityWindow : Window
+    public partial class AltEditAvailabilityWindow : Window
     {
 
         Color color = (Color)ColorConverter.ConvertFromString("#87A397");
@@ -34,7 +34,7 @@ namespace RollPlay
 
 
 
-        public EditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
+        public AltEditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
         {
 
             Brush brush = Brushes.Black;
@@ -112,7 +112,8 @@ namespace RollPlay
                         itemButton.Content = itemLabel.Content;
                         itemButton.Background = itemLabel.Background;
                         itemButton.Foreground = itemLabel.Foreground;
-                        itemButton.Click += Button_Click;
+                        itemButton.PreviewMouseDown += Button_Click;
+                        itemButton.MouseEnter += OnMouseMove;
 
                         itemButton.SetValue(Grid.RowProperty, r);
                         itemButton.SetValue(Grid.ColumnProperty, c);
@@ -138,7 +139,9 @@ namespace RollPlay
                         itemButton.Content = "x";
                         itemButton.Background = Brushes.Transparent;
                         itemButton.Foreground = Brushes.Transparent;
-                        itemButton.Click += Button_Click;
+                        itemButton.PreviewMouseDown += Button_Click;
+                        itemButton.MouseEnter += OnMouseMove;
+
 
 
                         itemButton.SetValue(Grid.RowProperty, r);
@@ -163,7 +166,7 @@ namespace RollPlay
 
         public void UpdateAvailability_Click(object sender, RoutedEventArgs e)
         {
-            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, Calendar);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, Calendar);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -173,7 +176,7 @@ namespace RollPlay
 
         public void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, null);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -199,6 +202,7 @@ namespace RollPlay
                         Label label1 = border1.Child as Label;
                         someButton.Content = label1.Content;
                         someButton.Foreground = Brushes.White;
+                        someButton.FontSize = 10;
                     }
                         
                 }
@@ -210,7 +214,10 @@ namespace RollPlay
                 someButton.Content = "x";
 
             }
+
+            e.Handled = true;
         }
+
 
         public void ClearAll_Click(object sender, RoutedEventArgs e)
         {
@@ -222,6 +229,50 @@ namespace RollPlay
                     button.Background = Brushes.Transparent;
                     button.Foreground = Brushes.Transparent;
                     button.Content = "x";
+                }
+            }
+        }
+
+        public void OnMouseMove (object sender, MouseEventArgs e)
+        {
+            var target = sender;
+            if (target is Button)
+            {
+                Button someButton = target as Button;
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    if (someButton.Content.Equals("x"))
+                    {
+                        someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                        int index = Grid.GetRow(someButton);
+                        UIElement timeLabel = null;
+
+                        for (int i = 0; i < Calendar.Children.Count; i++)
+                        {
+                            UIElement a = Calendar.Children[i];
+                            if (Grid.GetRow(a) == index && Grid.GetColumn(a) == 0)
+                            {
+                                timeLabel = a;
+                                Border border1 = timeLabel as Border;
+                                Label label1 = border1.Child as Label;
+                                someButton.Content = label1.Content;
+                                someButton.Foreground = Brushes.White;
+                                someButton.FontSize = 10;
+                                e.Handled = true;
+                            }
+
+                        }
+
+                    }
+                    else
+                    {
+                        someButton.Background = Brushes.Transparent;
+                        someButton.Foreground = Brushes.Transparent;
+                        someButton.Content = "x";
+                        e.Handled = true;
+
+
+                    }
                 }
             }
         }
@@ -250,6 +301,7 @@ namespace RollPlay
                             Label label1 = border1.Child as Label;
                             button.Content = label1.Content;
                             button.Foreground = Brushes.White;
+                            button.FontSize = 10;
                             button.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
 
                         }

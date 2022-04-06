@@ -1,5 +1,5 @@
-﻿<Window x:Class="RollPlay.MyAvailabilityWindow"
-        x:Name="MyAvailability"
+﻿<Window x:Class="RollPlay.AltMyAvailabilityWindow"
+        x:Name="AltMyAvailability"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -48,19 +48,19 @@
                     </StackPanel>
                     <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
-                    <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Height="Auto" Width="Auto" MaxHeight="325">
-                        <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto" MaxHeight="1000">
+                    <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
+                        <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
                             <Grid Name="Calendar">
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
                                 </Grid.ColumnDefinitions>
 
                                 <Grid.RowDefinitions>
@@ -103,49 +103,49 @@
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="SUNDAY" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
+                                    <Label Content="SUN" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="2" BorderThickness="0,0,0,.5"  >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="MONDAY" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="3" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="TUESDAY" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="4" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="WEDNESDAY" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="5" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="THURSDAY" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="6" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="FRIDAY" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <Border Grid.Row="0" Grid.Column="7" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="SATURDAY" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
+                                    <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
 
