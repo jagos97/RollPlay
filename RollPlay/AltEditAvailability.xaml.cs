@@ -29,7 +29,12 @@ namespace RollPlay
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
 
-        public Grid inputGrid = null;
+        public Grid inputGrid { get; set; }
+
+        List<Button> UndoChanges = new List<Button>();
+        List<Button> RedoChanges = new List<Button>();
+
+
 
 
 
@@ -189,29 +194,17 @@ namespace RollPlay
             if (someButton.Content.Equals("x"))
             {
                 someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
-                int index = Grid.GetRow(someButton);
-                UIElement timeLabel = null;
-
-                for (int i = 0; i < Calendar.Children.Count; i++)
-                {
-                    UIElement a = Calendar.Children[i];
-                    if (Grid.GetRow(a) == index && Grid.GetColumn(a) == 0)
-                    {
-                        timeLabel = a;
-                        Border border1 = timeLabel as Border;
-                        Label label1 = border1.Child as Label;
-                        someButton.Content = label1.Content;
-                        someButton.Foreground = Brushes.White;
-                        someButton.FontSize = 10;
-                    }
-                        
-                }
+                someButton.Foreground = Brushes.Transparent;
+                someButton.Content = "y";
+                UndoChanges.Add(someButton);
 
             } else
             {
                 someButton.Background = Brushes.Transparent;
                 someButton.Foreground = Brushes.Transparent;
                 someButton.Content = "x";
+                UndoChanges.Add(someButton);
+
 
             }
 
@@ -244,24 +237,10 @@ namespace RollPlay
                     if (someButton.Content.Equals("x"))
                     {
                         someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
-                        int index = Grid.GetRow(someButton);
-                        UIElement timeLabel = null;
+                        someButton.Content = "y";
+                        someButton.Foreground = Brushes.Transparent;
+                        UndoChanges.Add(someButton);
 
-                        for (int i = 0; i < Calendar.Children.Count; i++)
-                        {
-                            UIElement a = Calendar.Children[i];
-                            if (Grid.GetRow(a) == index && Grid.GetColumn(a) == 0)
-                            {
-                                timeLabel = a;
-                                Border border1 = timeLabel as Border;
-                                Label label1 = border1.Child as Label;
-                                someButton.Content = label1.Content;
-                                someButton.Foreground = Brushes.White;
-                                someButton.FontSize = 10;
-                                e.Handled = true;
-                            }
-
-                        }
 
                     }
                     else
@@ -270,12 +249,71 @@ namespace RollPlay
                         someButton.Foreground = Brushes.Transparent;
                         someButton.Content = "x";
                         e.Handled = true;
+                        UndoChanges.Add(someButton);
+
 
 
                     }
                 }
             }
         }
+
+        public void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            if (UndoChanges.Count > 0)
+            {
+                Button someButton = UndoChanges.Last();
+                if (someButton.Content.Equals("x"))
+                {
+                    someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                    someButton.Content = "y";
+                    someButton.Foreground = Brushes.Transparent;
+                    RedoChanges.Add(someButton);
+                    UndoChanges.RemoveAt(UndoChanges.Count - 1);
+
+
+                }
+                else
+                {
+                    someButton.Background = Brushes.Transparent;
+                    someButton.Foreground = Brushes.Transparent;
+                    someButton.Content = "x";
+                    e.Handled = true;
+                    RedoChanges.Add(someButton);
+                    UndoChanges.RemoveAt(UndoChanges.Count - 1);
+
+                }
+            }
+
+        }
+
+        public void Redo_Click(object sender, RoutedEventArgs e)
+        {
+            if (RedoChanges.Count > 0)
+            {
+                Button someButton = RedoChanges.Last();
+                if (someButton.Content.Equals("x"))
+                {
+                    someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                    someButton.Content = "y";
+                    someButton.Foreground = Brushes.Transparent;
+                    UndoChanges.Add(someButton);
+                    RedoChanges.RemoveAt(RedoChanges.Count - 1);
+
+
+                }
+                else
+                {
+                    someButton.Background = Brushes.Transparent;
+                    someButton.Foreground = Brushes.Transparent;
+                    someButton.Content = "x";
+                    e.Handled = true;
+                    UndoChanges.Add(someButton);
+                    RedoChanges.RemoveAt(RedoChanges.Count - 1);
+
+                }
+            }
+    }
 
         public void SelectAll_Click(object sender, RoutedEventArgs e)
         {
