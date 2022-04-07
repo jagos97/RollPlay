@@ -29,12 +29,10 @@ namespace RollPlay
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
 
-        public Grid inputGrid { get; set; }
+        public Grid inputGrid = null;
 
         List<Button> UndoChanges = new List<Button>();
         List<Button> RedoChanges = new List<Button>();
-
-
 
 
 
@@ -251,8 +249,6 @@ namespace RollPlay
                         e.Handled = true;
                         UndoChanges.Add(someButton);
 
-
-
                     }
                 }
             }
@@ -346,6 +342,14 @@ namespace RollPlay
                     }
                 }
             }
+        }
+
+        public void AddBlock_Click(object sender, RoutedEventArgs e)
+        {
+            AvailabilityBlock addBlock = new AvailabilityBlock(PartyName, PlayerName, Calendar);
+            overlay.Children.Clear();
+            overlay.Children.Add(addBlock);
+            
         }
 
     }

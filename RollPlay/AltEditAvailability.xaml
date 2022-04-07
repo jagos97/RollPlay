@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         Height="568" Width="320">
 
-   
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="0,15,0,0">
@@ -22,16 +21,15 @@
                 </Border>
             </StackPanel>
 
-
             <StackPanel Orientation="Vertical">
                 <StackPanel>
                     <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".5" HorizontalAlignment="Center"/>
-                   
+
                     <StackPanel Orientation="Horizontal">
                         <Button BorderThickness="0,0,0,0" Background="Transparent" Margin="30, 10,130,10" Click="ClearAll_Click">CLEAR ALL</Button>
                         <Button BorderThickness="0,0,0,0" Background="Transparent" Margin="5,10,0,10" Click="SelectAll_Click">SELECT ALL</Button>
                     </StackPanel>
-                    
+
                     <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center"/>
 
                     <StackPanel Orientation="Horizontal">
@@ -61,74 +59,71 @@
                             </Button>
                             <Label Content="REMOVE" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-10"/>
                             <Label Content="BLOCK" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
                         </StackPanel>
 
                         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                            <Button BorderThickness="0,0,0,0" Margin="0, 10, 0, 0" Height="25" Width="25">
+                            <Button BorderThickness="0,0,0,0" Margin="0, 10, 0, 0" Height="25" Width="25" Click="AddBlock_Click">
                                 <Button.Background>
                                     <ImageBrush Stretch="Uniform" ImageSource="/pics/add.png"/>
                                 </Button.Background>
                             </Button>
                             <Label Content="ADD" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-10"/>
-                            <Label Content="BLOCK" HorizontalAlignment="Center" VerticalAlignment="Center"/>                       
+                            <Label Content="BLOCK" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </StackPanel>
-
-
                     </StackPanel>
+                    
                     <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="215">
-                            <StackPanel Height="Auto" Width="Auto">
-                                <Grid Name="Calendar">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="40" />
-                                        <ColumnDefinition Width="38" />
-                                        <ColumnDefinition Width="38" />
-                                        <ColumnDefinition Width="38" />
-                                        <ColumnDefinition Width="38" />
-                                        <ColumnDefinition Width="38" />
-                                        <ColumnDefinition Width="38" />
+                        <StackPanel Height="Auto" Width="Auto">
+                            <Grid Name="Calendar">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
+                                    <ColumnDefinition Width="38" />
                                     <ColumnDefinition Width="38" />
                                 </Grid.ColumnDefinitions>
 
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="40"/>
+                                </Grid.RowDefinitions>
 
-               
                                 <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
                                     <Label Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
                                 </Border>
-                                    
+
                                 <Border Grid.Row="0" Grid.Column="1" BorderThickness="0,0,0,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
@@ -178,7 +173,6 @@
                                     <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
                                 </Border>
 
-
                                 <Border Grid.Row="1" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
@@ -199,14 +193,14 @@
                                     </Border.BorderBrush>
                                     <Label Content="2AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
-                                    
+
                                 <Border Grid.Row="4" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
                                     <Label Content="3AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
-                                    
+
                                 <Border Grid.Row="5" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
@@ -347,9 +341,9 @@
                                     </Border.BorderBrush>
                                     <Label Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
-                                    
-                                    
-                                    <!--buttons column=1-->
+
+
+                                <!--buttons column=1-->
                                 <Button  Grid.Column="1" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -493,8 +487,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".25"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--Buttons Column=2-->
+
+                                <!--Buttons Column=2-->
 
                                 <Button  Grid.Column="2" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
@@ -639,8 +633,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--buttons column=3-->
+
+                                <!--buttons column=3-->
 
                                 <Button  Grid.Column="3" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
@@ -785,8 +779,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--buttons column=4-->
+
+                                <!--buttons column=4-->
                                 <Button  Grid.Column="4" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -870,7 +864,7 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
+
                                 <Button Grid.Column="4" Grid.Row="15" Background="Transparent" BorderThickness="0,0,.5,.5" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -931,8 +925,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--buttons column=5-->
+
+                                <!--buttons column=5-->
                                 <Button  Grid.Column="5" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -1016,7 +1010,7 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
+
                                 <Button Grid.Column="5" Grid.Row="15" Background="Transparent" BorderThickness="0,0,.5,.5" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -1077,8 +1071,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--buttons column=6-->
+
+                                <!--buttons column=6-->
                                 <Button  Grid.Column="6" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -1162,7 +1156,7 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
+
                                 <Button Grid.Column="6" Grid.Row="15" Background="Transparent" BorderThickness="0,0,.5,.5" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -1223,8 +1217,8 @@
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-                                    
-                                    <!--button column=7-->
+
+                                <!--button column=7-->
                                 <Button  Grid.Column="7" Grid.Row="1" BorderThickness="0,0,.5,.5" Background="Transparent" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
@@ -1362,30 +1356,17 @@
                                     </Button.BorderBrush>
                                 </Button>
 
-
                                 <Button Grid.Column="7" Grid.Row="24" Background="Transparent" BorderThickness="0,0,.5,.5" Content="x" Foreground="Transparent" Click="Button_Click">
                                     <Button.BorderBrush>
                                         <SolidColorBrush Color="Black" Opacity=".15"/>
                                     </Button.BorderBrush>
                                 </Button>
-
-
-
-
-
-
                             </Grid>
-                            </StackPanel>
-                        </ScrollViewer>
-
-
+                        </StackPanel>
+                    </ScrollViewer>
                 </StackPanel>
-                
-                
             </StackPanel>
         </StackPanel>
-
-
 
         <StackPanel Panel.ZIndex="5" Background="White" VerticalAlignment="Bottom" Height="100">
                 <Line StrokeThickness=".5" X1="0" X2="300" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>
@@ -1407,7 +1388,9 @@
                     <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
                 </Button>
             </StackPanel>
-            
+
+        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
+
     </Grid>
 </Window>
     

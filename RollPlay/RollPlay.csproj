@@ -87,6 +87,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AvailabilityBlock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CreatePartyChat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,6 +108,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="AvailabilityBlock.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CreatePartyChat.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
