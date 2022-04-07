@@ -19,7 +19,7 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class EditAvailabilityWindow : Window
+    public partial class AltEditAvailabilityWindow : Window
     {
 
         Color color = (Color)ColorConverter.ConvertFromString("#87A397");
@@ -31,10 +31,13 @@ namespace RollPlay
 
         public Grid inputGrid = null;
 
+        List<Button> UndoChanges = new List<Button>();
+        List<Button> RedoChanges = new List<Button>();
 
 
 
-        public EditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
+
+        public AltEditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
         {
 
             Brush brush = Brushes.Black;
@@ -112,7 +115,8 @@ namespace RollPlay
                         itemButton.Content = itemLabel.Content;
                         itemButton.Background = itemLabel.Background;
                         itemButton.Foreground = itemLabel.Foreground;
-                        itemButton.Click += Button_Click;
+                        itemButton.PreviewMouseDown += Button_Click;
+                        itemButton.MouseEnter += OnMouseMove;
 
                         itemButton.SetValue(Grid.RowProperty, r);
                         itemButton.SetValue(Grid.ColumnProperty, c);
@@ -138,7 +142,9 @@ namespace RollPlay
                         itemButton.Content = "x";
                         itemButton.Background = Brushes.Transparent;
                         itemButton.Foreground = Brushes.Transparent;
-                        itemButton.Click += Button_Click;
+                        itemButton.PreviewMouseDown += Button_Click;
+                        itemButton.MouseEnter += OnMouseMove;
+
 
 
                         itemButton.SetValue(Grid.RowProperty, r);
@@ -163,7 +169,7 @@ namespace RollPlay
 
         public void UpdateAvailability_Click(object sender, RoutedEventArgs e)
         {
-            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, Calendar);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, Calendar);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -173,7 +179,7 @@ namespace RollPlay
 
         public void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, null);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -186,31 +192,23 @@ namespace RollPlay
             if (someButton.Content.Equals("x"))
             {
                 someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
-                int index = Grid.GetRow(someButton);
-                UIElement timeLabel = null;
-
-                for (int i = 0; i < Calendar.Children.Count; i++)
-                {
-                    UIElement a = Calendar.Children[i];
-                    if (Grid.GetRow(a) == index && Grid.GetColumn(a) == 0)
-                    {
-                        timeLabel = a;
-                        Border border1 = timeLabel as Border;
-                        Label label1 = border1.Child as Label;
-                        someButton.Content = label1.Content;
-                        someButton.Foreground = Brushes.White;
-                    }
-                        
-                }
+                someButton.Foreground = Brushes.Transparent;
+                someButton.Content = "y";
+                UndoChanges.Add(someButton);
 
             } else
             {
                 someButton.Background = Brushes.Transparent;
                 someButton.Foreground = Brushes.Transparent;
                 someButton.Content = "x";
+                UndoChanges.Add(someButton);
+
 
             }
+
+            e.Handled = true;
         }
+
 
         public void ClearAll_Click(object sender, RoutedEventArgs e)
         {
@@ -225,6 +223,93 @@ namespace RollPlay
                 }
             }
         }
+
+        public void OnMouseMove (object sender, MouseEventArgs e)
+        {
+            var target = sender;
+            if (target is Button)
+            {
+                Button someButton = target as Button;
+                if (e.LeftButton == MouseButtonState.Pressed)
+                {
+                    if (someButton.Content.Equals("x"))
+                    {
+                        someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                        someButton.Content = "y";
+                        someButton.Foreground = Brushes.Transparent;
+                        UndoChanges.Add(someButton);
+
+
+                    }
+                    else
+                    {
+                        someButton.Background = Brushes.Transparent;
+                        someButton.Foreground = Brushes.Transparent;
+                        someButton.Content = "x";
+                        e.Handled = true;
+                        UndoChanges.Add(someButton);
+
+                    }
+                }
+            }
+        }
+
+        public void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            if (UndoChanges.Count > 0)
+            {
+                Button someButton = UndoChanges.Last();
+                if (someButton.Content.Equals("x"))
+                {
+                    someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                    someButton.Content = "y";
+                    someButton.Foreground = Brushes.Transparent;
+                    RedoChanges.Add(someButton);
+                    UndoChanges.RemoveAt(UndoChanges.Count - 1);
+
+
+                }
+                else
+                {
+                    someButton.Background = Brushes.Transparent;
+                    someButton.Foreground = Brushes.Transparent;
+                    someButton.Content = "x";
+                    e.Handled = true;
+                    RedoChanges.Add(someButton);
+                    UndoChanges.RemoveAt(UndoChanges.Count - 1);
+
+                }
+            }
+
+        }
+
+        public void Redo_Click(object sender, RoutedEventArgs e)
+        {
+            if (RedoChanges.Count > 0)
+            {
+                Button someButton = RedoChanges.Last();
+                if (someButton.Content.Equals("x"))
+                {
+                    someButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                    someButton.Content = "y";
+                    someButton.Foreground = Brushes.Transparent;
+                    UndoChanges.Add(someButton);
+                    RedoChanges.RemoveAt(RedoChanges.Count - 1);
+
+
+                }
+                else
+                {
+                    someButton.Background = Brushes.Transparent;
+                    someButton.Foreground = Brushes.Transparent;
+                    someButton.Content = "x";
+                    e.Handled = true;
+                    UndoChanges.Add(someButton);
+                    RedoChanges.RemoveAt(RedoChanges.Count - 1);
+
+                }
+            }
+    }
 
         public void SelectAll_Click(object sender, RoutedEventArgs e)
         {
@@ -245,17 +330,27 @@ namespace RollPlay
                         UIElement a = Calendar.Children[i];
                         if (Grid.GetRow(a) == r && Grid.GetColumn(a) == 0)
                         {
-                            timeLabel = a;
-                            Border border1 = timeLabel as Border;
-                            Label label1 = border1.Child as Label;
-                            button.Content = label1.Content;
-                            button.Foreground = Brushes.White;
                             button.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
 
                         }
                     }
                 }
             }
+        }
+
+        public void AddBlock_Click(object sender, RoutedEventArgs e)
+        {
+            AvailabilityBlock addBlock = new AvailabilityBlock();
+            overlay.Children.Clear();
+            overlay.Children.Add(addBlock);
+            
+        }
+
+        public void RemoveBlock_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteBlock removeBlock = new DeleteBlock();
+            overlay.Children.Clear();
+            overlay.Children.Add(removeBlock);
         }
 
     }

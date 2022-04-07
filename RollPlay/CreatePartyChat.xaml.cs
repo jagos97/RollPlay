@@ -135,14 +135,12 @@ namespace RollPlay
                                     if ((box.Name).Equals(stockName))
                                     {
                                         items.Add(box.Text);
-                                        System.Diagnostics.Debug.WriteLine(box.Text + " added to Array 'items'");
 
 
                                     }
 
                                     if ((box.Name).Equals(itemName)){
                                         prices.Add(box.Text);
-                                        System.Diagnostics.Debug.WriteLine(box.Text + " added to Array 'prices'");
 
                                     }
 

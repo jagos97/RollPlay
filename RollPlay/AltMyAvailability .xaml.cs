@@ -19,7 +19,7 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class MyAvailabilityWindow : Window
+    public partial class AltMyAvailabilityWindow : Window
     {
 
         public string PartyName { get; set; }
@@ -30,7 +30,7 @@ namespace RollPlay
         public Grid calendarGrid = null;
 
 
-        public MyAvailabilityWindow(string PartyName, string PlayerName, Grid calendarGrid)
+        public AltMyAvailabilityWindow(string PartyName, string PlayerName, Grid calendarGrid)
         {
             this.calendarGrid = calendarGrid;
             this.PartyName = PartyName;
@@ -100,6 +100,7 @@ namespace RollPlay
                         itemLabel.Foreground = itemButton.Foreground;
                         itemLabel.HorizontalContentAlignment = HorizontalAlignment.Center;
                         itemLabel.VerticalContentAlignment = VerticalAlignment.Center;
+                        itemLabel.FontSize = 10;
 
                         itemLabel.SetValue(Grid.RowProperty, r);
                         itemLabel.SetValue(Grid.ColumnProperty, c);
@@ -123,7 +124,7 @@ namespace RollPlay
 
         public void EditAvailability_Click(object sender, RoutedEventArgs e)
         {
-            EditAvailabilityWindow window = new EditAvailabilityWindow(PartyName, PlayerName, Calendar);
+            AltEditAvailabilityWindow window = new AltEditAvailabilityWindow(PartyName, PlayerName, Calendar);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

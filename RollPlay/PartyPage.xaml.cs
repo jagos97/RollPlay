@@ -138,7 +138,7 @@ namespace RollPlay
         {
           
 
-            MyAvailabilityWindow window = new MyAvailabilityWindow(PartyName, PlayerName, null);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

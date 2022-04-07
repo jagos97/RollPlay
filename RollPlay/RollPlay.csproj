@@ -87,6 +87,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DeleteBlock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AvailabilityBlock.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="CreatePartyChat.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -105,16 +111,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="DeleteBlock.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AvailabilityBlock.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CreatePartyChat.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MyAvailability.xaml">
+    <Page Update="AltEditAvailability.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="EditAvailability.xaml">
+    <Page Update="AltMyAvailability .xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="InviteToParty.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
