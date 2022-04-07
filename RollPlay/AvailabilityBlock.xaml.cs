@@ -20,6 +20,7 @@ namespace RollPlay
     /// </summary>
     /// 
 
+
     public partial class AvailabilityBlock : UserControl
     {
         Color color = (Color)ColorConverter.ConvertFromString("#3094CC");
@@ -30,16 +31,15 @@ namespace RollPlay
 
         
 
-        public Grid updateCalendar { get; set; }
-        public string PartyName { get; set; }
-
-        public string PlayerName { get; set; }
+      
 
         public List<string> days = new List<string>();
 
-        public AvailabilityBlock(String PartyName, String PlayerName, Grid Calendar)
-        {
+        public List<string> addBlock = new List<string>();
 
+
+        public AvailabilityBlock()
+        {
             InitializeComponent();
                  
         }
@@ -282,18 +282,15 @@ namespace RollPlay
                     {
                         endRow = 1;
                     }
-                    else
-                    {
-                        endRow = endRow + 1;
-                    }
+                    
                 } else
                 {
                     if (endRow == 12)
                     {
-                        endRow = 13;
+                        endRow = 12;
                     } else
                     {
-                        endRow = endRow + 13;
+                        endRow = endRow + 12;
                     }
 
                 }
@@ -307,6 +304,7 @@ namespace RollPlay
                         col = 1;
                         int thisStart = startRow;
                         int thisend = endRow;
+                       
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -342,7 +340,7 @@ namespace RollPlay
                         col = 2;
                         int thisStart = startRow;
                         int thisend = endRow;
-
+                      
 
                         foreach (UIElement item in window.Calendar.Children)
                         {
@@ -376,6 +374,7 @@ namespace RollPlay
                         col = 3;
                         int thisStart = startRow;
                         int thisend = endRow;
+                       
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -410,6 +409,7 @@ namespace RollPlay
                         col = 4;
                         int thisStart = startRow;
                         int thisend = endRow;
+                      
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -444,6 +444,7 @@ namespace RollPlay
                         col = 5;
                         int thisStart = startRow;
                         int thisend = endRow;
+                    
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -478,6 +479,7 @@ namespace RollPlay
                         col = 6;
                         int thisStart = startRow;
                         int thisend = endRow;
+                   
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -512,6 +514,7 @@ namespace RollPlay
                         col = 7;
                         int thisStart = startRow;
                         int thisend = endRow;
+            
 
 
                         foreach (UIElement item in window.Calendar.Children)
@@ -545,6 +548,14 @@ namespace RollPlay
 
             }
 
+            window.overlay.Children.Clear();
+
+            
+        }
+
+        public void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            AltEditAvailabilityWindow window = Window.GetWindow(this) as AltEditAvailabilityWindow;
             window.overlay.Children.Clear();
         }
     }

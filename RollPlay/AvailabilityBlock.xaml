@@ -214,7 +214,7 @@
                     <Label Content="CREATE BLOCK" Foreground="white" FontWeight="ExtraBold"/>
                 </Button>
 
-                <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,0,0,25">
+                <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,0,0,25" Click="Cancel_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="6.25"/>

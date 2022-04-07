@@ -330,12 +330,6 @@ namespace RollPlay
                         UIElement a = Calendar.Children[i];
                         if (Grid.GetRow(a) == r && Grid.GetColumn(a) == 0)
                         {
-                            timeLabel = a;
-                            Border border1 = timeLabel as Border;
-                            Label label1 = border1.Child as Label;
-                            button.Content = label1.Content;
-                            button.Foreground = Brushes.White;
-                            button.FontSize = 10;
                             button.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
 
                         }
@@ -346,10 +340,17 @@ namespace RollPlay
 
         public void AddBlock_Click(object sender, RoutedEventArgs e)
         {
-            AvailabilityBlock addBlock = new AvailabilityBlock(PartyName, PlayerName, Calendar);
+            AvailabilityBlock addBlock = new AvailabilityBlock();
             overlay.Children.Clear();
             overlay.Children.Add(addBlock);
             
+        }
+
+        public void RemoveBlock_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteBlock removeBlock = new DeleteBlock();
+            overlay.Children.Clear();
+            overlay.Children.Add(removeBlock);
         }
 
     }

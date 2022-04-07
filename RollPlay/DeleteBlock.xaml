@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="RollPlay.DeleteBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="Auto" MinHeight="405" Width="320"
+             Name="DeleteBlockWindow">
+
+    <Grid>
+        
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+
+        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,0" Background="White" Width="288" Height="Auto" MinHeight="405" MaxHeight="500" VerticalAlignment="Center">
+                <Label Content="DELETE AVAILBILITY BLOCK" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="17" Margin="0, 10, 0, 10"/>
+
+                <StackPanel Orientation="Vertical" Name="BlockDisplay">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label Content="Day" FontWeight="Medium" Margin="0,0,0,0"/>
+                        <Label Content="Start Time" FontWeight="Medium" Margin="10,0,0,0" />
+                        <Label Content="End Time" FontWeight="Medium" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+
+
+
+
+            </StackPanel>
+
+            
+            
+        </Border>
+
+
+
+
+
+
+    </Grid>
+</UserControl>
