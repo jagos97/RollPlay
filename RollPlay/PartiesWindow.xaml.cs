@@ -84,7 +84,7 @@ namespace RollPlay
             string Name = (string)PartyName.Content;
             string Player = (string)PlayerName.Content;
 
-            PartyPageWindow window = new PartyPageWindow(Name, Player);
+            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -96,7 +96,7 @@ namespace RollPlay
             string Name = (string)PartyName2.Content;
             string Player = (string)PlayerName2.Content;
 
-            PartyPageWindow window = new PartyPageWindow(Name, Player);
+            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

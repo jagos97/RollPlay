@@ -25,32 +25,44 @@
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
                         </Style>
-                        <Style TargetType="ListBoxItem">
-                            <Setter Property="OverridesDefaultStyle" Value="true"/>
-                            <Setter Property="SnapsToDevicePixels" Value="True"/>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListBoxItem">
-                                        <CheckBox IsChecked="False" Margin="5, 5" VerticalAlignment="Center">
-                                            <ContentPresenter/>
-                                        </CheckBox>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                        </Style>
+                     
                     </ListBox.Resources>
 
-                    <ListBoxItem FontSize="14" FontWeight="light">Britt</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Julio</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Ines</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Shreya</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Michael</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Dwight</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Stanley</ListBoxItem>
-                    <ListBoxItem FontSize="14" FontWeight="light">Kelly</ListBoxItem>
-                </ListBox>
+                    <ListBoxItem FontSize="14" FontWeight="light">
+                        <CheckBox Content="Michael" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                    </ListBoxItem>
 
-            <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="Cancel_Click">
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Dwight" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Pam" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Phyllis" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Kelly" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Jim" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+                <ListBoxItem FontSize="14" FontWeight="light">
+                    <CheckBox Content="Stanley" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
+                </ListBoxItem>
+
+
+
+
+
+            </ListBox>
+
+            <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="Invite_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>

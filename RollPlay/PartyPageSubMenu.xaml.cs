@@ -23,13 +23,17 @@ namespace RollPlay
 
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
+
+        public List<string> friendsList = new List<string>();
  
        
-        public PartyPageSubMenu(string PartyName, string PlayerName)
+        public PartyPageSubMenu(string PartyName, string PlayerName, List<string> friendsList)
         {
-            InitializeComponent();
+            this.friendsList = friendsList;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
+            InitializeComponent();
+
         }
 
         public void SwapCharacter_Click(object sender, RoutedEventArgs e)
@@ -38,8 +42,8 @@ namespace RollPlay
         }
         public void EditParty_Click(object sender, RoutedEventArgs e)
         {
-            
-            EditPartyWindow window = new EditPartyWindow(PartyName, PlayerName);
+
+            EditPartyWindow window = new EditPartyWindow(PartyName, PlayerName, friendsList);
             window.Show();
             window.Top = Window.GetWindow(this).Top;
             window.Left = Window.GetWindow(this).Left;

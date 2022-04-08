@@ -21,6 +21,7 @@ namespace RollPlay
     public partial class InviteToParty : UserControl
     {
         List<string> NameList = new List<string>();
+        List<string> AddFriendList = new List<string>();
 
         public InviteToParty()
         {
@@ -63,6 +64,44 @@ namespace RollPlay
         {
             this.Visibility = Visibility.Hidden;
 
+        }
+
+        private void Friend_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                CheckBox friend = sender as CheckBox;
+                string friendName = friend.Content.ToString();
+                AddFriendList.Add(friendName);
+            }
+
+        }
+
+        private void Friend_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox)
+            {
+                CheckBox friend = sender as CheckBox;
+                string friendName = friend.Content.ToString();
+                AddFriendList.Remove(friendName);
+            }
+        }
+
+        private void Invite_Click(object sender, RoutedEventArgs e)
+        {
+            PartyPageWindow window = Window.GetWindow(this) as PartyPageWindow;
+            
+            if (AddFriendList.Count > 0)
+            {
+                foreach (string friend in AddFriendList)
+                {
+                    window.addFriend(friend);
+                    System.Diagnostics.Debug.WriteLine("looping through array and adding to partypage");
+
+                }
+            }
+
+            window.overlay.Children.Clear();
         }
 
 

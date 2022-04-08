@@ -8,79 +8,7 @@
         Name="MainShop" Height="568" Width="320">
 
     <Grid>
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
-                <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
-                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="TavernNavBar_Click">
-                <Button.Background>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
-                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
-                <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
-                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
-                <Button.Background>
-                    <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
-                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
-                        <ImageBrush.RelativeTransform>
-                            <TransformGroup>
-                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
-                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </ImageBrush.RelativeTransform>
-                    </ImageBrush>
-                </Button.Background>
-            </Button>
-        </StackPanel>
-        
+     
         <StackPanel Orientation="Vertical">
             <StackPanel Panel.ZIndex="10">
                 <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,0,0,0" Click="BackToMain_Click">
@@ -94,30 +22,43 @@
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/meatball.png"/>
                 </Button.Background>
             </Button>
-            <Label Content="{Binding ElementName=MainShop, Path=ShopName}" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,-10"/>
-            <Label Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="12" HorizontalAlignment="Center" Foreground="Black" Opacity=".5"/>
+            <Label Content="{Binding ElementName=MainShop, Path=ShopName}" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,-10"/>
+            <Label Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="12" FontWeight="Light" HorizontalAlignment="Center" Foreground="Black" Opacity=".5"/>
             <Line X1="1" X2="295" Width="295" Stroke="black" Opacity=".35" HorizontalAlignment="Center" Margin="0,10,0,10"/>
             </StackPanel>
             
-            <Border Height="122" Width="261" CornerRadius="10" Background="White" BorderBrush="White">
+            <Border Name="ShopViewer" Visibility="Collapsed" Height="122" Width="261" CornerRadius="10" Background="White" BorderBrush="White">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="2"/>
                 </Border.Effect>
 
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
 
-                    <StackPanel Orientation="Vertical" Name="ShopMenu" Grid.ColumnSpan="2">
-                        <Label Content="STOCK" FontSize="20" HorizontalAlignment="Left" FontWeight="Bold" Margin="10,0,0,-10" />
+                    <StackPanel  Orientation="Vertical" Name="ShopMenu" Grid.ColumnSpan="2">
+                        <Label Content="STOCK" FontSize="20" HorizontalAlignment="Left" FontWeight="SemiBold" Margin="10,0,0,-10" />
 
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Item" FontSize="16" FontWeight="bold" HorizontalAlignment="Left" Margin="10,0,145,0"/>
-                            <Label Content="Price" FontSize="16" FontWeight="bold" HorizontalAlignment="Right"/>
+                            <Label Content="Item" FontSize="16" FontWeight="Medium" HorizontalAlignment="Left" Width="175" Margin="10,0,0,0"/>
+                            <Label Content="Price" FontSize="16" FontWeight="Medium" HorizontalAlignment="Right" Width="75"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
 
             </Border>
 
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom" Panel.ZIndex="20">
+            <Line X1="0" X2="290" StrokeThickness=".5" Stroke="Black" Width="290" HorizontalAlignment="Center" Opacity=".5"/>
+            <Label Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="8" FontWeight="Light" Margin="25,0,0,-5" FontStyle="Italic" HorizontalAlignment="Left" Width="275"/>
+            <TextBox Height="35" Width="275" Margin="0,0,0,10" BorderBrush="#A0C8CD" Background="#FFF7F6F6">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </TextBox.Resources>
+                
+            </TextBox>
         </StackPanel>
 
         <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
