@@ -36,12 +36,67 @@ namespace RollPlay
         public static bool chatPopupShown = false;
         public static Border partySelected = null;
 
-        public EditPartyWindow(string PartyName, string PlayerName)
+        public List<string> friendsList = new List<string>();
+
+        public EditPartyWindow(string PartyName, string PlayerName, List<string> friendsList)
         {
+            this.friendsList = friendsList;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
             this.InitialName = PartyName;
             InitializeComponent();
+
+                if (friendsList.Count > 0)
+            {
+                foreach (string friend in friendsList)
+                {
+                    StackPanel stack = new StackPanel();
+                    stack.Orientation = Orientation.Vertical;
+                    stack.HorizontalAlignment = HorizontalAlignment.Center;
+
+                    Button button = new Button();
+                    button.Height = 75;
+                    button.Width = 75;
+                    button.BorderThickness = new Thickness(0, 0, 0, 0);
+                    button.Margin = new Thickness(10, 10, 0, 0);
+
+                    BitmapImage bmi = new BitmapImage();
+                    ImageBrush brush = new ImageBrush();
+                    bmi.BeginInit();
+                    bmi.UriSource = new Uri("pack://application:,,,/pics/defaultCharacter.png", UriKind.Absolute);
+                    bmi.EndInit();
+                    brush.ImageSource = bmi;
+                    button.Background = brush;
+
+                    Button removeButton = new Button();
+                    removeButton.Height = 40;
+                    removeButton.Width = 40;
+                    removeButton.Click += RemovePlayer_Click;
+                    removeButton.Margin = new Thickness(50, -125, 0, 0);
+                    removeButton.BorderThickness = new Thickness(0, 0, 0, 0);
+                    BitmapImage bmi1 = new BitmapImage();
+                    ImageBrush brush1 = new ImageBrush();
+                    bmi1.BeginInit();
+                    bmi1.UriSource = new Uri("pack://application:,,,/pics/remove.png", UriKind.Absolute);
+                    bmi1.EndInit();
+                    brush1.ImageSource = bmi1;
+                    removeButton.Background = brush1;
+
+                    TextBlock textBlock = new TextBlock();
+                    textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                    textBlock.TextWrapping = TextWrapping.Wrap;
+                    textBlock.TextAlignment = TextAlignment.Center;
+                    textBlock.MaxWidth = 75;
+                    textBlock.Text = friend;
+                    textBlock.Margin = new Thickness(10, 5, 0, 0);
+
+                    stack.Children.Add(button);
+                    stack.Children.Add(removeButton);
+                    stack.Children.Add(textBlock);
+                    PartyMembers.Children.Add(stack);
+                }
+
+            }
         }
 
         private void MainChat_Click(object sender, RoutedEventArgs e)
@@ -84,7 +139,7 @@ namespace RollPlay
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -95,7 +150,7 @@ namespace RollPlay
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             this.PartyName = this.InitialName;
-            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -104,7 +159,27 @@ namespace RollPlay
 
         private void RemovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            if (sender is Button)
+            {
+                Button remove = sender as Button;
+                if (remove.Parent is StackPanel)
+                {
+                    StackPanel stack = remove.Parent as StackPanel;
+                    if (stack != null)
+                    {
+                        foreach (UIElement item in stack.Children)
+                        {
+                            if (item is TextBlock)
+                            {
+                                TextBlock friendBlock = item as TextBlock;
+                                string friend = friendBlock.Text.ToString();
+                                friendsList.Remove(friend);
+                                stack.Visibility = Visibility.Collapsed;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)

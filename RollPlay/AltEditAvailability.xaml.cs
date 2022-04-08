@@ -323,7 +323,6 @@ namespace RollPlay
                     Button button = item as Button;
 
                     int r = Grid.GetRow(button);
-                    int c = 0;
 
                     for (int i = 0; i < Calendar.Children.Count; i++)
                     {

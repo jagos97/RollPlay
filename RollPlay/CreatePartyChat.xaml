@@ -25,7 +25,9 @@
                                 </Style>
                             </TextBox.Resources>
                         </TextBox>
-                       
+                        <Label Name="NameError" Content="Chat Room Name is required" Foreground="red" Margin="20, -10, 0, 10" FontSize="8" Visibility="Collapsed"/>
+
+
                         <ListBox Name="ChatTypes" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" ItemStringFormat="">
                             <ListBox.Resources>
                                 <Style TargetType="Border">
@@ -64,13 +66,15 @@
                             </TextBox>
 
                             <Label Content="Description" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
-                            <TextBox Text="" BorderBrush="#A0C8CD" Width="245" Height="88" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                            <TextBox Name="Description1" Text="" BorderBrush="#A0C8CD" Width="245" Height="88" FontSize="14" TextAlignment="left" Padding="5, 10" Margin="0, 8" TextWrapping="Wrap">
                                 <TextBox.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="8"/>
                                     </Style>
                                 </TextBox.Resources>
                             </TextBox>
+                            <Label Name="DescriptionError" Content="Description is required" Foreground="red" Margin="20, -10, 0, 10" FontSize="8" Visibility="Collapsed"/>
+
 
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="STOCK" FontWeight="Bold" FontSize="16" Width="Auto" Height="Auto" HorizontalAlignment="Left" Margin="20,0,0,0" />
@@ -82,7 +86,7 @@
                                 </Button>
                             </StackPanel>
 
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Name="itemPrice" Orientation="Horizontal" Visibility="Collapsed">
                                 <Label Content="Item Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
                                 <Label Content="Item Price" FontSize="8" Margin="125,0,0,-10" HorizontalAlignment="Left" />
                             </StackPanel>
@@ -90,23 +94,7 @@
                             
                             <StackPanel Name="AddStockPanel" Orientation="Vertical">
                                 
-                                <StackPanel Name="stackPanel0" Orientation="Horizontal">
-                                    <TextBox Name ="stock0" BorderBrush="#A0C8CD" Width="171" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10, 0, 0" Margin="20, 8, 0, 0">
-                                        <TextBox.Resources>
-                                            <Style TargetType="Border">
-                                                <Setter Property="CornerRadius" Value="8"/>
-                                            </Style>
-                                        </TextBox.Resources>
-                                    </TextBox>
-
-                                    <TextBox Name="price0" BorderBrush="#A0C8CD" Width="68" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10, 0, 0" Margin="5, 8, 0, 0">
-                                        <TextBox.Resources>
-                                            <Style TargetType="Border">
-                                                <Setter Property="CornerRadius" Value="8"/>
-                                            </Style>
-                                        </TextBox.Resources>
-                                    </TextBox>
-                                </StackPanel>
+                               
                                 
                             </StackPanel>
                         </StackPanel>

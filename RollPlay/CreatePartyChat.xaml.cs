@@ -20,11 +20,12 @@ namespace RollPlay
     /// </summary>
     public partial class CreatePartyChat : UserControl
     {
-        int i = 1;
+        int i = 0;
         List<string> items = new List<string>();
         List<string> prices = new List<string>();
         string ShopName = null;
         string ShopKeep = null;
+        string Description = null;
         public string PartyName { get; set; }
 
         public string PlayerName { get; set; }
@@ -70,6 +71,7 @@ namespace RollPlay
 
         private void AddStock_Click(object sender, RoutedEventArgs e)
         {
+            itemPrice.Visibility = Visibility.Visible;
             StackPanel stackPanel = new StackPanel();
             stackPanel.Orientation = Orientation.Horizontal;
             stackPanel.Name = "stackPanel" + i;
@@ -109,6 +111,7 @@ namespace RollPlay
 
                 ShopName = NameSearch.Text;
                 ShopKeep = ShopKeepName.Text;
+                Description = Description1.Text;
 
                 int count = AddStockPanel.Children.Count;
                 for (int i = 0; i < count; i++)
@@ -134,13 +137,19 @@ namespace RollPlay
 
                                     if ((box.Name).Equals(stockName))
                                     {
-                                        items.Add(box.Text);
+                                       
+                                            items.Add(box.Text);
+
+                                        
 
 
                                     }
 
                                     if ((box.Name).Equals(itemName)){
-                                        prices.Add(box.Text);
+                                       
+                                            prices.Add(box.Text);
+
+                                        
 
                                     }
 
@@ -155,13 +164,23 @@ namespace RollPlay
                     }
                 }
 
-                
-                
-                ShopWindow window = new ShopWindow(ShopName, ShopKeep, items, prices, PartyName, PlayerName);
-                window.Show();
-                window.Top = Window.GetWindow(this).Top;
-                window.Left = Window.GetWindow(this).Left;
-                Window.GetWindow(this).Close();
+
+                if (String.IsNullOrWhiteSpace(ShopName) || String.IsNullOrWhiteSpace(Description))
+                {
+                    NameSearch.BorderBrush = Brushes.Red;
+                    NameError.Visibility = Visibility.Visible;
+
+                    Description1.BorderBrush = Brushes.Red;
+                    DescriptionError.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    ShopWindow window = new ShopWindow(ShopName, ShopKeep, items, prices, PartyName, PlayerName, Description);
+                    window.Show();
+                    window.Top = Window.GetWindow(this).Top;
+                    window.Left = Window.GetWindow(this).Left;
+                    Window.GetWindow(this).Close();
+                }
 
             }
 

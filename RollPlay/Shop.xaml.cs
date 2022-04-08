@@ -26,13 +26,15 @@ namespace RollPlay
         public string ShopKeep { get; set; }
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
+        public string Description { get; set; }
+
 
         private static bool navBarMenuShown = false;
 
 
 
 
-        public ShopWindow(string ShopName, string ShopKeep, List<string> items, List<string> prices, string PartyName, string PlayerName)
+        public ShopWindow(string ShopName, string ShopKeep, List<string> items, List<string> prices, string PartyName, string PlayerName, string Description)
         {
             this.ShopName = ShopName;
             this.ShopKeep = ShopKeep;
@@ -40,31 +42,41 @@ namespace RollPlay
             this.prices = prices;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
+            this.Description = Description;
             InitializeComponent();
 
-
-            for (int i = 0; i < items.Count; i++)
+            if (items.Count > 0)
             {
-                StackPanel stackPanel = new StackPanel();
-                stackPanel.Orientation = Orientation.Horizontal;
+                ShopViewer.Visibility = Visibility.Visible;
 
-                Label label1 = new Label();
-                label1.Content = items[i];
-                label1.FontSize = 16;
-                label1.FontWeight = FontWeights.Light;
-                label1.Margin = new Thickness(10, -10, 140, 0);
+                for (int i = 0; i < items.Count; i++)
+                {
+                    StackPanel stackPanel = new StackPanel();
+                    stackPanel.Orientation = Orientation.Horizontal;
+                    stackPanel.Visibility = Visibility.Visible;
 
-                Label label2 = new Label();
-                label2.Content = prices[i];
-                label2.FontSize = 16;
-                label2.FontWeight = FontWeights.Light;
-                label2.Margin = new Thickness(0, -10 ,10, 0);
+                    TextBlock label1 = new TextBlock();
+                    label1.Text = items[i];
+                    label1.FontSize = 14;
+                    label1.FontWeight = FontWeights.Light;
+                    label1.Margin = new Thickness(15, 0, 0, 0);
+                    label1.Width = 175;
+                    label1.TextWrapping = TextWrapping.Wrap;
+
+                    TextBlock label2 = new TextBlock();
+                    label2.Text = prices[i];
+                    label2.FontSize = 14;
+                    label2.FontWeight = FontWeights.Light;
+                    label2.Margin = new Thickness(0, 0, 0, 0);
+                    label2.Width = 75;
+                    label2.TextWrapping = TextWrapping.Wrap;
 
 
-                stackPanel.Children.Add(label1);
-                stackPanel.Children.Add(label2);
-                ShopMenu.Children.Add(stackPanel);
+                    stackPanel.Children.Add(label1);
+                    stackPanel.Children.Add(label2);
+                    ShopMenu.Children.Add(stackPanel);
 
+                }
             }
 
 
@@ -72,7 +84,7 @@ namespace RollPlay
 
         public void BackToMain_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, ShopName, Description, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -110,6 +122,7 @@ namespace RollPlay
             this.Close();
         }
 
+     
     }
 }
 

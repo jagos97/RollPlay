@@ -133,7 +133,7 @@ namespace RollPlay
 
         public void BackToMain_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
