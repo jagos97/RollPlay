@@ -68,9 +68,9 @@ namespace RollPlay
 
         private void Friend_Checked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox)
+            if (sender is ListBoxItem)
             {
-                CheckBox friend = sender as CheckBox;
+                ListBoxItem friend = sender as ListBoxItem;
                 string friendName = friend.Content.ToString();
                 AddFriendList.Add(friendName);
             }
@@ -79,9 +79,9 @@ namespace RollPlay
 
         private void Friend_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox)
+            if (sender is ListBoxItem)
             {
-                CheckBox friend = sender as CheckBox;
+                ListBoxItem friend = sender as ListBoxItem;
                 string friendName = friend.Content.ToString();
                 AddFriendList.Remove(friendName);
             }
@@ -96,7 +96,6 @@ namespace RollPlay
                 foreach (string friend in AddFriendList)
                 {
                     window.addFriend(friend);
-                    System.Diagnostics.Debug.WriteLine("looping through array and adding to partypage");
 
                 }
             }

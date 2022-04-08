@@ -20,48 +20,27 @@
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-                <ListBox Name="FriendsList" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" Height="115" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemStringFormat="">
-                    <ListBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="5"/>
-                        </Style>
-                     
-                    </ListBox.Resources>
-
-                    <ListBoxItem FontSize="14" FontWeight="light">
-                        <CheckBox Content="Michael" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                    </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Dwight" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Pam" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Phyllis" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Kelly" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Jim" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-                <ListBoxItem FontSize="14" FontWeight="light">
-                    <CheckBox Content="Stanley" Checked="Friend_Checked" Unchecked="Friend_Unchecked"/>
-                </ListBoxItem>
-
-
-
-
-
+            <ListBox Name="FriendsList" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" Height="115" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemStringFormat="">
+                <ListBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </ListBox.Resources>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Michael" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Pam" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Phyllis" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Dwight" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Kelly" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Stanley" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Creed" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Jim" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Ryan" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Daryl" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Angela" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Oscar" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Kevin" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem FontSize="14" FontWeight="light" Content="Meredith" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
             </ListBox>
-
             <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="Invite_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -79,8 +58,6 @@
                 </Button.Resources>
                 <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
             </Button>
-
         </StackPanel>
-
     </Grid>
 </UserControl>
