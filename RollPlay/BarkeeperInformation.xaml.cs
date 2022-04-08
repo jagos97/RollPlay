@@ -28,6 +28,8 @@ namespace RollPlay
         public string desc3 { get; set; }
         public Uri redirect { get; set; }
 
+        private static bool navBarMenuShown = false;
+
         public BarkeeperInformationWindow(string title, string desc1, string desc2, string desc3, Uri redirect)
         {
             this.title = title;
@@ -80,6 +82,22 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            } else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown=true;
+
+            }
         }
     }
 }

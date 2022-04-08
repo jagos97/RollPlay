@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="RollPlay.InviteToParty"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="568" Width="320">
+
+    <Grid>
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+        <Rectangle  Fill="White" RadiusX="10" RadiusY="10" Height="405" Width="288" Margin="0,0,0,100" />
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,150">
+            <Label Content="INVITE USER(S) TO PARTY" HorizontalAlignment="Center" FontWeight="Bold" FontSize="17" Margin="0, 36, 0, 0"/>
+            <Label Content="Search Users" FontSize="8" Margin="0,0,0,-10" HorizontalAlignment="Left" />
+            <TextBox Name ="NameSearch" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8" TextChanged="NameSearch_TextChanged">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+                <ListBox Name="FriendsList" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" Height="115" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemStringFormat="">
+                    <ListBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="OverridesDefaultStyle" Value="true"/>
+                            <Setter Property="SnapsToDevicePixels" Value="True"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <CheckBox IsChecked="False" Margin="5, 5" VerticalAlignment="Center">
+                                            <ContentPresenter/>
+                                        </CheckBox>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.Resources>
+
+                    <ListBoxItem FontSize="14" FontWeight="light">Britt</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Julio</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Ines</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Shreya</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Michael</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Dwight</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Stanley</ListBoxItem>
+                    <ListBoxItem FontSize="14" FontWeight="light">Kelly</ListBoxItem>
+                </ListBox>
+
+            <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="Cancel_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="INVITE TO PARTY" Foreground="white" FontWeight="ExtraBold"/>
+            </Button>
+
+            <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Click="Cancel_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

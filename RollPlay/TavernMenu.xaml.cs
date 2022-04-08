@@ -32,6 +32,9 @@ namespace RollPlay
         public string? Prompt5 { get; set; }
         public string? Prompt6 { get; set; }
 
+        private static bool navBarMenuShown = false;
+
+
         public TavernMenuWindow()
         {
             InitializeComponent();
@@ -96,6 +99,23 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
         }
     }
 }
