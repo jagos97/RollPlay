@@ -53,6 +53,11 @@
     <Resource Include="pics\blockUser.png" />
     <Resource Include="pics\copy.png" />
     <Resource Include="pics\deleteFriend.png" />
+    <Resource Include="pics\deleteFriend.png" />
+    <Resource Include="pics\black-remove.png" />
+    <Resource Include="pics\blockUser.png" />
+    <Resource Include="pics\copy.png" />
+    <Resource Include="pics\delete.png" />
     <Resource Include="pics\kebabmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
     <Resource Include="pics\redo.png" />
