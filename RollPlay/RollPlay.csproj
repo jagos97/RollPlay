@@ -13,16 +13,17 @@
     <None Remove="defaultpartyicon.png" />
     <None Remove="hamburger.png" />
     <None Remove="image-1.png %2814%29.png" />
-    <None Remove="image-1.png %2820%29.png" />
     <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
     <None Remove="pics\add.png" />
     <None Remove="pics\addcircle.png" />
+    <None Remove="pics\addFriend.png" />
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\black-remove.png" />
     <None Remove="pics\blockUser.png" />
     <None Remove="pics\copy.png" />
+    <None Remove="pics\deleteFriend.png" />
     <None Remove="pics\delete.png" />
     <None Remove="pics\edit.png" />
     <None Remove="pics\kebabmenu.png" />
@@ -40,6 +41,7 @@
     <None Remove="pics\Vector.svg" />
     <None Remove="pics\whitebackarrow.png" />
     <None Remove="pics\whitedirectional.png" />
+    <None Remove="pics\x.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
   </ItemGroup>
@@ -47,6 +49,11 @@
   <ItemGroup>
     <Resource Include="pics\add.png" />
     <Resource Include="pics\addcircle.png" />
+    <Resource Include="pics\addFriend.png" />
+    <Resource Include="pics\blockUser.png" />
+    <Resource Include="pics\copy.png" />
+    <Resource Include="pics\deleteFriend.png" />
+    <Resource Include="pics\deleteFriend.png" />
     <Resource Include="pics\black-remove.png" />
     <Resource Include="pics\blockUser.png" />
     <Resource Include="pics\copy.png" />
@@ -84,6 +91,7 @@
     <Resource Include="pics\Vector.svg" />
     <Resource Include="pics\whitebackarrow.png" />
     <Resource Include="pics\whitedirectional.png" />
+    <Resource Include="pics\x.png" />
   </ItemGroup>
 
   <ItemGroup>
