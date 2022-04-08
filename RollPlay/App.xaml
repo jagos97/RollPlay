@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:RollPlay"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Minecraftia">pack://application:,,,/fonts/#Minecraftia</FontFamily>
+        <FontFamily x:Key="Alagard">pack://application:,,,/fonts/#alagard</FontFamily>
+
     </Application.Resources>
 </Application>

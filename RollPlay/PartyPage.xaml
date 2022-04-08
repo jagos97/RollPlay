@@ -104,11 +104,11 @@
 
             <ScrollViewer VerticalScrollBarVisibility="Hidden" MaxHeight="{Binding Path=ActualHeight, ElementName=stack, Mode=OneWay}">
                     <StackPanel Name="stack" Orientation="Vertical" Height="Auto" Margin="0,50,0,100">
-                        <Label Content="UPCOMING SESSION" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,0,0,0" Width="150" Height="25" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="UPCOMING SESSION" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,0,0,0" Width="175" Height="30" FontWeight="Bold" FontSize="14" FontFamily="{StaticResource Minecraftia}"/>
                         <TextBlock Margin="15,0,0,0" FontSize="12" FontWeight="Light"> Tuesday, March 5 @ 5pm-6pm</TextBlock>
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="Auto" Margin="0,0,0,0">
-                            <Label Content="PARTY MEMBERS" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,5,0,0" Width="150" Height="25" FontWeight="Bold" FontSize="14"/>
+                        <Label Content="PARTY MEMBERS" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,5,0,0" Width="175" Height="25" FontWeight="Bold" FontSize="14" FontFamily="{StaticResource Minecraftia}"/>
                             <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-28,10,0,0" Click="InviteToParty_Click">
                                 <Button.Background>
                                     <ImageBrush Stretch="Uniform" ImageSource="/pics/addcircle.png"/>

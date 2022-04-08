@@ -11,6 +11,8 @@
     <None Remove="chats.png" />
     <None Remove="defaultCharacter.png" />
     <None Remove="defaultpartyicon.png" />
+    <None Remove="fonts\alagard.ttf" />
+    <None Remove="fonts\Minecraftia-Regular.ttf" />
     <None Remove="hamburger.png" />
     <None Remove="image-1.png %2814%29.png" />
     <None Remove="image-1.png %2820%29.png" />
@@ -48,6 +50,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="fonts\alagard.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="fonts\Minecraftia-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="pics\add.png" />
     <Resource Include="pics\addcircle.png" />
     <Resource Include="pics\addFriend.png" />
