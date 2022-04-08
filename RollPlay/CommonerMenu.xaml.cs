@@ -19,6 +19,9 @@ namespace RollPlay
     /// </summary>
     public partial class CommonerMenuWindow : Window
     {
+
+        private static bool navBarMenuShown = false;
+
         public CommonerMenuWindow()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace RollPlay
 
         private void CombatSelector_Click(object sender, RoutedEventArgs e)
         {
-            string title= "COMBAT";
+            string title = "COMBAT";
             string desc1 = "A typical combat is a clash between two sides, a flurry of weapons, feints, parries," +
                 " footwork, and spellcasting. The game organizes the chaos of battle into a cycle of rounds and turns.";
             string desc2 = "A round lasts 6 seconds in game world, during which each battle participant takes one turn." +
@@ -143,6 +146,23 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void MenuNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            if (navBarMenuShown)
+            {
+                navBarMenuHolder.Children.Clear();
+                navBarMenuShown = false;
+            }
+            else
+            {
+                HamburgerMenu menu = new HamburgerMenu();
+                navBarMenuHolder.Children.Clear();
+                navBarMenuHolder.Children.Add(menu);
+                navBarMenuShown = true;
+
+            }
         }
     }
 }

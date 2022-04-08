@@ -17,56 +17,45 @@ using System.Diagnostics;
 namespace RollPlay
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Window4.xaml
     /// </summary>
-
-    public partial class PartiesWindow : Window
+    public partial class EditPartyWindow : Window
     {
+
         private static bool navBarMenuShown = false;
 
-        private static bool popupShown = false;
-        public PartiesWindow()
+        public static StackPanel playerSelected = null;
+
+        public string PartyName { get; set; }
+        public string InitialName { get; set; }
+
+        public string PlayerName { get; set; }
+
+        public static bool invitePopupShown = false;
+        public static bool popupShown = false;
+        public static bool chatPopupShown = false;
+        public static Border partySelected = null;
+
+        public EditPartyWindow(string PartyName, string PlayerName)
         {
+            this.PartyName = PartyName;
+            this.PlayerName = PlayerName;
+            this.InitialName = PartyName;
             InitializeComponent();
-            MainGrid.Focus();
         }
-        private void CharactersCollectionSubMenuSelector_Click(object sender, RoutedEventArgs e)
+
+        private void MainChat_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
+            return;
+        }
+
+        private void BackToMain_Click(object sender, RoutedEventArgs e)
+        {
+            PartiesWindow window = new PartiesWindow();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
-        }
-        private void KeyIsDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void FriendsCollectionSubMenuSelector_Click(object sender, RoutedEventArgs e)
-        {
-            FriendsWindow window = new FriendsWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
-
-        private void PartySubmenu_Click(object sender, RoutedEventArgs e)
-        {
-            if (popupShown)
-            {
-                SubMenuHolder.Children.Clear();
-                popupShown = false;
-            }
-            else
-            {
-                PartySubMenu1 partySubMenu1 = new PartySubMenu1();
-                SubMenuHolder.Children.Clear();
-                SubMenuHolder.Children.Add(partySubMenu1);
-                popupShown = true;
-            }
-            e.Handled = true;
         }
 
         private void TavernNavBar_Click(object sender, RoutedEventArgs e)
@@ -79,28 +68,43 @@ namespace RollPlay
 
         }
 
-        private void ToParty_Click(object sender, RoutedEventArgs e)
+        private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            string Name = (string)PartyName.Content;
-            string Player = (string)PlayerName.Content;
+            ScrollViewer scrollViewer = (ScrollViewer)sender;
+            if (e.Delta > 0)
+            {
+                scrollViewer.LineLeft();
+            }
+            else
+            {
+                scrollViewer.LineRight();
+            }
+            e.Handled = true;
+        }
 
-            PartyPageWindow window = new PartyPageWindow(Name, Player);
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            this.PartyName = this.InitialName;
+            PartyPageWindow window = new PartyPageWindow(this.PartyName, this.PlayerName);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
         }
 
-        private void ToParty2_Click(object sender, RoutedEventArgs e)
+        private void RemovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            string Name = (string)PartyName2.Content;
-            string Player = (string)PlayerName2.Content;
-
-            PartyPageWindow window = new PartyPageWindow(Name, Player);
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
+            //TODO
         }
 
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)

@@ -66,7 +66,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -182,6 +182,9 @@
             </StackPanel>
         </ScrollViewer>
         <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+
+
     </Grid>
 </Window>
     
