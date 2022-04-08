@@ -13,6 +13,7 @@
     <None Remove="defaultpartyicon.png" />
     <None Remove="hamburger.png" />
     <None Remove="image-1.png %2814%29.png" />
+    <None Remove="image-1.png %2820%29.png" />
     <None Remove="magnifyingglass.png" />
     <None Remove="meatball.png" />
     <None Remove="mug.png" />
@@ -50,9 +51,6 @@
     <Resource Include="pics\add.png" />
     <Resource Include="pics\addcircle.png" />
     <Resource Include="pics\addFriend.png" />
-    <Resource Include="pics\blockUser.png" />
-    <Resource Include="pics\copy.png" />
-    <Resource Include="pics\deleteFriend.png" />
     <Resource Include="pics\deleteFriend.png" />
     <Resource Include="pics\black-remove.png" />
     <Resource Include="pics\blockUser.png" />
