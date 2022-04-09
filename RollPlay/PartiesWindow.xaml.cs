@@ -25,6 +25,9 @@ namespace RollPlay
         private static bool navBarMenuShown = false;
 
         private static bool popupShown = false;
+
+        private string schedSession = "No Session Scheduled";
+
         public PartiesWindow()
         {
             InitializeComponent();
@@ -84,7 +87,7 @@ namespace RollPlay
             string Name = (string)PartyName.Content;
             string Player = (string)PlayerName.Content;
 
-            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null);
+            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -96,7 +99,7 @@ namespace RollPlay
             string Name = (string)PartyName2.Content;
             string Player = (string)PlayerName2.Content;
 
-            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null);
+            PartyPageWindow window = new PartyPageWindow(Name, Player, null, null, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

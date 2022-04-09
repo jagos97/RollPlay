@@ -153,7 +153,17 @@ namespace RollPlay
             window.InfoPanel.Children.Clear();
 
         }
+
+        private void Create_Click(object sender, RoutedEventArgs e) 
+        {
+            string schedString = (SelectedDate.Content.ToString()) + " @ " + (SelectedStartHour.Content.ToString()) + ":" + (SelectedStartMinute.Content.ToString()) + (SelectedStartAMPM.Content.ToString()) + " - " + (SelectedEndHour.Content.ToString()) + ":" + (SelectedEndMinute.Content.ToString()) + (SelectedEndAMPM.Content.ToString());
+            PartyAvailabilityWindow window = Window.GetWindow(this) as PartyAvailabilityWindow;
+            window.ScheduledSession.Content = schedString;
+            window.schedSession = schedString;
+            window.InfoPanel.Children.Clear();
+        }
     }
 
     
 }
+

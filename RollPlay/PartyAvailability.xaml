@@ -35,7 +35,7 @@
                     
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0,0,0,0"  > 
+                        <Button Background="Transparent" BorderThickness="0,0,0,0"  Click="MyAvail_Click"> 
                             MY AVAILABILITY
                         </Button>
 
@@ -339,40 +339,43 @@
                                     </Border.BorderBrush>
                                     <Label Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
+                                
+                                
+                                
 
                                 <Border Grid.Row="18" Grid.Column="1" Grid.RowSpan="6" BorderThickness="0, 0, 0,0" Background="#87A397" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" Click="MembersAvail_Click"/>
                                 </Border>
 
                                 <Border Grid.Row="15" Grid.Column="4" Grid.RowSpan="3" BorderThickness="0, 0, 0,0" Background="#E3E097" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Button BorderThickness="0,0,0,0" Content="2/5" Foreground="White" Background="#E3E097" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Button BorderThickness="0,0,0,0" Content="2/5" Foreground="White" Background="#E3E097" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" Click="MembersAvail_Click"/>
                                 </Border>
 
                                 <Border Grid.Row="12" Grid.Column="2" Grid.RowSpan="3" BorderThickness="0, 0, 0,0" Background="#C2A881" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" Click="MembersAvail_Click"/>
                                 </Border>
 
                                 <Border Grid.Row="14" Grid.Column="7" Grid.RowSpan="6" BorderThickness="0, 0, 0,0" Background="#87A397" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" Click="MembersAvail_Click"/>
                                 </Border>
 
                                 <Border Grid.Row="12" Grid.Column="7" Grid.RowSpan="2" BorderThickness="0, 0, 0,0" Background="#C2A881" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" Click="MembersAvail_Click"/>
                                 </Border>
 
                                 <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>

@@ -26,15 +26,18 @@ namespace RollPlay
 
         public string PlayerName { get; set; }
 
+        public string schedSession { get; set; }
 
         public Grid calendarGrid = null;
 
 
-        public AltMyAvailabilityWindow(string PartyName, string PlayerName, Grid calendarGrid)
+
+        public AltMyAvailabilityWindow(string PartyName, string PlayerName, Grid calendarGrid, string schedSession)
         {
             this.calendarGrid = calendarGrid;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
+            this.schedSession = schedSession;
 
             if (calendarGrid == null)
              {
@@ -124,7 +127,7 @@ namespace RollPlay
 
         public void EditAvailability_Click(object sender, RoutedEventArgs e)
         {
-            AltEditAvailabilityWindow window = new AltEditAvailabilityWindow(PartyName, PlayerName, Calendar);
+            AltEditAvailabilityWindow window = new AltEditAvailabilityWindow(PartyName, PlayerName, Calendar, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -133,7 +136,7 @@ namespace RollPlay
 
         public void BackToMain_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, null);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -142,7 +145,7 @@ namespace RollPlay
 
         private void PartyAvailability_Click(object sender, RoutedEventArgs e)
         {
-            PartyAvailabilityWindow window = new PartyAvailabilityWindow(PartyName, PlayerName);
+            PartyAvailabilityWindow window = new PartyAvailabilityWindow(PartyName, PlayerName, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

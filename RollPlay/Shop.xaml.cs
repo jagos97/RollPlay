@@ -28,13 +28,15 @@ namespace RollPlay
         public string PlayerName { get; set; }
         public string Description { get; set; }
 
+        public string schedSession { get; set; }
+
 
         private static bool navBarMenuShown = false;
 
 
 
 
-        public ShopWindow(string ShopName, string ShopKeep, List<string> items, List<string> prices, string PartyName, string PlayerName, string Description)
+        public ShopWindow(string ShopName, string ShopKeep, List<string> items, List<string> prices, string PartyName, string PlayerName, string Description, string schedSession)
         {
             this.ShopName = ShopName;
             this.ShopKeep = ShopKeep;
@@ -43,6 +45,7 @@ namespace RollPlay
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
             this.Description = Description;
+            this.schedSession = schedSession;
             InitializeComponent();
 
             if (items.Count > 0)
@@ -84,7 +87,7 @@ namespace RollPlay
 
         public void BackToMain_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, ShopName, Description, null);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, ShopName, Description, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
