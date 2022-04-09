@@ -140,6 +140,15 @@ namespace RollPlay
             this.Close();
         }
 
+        private void PartyAvailability_Click(object sender, RoutedEventArgs e)
+        {
+            PartyAvailabilityWindow window = new PartyAvailabilityWindow(PartyName, PlayerName);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
 
 
     }

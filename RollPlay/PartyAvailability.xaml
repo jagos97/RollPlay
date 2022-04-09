@@ -1,5 +1,5 @@
-﻿<Window x:Class="RollPlay.AltMyAvailabilityWindow"
-        x:Name="AltMyAvailability"
+﻿<Window x:Class="RollPlay.PartyAvailabilityWindow"
+        x:Name="PartyAvailability"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -11,13 +11,13 @@
    
     <Grid>
 
-        <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+        <StackPanel Orientation="Vertical" Margin="0,0,0,0" Width="320">
 
             <StackPanel Panel.ZIndex="10">
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,0" Width="320" Height="75">
                     <StackPanel>
-                        <Label HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Content="YOUR AVAILABILITY"/>
-                        <Label Content="{Binding ElementName=AltMyAvailability, Path=PartyName}" HorizontalAlignment="Center" Height="Auto" Width="Auto" FontSize="14" FontWeight="Medium" Foreground="Black" Opacity=".50" Margin="0, -5 0, 0"/>
+                        <Label HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Content="PARTY AVAILABILITY"/>
+                        <Label Content="{Binding ElementName=PartyAvailability, Path=PartyName}" HorizontalAlignment="Center" Height="Auto" Width="Auto" FontSize="14" FontWeight="Medium" Foreground="Black" Opacity=".50" Margin="0, -5 0, 0"/>
                     </StackPanel>
                 </Border>
 
@@ -35,18 +35,40 @@
                     
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0,0,0,0" FontWeight="Bold" > 
+                        <Button Background="Transparent" BorderThickness="0,0,0,0"  > 
                             MY AVAILABILITY
                         </Button>
 
                         <Line Y1="0" Y2="90" X1="0" X2="1" Height="20" Width="10" Stroke="Black" StrokeThickness="1" Opacity=".5" Margin="10, 0, 0, 0" HorizontalAlignment="Center"/>
 
-                        <Button Background="Transparent" BorderThickness="0,0,0,0" Opacity=".5" Click="PartyAvailability_Click">
+                        <Button Background="Transparent" BorderThickness="0,0,0,0" FontWeight="Bold" >
                             PARTY AVAILABILITY
                         </Button>
-                        
                     </StackPanel>
-                    <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+                    
+                    <StackPanel Orientation="Vertical">
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="UPCOMING SESSION" FontWeight="Bold" Margin="10,10,0,0"/>
+                            <Button Width="12" Height="12" BorderThickness="0,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="-2,11,0,0" Click="Info_Click">
+                                <Button.Background>
+                                    <ImageBrush Stretch="Uniform" ImageSource="/pics/info.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,-10,0,0">
+                            <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="15,0,0,0" Click="Button_Click">
+                                <Button.Background>
+                                    <ImageBrush Stretch="Uniform" ImageSource="/pics/calendar.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Label Name="ScheduledSession" Content="No Session Scheduled" FontWeight="Light" Margin="0,0,0,0"/>
+                        </StackPanel>
+
+                    </StackPanel>
+
+
 
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
                         <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
@@ -318,183 +340,75 @@
                                     <Label Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <TextBlock Grid.Row="1" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="1" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="1" Foreground="Transparent"/>
+                                <Border Grid.Row="18" Grid.Column="1" Grid.RowSpan="6" BorderThickness="0, 0, 0,0" Background="#87A397" Panel.ZIndex="10">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="black" Opacity=".35"/>
+                                    </Border.BorderBrush>
+                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Row="15" Grid.Column="4" Grid.RowSpan="3" BorderThickness="0, 0, 0,0" Background="#E3E097" Panel.ZIndex="10">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="black" Opacity=".35"/>
+                                    </Border.BorderBrush>
+                                    <Button BorderThickness="0,0,0,0" Content="2/5" Foreground="White" Background="#E3E097" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Row="12" Grid.Column="2" Grid.RowSpan="3" BorderThickness="0, 0, 0,0" Background="#C2A881" Panel.ZIndex="10">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="black" Opacity=".35"/>
+                                    </Border.BorderBrush>
+                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Row="14" Grid.Column="7" Grid.RowSpan="6" BorderThickness="0, 0, 0,0" Background="#87A397" Panel.ZIndex="10">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="black" Opacity=".35"/>
+                                    </Border.BorderBrush>
+                                    <Button BorderThickness="0,0,0,0" Content="5/5" Foreground="White" Background="#87A397" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Row="12" Grid.Column="7" Grid.RowSpan="2" BorderThickness="0, 0, 0,0" Background="#C2A881" Panel.ZIndex="10">
+                                    <Border.BorderBrush>
+                                        <SolidColorBrush Color="black" Opacity=".35"/>
+                                    </Border.BorderBrush>
+                                    <Button BorderThickness="0,0,0,0" Content="3/5" Foreground="White" Background="#C2A881" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                </Border>
+
+                                <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="4" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="5" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="6" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="1" Grid.Column="7" Grid.RowSpan="25" BorderThickness="0,0,.5,0" BorderBrush="Black" Opacity=".35"/>
+                               
+                                <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="14" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="18" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="19" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="20" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="21" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="22" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="23" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
+                                <Border Grid.Row="24" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
 
 
-                                <TextBlock Grid.Row="1" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="2" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="2" Foreground="Transparent"/>
-
-
-                                <TextBlock Grid.Row="1" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="3" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="3" Foreground="Transparent"/>
-
-                                <TextBlock Grid.Row="1" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="4" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="4" Foreground="Transparent"/>
-
-                                <TextBlock Grid.Row="1" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="5" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="5" Foreground="Transparent"/>
-
-
-                                <TextBlock Grid.Row="1" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="6" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="6" Foreground="Transparent"/>
-
-                                <TextBlock Grid.Row="1" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="2" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="3" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="4" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="5" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="6" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="7" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="8" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="9" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="10" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="11" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="12" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="13" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="14" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="15" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="16" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="17" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="18" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="19" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="20" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="21" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="22" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="23" Grid.Column="7" Foreground="Transparent"/>
-                                <TextBlock Grid.Row="24" Grid.Column="7" Foreground="Transparent"/>
 
                             </Grid>
                         </StackPanel>
@@ -509,21 +423,32 @@
 
 
 
-        <StackPanel Panel.ZIndex="5" Background="White" VerticalAlignment="Bottom" Height="75">
-                <Line StrokeThickness=".5" X1="0" X2="300" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                <Button Width="184" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,10" Click="EditAvailability_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="6.25"/>
-                        </Style>
-                    </Button.Resources>
-                    <Label Content="EDIT AVAILABILITY" Foreground="white" FontWeight="ExtraBold"/>
-                </Button>
+        <StackPanel Panel.ZIndex="5" Background="White" VerticalAlignment="Bottom" Height="100">
+            <Line StrokeThickness=".5" X1="0" X2="300" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Button Width="185" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,10" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="SCHEDULE SESSION" Foreground="white" FontWeight="ExtraBold"/>
+            </Button>
 
-         
-            </StackPanel>
-            
+            <Button Width="185" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,0,0,0" Click="Request_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="REQUEST AVAILABILITIES" Foreground="#3094CC" FontWeight="ExtraBold"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Name="InfoPanel" Panel.ZIndex="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
     </Grid>
+
 </Window>
     
     

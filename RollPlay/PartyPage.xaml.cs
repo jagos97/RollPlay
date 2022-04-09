@@ -98,7 +98,7 @@ namespace RollPlay
                 Border border = new Border();
                 border.Background = Brushes.White;
                 border.BorderThickness = new Thickness(0, 0, 0, 0);
-                border.Height = 110;
+                border.Height = 140;
                 border.Width = 275;
                 border.HorizontalAlignment = HorizontalAlignment.Center;
                 border.CornerRadius = new CornerRadius(10);
@@ -111,7 +111,7 @@ namespace RollPlay
                 Button button = new Button();
                 button.Background = Brushes.Transparent;
                 button.BorderBrush = Brushes.Transparent;
-                button.Height = 110;
+                button.Height = 140;
                 button.HorizontalContentAlignment = HorizontalAlignment.Left;
                 button.VerticalContentAlignment = VerticalAlignment.Top;
 
