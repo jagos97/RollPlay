@@ -134,6 +134,9 @@
     <Compile Update="InvitetoParty.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="OtherChats.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PartyPageSubMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -184,6 +187,10 @@
     </Page>
     <Page Update="EditParty.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="OtherChats.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="PartyPageSubMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>

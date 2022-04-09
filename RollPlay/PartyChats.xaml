@@ -17,8 +17,8 @@
                 <ImageBrush ImageSource="/pics/meatball.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Other Chats" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#00707070"/>
-        <Button Content="Party Chats" HorizontalAlignment="Left" Margin="70,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#FFBCBAB8" BorderThickness="0,0,1,0" FontWeight="Bold"/>
+        <Button Content="Other Chats" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#00707070" Click="OtherChat_Click"/>
+        <Button Content="Party Chats" HorizontalAlignment="Left" Margin="70,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#FFBCBAB8" BorderThickness="0,0,1,0" FontWeight="Bold" Click="PartyChat_Click"/>
         <Ellipse Height="60" Stroke="Black" Width="60" Margin="32,86,0,0" Fill="#FF504B43" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Ellipse Height="60" Stroke="Black" Width="60" Margin="0,86,0,0" Fill="#FF504B43" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Ellipse Height="60" Stroke="Black" Width="60" Margin="0,86,32,0" Fill="#FF504B43" HorizontalAlignment="Right" VerticalAlignment="Top"/>
