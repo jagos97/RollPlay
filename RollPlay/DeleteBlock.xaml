@@ -12,7 +12,7 @@
         
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
 
-        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288">
+        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288" RenderOptions.EdgeMode="Aliased">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,0" Background="White" Width="288" Height="Auto" MinHeight="405" MaxHeight="500" VerticalAlignment="Center">
                 <Label Content="DELETE AVAILBILITY BLOCK" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="17" Margin="0, 10, 0, 10"/>
 

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="RollPlay.InfoPrompt"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="Auto" MinHeight="405" Width="320"
+             Name="InfoPromptWindow">
+
+    <Grid>
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+
+        <Border BorderBrush="White" BorderThickness="5,5,5,5" Height="298" Width="278" CornerRadius="6" Margin="0,0,17,0" RenderOptions.EdgeMode="Aliased">
+            <StackPanel Height="298" Width="278" Background="White">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="18" Width="18" Source="/pics/info.png" Margin="10,0,0,0"/>
+                    <Label FontWeight="Bold" FontSize="14" Content="A NOTE ABOUT THE APP" Margin="0,0,0,0"/>
+                </StackPanel>
+
+                <TextBlock TextWrapping="Wrap" FontWeight="Light" Margin="0,0,0,0" Width="260">Please be aware that this application only allows one session to be scheduled at a time.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="Light" Margin="0,10,0,0" Width="260">You may schedule a session to be recurring, which means it is played at the same time every week. Therefore, once your upcoming session has passed, the system will automatically update the next session for you.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="Light" Margin="0,10,0,0" Width="260">You may also set reminders for your parties session by toggling the notification icon.</TextBlock>
+                <TextBlock TextWrapping="Wrap" FontWeight="Light" Margin="0,10,0,0" Width="260">If you would like to edit any of these settings, simply click on the time listed under upcoming session.</TextBlock>
+
+                <Button Width="70" Background="#3094CC" BorderBrush="#3094CC" Height="25" Margin="0,10" Content="OK" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                
+            </StackPanel>
+        </Border>
+
+
+
+    </Grid>
+</UserControl>

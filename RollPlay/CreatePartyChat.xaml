@@ -12,7 +12,7 @@
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
 
            <!-- <Rectangle  Fill="White" RadiusX="10" RadiusY="10" Height="405" Width="288" Margin="0,0,0,100" Panel.ZIndex="-1" /> -->
-        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288">
+        <Border BorderBrush="White" BorderThickness="10" CornerRadius="10" Background="white" Height="Auto" MinHeight="405" MaxHeight="500" Width="288" RenderOptions.EdgeMode="Aliased">
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,0" Background="White" Width="288" Height="Auto" MinHeight="405" MaxHeight="500" VerticalAlignment="Center">
                 <ScrollViewer VerticalScrollBarVisibility="Hidden" MaxHeight="500" Height="Auto" MinHeight="405" Margin="0,0,0,0" BorderBrush="white">
                     <StackPanel>

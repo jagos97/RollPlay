@@ -149,12 +149,19 @@ namespace RollPlay
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            this.PartyName = this.InitialName;
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
+            if (!String.IsNullOrWhiteSpace(NewName.Text))
+            {
+                this.PartyName = this.InitialName;
+                PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
+                window.Show();
+                window.Top = this.Top;
+                window.Left = this.Left;
+                this.Close();
+            } else
+            {
+                NameError.Visibility = Visibility.Visible;
+                NewName.BorderBrush = Brushes.Red;
+            }
         }
 
         private void RemovePlayer_Click(object sender, RoutedEventArgs e)
