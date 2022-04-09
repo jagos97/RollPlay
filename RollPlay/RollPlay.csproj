@@ -30,6 +30,7 @@
     <None Remove="pics\deleteFriend.png" />
     <None Remove="pics\delete.png" />
     <None Remove="pics\edit.png" />
+    <None Remove="pics\info.png" />
     <None Remove="pics\kebabmenu.png" />
     <None Remove="pics\leave.png" />
     <None Remove="pics\backarrow.png" />
@@ -55,6 +56,7 @@
 
   <ItemGroup>
     <Resource Include="pics\calendar.png" />
+    <Resource Include="pics\info.png" />
     <Resource Include="pics\plus.png" />
     <Resource Include="pics\silence.png" />
     <Resource Include="pics\user.png" />
