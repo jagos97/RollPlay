@@ -85,9 +85,7 @@
         <Grid>
             <StackPanel Panel.ZIndex="10">
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,0" Width="320" Height="75">
-                    <Border.Effect>
-                        <DropShadowEffect Opacity=".55" ShadowDepth="1.5" />
-                    </Border.Effect>
+
                     <TextBlock Text="{Binding ElementName=PartyWindow, Path=PartyName}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto" FontSize="20" FontWeight="Bold" />
                 </Border>
 
@@ -134,8 +132,8 @@
                             </StackPanel>
                         </ScrollViewer>
 
-                    <Border BorderThickness="10,8,8,8" CornerRadius="6" Width="150" Height="30" BorderBrush="#8398F5" Margin="20">
-                        <Button Width="140" Height="40" Background="#8398F5" Foreground="White" FontWeight="ExtraBold" FontSize="13" BorderBrush="#3094CC" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,0,-2,0" Click="Availability_Click">
+                    <Border BorderThickness="10,8,8,8" CornerRadius="6" Width="150" Height="30" BorderBrush="#3094CC" Margin="20" RenderOptions.EdgeMode="Aliased">
+                        <Button Width="140" Height="40" Background="#3094CC" Foreground="White" FontWeight="ExtraBold" FontSize="13" BorderBrush="#3094CC" VerticalAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Margin="0,0,-2,0" Click="Availability_Click">
                                 <TextBlock>
                                 AVAILABILITY
                                 </TextBlock>

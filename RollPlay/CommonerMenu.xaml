@@ -100,7 +100,7 @@
 
             <!--buttons-->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0, 135,0,0" CornerRadius="10">
+                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0, 135,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
@@ -109,7 +109,7 @@
                     </Button>
                 </Border>
 
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,135,0,-1" CornerRadius="10">
+                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,135,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
@@ -120,7 +120,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0,15,0,0" CornerRadius="10">
+                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
@@ -130,7 +130,7 @@
                 </Border>
 
 
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,15,0,0" CornerRadius="10">
+                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                     </Border.Effect>
@@ -140,7 +140,7 @@
                 </Border>
             </StackPanel>
 
-            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10">
+            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                 </Border.Effect>
@@ -149,7 +149,7 @@
                 </Button>
             </Border>
 
-            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10">
+            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                 </Border.Effect>

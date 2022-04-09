@@ -61,6 +61,11 @@ namespace RollPlay
             InfoPanel.Children.Add(scheduler);
         }
 
+        private void Request_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+
       
     }
     }

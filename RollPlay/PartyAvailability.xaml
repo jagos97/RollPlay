@@ -58,12 +58,12 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" Margin="0,-10,0,0">
-                            <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="15,0,0,0">
+                            <Button Width="15" Height="15" BorderThickness="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="15,0,0,0" Click="Button_Click">
                                 <Button.Background>
                                     <ImageBrush Stretch="Uniform" ImageSource="/pics/calendar.png"/>
                                 </Button.Background>
                             </Button>
-                            <Label Content="Tuesday, March 5 @ 5pm - 8pm" FontWeight="Light" Margin="0,0,0,0"/>
+                            <Label Name="ScheduledSession" Content="No Session Scheduled" FontWeight="Light" Margin="0,0,0,0"/>
                         </StackPanel>
 
                     </StackPanel>
@@ -434,7 +434,7 @@
                 <Label Content="SCHEDULE SESSION" Foreground="white" FontWeight="ExtraBold"/>
             </Button>
 
-            <Button Width="185" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,0,0,0">
+            <Button Width="185" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,0,0,0" Click="Request_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>
