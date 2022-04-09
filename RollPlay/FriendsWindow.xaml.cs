@@ -29,8 +29,7 @@ namespace RollPlay
         private static Button friendSelectedButton = null;
         public FriendsWindow()
         {
-            InitializeComponent();
-            SearchfriendTextBox.Focus(); 
+            InitializeComponent(); 
             for(int i = 0; i < 10; i++)
             {
                 Button btn = new Button();
@@ -111,6 +110,7 @@ namespace RollPlay
         private void GoToAddFriend_Click(object sender, RoutedEventArgs e)
         {
             AddFriendOverlay.Visibility = Visibility.Visible;
+            SearchfriendTextBox.Focus();
         }
         private void GoToPendingFriends_Click(object sender, RoutedEventArgs e)
         {
@@ -126,10 +126,7 @@ namespace RollPlay
         private void AddFriend_Click(object sender, RoutedEventArgs e)
         {
             string content = friendSelectedButton.Content as string;
-            foreach (Button b in PossibleFriendsStack.Children)
-            {
-                b.Background = new SolidColorBrush(Colors.White);
-            }
+            PossibleFriendsStack.Children.Remove(friendSelectedButton);
             MessageBox.Show("Friend Request sent to " + content);
 
         }
