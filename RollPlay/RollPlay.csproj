@@ -36,6 +36,7 @@
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\mutenotifications.png" />
+    <None Remove="pics\newMessage.png" />
     <None Remove="pics\plus.png" />
     <None Remove="pics\redo.png" />
     <None Remove="pics\remove.png" />
@@ -79,6 +80,7 @@
     <Resource Include="pics\delete.png" />
     <Resource Include="pics\kebabmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
+    <Resource Include="pics\newMessage.png" />
     <Resource Include="pics\redo.png" />
     <Resource Include="pics\remove.png" />
     <Resource Include="pics\removeFriend.png" />
