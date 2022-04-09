@@ -88,8 +88,8 @@
             </Border>
             <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="16" FontStyle="Italic">WELCOME TO THE TAVERN. WHAT CAN I DO FOR YOU ADVENTURER?</TextBlock>
         </StackPanel>
-        
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10">
+
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>
@@ -98,7 +98,7 @@
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I would like to learn the basic rules of Dungeons and Dragons</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10">
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>
@@ -107,7 +107,7 @@
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I want to hang out in the Tavern and roleplay with other random users - just for fun!</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10">
+        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>

@@ -25,6 +25,7 @@
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\black-remove.png" />
     <None Remove="pics\blockUser.png" />
+    <None Remove="pics\calendar.png" />
     <None Remove="pics\copy.png" />
     <None Remove="pics\deleteFriend.png" />
     <None Remove="pics\delete.png" />
@@ -34,19 +35,29 @@
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\mutenotifications.png" />
+    <None Remove="pics\plus.png" />
     <None Remove="pics\redo.png" />
     <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
     <None Remove="pics\reportuser.png" />
+    <None Remove="pics\silence.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\undo.png" />
+    <None Remove="pics\user.png" />
     <None Remove="pics\Vector.svg" />
     <None Remove="pics\whitebackarrow.png" />
     <None Remove="pics\whitedirectional.png" />
     <None Remove="pics\x.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pics\calendar.png" />
+    <Resource Include="pics\plus.png" />
+    <Resource Include="pics\silence.png" />
+    <Resource Include="pics\user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -101,6 +112,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CreateSession.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InfoPrompt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DeleteBlock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -125,6 +142,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="CreateSession.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InfoPrompt.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PartyAvailability.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="DeleteBlock.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
