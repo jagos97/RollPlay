@@ -38,12 +38,15 @@ namespace RollPlay
 
         public List<string> friendsList = new List<string>();
 
-        public EditPartyWindow(string PartyName, string PlayerName, List<string> friendsList)
+        public string schedSession { get; set; }
+
+        public EditPartyWindow(string PartyName, string PlayerName, List<string> friendsList, string schedSession)
         {
             this.friendsList = friendsList;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
             this.InitialName = PartyName;
+            this.schedSession = schedSession;
             InitializeComponent();
 
                 if (friendsList.Count > 0)
@@ -139,7 +142,7 @@ namespace RollPlay
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
+            PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -152,7 +155,7 @@ namespace RollPlay
             if (!String.IsNullOrWhiteSpace(NewName.Text))
             {
                 this.PartyName = this.InitialName;
-                PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList);
+                PartyPageWindow window = new PartyPageWindow(PartyName, PlayerName, null, null, friendsList, schedSession);
                 window.Show();
                 window.Top = this.Top;
                 window.Left = this.Left;

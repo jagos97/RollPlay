@@ -18,17 +18,16 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for CharacterSubMenu.xaml
     /// </summary>
-    public partial class PartyPageSubMenu : UserControl
+    public partial class PartyChatSubMenu : UserControl
     {
 
         public string PartyName { get; set; }
         public string PlayerName { get; set; }
 
         public List<string> friendsList = new List<string>();
-
  
        
-        public PartyPageSubMenu(string PartyName, string PlayerName, List<string> friendsList)
+        public PartyChatSubMenu(string PartyName, string PlayerName, List<string> friendsList)
         {
             this.friendsList = friendsList;
             this.PartyName = PartyName;
@@ -37,28 +36,12 @@ namespace RollPlay
 
         }
 
-        public void SwapCharacter_Click(object sender, RoutedEventArgs e)
+
+        public void DeleteChat_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
-        }
-        public void EditParty_Click(object sender, RoutedEventArgs e)
-        {
-            PartyPageWindow window1 = Window.GetWindow(this) as PartyPageWindow;
-            string schedSession = window1.schedSession;
-
-            EditPartyWindow window = new EditPartyWindow(PartyName, PlayerName, friendsList, schedSession);
-            window.Show();
-            window.Top = Window.GetWindow(this).Top;
-            window.Left = Window.GetWindow(this).Left;
-            Window.GetWindow(this).Close();
-            PartyPageWindow.popupShown = false;
-
-
-        }
-
-        public void LeaveParty_Click(object sender, RoutedEventArgs e)
-        {
-            //TODO
+            PartyPageWindow window = Window.GetWindow(this) as PartyPageWindow;
+            window.SubMenuHolder.Children.Clear();
+            window.DeleteChat();
         }
 
         public void NotImplemented_Click(object sender, RoutedEventArgs e)

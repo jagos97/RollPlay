@@ -30,8 +30,11 @@ namespace RollPlay
 
         public string PlayerName { get; set; }
 
-        public CreatePartyChat(string PartyName, string PlayerName)
+        public string schedSession { get; set; }
+
+        public CreatePartyChat(string PartyName, string PlayerName, string schedSession)
         {
+            this.schedSession = schedSession;
             this.PartyName = PartyName;
             this.PlayerName = PlayerName;
             InitializeComponent();
@@ -175,7 +178,7 @@ namespace RollPlay
                 }
                 else
                 {
-                    ShopWindow window = new ShopWindow(ShopName, ShopKeep, items, prices, PartyName, PlayerName, Description);
+                    ShopWindow window = new ShopWindow(ShopName, ShopKeep, items, prices, PartyName, PlayerName, Description, schedSession);
                     window.Show();
                     window.Top = Window.GetWindow(this).Top;
                     window.Left = Window.GetWindow(this).Left;

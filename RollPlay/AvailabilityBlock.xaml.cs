@@ -29,19 +29,13 @@ namespace RollPlay
         Color color1 = (Color)ColorConverter.ConvertFromString("#87A397");
         System.Drawing.Color myColor1 = System.Drawing.ColorTranslator.FromHtml("#87A397");
 
-        
-
-      
-
         public List<string> days = new List<string>();
 
         public List<string> addBlock = new List<string>();
 
-
         public AvailabilityBlock()
         {
             InitializeComponent();
-                 
         }
 
         public void selectStartHour(object sender, MouseEventArgs e)
@@ -52,7 +46,6 @@ namespace RollPlay
                 StartHour.Content = hour.Content;
             }
         }
-
         public void selectStartMinute(object sender, MouseEventArgs e)
         {
             if (sender is ListBoxItem)
@@ -70,7 +63,6 @@ namespace RollPlay
                 StartAMPM.Content = AMPM.Content;
             }
         }
-
 
         public void selectEndHour(object sender, MouseEventArgs e)
         {
@@ -184,8 +176,6 @@ namespace RollPlay
             sat.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             sat.Foreground = Brushes.White;
             days.Add("Sa");
-
-
         }
 
         private void Everyday_Unchecked(object sender, RoutedEventArgs e)
@@ -193,7 +183,6 @@ namespace RollPlay
             sun.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             sun.Background = Brushes.White;
             days.Remove("Su");
-
 
             mon.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             mon.Background = Brushes.White;
@@ -203,26 +192,21 @@ namespace RollPlay
             tue.Background = Brushes.White;
             days.Remove("Tu");
 
-
             wed.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             wed.Background = Brushes.White;
             days.Remove("We");
-
 
             thu.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             thu.Background = Brushes.White;
             days.Remove("Th");
 
-
             fri.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             fri.Background = Brushes.White;
             days.Remove("Fr");
 
-
             sat.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
             sat.Background = Brushes.White;
             days.Remove("Sa");
-
         }
 
         private void CreateBlock_Click(object sender, RoutedEventArgs e)
@@ -237,14 +221,12 @@ namespace RollPlay
             string endTime = endHourString + endAMPMString;
             AltEditAvailabilityWindow window = Window.GetWindow(this) as AltEditAvailabilityWindow;
 
-
             if (startHourString.Equals("--") | endHourString.Equals("--")) {
                 //TODO
             } else
             {
                 int startRow = int.Parse(startHourString);
                 int endRow =int.Parse(endHourString);
-
                 int col;
 
                 Brush brush = Brushes.Black;
@@ -292,21 +274,16 @@ namespace RollPlay
                     {
                         endRow = endRow + 12;
                     }
-
                 }
-
 
                 for (int i = 0; i < days.Count; i++)
                 {
                     if (days[i].Equals("Su"))
                     {
-
                         col = 1;
                         int thisStart = startRow;
                         int thisend = endRow;
                        
-
-
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -325,14 +302,11 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
-
                                     }
                                 }
                             }
                         }
-
                     }
 
                     if (days[i].Equals("Mo"))
@@ -341,7 +315,6 @@ namespace RollPlay
                         int thisStart = startRow;
                         int thisend = endRow;
                       
-
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -360,7 +333,6 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
 
                                     }
@@ -375,8 +347,6 @@ namespace RollPlay
                         int thisStart = startRow;
                         int thisend = endRow;
                        
-
-
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -395,9 +365,7 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
-
                                     }
                                 }
                             }
@@ -409,9 +377,7 @@ namespace RollPlay
                         col = 4;
                         int thisStart = startRow;
                         int thisend = endRow;
-                      
-
-
+                    
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -430,9 +396,7 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
-
                                     }
                                 }
                             }
@@ -445,8 +409,6 @@ namespace RollPlay
                         int thisStart = startRow;
                         int thisend = endRow;
                     
-
-
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -465,7 +427,6 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
 
                                     }
@@ -479,9 +440,7 @@ namespace RollPlay
                         col = 6;
                         int thisStart = startRow;
                         int thisend = endRow;
-                   
-
-
+                  
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -500,7 +459,6 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
 
                                     }
@@ -515,8 +473,6 @@ namespace RollPlay
                         int thisStart = startRow;
                         int thisend = endRow;
             
-
-
                         foreach (UIElement item in window.Calendar.Children)
                         {
                             if (item is Button)
@@ -535,7 +491,6 @@ namespace RollPlay
                                         if (thisStart < thisend)
                                         {
                                             thisStart++;
-
                                         }
 
                                     }
@@ -544,14 +499,10 @@ namespace RollPlay
                         }
                     }
                 }
-                
-
-            }
+                            }
 
             window.overlay.Children.Clear();
-
-            
-        }
+                    }
 
         public void Cancel_Click(object sender, RoutedEventArgs e)
         {
