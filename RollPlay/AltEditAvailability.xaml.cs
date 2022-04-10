@@ -34,12 +34,15 @@ namespace RollPlay
         List<Button> UndoChanges = new List<Button>();
         List<Button> RedoChanges = new List<Button>();
 
+        public string schedSession { get; set; }
 
 
 
-        public AltEditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid)
+
+        public AltEditAvailabilityWindow(string PartyName, string PlayerName, Grid inputGrid, string schedSession)
         {
 
+            this.schedSession = schedSession;
             Brush brush = Brushes.Black;
             if (brush.IsFrozen)
             {
@@ -169,7 +172,7 @@ namespace RollPlay
 
         public void UpdateAvailability_Click(object sender, RoutedEventArgs e)
         {
-            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, Calendar);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, Calendar, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -179,7 +182,7 @@ namespace RollPlay
 
         public void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -330,6 +333,7 @@ namespace RollPlay
                         if (Grid.GetRow(a) == r && Grid.GetColumn(a) == 0)
                         {
                             button.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(myColor.A, myColor.R, myColor.G, myColor.B));
+                            button.Content = "y";
 
                         }
                     }

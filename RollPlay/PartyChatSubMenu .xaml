@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="RollPlay.PartyChatSubMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             d:DesignHeight="138" d:DesignWidth="320">
+    <Grid>
+        <Rectangle  Fill="#FF504B43" RadiusX="10" RadiusY="10"/>
+        <StackPanel>
+            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="NotImplemented_Click">
+                <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/silence.png"/>
+                    <Label Content="MUTE NOTIFICATIONS" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" BorderBrush="#FFCC1010" Height="44" />
+                </StackPanel>
+            </Button>
+            <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="NotImplemented_Click">
+                <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/edit.png"/>
+                    <Label Content="EDIT CHAT" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" />
+                </StackPanel>
+            </Button>
+            <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="DeleteChat_Click">
+                <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
+                    <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/trash.png"/>
+                    <Label Content="DELETE CHAT" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

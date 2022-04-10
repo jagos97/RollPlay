@@ -27,18 +27,21 @@ namespace RollPlay
         public string PartyName { get; set; }
 
         public string PlayerName { get; set; }
+
         public string ChatName { get; set; }
 
         public string Description { get; set; }
 
         public string friendName { get; set; }
 
+        public string schedSession { get; set; }
+
         public static bool popupShown = false;
         public static Border partySelected = null;
         public List<string> friendsList = new List<string>();
+        public Border chatSelected = null;
 
-
-        public PartyPageWindow(string PartyName, string PlayerName, string ChatName, string Description, List<string> friendsList)
+        public PartyPageWindow(string PartyName, string PlayerName, string ChatName, string Description, List<string> friendsList, string schedSession)
         {
             
             if (friendsList != null)
@@ -46,8 +49,14 @@ namespace RollPlay
                 this.friendsList = friendsList;
                 this.PartyName = PartyName;
                 this.PlayerName = PlayerName;
+                this.schedSession = schedSession;
+
                 InitializeComponent();
 
+                if (!schedSession.Equals("No Session Scheduled"))
+                {
+                    TrashSched.Visibility = Visibility.Visible;
+                }
 
                 if (friendsList.Count > 0)
                 {
@@ -63,7 +72,6 @@ namespace RollPlay
                         button.BorderThickness = new Thickness(0, 0, 0, 0);
                         button.Margin = new Thickness(10, 10, 0, 0);
 
-                        //Image myImage = new Image();
                         BitmapImage bmi = new BitmapImage();
                         ImageBrush brush = new ImageBrush();
                         bmi.BeginInit();
@@ -71,7 +79,6 @@ namespace RollPlay
                         bmi.EndInit();
                         brush.ImageSource = bmi;
                         button.Background = brush;
-
 
                         TextBlock textBlock = new TextBlock();
                         textBlock.HorizontalAlignment = HorizontalAlignment.Center;
@@ -90,7 +97,14 @@ namespace RollPlay
             {
                 this.PartyName = PartyName;
                 this.PlayerName = PlayerName;
+                this.schedSession = schedSession;
                 InitializeComponent();
+
+                if (!schedSession.Equals("No Session Scheduled"))
+                {
+                    TrashSched.Visibility = Visibility.Visible;
+                }
+
             }
 
             if (ChatName != null && Description != null)
@@ -98,7 +112,7 @@ namespace RollPlay
                 Border border = new Border();
                 border.Background = Brushes.White;
                 border.BorderThickness = new Thickness(0, 0, 0, 0);
-                border.Height = 140;
+                border.Height = 110;
                 border.Width = 275;
                 border.HorizontalAlignment = HorizontalAlignment.Center;
                 border.CornerRadius = new CornerRadius(10);
@@ -111,7 +125,7 @@ namespace RollPlay
                 Button button = new Button();
                 button.Background = Brushes.Transparent;
                 button.BorderBrush = Brushes.Transparent;
-                button.Height = 140;
+                button.Height = 110;
                 button.HorizontalContentAlignment = HorizontalAlignment.Left;
                 button.VerticalContentAlignment = VerticalAlignment.Top;
 
@@ -133,7 +147,6 @@ namespace RollPlay
                 muteButton.BorderThickness = new Thickness(0, 0, 0, 0);
                 muteButton.Margin = new Thickness(0, 10, 0, 0);
 
-
                 BitmapImage bmi = new BitmapImage();
                 ImageBrush brush = new ImageBrush();
                 bmi.BeginInit();
@@ -144,8 +157,6 @@ namespace RollPlay
 
                 stackHor.Children.Add(label);
                 stackHor.Children.Add(muteButton);
-
-
 
                 StackPanel stackHor2 = new StackPanel();
                 stackHor2.Orientation = Orientation.Horizontal;
@@ -161,7 +172,6 @@ namespace RollPlay
                 kebabButton.Width = 20;
                 kebabButton.BorderThickness = new Thickness(0, 0, 0, 0);
                 kebabButton.Margin = new Thickness(0, 30, 0, 0);
-
 
                 BitmapImage bmi1 = new BitmapImage();
                 ImageBrush brush1 = new ImageBrush();
@@ -181,9 +191,7 @@ namespace RollPlay
                 border.Child = button;
 
                 Chats.Children.Add(border);
-            }
-
-            
+            }    
         }
 
         private void MainChat_Click(object sender, RoutedEventArgs e)
@@ -207,7 +215,6 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
-
         }
 
         private void PartyPageSubMenu_Click(object sender, RoutedEventArgs e)
@@ -216,7 +223,6 @@ namespace RollPlay
             {
                 SubMenuHolder.Children.Clear();
                 popupShown = false;
-
             }
             else
             {
@@ -224,14 +230,12 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
-
             }
             e.Handled = true;
         }
 
         private void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
-
             InviteToParty inviteMenu = new InviteToParty();
             overlay.Children.Clear();
             overlay.Children.Add(inviteMenu);
@@ -239,12 +243,10 @@ namespace RollPlay
 
         private void CreatePartyChat_Click(object sender, RoutedEventArgs e)
         {
-            CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName);
+            CreatePartyChat chatMenu = new CreatePartyChat(PartyName, PlayerName, schedSession);
             overlay.Children.Clear();
             overlay.Children.Add(chatMenu);
-
         }
-
 
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
@@ -278,29 +280,20 @@ namespace RollPlay
                 navBarMenuHolder.Children.Clear();
                 navBarMenuHolder.Children.Add(menu);
                 navBarMenuShown = true;
-
             }
-
         }
 
         private void Availability_Click(object sender, RoutedEventArgs e)
         {
-          
-
-            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null);
+            AltMyAvailabilityWindow window = new AltMyAvailabilityWindow(PartyName, PlayerName, null, schedSession);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
-            
-
-            
         }
  
-
         public void addFriend(string friendName)
         {
-
             this.friendName = friendName;
             friendsList.Add(friendName);
 
@@ -314,7 +307,6 @@ namespace RollPlay
             button.BorderThickness = new Thickness(0, 0, 0, 0);
             button.Margin = new Thickness(10, 10, 0, 0);
 
-            //Image myImage = new Image();
             BitmapImage bmi = new BitmapImage();
             ImageBrush brush = new ImageBrush();
             bmi.BeginInit();
@@ -322,7 +314,6 @@ namespace RollPlay
             bmi.EndInit();
             brush.ImageSource = bmi;
             button.Background = brush;
-
 
             TextBlock textBlock = new TextBlock();
             textBlock.HorizontalAlignment = HorizontalAlignment.Center;
@@ -335,6 +326,39 @@ namespace RollPlay
             stack.Children.Add(button);
             stack.Children.Add(textBlock);
             PartyMembers.Children.Add(stack);
+        }
+
+        private void Kebab_Click(object sender, RoutedEventArgs e)
+        {
+            if (popupShown)
+            {
+                SubMenuHolder.Children.Clear();
+                popupShown = false;
+            }
+            else
+            {
+                PartyChatSubMenu subMenu = new PartyChatSubMenu(PartyName, PlayerName, friendsList);
+                SubMenuHolder.Children.Clear();
+                SubMenuHolder.Children.Add(subMenu);
+                popupShown = true;
+                chatSelected = (Border)((Button)((StackPanel)((StackPanel)((Button)sender).Parent).Parent).Parent).Parent;
+            }
+            e.Handled = true;
+
+        }
+
+        private void DeleteSession_Click(object sender, RoutedEventArgs e)
+        {
+            SessionText.Text = "No Session Scheduled";
+            this.schedSession = "No Session Scheduled";
+            TrashSched.Visibility = Visibility.Collapsed;
+        }
+
+        public void DeleteChat()
+        {
+            popupShown = false;
+            Chats.Children.Remove(chatSelected);
+            SubMenuHolder.Children.Clear();
         }
     }
 }

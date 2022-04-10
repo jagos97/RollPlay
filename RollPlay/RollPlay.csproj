@@ -119,6 +119,9 @@
     <Compile Update="CreateSession.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="AvailableMembers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InfoPrompt.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -135,6 +138,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="OtherChats.xaml.cs">
+    <Compile Update="PartyChatSubMenu .xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PartyPageSubMenu.xaml.cs">
@@ -150,6 +154,10 @@
 
   <ItemGroup>
     <Page Update="CreateSession.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AvailableMembers.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -189,6 +197,7 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="OtherChats.xaml">
+    <Page Update="PartyChatSubMenu .xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
