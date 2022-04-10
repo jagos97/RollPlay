@@ -138,6 +138,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="OtherChats.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
     <Compile Update="PartyChatSubMenu .xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -197,6 +199,9 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="OtherChats.xaml">
+		<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+		<SubType>Designer</SubType>
+	</Page>
     <Page Update="PartyChatSubMenu .xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
