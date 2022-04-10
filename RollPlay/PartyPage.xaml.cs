@@ -349,9 +349,10 @@ namespace RollPlay
 
         private void DeleteSession_Click(object sender, RoutedEventArgs e)
         {
-            SessionText.Text = "No Session Scheduled";
-            this.schedSession = "No Session Scheduled";
-            TrashSched.Visibility = Visibility.Collapsed;
+            CancelSession areYouSure = new CancelSession();
+            overlay.Children.Clear();
+            overlay.Children.Add(areYouSure);
+            
         }
 
         public void DeleteChat()
