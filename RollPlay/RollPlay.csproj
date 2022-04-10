@@ -42,6 +42,7 @@
     <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
     <None Remove="pics\reportuser.png" />
+    <None Remove="pics\sendMessage.png" />
     <None Remove="pics\silence.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
@@ -59,6 +60,7 @@
     <Resource Include="pics\calendar.png" />
     <Resource Include="pics\info.png" />
     <Resource Include="pics\plus.png" />
+    <Resource Include="pics\sendMessage.png" />
     <Resource Include="pics\silence.png" />
     <Resource Include="pics\user.png" />
   </ItemGroup>
@@ -242,6 +244,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HamburgerMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Chat.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Shop.xaml">
