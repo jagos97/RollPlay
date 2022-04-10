@@ -82,13 +82,7 @@
             </Button>
         </StackPanel>
         
-        
-        
-        
-        
-        
 
-        <StackPanel Orientation="Vertical">
             <StackPanel Panel.ZIndex="10">
                 <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,0" Width="320" Height="75">
                     <TextBox Name="NewName" Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="Auto" Width="Auto" FontSize="20" FontWeight="Bold" BorderBrush="#A0C8CD"/>
@@ -96,8 +90,8 @@
                 <Label Name="NameError" Content="Party Name is required" Foreground="red" HorizontalAlignment="Center" FontSize="10" Margin="0,-20,0,0" Visibility="Collapsed"/>
             </StackPanel>
 
-            <ScrollViewer MaxHeight="1000" VerticalScrollBarVisibility="Hidden">
-                <StackPanel Height="1000" Margin="0,0,0,200">
+            <ScrollViewer MaxHeight="{Binding Path=ActualHeight, ElementName=stack, Mode=OneWay}" VerticalScrollBarVisibility="Hidden">
+                <StackPanel Orientation="Vertical" Name="stack" Height="Auto" Margin="0,0,0,100">
                     <Label Content="UPCOMING SESSION" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="10,0,0,0" Width="150" Height="25" FontWeight="Bold" FontSize="14"/>
                     <TextBlock Margin="15,0,0,0" FontSize="12" FontWeight="Light"> Tuesday, March 5 @ 5pm-6pm</TextBlock>
 
@@ -106,7 +100,7 @@
                     </StackPanel>
 
                     <ScrollViewer Height="Auto" Width="Auto" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
-                        <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="Auto">
+                        <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="125">
                             <StackPanel Name="Player1" Orientation="Vertical" Height="Auto">
                                 <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="0,10">
                                     <Button.Background>
@@ -158,7 +152,6 @@
                 </StackPanel>
             </ScrollViewer>
                      
-        </StackPanel>
 
         <StackPanel Panel.ZIndex="5" Background="White" VerticalAlignment="Bottom" Height="160">
             <Line StrokeThickness=".5" X1="0" X2="300" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>

@@ -36,11 +36,13 @@
     <None Remove="pics\backarrow.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\mutenotifications.png" />
+    <None Remove="pics\newMessage.png" />
     <None Remove="pics\plus.png" />
     <None Remove="pics\redo.png" />
     <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
     <None Remove="pics\reportuser.png" />
+    <None Remove="pics\silence.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\undo.png" />
@@ -71,11 +73,13 @@
     <Resource Include="pics\info.png" />
     <Resource Include="pics\kebabmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
+    <Resource Include="pics\newMessage.png" />
     <Resource Include="pics\plus.png" />
     <Resource Include="pics\redo.png" />
     <Resource Include="pics\remove.png" />
     <Resource Include="pics\removeFriend.png" />
     <Resource Include="pics\reportuser.png" />
+    <Resource Include="pics\silence.png" />
     <Resource Include="pics\tavern.jpeg" />
     <Resource Include="pics\trash.png" />
   </ItemGroup>

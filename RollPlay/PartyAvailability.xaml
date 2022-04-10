@@ -68,10 +68,67 @@
 
                     </StackPanel>
 
+                    <StackPanel Orientation="Horizontal" Margin="0,-18,0,-40" Background="White" Panel.ZIndex="10" VerticalAlignment="Bottom" Height="44">
 
+                        <Border BorderThickness="0,0,0,.5" Width="40" >
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5"  Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="SUN" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
+                        </Border>
+
+                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38" >
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+                    </StackPanel>
 
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
-                        <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
+                        <StackPanel Name="CalendarHolder">
                             <Grid Name="Calendar">
 
                                 <Grid.ColumnDefinitions>
@@ -113,63 +170,6 @@
                                     <RowDefinition Height="40"/>
                                     <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
-
-                                <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="1" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="SUN" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="2" BorderThickness="0,0,0,.5"  >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="3" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="4" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="5" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="6" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="7" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
 
                                 <Border Grid.Row="1" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
@@ -339,10 +339,7 @@
                                     </Border.BorderBrush>
                                     <Label Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
-                                
-                                
-                                
-
+                              
                                 <Border Grid.Row="18" Grid.Column="1" Grid.RowSpan="6" BorderThickness="0, 0, 0,0" Background="#87A397" Panel.ZIndex="10">
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
@@ -410,9 +407,6 @@
                                 <Border Grid.Row="22" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
                                 <Border Grid.Row="23" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
                                 <Border Grid.Row="24" Grid.Column="1" Grid.ColumnSpan="7" BorderThickness="0,0,0,.5" BorderBrush="Black" Opacity=".35"/>
-
-
-
                             </Grid>
                         </StackPanel>
                     </ScrollViewer>
@@ -447,7 +441,7 @@
             </Button>
         </StackPanel>
 
-        <StackPanel Name="InfoPanel" Panel.ZIndex="50" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Name="InfoPanel" Panel.ZIndex="50" HorizontalAlignment="Center" Width="320" VerticalAlignment="Center"/>
 
 
     </Grid>

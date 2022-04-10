@@ -116,7 +116,7 @@ namespace RollPlay
                 border.Width = 275;
                 border.HorizontalAlignment = HorizontalAlignment.Center;
                 border.CornerRadius = new CornerRadius(10);
-                border.Margin = new Thickness(0, 5, 0, 0);
+                border.Margin = new Thickness(0, 5, 0, 30);
                 DropShadowEffect effect = new DropShadowEffect();
                 effect.Opacity = .35;
                 effect.ShadowDepth = 1.5;
@@ -360,6 +360,16 @@ namespace RollPlay
             popupShown = false;
             Chats.Children.Remove(chatSelected);
             SubMenuHolder.Children.Clear();
+        }
+
+        private void ScheduleSession_Click(object sender, RoutedEventArgs e)
+        {
+            string sesh = SessionText.Text.ToString();
+            PartyAvailabilityWindow window = new PartyAvailabilityWindow(PartyName, PlayerName, sesh);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
     }
 }

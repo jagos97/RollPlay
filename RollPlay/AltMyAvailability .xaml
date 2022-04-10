@@ -29,25 +29,86 @@
             </StackPanel>
 
 
-            <StackPanel Orientation="Vertical">
-                <StackPanel>
+            <StackPanel Orientation="Vertical" Background="White">
+                <StackPanel Background="White">
                     
                     
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Background="White" Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Background="Transparent" BorderThickness="0,0,0,0" FontWeight="Bold" > 
                             MY AVAILABILITY
                         </Button>
-
+                        
                         <Line Y1="0" Y2="90" X1="0" X2="1" Height="20" Width="10" Stroke="Black" StrokeThickness="1" Opacity=".5" Margin="10, 0, 0, 0" HorizontalAlignment="Center"/>
 
                         <Button Background="Transparent" BorderThickness="0,0,0,0" Opacity=".5" Click="PartyAvailability_Click">
                             PARTY AVAILABILITY
                         </Button>
-                        
                     </StackPanel>
-                    <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
+                    <StackPanel Background="White">
+                        <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Horizontal" Margin="0,-18,0,-40" Background="White" Panel.ZIndex="10" VerticalAlignment="Bottom" Height="60">
+                        
+                        <Border BorderThickness="0,0,0,.5" Width="40" >
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5"  Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="SUN" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
+                        </Border>
+
+                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38" >
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+
+                        <Border BorderThickness="0,0,0,.5" Width="38">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="black" Opacity=".35"/>
+                            </Border.BorderBrush>
+                            <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                        </Border>
+                    </StackPanel>
+                    
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
                         <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
                             <Grid Name="Calendar">
@@ -91,63 +152,6 @@
                                     <RowDefinition Height="40"/>
                                     <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
-
-                                <Border Grid.Row="0" Grid.Column="0" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="1" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="SUN" VerticalAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="2" BorderThickness="0,0,0,.5"  >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="3" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="4" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="5" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="6" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
-                                <Border Grid.Row="0" Grid.Column="7" BorderThickness="0,0,0,.5" >
-                                    <Border.BorderBrush>
-                                        <SolidColorBrush Color="black" Opacity=".35"/>
-                                    </Border.BorderBrush>
-                                    <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Center"/>
-                                </Border>
-
 
                                 <Border Grid.Row="1" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
