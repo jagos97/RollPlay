@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:RollPlay"
         mc:Ignorable="d"
         Title="Login" Height="564" Width="320">
+    
     <Grid>
         
         <Grid.RowDefinitions>
@@ -90,8 +91,8 @@
         </StackPanel>
         <Label Content="SETTINGS" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="Century Gothic"/>
 
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-            <TextBlock FontSize="20"  Margin="80,75, 0, 0" Width="200" VerticalAlignment="Center" Text="Type to Search"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
+            <TextBlock FontSize="20"  Margin="100,75, 0, 0" Width="200" VerticalAlignment="Center" Text="Type to Search" />
         </StackPanel>
 
         <Label Content="ACCOUNT INFORMATION" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
