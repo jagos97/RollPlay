@@ -1,0 +1,106 @@
+﻿<Window x:Class="RollPlay.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollPlay"
+        mc:Ignorable="d"
+        Title="Login" Height="564" Width="320">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+
+
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="NavBar"  Grid.Row="6" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
+            <Button x:Name="CollectionNavBar" Width="62"  BorderThickness="0,4,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="TavernNavBar" Width="62" BorderThickness="0,0,0,0" Click="TavernNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ChatNavBar" Width="62"  BorderThickness="0,0,0,0" Click="ChatNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="NotificationNavBar"  Width="62" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MenuNavBar"  Width="62"  BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Label Content="SETTINGS" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="Century Gothic"/>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+            <TextBlock FontSize="20"  Margin="80,75, 0, 0" Width="200" VerticalAlignment="Center" Text="Type to Search"/>
+        </StackPanel>
+
+        <Label Content="ACCOUNT INFORMATION" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+        <Label Content="NOTIFICATIONS" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+
+
+        <Label Content="APPLICATION PREFERENCES" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+        <Label Content="PRIVACY AND SECURITY" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,235,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic" Height="59" Grid.RowSpan="2" Width="185"/>
+
+        <Label Content="QUICK LINKS" Grid.Row ="2" HorizontalAlignment="Left" Margin="25,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+
+    </Grid>
+</Window>
