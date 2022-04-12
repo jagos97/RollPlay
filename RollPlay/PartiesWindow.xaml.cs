@@ -156,5 +156,12 @@ namespace RollPlay
 
             }
         }
+
+        private void CreateParty_Click(object sender, RoutedEventArgs e)
+        {
+            CreateParty window = new CreateParty();
+            overlay.Children.Clear();
+            overlay.Children.Add(window);
+        }
     }
 }

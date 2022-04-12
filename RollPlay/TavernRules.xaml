@@ -88,6 +88,11 @@
                     <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
                 </Border>
                 <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260"  FontSize="16" FontStyle="Italic">RULES AND INFORMATION ABOUT THE TAVERN</TextBlock>
+                <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
 
             <ScrollViewer MaxHeight="{Binding Path=ActualHeight, ElementName=stack, Mode=OneWay}" VerticalScrollBarVisibility="Hidden">
@@ -133,11 +138,11 @@
                         </StackPanel>
                     </Border>
 
-                    <Border BorderBrush="#3094CC" BorderThickness="8" CornerRadius="6.25" Width="150" Margin="15">
+                    <Border BorderBrush="#7385AE" BorderThickness="8" CornerRadius="6.25" Width="150" Margin="15">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".1" />
                         </Border.Effect>
-                        <Button x:Name="FilterUsers" Background="#3094CC" Foreground="White" BorderThickness="0,0,0,0" Click="Proceed_Click">
+                        <Button x:Name="FilterUsers" Background="#7385AE" Foreground="White" BorderThickness="0,0,0,0" Click="Proceed_Click">
                             <TextBlock FontSize="14" FontWeight="ExtraBold">PROCEED</TextBlock>
                         </Button>
                     </Border>
