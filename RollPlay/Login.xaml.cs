@@ -33,7 +33,7 @@ namespace RollPlay
 
         private void CharacterPage(object sender, RoutedEventArgs e)
         {
-            TavernMenuWindow window = new TavernMenuWindow();
+            MainWindow window = new MainWindow();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

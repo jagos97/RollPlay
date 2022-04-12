@@ -34,6 +34,7 @@
                SIGN UP
             </Hyperlink>
         </TextBlock>
+        
 
         <TextBlock HorizontalAlignment="Right" Grid.Row="3" Margin="0,70,-5,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8">
             <Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" >
