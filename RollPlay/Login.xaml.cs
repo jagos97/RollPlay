@@ -31,9 +31,13 @@ namespace RollPlay
             DragMove();
         }
 
-        private void ButtonAcceptClick1(object sender, RoutedEventArgs e)
+        private void CharacterPage(object sender, RoutedEventArgs e)
         {
-           
+            TavernMenuWindow window = new TavernMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
 
         }
 

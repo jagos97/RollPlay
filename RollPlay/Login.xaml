@@ -18,24 +18,28 @@
 
         <Label Content="SIGN IN" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="Century Gothic"/>
 
-        <TextBlock  x:Name="textBlockLogin" Text="Email Address" Background="Lavender" FontSize="18" HorizontalAlignment="Left" FontWeight="Bold" Height="21" VerticalAlignment="Bottom" Width="189" Margin="0,0,0,13" />
+        <TextBlock  x:Name="textBlockLogin" Text="Email Address" Background="White" FontSize="18" HorizontalAlignment="Left" FontWeight="Bold" Height="21" VerticalAlignment="Bottom" Width="189" Margin="0,0,0,13"/>
         <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" x:Name="textBoxLogin" Width="180" Margin="0,0,0,0" MaxLines="20" Height="40" TabIndex="5" FontSize="20"/>
 
-        <TextBlock x:Name="textBlockPass" Text="Password" Grid.Row="2" Background="Lavender" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Width="189" Margin="0,-50,0,13" />
-        <PasswordBox Grid.Column="1" Grid.Row="2"  MaxLength="16" HorizontalAlignment="Left" x:Name="passwordBoxPass" Width="180" Margin="0,30,0,6" Height="40" TabIndex="2" />
+        <TextBlock x:Name="textBlockPass" Text="Password" Grid.Row="2" Background="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Width="189" Margin="0,-50,0,13" />
+        <PasswordBox Grid.Column="1" Grid.Row="2"  MaxLength="20" HorizontalAlignment="Left" x:Name="passwordBoxPass" Width="180" Margin="0,30,0,6" Height="40" TabIndex="5" FontSize="20" />
 
-        <Button Content="SIGN IN" Foreground="White" Click="ButtonAcceptClick1" Grid.Column="1" Background="Green" Grid.Row="3" Height="35" x:Name="buttonAccept" VerticalAlignment="Center" Margin="67,-60,0,30" HorizontalAlignment="Left" Width="100" IsDefault="True" TabIndex="4" />
+        <Button Content="LOGIN" Foreground="White"  Grid.Column="1" Background="Blue" Grid.Row="3" Height="35" x:Name="buttonAccept" VerticalAlignment="Center" Margin="67,-20,0,30" HorizontalAlignment="Left" Width="100" IsDefault="True" TabIndex="4" Click="CharacterPage" />
 
 
-        <Label Content="NOT A MEMBER YER?" HorizontalAlignment="Left" Grid.Row="3" Margin="10,42,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="6"/>
+        <Label Content="NOT A MEMBER YET?" HorizontalAlignment="Left" Grid.Row="3" Margin="0,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8"/>
 
-        <TextBlock HorizontalAlignment="Left" Grid.Row="3" Margin="80,46,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="6">           
-            <Hyperlink NavigateUri="http://www.google.com" RequestNavigate="Hyperlink_RequestNavigate" >
-               SING UP
+        <TextBlock HorizontalAlignment="Left" Grid.Row="3" Margin="90,70,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8">           
+            <Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" >
+               SIGN UP
             </Hyperlink>
         </TextBlock>
 
-        <Label Content="FORGOT MY PASSWORD" HorizontalAlignment="Right" Grid.Row="3" Margin="10,42,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="6"/>
+        <TextBlock HorizontalAlignment="Right" Grid.Row="3" Margin="0,70,-5,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8">
+            <Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" >
+                FORGOT MY PASSWORD
+            </Hyperlink>
+        </TextBlock>
 
     </Grid>
 </Window>
