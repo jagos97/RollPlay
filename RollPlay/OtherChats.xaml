@@ -1,0 +1,136 @@
+﻿<Window x:Class="RollPlay.OtherChats"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollPlay"
+        mc:Ignorable="d"
+        Title="OtherChats" Height="564" Width="320">
+    <Grid Background="#FF2C2C2C">
+        <Button HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="30" Height="30" BorderBrush="#01707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/pics/newMessage.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" HorizontalAlignment="Right" Margin="0,20,10,0" VerticalAlignment="Top" Width="35" Height="12" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush ImageSource="/pics/meatball.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="Other Chats" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#FF7685AB" FontWeight="Bold" Foreground="White" BorderThickness="0,0,0,3"/>
+        <Button Content="Party Chats" HorizontalAlignment="Left" Margin="70,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="Transparent" BorderBrush="#FFBCBAB8" BorderThickness="0,0,0,0" FontWeight="Normal" Click="PartyChats_Click" Foreground="White"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Margin="0,90,0,0" Height="386">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid Width="285" Height="54">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/character1.jpg"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Label Content="User1" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                        <Label Content="Do you want to make a party for Call of Cthulu" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="209" Height="29" FontWeight="Bold" Foreground="White"/>
+                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF3094CC"/>
+                    </Grid>
+                </Button>
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid Width="285" Height="54">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/character2.jpg"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Label Content="Character Name" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                        <Label Content="We will attack Thorin at midnight" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Bold" Foreground="White"/>
+                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF3094CC"/>
+                    </Grid>
+                </Button>
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid Width="285" Height="54">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/character4.jpg"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Label Content="Tavern Chat" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
+                        <Label Content="User1: Tell me stranger, what can you offer party?" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Normal" Foreground="White"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF1C1C1D" Width="320" HorizontalAlignment="Stretch">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="TavernNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+         <StackPanel Name = "navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />  
+    </Grid>
+</Window>

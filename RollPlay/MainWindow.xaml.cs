@@ -191,8 +191,9 @@ namespace RollPlay
                 navBarMenuShown = true;
 
             }
-
         }
+
+        
 
         private void ChatNavBar_Click(object sender, RoutedEventArgs e)
         {

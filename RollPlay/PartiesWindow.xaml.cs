@@ -81,6 +81,14 @@ namespace RollPlay
             this.Close();
 
         }
+        private void ChatNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            PartyChats window = new PartyChats();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
 
         private void ToParty_Click(object sender, RoutedEventArgs e)
         {
@@ -104,6 +112,32 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void PartyChat1_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)PartyName.Content;
+            string Player = (string)PlayerName.Content;
+
+            Chat window = new Chat(chatName: Name, subname: Player);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            e.Handled = true;
+        }
+
+        private void PartyChat2_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)PartyName2.Content;
+            string Player = (string)PlayerName2.Content;
+
+            Chat window = new Chat(chatName: Name, subname: Player);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            e.Handled = true;
         }
 
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Collections" Height="564" Width="320">
 
-    <Grid x:Name="MainGrid" Margin="0,0,0,0" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True">
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
+    <Grid x:Name="MainGrid" Margin="0,0,0,0" Visibility="Visible" KeyDown="KeyIsDown" Focusable="True" Background="#FF2C2C2C">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF1C1C1D" Width="320" HorizontalAlignment="Stretch">
             <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
@@ -37,7 +37,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="ChatNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -81,17 +81,17 @@
             </Button>
         </StackPanel>
 
-        <Button x:Name="Settings" HorizontalAlignment="Right" Margin="0,17,30,0" VerticalAlignment="Top" Height="20" Width="20" BorderBrush="White">
+        <Button x:Name="Settings" HorizontalAlignment="Right" Margin="0,17,30,0" VerticalAlignment="Top" Height="20" Width="20" BorderBrush="#00000000">
             <Button.Background>
                 <ImageBrush ImageSource="/pics/settings.png"/>
             </Button.Background>
         </Button>
-        <Label Content="USERNAME#000" HorizontalAlignment="Center" Height="43" Margin="0,27,0,0" VerticalAlignment="Top" Width="166" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Aer Grylls" HorizontalAlignment="Center" Height="43" Margin="0,17,0,0" VerticalAlignment="Top" Width="100" FontSize="20" FontWeight="Bold" Foreground="White"/>
 
         <StackPanel x:Name="CollectionSubMenuSelector"  Margin="0,75,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="240" >
-            <Button x:Name="CharactersCollectionSubMenuSelector" Content="Characters" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" FontSize="14" Margin="5,0,5,0" Click="CharactersCollectionSubMenuSelector_Click"/>
-            <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="White" BorderThickness="0,0,0,3" BorderBrush="Black" Width="70" Margin="5,0,5,0" Click="PartiesCollectionSubMenuSelector_Click"/>
-            <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="White" BorderThickness="0,0,0,3" BorderBrush="#FF95DADE" Width="70" Margin="5,0,5,0" />
+            <Button x:Name="CharactersCollectionSubMenuSelector" Content="Characters" Background="#FF2C2C2C" BorderThickness="0,0,0,3" BorderBrush="#00000000" Width="70" FontSize="14" Margin="5,0,5,0" Click="CharactersCollectionSubMenuSelector_Click" Foreground="White"/>
+            <Button x:Name="PartiesCollectionSubMenuSelector" Content="Parties" Background="#FF2C2C2C" BorderThickness="0,0,0,3" BorderBrush="#00000000" Width="70" Margin="5,0,5,0" Click="PartiesCollectionSubMenuSelector_Click" Foreground="White"/>
+            <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="#FF2C2C2C" BorderThickness="0,0,0,3" BorderBrush="#FF7685AB" Width="70" Margin="5,0,5,0" Foreground="White" />
         </StackPanel>
         <ScrollViewer x:Name="Characters" Margin="0,221,0,77" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" HorizontalAlignment="Stretch">
             <StackPanel x:Name="FriendHolder" VerticalAlignment="Center" Width="320">
@@ -111,15 +111,15 @@
                         </Grid>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="July#342" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="July#342" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Foreground="Transparent" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -134,15 +134,15 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="Britt#563" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="Brit#425" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Foreground="Transparent" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click" >
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -157,15 +157,15 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="Poncho#745" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="Poncho#523" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Foreground="Transparent" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -180,15 +180,15 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="ApplePie#635" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="ApplePie#985" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Foreground="Transparent" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -203,15 +203,15 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="RandomName#420" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="RandomPerson#420" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Foreground="Transparent" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Foreground="White" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -226,61 +226,15 @@
                         </Button>
                     </StackPanel>
                 </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="RandomName#420" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
+                <Border x:Name="NewFriend" Background="White" BorderBrush="#FF494949" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal" Background="#FF494949">
+                        <Button Content="NewFriend#120" Width="190" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" Foreground="White"/>
+                        <Button Content="" BorderBrush="#00000000" Height="21" Width="22" Margin="0,0,10,0" Click="ToChat_Click">
                             <Button.Background>
                                 <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
                             </Button.Background>
                         </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="90"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/meatball.png"/>
-                            </Button.Background>
-                        </Button>
-                    </StackPanel>
-                </Border>
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="RandomName#420" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
-                            <Button.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform Angle="90"/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Button.RenderTransform>
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/meatball.png"/>
-                            </Button.Background>
-                        </Button>
-                    </StackPanel>
-                </Border>
-                <Border x:Name="NewFriend" Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="35" Width="256" VerticalAlignment="Top" Visibility="Collapsed">
-                    <StackPanel Orientation="Horizontal">
-                        <Button Content="NewFriend#120" Width="190" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0"/>
-                        <Button Content="" BorderBrush="White" Height="21" Width="22" Margin="0,0,10,0">
-                            <Button.Background>
-                                <ImageBrush ImageSource="/pics/darkChat.png" TileMode="FlipY"/>
-                            </Button.Background>
-                        </Button>
-                        <Button Content="Button" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
+                        <Button Content="Button" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="25" Height="8" Click="PartySubMenu_Click">
                             <Button.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -297,39 +251,39 @@
                 </Border>
             </StackPanel>
         </ScrollViewer>
-        <Border HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="272" Height="28" BorderThickness="0,1,0,1" BorderBrush="#FFE5E4E3" Background="White">
+        <Border HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Width="272" Height="28" BorderThickness="0,1,0,1" BorderBrush="#FF2C2C2C" Background="#FF2C2C2C">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Add Friend" Width="120" BorderBrush="White" Background="White"  HorizontalContentAlignment ="Left" RenderTransformOrigin="0.5,0.5" Click="GoToAddFriend_Click">
+                <Button Content="Add Friend" Width="120" BorderBrush="#FF2C2C2C" Background="#FF2C2C2C"  HorizontalContentAlignment ="Left" RenderTransformOrigin="0.5,0.5" Click="GoToAddFriend_Click" Foreground="White">
                 </Button>
-                <Button Content="Pending Friend Requests" Width="136" Background="White" BorderBrush="White" HorizontalContentAlignment ="Right" Click="GoToPendingFriends_Click"/>
+                <Button Content="Pending Friend Requests" Width="136" Background="#FF2C2C2C" BorderBrush="#FF2C2C2C" HorizontalContentAlignment ="Right" Click="GoToPendingFriends_Click" Foreground="White"/>
             </StackPanel>
 
         </Border>
-        <Ellipse HorizontalAlignment="Right" Height="6" Margin="0,128,20,0" Stroke="#FFA71D31" VerticalAlignment="Top" Width="5" Fill="#FFA71D31"/>
-        <Border BorderBrush="#FFB7D5D9" BorderThickness="1" Margin="0,154,0,0" HorizontalAlignment="Center" CornerRadius="6" VerticalAlignment="Top" Height="50" Width="290">
-            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <Ellipse HorizontalAlignment="Right" Height="7" Margin="0,128,20,0" Stroke="#FFBD4346" VerticalAlignment="Top" Width="7" Fill="#FFBD4346"/>
+        <Border BorderBrush="#FF494949" BorderThickness="1" Margin="0,154,0,0" HorizontalAlignment="Center" CornerRadius="6" VerticalAlignment="Top" Height="50" Width="290">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="#FF494949">
 
-                <Label FontSize="10" Content="Search Friends" Foreground="#FF969696" Margin="0,-5,210,26"/>
+                <Label FontSize="10" Content="Search Friends" Foreground="White" Margin="0,-5,210,26"/>
                 <Canvas Margin="262,11,6,11" Width="20" Height="20" >
                     <Canvas.Background>
                         <ImageBrush ImageSource="/pics/magnifyingGlass.png"/>
                     </Canvas.Background>
                 </Canvas>
-                <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Height="31" Margin="0,14,0,0" Background="Transparent" BorderBrush="#00ABADB3" FontSize="16"/>
+                <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" Height="31" Margin="0,14,0,0" Background="Transparent" BorderBrush="#00ABADB3" FontSize="16" Foreground="White"/>
             </Grid>
         </Border>
         <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
-        <Grid x:Name="AddFriendOverlay" Visibility="Collapsed">
+        <Grid x:Name="AddFriendOverlay" Visibility="Collapsed" >
             <Rectangle Stroke="Black" Fill="#99000000"/>
-            <Border BorderBrush="Black" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="White" Height="394" Width="272"  CornerRadius="10">
+            <Border BorderBrush="Black" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="#FF2C2C2C" Height="394" Width="272"  CornerRadius="10">
                 <Grid Margin="-11,-31,-21,-40">
-                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Margin="0,10,10,2" BorderBrush="White" Click="ExitFriendOverlay_Click" >
+                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Margin="0,10,10,2" BorderBrush="#00000000" Click="ExitFriendOverlay_Click" >
                         <Button.Background>
                             <ImageBrush ImageSource="/pics/x.png"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="ADD FRIEND" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
-                    <TextBox x:Name="SearchfriendTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Margin="0,66,0,0" Height="31" FontSize="16" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" >
+                    <Label Content="ADD FRIEND" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    <TextBox x:Name="SearchfriendTextBox" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" Margin="0,66,0,0" Height="31" FontSize="16" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="#FF494949" Foreground="White" BorderBrush="#FF494949" >
                         <TextBox.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="5"/>
@@ -341,14 +295,14 @@
                         <StackPanel x:Name="PossibleFriendsStack">
                         </StackPanel>
                     </ScrollViewer>
-                    <Button Content="SEND FRIEND REQUEST" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top" Width="154" Background="#FF3094CC" Foreground="White" BorderBrush="White" Height="28" FontWeight="Bold" Click="AddFriend_Click">
+                    <Button Content="SEND FRIEND REQUEST" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top" Width="154" Background="#FF7685AB" Foreground="White" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" Click="AddFriend_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>
                             </Style>
                         </Button.Resources>
                     </Button>
-                    <Button Content="Cancel" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Width="106" Background="White" Foreground="#FF3094CC" BorderBrush="#FF3094CC" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Click="ExitFriendOverlay_Click">
+                    <Button Content="Cancel" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Width="106" Background="White" Foreground="#FF7685AB" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Click="ExitFriendOverlay_Click">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="5"/>
@@ -358,30 +312,30 @@
                 </Grid>
             </Border>
         </Grid>
-        <Grid x:Name="PendingFriendsOverlay" Visibility="Collapsed">
+        <Grid x:Name="PendingFriendsOverlay" Visibility="Collapsed" >
             <Rectangle Stroke="Black" Fill="#99000000"/>
-            <Border BorderBrush="Black" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="White" Height="394" Width="272"  CornerRadius="10">
+            <Border BorderBrush="Black" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="#FF2C2C2C" Height="394" Width="272"  CornerRadius="10">
                 <Grid Margin="-11,-31,-21,-40">
-                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Margin="0,10,10,2" BorderBrush="White" Click="ExitFriendOverlay_Click" >
+                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Margin="0,10,10,2" BorderBrush="#00000000" Click="ExitFriendOverlay_Click" >
                         <Button.Background>
                             <ImageBrush ImageSource="/pics/x.png"/>
                         </Button.Background>
                     </Button>
-                    <Label Content="PENDING FRIEND REQUESTS" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="PENDING FRIEND REQUESTS" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
                     <Border BorderBrush="#FFD0D0D0" Margin="18,71,18,285" BorderThickness="0,0,0,1">
-                        <Label Content="INCOMING" FontWeight="Bold" FontSize="11"/>
+                        <Label Content="INCOMING" FontWeight="Bold" FontSize="11" Foreground="White"/>
                     </Border>
                     <ScrollViewer Margin="0,110,0,185" HorizontalAlignment="Center" Width="242" VerticalScrollBarVisibility="Hidden">
                         <StackPanel x:Name="FriendRequestsStack">
                             <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="40" Width="242">
-                                <StackPanel Orientation="Horizontal">
-                                    <Label Content="NewFriend#120" Width="157" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0" VerticalContentAlignment="Center" FontWeight="Normal"/>
-                                    <Button Content="" BorderBrush="White" Height="30" Width="30" Margin="0,0,10,0" Click="AcceptFriend_Click">
+                                <StackPanel Orientation="Horizontal" Background="#FF494949">
+                                    <Label Content="NewFriend#120" Width="157" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" VerticalContentAlignment="Center" FontWeight="Normal" Foreground="White"/>
+                                    <Button Content="" BorderBrush="Transparent" Height="30" Width="30" Margin="0,0,10,0" Click="AcceptFriend_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="/pics/addFriend.png" TileMode="FlipY"/>
                                         </Button.Background>
                                     </Button>
-                                    <Button Content="" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="30" Height="30" Click="DeclineFriend_Click">
+                                    <Button Content="" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="30" Height="30" Click="DeclineFriend_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="/pics/deleteFriend.png"/>
                                         </Button.Background>
@@ -390,15 +344,15 @@
                             </Border>
                         </StackPanel>
                     </ScrollViewer>
-                    <Border BorderBrush="#FFD0D0D0" Margin="18,71,18,285" BorderThickness="0,0,0,1">
-                        <Label Content="OUTGOING" FontWeight="Bold" FontSize="11" Margin="0,129,0,-129"/>
+                    <Border BorderBrush="#FFD0D0D0" Margin="14,199,22,157" BorderThickness="0,0,0,1">
+                        <Label Content="OUTGOING" FontWeight="Bold" FontSize="11" Margin="0,0,0,-1" Foreground="White" BorderBrush="#FFD0D0D0"/>
                     </Border>
-                    <ScrollViewer Margin="0,230,0,80" HorizontalAlignment="Center" Width="242" VerticalScrollBarVisibility="Hidden">
+                    <ScrollViewer Margin="0,0,0,105" HorizontalAlignment="Center" Width="242" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Bottom">
                         <StackPanel x:Name="FriendRequestsSentStack">
-                            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="40" Width="242">
+                            <Border Background="#FF494949" BorderBrush="#FFE0E0E0" BorderThickness="0,1,0,1" Height="40" Width="242">
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Content="PossibleFriend#120" Width="199" Background="White" Padding="0,0,0,0" BorderBrush="White" Margin="0,0,10,0" VerticalContentAlignment="Center" FontWeight="Normal"/>
-                                    <Button Content="" BorderBrush="White" RenderTransformOrigin="0.5,0.5" Width="30" Height="30" Click="ResindFriendRequest_Click">
+                                    <Label Content="PossibleFriend#120" Width="199" Background="#FF494949" Padding="0,0,0,0" BorderBrush="#FF494949" Margin="0,0,10,0" VerticalContentAlignment="Center" FontWeight="Normal" Foreground="White"/>
+                                    <Button Content="" BorderBrush="#00000000" RenderTransformOrigin="0.5,0.5" Width="30" Height="30" Click="ResindFriendRequest_Click">
                                         <Button.Background>
                                             <ImageBrush ImageSource="/pics/deleteFriend.png"/>
                                         </Button.Background>

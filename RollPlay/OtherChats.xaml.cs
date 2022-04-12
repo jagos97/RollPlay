@@ -17,11 +17,11 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class PartyChats : Window
+    public partial class OtherChats : Window
     {
         private static bool navBarMenuShown = false;
 
-        public PartyChats()
+        public OtherChats()
         {
             InitializeComponent();
         }
@@ -44,9 +44,13 @@ namespace RollPlay
             this.Close();
         }
 
-        private void PartyChatPins_Click(object sender, RoutedEventArgs e)
+        private void OtherChat_Click(object sender, RoutedEventArgs e)
         {
-            Chat window = new Chat(chatName: "Party", subname: "");
+
+        }
+        private void PartyChats_Click(object sender, RoutedEventArgs e)
+        {
+            PartyChats window = new PartyChats();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -54,25 +58,7 @@ namespace RollPlay
         }
 
 
-        private void PartyChat_Click(object sender, RoutedEventArgs e)
-        {
-            List<string> messages = new List<string> { "Welcome", "Hey it's me. now it is a longer mdosgsdig nsdgonsd sodgn fn"};
-            List<string> senders = new List<string> { "lDM","rMe"};
 
-            Chat window = new Chat(messages: messages, senders: senders);
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
-        private void OtherChats_Click(object sender, RoutedEventArgs e)
-        {
-            OtherChats window = new OtherChats();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {
             if (navBarMenuShown)
