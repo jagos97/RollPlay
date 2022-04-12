@@ -105,7 +105,7 @@
                     <StackPanel Height="103" Orientation="Horizontal" VerticalAlignment="Top" Margin="9,0,4,0">
                         <Grid Height="100" Width="243" VerticalAlignment="Top">
                             <Label Content="It's dangerous to go alone!" HorizontalAlignment="Center" Margin="0,1,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="175" FontStyle="Italic" FontSize="14" Foreground="White"/>
-                            <Button Content="CREATE A PARTY" HorizontalAlignment="Center" Margin="0,63,0,10" Width="129" BorderBrush="#FF7685AB" RenderTransformOrigin="-0.367,-0.117" Background="#FF7685AB" FontStretch="Normal" Foreground="White" FontWeight="Bold">
+                            <Button Content="CREATE A PARTY" HorizontalAlignment="Center" Margin="0,63,0,10" Width="129" BorderBrush="#FF7685AB" RenderTransformOrigin="-0.367,-0.117" Background="#FF7685AB" FontStretch="Normal" Foreground="White" FontWeight="Bold" Click="CreateParty_Click">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
@@ -184,7 +184,7 @@
             </Button.Resources>
         </Button>
         <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
-
+        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
         <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" /> 
 
 

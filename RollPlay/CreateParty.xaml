@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="RollPlay.CreateParty"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="Auto" MinHeight="405" Width="320"
+             Name="CreatePartyWindow">
+
+    <Grid>
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+
+        <Border BorderBrush="#2C2C2C" BorderThickness="5" CornerRadius="10" Background="#2C2C2C" Height="Auto" MinHeight="405" MaxHeight="500" Width="288" RenderOptions.EdgeMode="Aliased">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,0" Background="#2C2C2C" Width="288" Height="Auto" MinHeight="405" MaxHeight="500" VerticalAlignment="Center">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" MaxHeight="500" Height="Auto" MinHeight="405" Margin="0,0,0,0" BorderBrush="white">
+                    <StackPanel>
+                        <Label Foreground="White" Content="CREATE NEW PARTY" HorizontalAlignment="Center" FontWeight="Bold" FontSize="17" Margin="0, 10, 0, 0"/>
+                        <Label Foreground="White" Content="Party Name" FontSize="8" Margin="20,0,0,-10" HorizontalAlignment="Left" />
+                        <TextBox Name="PartyNameBox" Foreground="White" Background="#494949" BorderBrush="#7385AE" Width="240" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                            <TextBox.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"/>
+                                </Style>
+                            </TextBox.Resources>
+                        </TextBox>
+                        <Label Name="NameError" Content="Party Name is required" Foreground="#CC3641" Margin="0, -10, 0, 10" FontSize="8" Visibility="Collapsed" HorizontalAlignment="Center"/>
+
+                        <RadioButton Name="JoinWith" Foreground="White" Background="#494949" BorderBrush="#494949" Content="Join With Character" HorizontalAlignment="Center" Margin="0,5,0,0" Checked="WithCharacter_Selected" Unchecked="WithCharacter_Unselected"/>
+                        <RadioButton Name="JoinWithout" Foreground="White" Background="#494949" BorderBrush="#494949" Content="Join Without Character" HorizontalAlignment="Center" Margin="0,5,0,0" Checked="WithoutCharacter_Selected" Unchecked="WithoutCharacter_Unselected"/>
+
+                        <StackPanel Name="CharacterListPanel" Visibility="Collapsed">
+                            <ListBox Name="CharacterList" Width="200" HorizontalAlignment="Center" Background="#494949" BorderBrush="#494949" Foreground="White" Height="65" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="0,10,0,0" SelectionMode="Single">
+                                <ListBox.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="8"/>
+                                    </Style>
+                                </ListBox.Resources>
+                                <ListBoxItem Content="Brelion Mosslock"/>
+                                <ListBoxItem Content="Ashlavvah Emberstone"/>
+                                <ListBoxItem Content="Walker Ranger"/>
+                                <ListBoxItem Content="Jasper Knuckleface"/>
+                                <ListBoxItem Content="Flynhorn d'Fareweed"/>
+                                <ListBoxItem Content="Danny Clash"/>
+                                <ListBoxItem Content="Mayhem Stoneheart"/>
+                            </ListBox>
+                            <Label Name="ListError" Content="Please select a character" Foreground="#CC3641" Margin="0, 0, 0, 10" HorizontalAlignment="Center" FontSize="8" Visibility="Collapsed"/>
+                        </StackPanel>
+
+                        <StackPanel Name="WithoutCharacter" Visibility="Collapsed">
+                            <TextBlock Text="If you would like to join without a charcter, please enter a display name below" Foreground="White" TextWrapping="Wrap" Width="250" Margin="0,15,0,5" TextAlignment="Center" FontStyle="Italic" Opacity=".75"/>
+                            <Label Foreground="White" Content="Display Name" FontSize="8" Margin="40,0,0,-10" HorizontalAlignment="Left" />
+                            <TextBox Name="DisplayName" Foreground="White" Background="#494949" BorderBrush="#7385AE" Width="200" Height="40" FontSize="14" TextAlignment="left" Padding="5, 10" Margin="0, 8">
+                                <TextBox.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="8"/>
+                                    </Style>
+                                </TextBox.Resources>
+                            </TextBox>
+                            <Label Name="DisplayError" Content="Display Name is required" Foreground="#CC3641" Margin="0, -10, 0, 10" HorizontalAlignment="Center" FontSize="8" Visibility="Collapsed"/>
+                        </StackPanel>
+
+                        <Button Width="154" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,14" Click="CreateParty_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="6.25"/>
+                                </Style>
+                            </Button.Resources>
+                            <Label Content="CREATE PARTY" Foreground="white" FontWeight="ExtraBold"/>
+                        </Button>
+
+                        <Button Width="95" Background="#2C2C2C" BorderBrush="#7385AE" Height="Auto" BorderThickness="3" Click="Cancel_Click" Margin="0,0,0,25">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="6.25"/>
+                                </Style>
+                            </Button.Resources>
+                            <Label Content="CANCEL" Foreground="#7385AE" FontWeight="ExtraBold"/>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

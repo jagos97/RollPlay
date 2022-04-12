@@ -49,6 +49,7 @@
     <None Remove="pics\partypic4.jpg" />
     <None Remove="pics\plus.png" />
     <None Remove="pics\plusicon.png" />
+    <None Remove="pics\redo 2.png" />
     <None Remove="pics\redo.png" />
     <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
@@ -59,6 +60,7 @@
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\trashcan.png" />
+    <None Remove="pics\undo 2.png" />
     <None Remove="pics\undo.png" />
     <None Remove="pics\user.png" />
     <None Remove="pics\Vector.svg" />
@@ -67,23 +69,6 @@
     <None Remove="pics\x.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="pics\calendar.png" />
-    <Resource Include="pics\character1.jpg" />
-    <Resource Include="pics\character2.jpg" />
-    <Resource Include="pics\character3.jpg" />
-    <Resource Include="pics\character4.jpg" />
-    <Resource Include="pics\partypic.jpg" />
-    <Resource Include="pics\partypic2.jpg" />
-    <Resource Include="pics\info.png" />
-    <Resource Include="pics\partypic4.jpg" />
-    <Resource Include="pics\plus.png" />
-    <Resource Include="pics\partypic3.jpg" />
-    <Resource Include="pics\sendMessage.png" />
-    <Resource Include="pics\silence.png" />
-    <Resource Include="pics\user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -98,6 +83,10 @@
     <Resource Include="pics\addFriend.png" />
     <Resource Include="pics\arrow.png" />
     <Resource Include="pics\calendar.png" />
+    <Resource Include="pics\character1.jpg" />
+    <Resource Include="pics\character2.jpg" />
+    <Resource Include="pics\character3.jpg" />
+    <Resource Include="pics\character4.jpg" />
     <Resource Include="pics\deleteFriend.png" />
     <Resource Include="pics\black-remove.png" />
     <Resource Include="pics\blockUser.png" />
@@ -108,13 +97,19 @@
     <Resource Include="pics\meatballmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
     <Resource Include="pics\newMessage.png" />
+    <Resource Include="pics\partypic.jpg" />
+    <Resource Include="pics\partypic2.jpg" />
+    <Resource Include="pics\partypic3.jpg" />
+    <Resource Include="pics\partypic4.jpg" />
     <Resource Include="pics\plus.png" />
     <Resource Include="pics\plusicon.png" />
+    <Resource Include="pics\redo 2.png" />
     <Resource Include="pics\redo.png" />
     <Resource Include="pics\remove.png" />
     <Resource Include="pics\removeFriend.png" />
     <Resource Include="pics\removeicon.png" />
     <Resource Include="pics\reportuser.png" />
+    <Resource Include="pics\sendMessage.png" />
     <Resource Include="pics\silence.png" />
     <Resource Include="pics\tavern.jpeg" />
     <Resource Include="pics\trash.png" />
@@ -137,6 +132,7 @@
     <Resource Include="pics\chats.png" />
     <Resource Include="pics\mug.png" />
     <Resource Include="pics\trashcan.png" />
+    <Resource Include="pics\undo 2.png" />
     <Resource Include="pics\undo.png" />
     <Resource Include="pics\user.png" />
   </ItemGroup>
@@ -149,6 +145,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="CreateParty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DeleteBlock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -159,12 +158,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="InvitetoParty.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="OtherChats.xaml.cs">
-		<SubType>Code</SubType>
-	</Compile>
-    <Compile Update="PartyChatSubMenu .xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="PartyPageSubMenu.xaml.cs">
@@ -179,6 +172,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="CreateParty.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="RequestAvailOverlay.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -213,15 +210,6 @@
     </Page>
     <Page Update="EditParty.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-    </Page>
-
-    <Page Update="OtherChats.xaml">
-		<XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-		<SubType>Designer</SubType>
-	</Page>
-    <Page Update="PartyChatSubMenu .xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
     </Page>
     <Page Update="PartyPageSubMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
@@ -259,9 +247,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HamburgerMenu.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-    </Page>
-    <Page Update="Chat.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Shop.xaml">

@@ -86,9 +86,9 @@
                 <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" Height="50" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" FontSize="11" FontStyle="Italic">SO, YOU WANT TO FIND AN ADVENTURING PARTY. WE'VE GOT PLENTY OF TRAVELLERS HERE... ARE YOU LOOKIN' FOR ANYONE SPECIFIC?</TextBlock>
-            <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
+            <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/backarrow.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
