@@ -20,6 +20,10 @@ namespace RollPlay
     /// </summary>
     public partial class CreatePartyChat : UserControl
     {
+
+        System.Drawing.Color interactableColor = System.Drawing.ColorTranslator.FromHtml("#7385AE");
+        System.Drawing.Color overlayColor = System.Drawing.ColorTranslator.FromHtml("#494949");
+
         int i = 0;
         List<string> items = new List<string>();
         List<string> prices = new List<string>();
@@ -88,6 +92,10 @@ namespace RollPlay
             stock.TextAlignment = TextAlignment.Left;
             stock.Margin = new Thickness(20, 8, 0, 0);
             stock.Padding = new Thickness(5, 10, 0, 0);
+            stock.BorderBrush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(interactableColor.A, interactableColor.R, interactableColor.G, interactableColor.B));
+            stock.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(overlayColor.A, overlayColor.R, overlayColor.G, overlayColor.B));
+            stock.Foreground = Brushes.White;
+            
             //stock.SetValue(Border.CornerRadiusProperty, new CornerRadius(8));
 
             TextBox price = new TextBox();
@@ -98,6 +106,9 @@ namespace RollPlay
             price.TextAlignment = TextAlignment.Left;
             price.Margin = new Thickness(5, 8, 0, 0);
             price.Padding = new Thickness(5, 10, 0, 0);
+            price.BorderBrush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(interactableColor.A, interactableColor.R, interactableColor.G, interactableColor.B));
+            price.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(overlayColor.A, overlayColor.R, overlayColor.G, overlayColor.B));
+            price.Foreground = Brushes.White;
             //price.SetValue(Border.CornerRadiusProperty, new CornerRadius(8));
             //price.Style.Setters.Add(new Setter { Property = CornerRadius, Value = 8 });
             i++;

@@ -7,27 +7,27 @@
         mc:Ignorable="d"
         Name="MainShop" Height="568" Width="320">
 
-    <Grid>
+    <Grid Background="#2C2C2C">
      
         <StackPanel Orientation="Vertical">
             <StackPanel Panel.ZIndex="10">
-                <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,0,0,0" Click="BackToMain_Click">
+                <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="-270,10,0,0" Click="BackToMain_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/backarrow.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
                 </Button.Background>
             </Button>
 
             <Button x:Name="MeatballMenu" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="270,-25,10,0" Click="ChatSubMenu_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/meatball.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/meatballmenu.png"/>
                 </Button.Background>
             </Button>
-            <Label Content="{Binding ElementName=MainShop, Path=ShopName}" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,-10"/>
-            <Label Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="12" FontWeight="Light" HorizontalAlignment="Center" Foreground="Black" Opacity=".5"/>
-            <Line X1="1" X2="295" Width="295" Stroke="black" Opacity=".35" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+            <Label Foreground="White" Content="{Binding ElementName=MainShop, Path=ShopName}" FontWeight="SemiBold" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,-10"/>
+            <Label Foreground="White" Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="12" FontWeight="Light" HorizontalAlignment="Center" Opacity=".5"/>
+                <Line X1="1" X2="295" Width="295" Stroke="#494949" Opacity=".35" HorizontalAlignment="Center" Margin="0,10,0,10"/>
             </StackPanel>
-            
-            <Border Name="ShopViewer" Visibility="Collapsed" Height="122" Width="261" CornerRadius="10" Background="White" BorderBrush="White">
+
+            <Border Name="ShopViewer" Visibility="Collapsed" Height="122" Width="261" CornerRadius="10" Background="#494949" BorderBrush="White">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="2"/>
                 </Border.Effect>
@@ -35,11 +35,11 @@
                 <ScrollViewer VerticalScrollBarVisibility="Hidden">
 
                     <StackPanel  Orientation="Vertical" Name="ShopMenu" Grid.ColumnSpan="2">
-                        <Label Content="STOCK" FontSize="20" HorizontalAlignment="Left" FontWeight="SemiBold" Margin="10,0,0,-10" />
+                        <Label Foreground="White" Content="STOCK" FontSize="20" HorizontalAlignment="Left" FontWeight="SemiBold" Margin="10,0,0,-10" />
 
                         <StackPanel Orientation="Horizontal">
-                            <Label Content="Item" FontSize="16" FontWeight="Medium" HorizontalAlignment="Left" Width="175" Margin="10,0,0,0"/>
-                            <Label Content="Price" FontSize="16" FontWeight="Medium" HorizontalAlignment="Right" Width="75"/>
+                            <Label Foreground="White" Content="Item" FontSize="16" FontWeight="Medium" HorizontalAlignment="Left" Width="175" Margin="10,0,0,0"/>
+                            <Label Foreground="White" Content="Price" FontSize="16" FontWeight="Medium" HorizontalAlignment="Right" Width="75"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
@@ -49,9 +49,9 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" Panel.ZIndex="20">
-            <Line X1="0" X2="290" StrokeThickness=".5" Stroke="Black" Width="290" HorizontalAlignment="Center" Opacity=".5"/>
-            <Label Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="8" FontWeight="Light" Margin="25,0,0,-5" FontStyle="Italic" HorizontalAlignment="Left" Width="275"/>
-            <TextBox Height="35" Width="275" Margin="0,0,0,10" BorderBrush="#A0C8CD" Background="#FFF7F6F6">
+            <Line X1="0" X2="290" StrokeThickness=".5" Stroke="#494949" Width="290" HorizontalAlignment="Center" Opacity=".5"/>
+            <Label Foreground="White" Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="8" FontWeight="Light" Margin="25,0,0,-5" FontStyle="Italic" HorizontalAlignment="Left" Width="275"/>
+            <TextBox Height="35" Width="275" Margin="0,0,0,10" BorderBrush="#494949" Background="#494949">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"/>

@@ -11,25 +11,25 @@
     <Grid>
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
 
-        <Border BorderBrush="White" BorderThickness="5,5,5,5" Height="298" Width="278" CornerRadius="6" RenderOptions.EdgeMode="Aliased">
-            <StackPanel Height="298" Width="278" Background="White">
+        <Border BorderBrush="#2C2C2C" BorderThickness="5,5,5,5" Height="298" Width="278" CornerRadius="6" RenderOptions.EdgeMode="Aliased">
+            <StackPanel Height="298" Width="278" Background="#2C2C2C">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Label Name="Day" Content="" FontWeight="SemiBold" FontSize="20" Margin="-5,0,-5,0"/>
-                    <Label Name="StartTime" Content="" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
-                    <Label Content="TO" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
-                    <Label Name="EndTime" Content="" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
+                    <Label Foreground="White" Name="Day" Content="" FontWeight="SemiBold" FontSize="20" Margin="-5,0,-5,0"/>
+                    <Label Foreground="White" Name="StartTime" Content="" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
+                    <Label Foreground="White" Content="TO" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
+                    <Label Foreground="White" Name="EndTime" Content="" FontWeight="SemiBold" FontSize="20" Margin="0,0,-5,0"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" >
-                    <TextBox Text="The following party members are available at this time:" FontSize="14" FontStyle="italic" FontWeight="Light" TextWrapping="Wrap" Width="250" HorizontalContentAlignment="Center" BorderThickness="0,0,0,0" Margin="0,10,0,10"/>
-                    <Label Name="Player1" Content="Michael Scott" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
-                    <Label Name="Player2" Content="Pamela Beesly" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
-                    <Label Name="Player3" Content="Anegla Martin" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
-                    <Label Name ="Player4" Content="Dwight Schrute" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
-                    <Label Name="Player5" Content="Kelly Kapoor" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center"  >
+                    <TextBox Background="#2C2C2C" Foreground="White" Text="The following party members are available at this time:" FontSize="14" FontStyle="italic" FontWeight="Light" TextWrapping="Wrap" Width="250" HorizontalContentAlignment="Center" BorderThickness="0,0,0,0" Margin="0,10,0,10"/>
+                    <Label Foreground="White" Name="Player1" Content="Michael Scott" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
+                    <Label Foreground="white" Name="Player2" Content="Pamela Beesly" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
+                    <Label Foreground="White" Name="Player3" Content="Anegla Martin" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
+                    <Label Foreground="White" Name ="Player4" Content="Dwight Schrute" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
+                    <Label Foreground="White" Name="Player5" Content="Kelly Kapoor" FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center" Margin="0,0,0,-10" Visibility="Collapsed"/>
                 </StackPanel>
 
-                <Button Width="70" Background="#3094CC" BorderBrush="#3094CC" Height="25" Margin="0,30,0,0" Content="OK" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
+                <Button Width="70" Background="#7385AE" BorderBrush="#7385AE" Height="25" Margin="0,30,0,0" Content="OK" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

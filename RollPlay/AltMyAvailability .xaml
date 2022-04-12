@@ -11,107 +11,106 @@
    
     <Grid>
 
-        <StackPanel Orientation="Vertical" Margin="0,15,0,0">
+        <StackPanel Orientation="Vertical" Background="#2C2C2C">
 
-            <StackPanel Panel.ZIndex="10">
-                <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,0" Width="320" Height="75">
-                    <StackPanel>
-                        <Label HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Content="YOUR AVAILABILITY"/>
-                        <Label Content="{Binding ElementName=AltMyAvailability, Path=PartyName}" HorizontalAlignment="Center" Height="Auto" Width="Auto" FontSize="14" FontWeight="Medium" Foreground="Black" Opacity=".50" Margin="0, -5 0, 0"/>
+            <StackPanel Panel.ZIndex="10" Height="100" VerticalAlignment="Top">
+                <Border Background="#2C2C2C" BorderThickness="0,0,0,0" Width="320" Height="75">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="15,0,-10,0" Click="BackToMain_Click">
+                            <Button.Background>
+                                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
+                            </Button.Background>
+                        </Button>
+
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="275">
+                            <Label Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Content="YOUR AVAILABILITY"/>
+                            <Label Foreground="White" Content="{Binding ElementName=AltMyAvailability, Path=PartyName}" HorizontalAlignment="Center" FontSize="14" FontWeight="Medium" Opacity=".50" Margin="0, -5 0, 0"/>
+                        </StackPanel>
                     </StackPanel>
                 </Border>
-
-                <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,-100,0,0" Click="BackToMain_Click">
-                    <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="/pics/backarrow.png"/>
-                    </Button.Background>
-                </Button>
             </StackPanel>
 
-
-            <StackPanel Orientation="Vertical" Background="White">
-                <StackPanel Background="White">
-                    
-                    
-
-                    <StackPanel Background="White" Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Background="Transparent" BorderThickness="0,0,0,0" FontWeight="Bold" > 
+            <StackPanel Orientation="Vertical">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Foreground="White" Background="Transparent" BorderThickness="0,0,0,0" FontWeight="Bold" >
                             MY AVAILABILITY
                         </Button>
-                        
-                        <Line Y1="0" Y2="90" X1="0" X2="1" Height="20" Width="10" Stroke="Black" StrokeThickness="1" Opacity=".5" Margin="10, 0, 0, 0" HorizontalAlignment="Center"/>
 
-                        <Button Background="Transparent" BorderThickness="0,0,0,0" Opacity=".5" Click="PartyAvailability_Click">
+                        <Line Y1="0" Y2="90" X1="0" X2="1" Height="20" Width="10" Stroke="White" StrokeThickness="1" Opacity=".5" Margin="10, 0, 0, 0" HorizontalAlignment="Center"/>
+
+                        <Button Foreground="White" Background="Transparent" BorderThickness="0,0,0,0" Opacity=".5" Click="PartyAvailability_Click">
                             PARTY AVAILABILITY
                         </Button>
                     </StackPanel>
 
-                    <StackPanel Background="White">
-                        <Line StrokeThickness=".5" X1="0" X2="275" Stroke="Black" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+                    <StackPanel>
+                        <Line StrokeThickness=".5" X1="0" X2="275" Stroke="#494949" Opacity=".25" HorizontalAlignment="Center" Margin="0,10,0,20"/>
                     </StackPanel>
-                    
-                    <StackPanel Orientation="Horizontal" Margin="0,-18,0,-40" Background="White" Panel.ZIndex="10" VerticalAlignment="Bottom" Height="60">
-                        
-                        <Border BorderThickness="0,0,0,.5" Width="40" >
+
+                    <StackPanel Background="#2C2C2C" Orientation="Horizontal" Margin="0,-18,0,-40" Panel.ZIndex="10" VerticalAlignment="Bottom" Height="60">
+
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="40" >
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
+                            <Label Foreground="White"  Content="" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" HorizontalAlignment="Center" FontWeight="SemiBold" Opacity="1" />
                         </Border>
 
-                        <Border BorderThickness="0,0,0,.5"  Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5"  Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="SUN" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
+                            <Label Foreground="White" Content="SUN" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontWeight="semibold" Opacity="1"/>
                         </Border>
 
-                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="MON" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
 
-                        <Border BorderThickness="0,0,0,.5" Width="38" >
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38" >
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="TUE" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
 
-                        <Border BorderThickness="0,0,0,.5" Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="WED" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
 
-                        <Border BorderThickness="0,0,0,.5" Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="THU" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
 
-                        <Border  BorderThickness="0,0,0,.5" Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="FRI" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
 
-                        <Border BorderThickness="0,0,0,.5" Width="38">
+                        <Border Background="#2C2C2C" BorderThickness="0,0,0,.5" Width="38">
                             <Border.BorderBrush>
                                 <SolidColorBrush Color="black" Opacity=".35"/>
                             </Border.BorderBrush>
-                            <Label Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
+                            <Label Foreground="White" Content="SAT" HorizontalAlignment="Center" FontWeight="semibold" VerticalAlignment="Bottom"/>
                         </Border>
                     </StackPanel>
-                    
+
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
                         <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
-                            <Grid Name="Calendar">
+                            <Grid Name="Calendar" Background="#494949">
 
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="40" />
@@ -153,173 +152,173 @@
                                     <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
 
-                                <Border Grid.Row="1" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="1" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="12AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White" Content="12AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="2" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="2" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="1AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label  Foreground="White" Content="1AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="3" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="3" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="2AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="2AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="4" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="4" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="3AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="3AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="5" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="5" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="4AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="4AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
 
-                                <Border Grid.Row="6" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C" Grid.Row="6" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="5AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label  Foreground="White" Content="5AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="7" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border  Background="#2C2C2C" Grid.Row="7" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="6AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label  Foreground="White" Content="6AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="8" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border  Background="#2C2C2C" Grid.Row="8" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="7AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="7AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="9" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border  Background="#2C2C2C" Grid.Row="9" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="8AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="8AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="10" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border  Background="#2C2C2C" Grid.Row="10" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="9AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="9AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="11" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="11" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="10AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="10AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="12" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="12" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="11AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label  Foreground="White" Content="11AM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="13" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="13" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="12PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="12PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="14" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="14" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="1PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="1PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="15" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="15" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="2PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="2PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="16" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="16" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="3PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label  Foreground="White" Content="3PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="17" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="17" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="4PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="4PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="18" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="18" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="5PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="5PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="19" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="19" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="6PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="6PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="20" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="20" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="7PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label  Foreground="White" Content="7PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="21" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="21" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="8PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="8PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="22" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="22" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="9PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label  Foreground="White" Content="9PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
-                                <Border Grid.Row="23" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="23" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="10PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
+                                    <Label Foreground="White"  Content="10PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center" />
                                 </Border>
 
-                                <Border Grid.Row="24" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
+                                <Border Background="#2C2C2C"  Grid.Row="24" Grid.Column="0" BorderThickness="0, 0, .5,.5" >
                                     <Border.BorderBrush>
                                         <SolidColorBrush Color="black" Opacity=".35"/>
                                     </Border.BorderBrush>
-                                    <Label Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
+                                    <Label Foreground="White"  Content="11PM" HorizontalAlignment="Center" FontWeight="medium" VerticalAlignment="Center"/>
                                 </Border>
 
                                 <TextBlock Grid.Row="1" Grid.Column="1" Foreground="Transparent"/>
@@ -503,30 +502,26 @@
                             </Grid>
                         </StackPanel>
                     </ScrollViewer>
-
-
                 </StackPanel>
-                
-                
             </StackPanel>
+        </StackPanel>
+
+        <StackPanel Height="100" VerticalAlignment="Bottom" Background="#2C2C2C">
+            <Line StrokeThickness=".5" X1="0" X2="300" Stroke="#494949" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Button VerticalAlignment="Center" Width="184" Background="#7385AE" BorderBrush="#7385AE" Margin="0,30" Click="EditAvailability_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="EDIT AVAILABILITY" Foreground="white" FontWeight="ExtraBold"/>
+            </Button>
         </StackPanel>
 
 
 
-        <StackPanel Panel.ZIndex="5" Background="White" VerticalAlignment="Bottom" Height="75">
-                <Line StrokeThickness=".5" X1="0" X2="300" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-                <Button Width="184" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,10" Click="EditAvailability_Click">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="6.25"/>
-                        </Style>
-                    </Button.Resources>
-                    <Label Content="EDIT AVAILABILITY" Foreground="white" FontWeight="ExtraBold"/>
-                </Button>
 
-         
-            </StackPanel>
-            
+
     </Grid>
 </Window>
     

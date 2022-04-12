@@ -9,39 +9,39 @@
 
     <Grid>
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
-        <Rectangle  Fill="White" RadiusX="10" RadiusY="10" Height="405" Width="288" Margin="0,0,0,100" />
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,150">
-            <Label Content="INVITE USER(S) TO PARTY" HorizontalAlignment="Center" FontWeight="Bold" FontSize="17" Margin="0, 36, 0, 0"/>
-            <Label Content="Search Users" FontSize="8" Margin="0,0,0,-10" HorizontalAlignment="Left" />
-            <TextBox Name ="NameSearch" BorderBrush="#A0C8CD" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8" TextChanged="NameSearch_TextChanged">
+        <Rectangle  Fill="#2C2C2C" RadiusX="10" RadiusY="10" Height="405" Width="288" Margin="0,0,0,00"/>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50">
+            <Label Foreground="White" Content="INVITE USER(S) TO PARTY" HorizontalAlignment="Center" FontWeight="Bold" FontSize="17" Margin="0, 36, 0, 0"/>
+            <Label Foreground="White" Content="Search Users" FontSize="8" Margin="0,0,0,-10" HorizontalAlignment="Left" />
+            <TextBox Name ="NameSearch" Foreground="White" Background="#494949" BorderBrush="#7385AE" Width="245" Height="49" FontSize="18" TextAlignment="left" Padding="5, 10" Margin="0, 8" TextChanged="NameSearch_TextChanged">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="8"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <ListBox Name="FriendsList" BorderBrush="white" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#F6F6F6" SelectionMode="Multiple" Height="115" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemStringFormat="">
+            <ListBox Name="FriendsList" BorderBrush="#494949" VerticalAlignment="Center" HorizontalAlignment="Center" Width="245" Background="#494949" SelectionMode="Multiple" Height="115" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemStringFormat="">
                 <ListBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </ListBox.Resources>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Michael" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Pam" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Phyllis" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Dwight" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Kelly" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Stanley" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Creed" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Jim" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Ryan" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Daryl" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Angela" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Oscar" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Kevin" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
-                <ListBoxItem FontSize="14" FontWeight="light" Content="Meredith" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Michael" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Pam" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Phyllis" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Dwight" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Kelly" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Stanley" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Creed" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Jim" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Ryan" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Daryl" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Angela" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Oscar" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Kevin" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
+                <ListBoxItem Foreground="White" FontSize="14" FontWeight="light" Content="Meredith" Selected="Friend_Checked" Unselected="Friend_Unchecked"/>
             </ListBox>
-            <Button Width="154" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,14" Click="Invite_Click">
+            <Button Width="154" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,14" Click="Invite_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>
@@ -50,13 +50,13 @@
                 <Label Content="INVITE TO PARTY" Foreground="white" FontWeight="ExtraBold"/>
             </Button>
 
-            <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Click="Cancel_Click">
+            <Button Width="95" Background="#2C2C2C" BorderBrush="#7385AE" Height="Auto" BorderThickness="3" Click="Cancel_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>
                     </Style>
                 </Button.Resources>
-                <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
+                <Label Content="CANCEL" Foreground="#7385AE" FontWeight="ExtraBold"/>
             </Button>
         </StackPanel>
     </Grid>

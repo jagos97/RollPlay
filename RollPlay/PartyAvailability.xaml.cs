@@ -21,24 +21,18 @@ namespace RollPlay
     /// </summary>
     public partial class PartyAvailabilityWindow : Window
     {
-
         public string PartyName { get; set; }
 
         public string PlayerName { get; set; }
 
         public string schedSession { get; set; }
 
-
-
-
         public PartyAvailabilityWindow(string PartyName, string PlayerName, string schedSession)
         {
-
                 this.PartyName = PartyName;
                 this.PlayerName = PlayerName;
                 this.schedSession = schedSession;
                 InitializeComponent();
-
         } 
          
 
@@ -67,7 +61,9 @@ namespace RollPlay
 
         private void Request_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            RequestAvail popup = new RequestAvail();
+            InfoPanel.Children.Clear();
+            InfoPanel.Children.Add(popup);
         }
 
         private void MyAvail_Click(object sender, RoutedEventArgs e)
@@ -78,13 +74,10 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
-
         }
 
         private void MembersAvail_Click(object sender, RoutedEventArgs e)
         {
-            
-
             Button button = sender as Button;
             Border border = button.Parent as Border;
 

@@ -47,38 +47,38 @@
                 </StackPanel.Background>
 
                 <!--text prompts-->
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight='100' MaxWidth="200" Padding="5" Margin="63,300,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Height="Auto" Width="Auto" Foreground="White" FontWeight="Light" FontSize="16">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight='100' MaxWidth="200" Padding="5" Margin="63,300,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Height="Auto" Width="Auto" Foreground="White" FontWeight="Light" FontSize="16">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt1}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>
 
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="67,-450,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="Auto" Height="Auto" Foreground="White" FontWeight="Light" FontSize="12">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="67,-450,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Width="Auto" Height="Auto" Foreground="White" FontWeight="Light" FontSize="12">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt2}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>
 
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="350,-400,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="350,-400,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt3}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>
 
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="625,-425,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="625,-425,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Width="100" Foreground="White" FontWeight="Light" FontSize="13">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt4}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>
 
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="625,-125,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="150" Foreground="White" FontWeight="Light" FontSize="16">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="625,-125,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Width="150" Foreground="White" FontWeight="Light" FontSize="16">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt5}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>
 
-                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#504B43" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="900,-425,0,0" HorizontalAlignment="Left">
-                    <Button BorderThickness="0,0,0,0" Background="#504B43" Width="75" Foreground="White" FontWeight="Light" FontSize="11">
+                <Border BorderThickness="5,5,5,5" CornerRadius="10" Background="#494949" Opacity=".75" Height="Auto" Width="Auto" MaxHeight="100" MaxWidth="200" Padding="5" Margin="900,-425,0,0" HorizontalAlignment="Left">
+                    <Button BorderThickness="0,0,0,0" Background="#494949" Width="75" Foreground="White" FontWeight="Light" FontSize="11">
                         <TextBlock Text="{Binding ElementName=ExploreWindow, Path=Prompt6}" TextWrapping="Wrap" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center"/>
                     </Button>
                 </Border>

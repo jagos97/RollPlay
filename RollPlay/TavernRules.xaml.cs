@@ -17,32 +17,14 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Window4.xaml
     /// </summary>
-    public partial class FindFriendsMenuWindow : Window
+    public partial class TavernRulesWindow : Window
     {
 
         private static bool navBarMenuShown = false;
 
-        public FindFriendsMenuWindow()
+        public TavernRulesWindow()
         {
             InitializeComponent();
-        }
-
-        private void CommonerMenuSelector_Click(object sender, RoutedEventArgs e)
-        {
-            CommonerMenuWindow window = new CommonerMenuWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
-
-        private void BackToMain_Click(object sender, RoutedEventArgs e)
-        {
-            TavernMenuWindow window = new TavernMenuWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
         }
 
         private void CollectionNavBar_Click(object sender, RoutedEventArgs e)
@@ -67,16 +49,13 @@ namespace RollPlay
                 navBarMenuHolder.Children.Clear();
                 navBarMenuHolder.Children.Add(menu);
                 navBarMenuShown = true;
+
             }
         }
 
-        private void Filter_Click(object sender, RoutedEventArgs e)
+        private void Proceed_Click(object sender, RoutedEventArgs e)
         {
-            TavernRulesWindow window = new TavernRulesWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
+            //TODO
         }
     }
 }

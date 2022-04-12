@@ -23,8 +23,8 @@ namespace RollPlay
 
     public partial class AvailabilityBlock : UserControl
     {
-        Color color = (Color)ColorConverter.ConvertFromString("#3094CC");
-        System.Drawing.Color myColor = System.Drawing.ColorTranslator.FromHtml("#3094CC");
+        Color color = (Color)ColorConverter.ConvertFromString("#7385AE");
+        System.Drawing.Color myColor = System.Drawing.ColorTranslator.FromHtml("#7385AE");
 
         Color color1 = (Color)ColorConverter.ConvertFromString("#87A397");
         System.Drawing.Color myColor1 = System.Drawing.ColorTranslator.FromHtml("#87A397");

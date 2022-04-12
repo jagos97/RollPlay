@@ -1,0 +1,155 @@
+﻿<Window x:Class="RollPlay.TavernRulesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollPlay"
+        mc:Ignorable="d"
+        Title="TavernRulesWindow" Height="568" Width="320">
+
+    <Grid Background="#2C2C2C">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#1C1C1D" Width="320" Margin="0,271,0,0" Grid.Row="1" Panel.ZIndex="30">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,4,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
+                        <ImageBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="0.5" ScaleY="0.5"/>
+                                <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                <RotateTransform CenterX="0.5" CenterY="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ImageBrush.RelativeTransform>
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
+        <Grid>
+
+            <StackPanel Panel.ZIndex="10">
+                <Border Background="#2C2C2C" BorderThickness="0,0,0,0" Height=" 110">
+                    <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
+                </Border>
+                <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260"  FontSize="16" FontStyle="Italic">RULES AND INFORMATION ABOUT THE TAVERN</TextBlock>
+            </StackPanel>
+
+            <ScrollViewer MaxHeight="{Binding Path=ActualHeight, ElementName=stack, Mode=OneWay}" VerticalScrollBarVisibility="Hidden">
+                <StackPanel Name="stack" Orientation="Vertical" Margin="0,110,0,65">
+
+                    <Border BorderBrush="#BB8282" BorderThickness="15" Margin="0,15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="Auto" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".35" />
+                        </Border.Effect>
+                        <StackPanel>
+                            <Label Background="#BB8282" Foreground="White" Content="Be Respectful" FontSize="18" FontWeight="SemiBold" Margin="-5,-10,0,0"/>
+                            <TextBlock Background="#BB8282" Foreground="White" TextWrapping="Wrap" Margin="0,-5,0,0" Text="Please remember that you are chatting with real people. Treat everyone with repect and consideration. You can always block and/or report a user who violates this rule."/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border BorderBrush="#BB8282" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="Auto" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".35" />
+                        </Border.Effect>
+                        <StackPanel>
+                            <Label Background="#BB8282" Foreground="White" Content="Follow Roleplay Prompts" FontSize="18" FontWeight="SemiBold" Margin="-5,-10,0,0"/>
+                            <TextBlock Background="#BB8282" Foreground="White" TextWrapping="Wrap" Margin="0,-5,0,0" Text="Roleplay prompts help to break the ice and allow characters to get to know one another. You can add users as friends and start private chats if you would like to have conversations not pertaining to the roleplay prompt."/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border BorderBrush="#BB8282" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="Auto" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".35" />
+                        </Border.Effect>
+                        <StackPanel>
+                            <Label Background="#BB8282" Foreground="White" Content="Have Patience" FontSize="18" FontWeight="SemiBold" Margin="-5,-10,0,0"/>
+                            <TextBlock Background="#BB8282" Foreground="White" TextWrapping="Wrap" Margin="0,-5,0,0" Text="Rollplay is for everyone! Some users are very new to the world of Dungeons and Dragons; helping one another out and having patience for commoners (newbies) as they learn the rules makes the game available to all."/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border BorderBrush="#BB8282" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="Auto" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".35" />
+                        </Border.Effect>
+                        <StackPanel>
+                            <Label Background="#BB8282" Foreground="White" Content="Have Fun!" FontSize="18" FontWeight="SemiBold" Margin="-5,-10,0,0"/>
+                            <TextBlock Background="#BB8282" Foreground="White" TextWrapping="Wrap" Margin="0,-5,0,0" Text="Stay in character, get to know others and lean into the fantasy!"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border BorderBrush="#3094CC" BorderThickness="8" CornerRadius="6.25" Width="150" Margin="15">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".1" />
+                        </Border.Effect>
+                        <Button x:Name="FilterUsers" Background="#3094CC" Foreground="White" BorderThickness="0,0,0,0" Click="Proceed_Click">
+                            <TextBlock FontSize="14" FontWeight="ExtraBold">PROCEED</TextBlock>
+                        </Button>
+                    </Border>
+
+
+
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+
+    </Grid>
+</Window>

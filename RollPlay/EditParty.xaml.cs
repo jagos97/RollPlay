@@ -66,21 +66,21 @@ namespace RollPlay
                     BitmapImage bmi = new BitmapImage();
                     ImageBrush brush = new ImageBrush();
                     bmi.BeginInit();
-                    bmi.UriSource = new Uri("pack://application:,,,/pics/defaultCharacter.png", UriKind.Absolute);
+                    bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
                     bmi.EndInit();
                     brush.ImageSource = bmi;
                     button.Background = brush;
 
                     Button removeButton = new Button();
-                    removeButton.Height = 40;
-                    removeButton.Width = 40;
+                    removeButton.Height = 30;
+                    removeButton.Width = 30;
                     removeButton.Click += RemovePlayer_Click;
                     removeButton.Margin = new Thickness(50, -125, 0, 0);
                     removeButton.BorderThickness = new Thickness(0, 0, 0, 0);
                     BitmapImage bmi1 = new BitmapImage();
                     ImageBrush brush1 = new ImageBrush();
                     bmi1.BeginInit();
-                    bmi1.UriSource = new Uri("pack://application:,,,/pics/remove.png", UriKind.Absolute);
+                    bmi1.UriSource = new Uri("pack://application:,,,/pics/removeicon.png", UriKind.Absolute);
                     bmi1.EndInit();
                     brush1.ImageSource = bmi1;
                     removeButton.Background = brush1;
@@ -92,6 +92,7 @@ namespace RollPlay
                     textBlock.MaxWidth = 75;
                     textBlock.Text = friend;
                     textBlock.Margin = new Thickness(10, 5, 0, 0);
+                    textBlock.Foreground = Brushes.White;
 
                     stack.Children.Add(button);
                     stack.Children.Add(removeButton);

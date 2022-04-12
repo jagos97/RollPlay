@@ -11,14 +11,14 @@
     <Grid>
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
 
-        <Border BorderBrush="White" BorderThickness="5,5,5,5" Height="145" Width="278" CornerRadius="6" Margin="0,0,0,0" RenderOptions.EdgeMode="Aliased">
-            <StackPanel Height="298" Width="278" Background="White">
+        <Border BorderBrush="#2C2C2C" BorderThickness="5,5,5,5" Height="145" Width="278" CornerRadius="6" Margin="0,0,0,0" RenderOptions.EdgeMode="Aliased">
+            <StackPanel Height="298" Width="278" Background="#2C2C2C">
 
-                <Label Content="CANCEL SESSION?" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="20" Margin="0,5,0,0"/>
-                <TextBlock Width="250" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Center" TextAlignment="Center" Text="Your scheduled session will be cancelled. This action cannot be undone. Are you sure you want to cancel this session?"/>
+                <Label Foreground="White" Content="CANCEL SESSION?" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="20" Margin="0,5,0,0"/>
+                <TextBlock Foreground="White" Width="250" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Center" TextAlignment="Center" Text="Your scheduled session will be cancelled. This action cannot be undone. Are you sure you want to cancel this session?"/>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Width="90" Background="#A6320D" BorderBrush="#A6320D" Height="25" Margin="0,0,10,0" Content="CONFIRM" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
+                    <Button Width="90" Background="#CC3641" BorderBrush="#CC3641" Height="25" Margin="0,0,10,0" Content="CONFIRM" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>
@@ -26,7 +26,7 @@
                     </Button.Resources>
                 </Button>
 
-                    <Button Width="90" Background="Transparent" BorderBrush="Black" Height="25" Margin="10,0,0,0" Content="GO BACK" Foreground="Black" BorderThickness="2,2,2,2" FontWeight="ExtraBold" Click="Cancel_Click">
+                    <Button Foreground="#7385AE" Width="90" Background="Transparent" BorderBrush="#7385AE" Height="25" Margin="10,0,0,0" Content="GO BACK" BorderThickness="3,3,3,3" FontWeight="ExtraBold" Click="Cancel_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="5"/>

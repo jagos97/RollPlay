@@ -23,6 +23,7 @@
     <None Remove="pics\addcircle.png" />
     <None Remove="pics\addFriend.png" />
     <None Remove="pics\addtoparty.png" />
+    <None Remove="pics\arrow.png" />
     <None Remove="pics\black-remove.png" />
     <None Remove="pics\blockUser.png" />
     <None Remove="pics\calendar.png" />
@@ -34,18 +35,23 @@
     <None Remove="pics\kebabmenu.png" />
     <None Remove="pics\leave.png" />
     <None Remove="pics\backarrow.png" />
+    <None Remove="pics\meatballmenu.png" />
     <None Remove="pics\mug.png" />
     <None Remove="pics\mutenotifications.png" />
     <None Remove="pics\newMessage.png" />
     <None Remove="pics\plus.png" />
+    <None Remove="pics\plusicon.png" />
     <None Remove="pics\redo.png" />
     <None Remove="pics\remove.png" />
     <None Remove="pics\removeFriend.png" />
+    <None Remove="pics\removeicon.png" />
     <None Remove="pics\reportuser.png" />
     <None Remove="pics\silence.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
+    <None Remove="pics\trashcan.png" />
     <None Remove="pics\undo.png" />
+    <None Remove="pics\user.png" />
     <None Remove="pics\Vector.svg" />
     <None Remove="pics\whitebackarrow.png" />
     <None Remove="pics\whitedirectional.png" />
@@ -64,6 +70,7 @@
     <Resource Include="pics\add.png" />
     <Resource Include="pics\addcircle.png" />
     <Resource Include="pics\addFriend.png" />
+    <Resource Include="pics\arrow.png" />
     <Resource Include="pics\calendar.png" />
     <Resource Include="pics\deleteFriend.png" />
     <Resource Include="pics\black-remove.png" />
@@ -72,12 +79,15 @@
     <Resource Include="pics\delete.png" />
     <Resource Include="pics\info.png" />
     <Resource Include="pics\kebabmenu.png" />
+    <Resource Include="pics\meatballmenu.png" />
     <Resource Include="pics\mutenotifications.png" />
     <Resource Include="pics\newMessage.png" />
     <Resource Include="pics\plus.png" />
+    <Resource Include="pics\plusicon.png" />
     <Resource Include="pics\redo.png" />
     <Resource Include="pics\remove.png" />
     <Resource Include="pics\removeFriend.png" />
+    <Resource Include="pics\removeicon.png" />
     <Resource Include="pics\reportuser.png" />
     <Resource Include="pics\silence.png" />
     <Resource Include="pics\tavern.jpeg" />
@@ -100,7 +110,9 @@
     <Resource Include="pics\star.png" />
     <Resource Include="pics\chats.png" />
     <Resource Include="pics\mug.png" />
+    <Resource Include="pics\trashcan.png" />
     <Resource Include="pics\undo.png" />
+    <Resource Include="pics\user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -135,6 +147,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="RequestAvailOverlay.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CancelSessionOverlay.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -205,6 +221,9 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Shop.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="TavernRules.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>

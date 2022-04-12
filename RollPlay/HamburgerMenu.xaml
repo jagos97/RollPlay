@@ -7,23 +7,23 @@
              mc:Ignorable="d">
     
         <Grid>
-        <StackPanel Background="#FF504B43" Orientation="Vertical" Width="200" Height="458">
-            <Button Content="MY CHARACTERS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,20,10,0"/>
-            <Button Content="Character 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="Character 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="Character 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
+        <StackPanel Background="#1C1C1D" Orientation="Vertical" Width="200" Height="458">
+            <Button Content="MY CHARACTERS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,20,10,0"/>
+            <Button Content="Character 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+            <Button Content="Character 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+                <Button Content="Character 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+            <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
 
-            <Button Content="MY PARTIES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,5,10,0"/>
-            <Button Content="Party 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="Party 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="Party 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#FF504B43" Margin="0,0,10,0"/>
-            
-            <Button Content="MY FRIENDS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
-            <Button Content="MY MESSAGES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
-            <Button Content="THE TAVERN" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
-            <Button Content="NOTIFICATIONS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#FF504B43" Margin="0,10,10,0"/>
+            <Button Content="MY PARTIES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,5,10,0"/>
+            <Button Content="Party 1" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+            <Button Content="Party 2" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+            <Button Content="Party 3" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+                <Button Content="+ Add New" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,0"/>
+
+            <Button Content="MY FRIENDS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,10,10,0"/>
+            <Button Content="MY MESSAGES" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,10,10,0"/>
+            <Button Content="THE TAVERN" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,10,10,0"/>
+            <Button Content="NOTIFICATIONS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,10,10,0"/>
         </StackPanel>
 
     </Grid>
