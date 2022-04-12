@@ -36,9 +36,10 @@ namespace RollPlay
                 int j = i + 121;
                 btn.Content = "NewFriend#" + j.ToString();
                 btn.Height = 30;
-                btn.Background = new SolidColorBrush(Colors.White);
-                btn.BorderBrush = new SolidColorBrush(Colors.LightGray);
+                btn.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF494949"));
+                btn.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF494949"));
                 btn.BorderThickness = new Thickness(0,0,0,2);
+                btn.Foreground = new SolidColorBrush(Colors.White);
                 btn.Click += (object sender, RoutedEventArgs e) => { SelectFriend_Click(sender,e); };
                 PossibleFriendsStack.Children.Add(btn);
             }
@@ -70,6 +71,14 @@ namespace RollPlay
         private void TavernNavBar_Click(object sender, RoutedEventArgs e)
         {
             TavernMenuWindow window = new TavernMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+        private void ChatNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            PartyChats window = new PartyChats();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -148,11 +157,11 @@ namespace RollPlay
         {
             foreach (Button b in PossibleFriendsStack.Children)
             {
-                b.Background = new SolidColorBrush(Colors.White);
+                b.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF494949"));
             }
             Button btn = sender as Button;
             friendSelectedButton = btn;
-            btn.Background = new SolidColorBrush(Colors.LightBlue);
+            btn.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF7685AB"));
         }
 
 
@@ -171,6 +180,18 @@ namespace RollPlay
                 navBarMenuShown = true;
 
             }
+        }
+
+        private void ToChat_Click(object sender, RoutedEventArgs e)
+        {
+            string person = (((sender as Button).Parent as StackPanel).Children[0] as Button).Content as string;
+            List<string> list = new List<string> { "Hey man. You ready for Call of Cthulu" };
+            List<string> list2 = new List<string> { "l"+person};
+            Chat window = new Chat(chatName: person, messages: list, senders: list2, subname: "");
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
     }
 }

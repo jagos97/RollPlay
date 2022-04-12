@@ -17,9 +17,9 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for setting.xaml
     /// </summary>
-    public partial class setting : Window
+    public partial class Settings : Window
     {
-        public setting()
+        public Settings()
         {
             InitializeComponent();
         }

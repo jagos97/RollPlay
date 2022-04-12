@@ -32,7 +32,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderThickness="0,0,0,0" Click="TavernNavBar_Click">
+            <Button x:Name="TavernNavBar" Width="62" BorderThickness="0,0,0,0" >
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
                         <ImageBrush.RelativeTransform>
@@ -46,7 +46,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62"  BorderThickness="0,0,0,0" Click="ChatNavBar_Click">
+            <Button x:Name="ChatNavBar" Width="62"  BorderThickness="0,0,0,0" >
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -74,7 +74,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62"  BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+            <Button x:Name="MenuNavBar"  Width="62"  BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
