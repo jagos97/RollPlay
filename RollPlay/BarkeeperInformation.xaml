@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="BarkeeperInformationWindow" Height="568" Width="320">
 
-    <Grid>
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" Margin="0,271,0,0" Grid.Row="1" Panel.ZIndex="10">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+    <Grid Background="#2C2C2C">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#1C1C1D" Width="320" Margin="0,271,0,0" Grid.Row="1" Panel.ZIndex="10">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
                         <ImageBrush.RelativeTransform>
@@ -24,7 +24,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
                         <ImageBrush.RelativeTransform>
@@ -38,7 +38,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -52,7 +52,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -66,7 +66,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -83,76 +83,75 @@
         </StackPanel>
 
         <StackPanel Panel.ZIndex="10">
-            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="280" Height=" 110">
-                <Label Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
+            <Border Background="#2C2C2C" BorderThickness="0,0,0,2" Width="280" Height=" 110">
+                <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
-            <TextBlock Text="{Binding ElementName=barWindow, Path=title, StringFormat=OKAY. HERE IS WHAT I KNOW ABOUT {0}: }" TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="16" FontStyle="Italic"/>
-            <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
+            <TextBlock Foreground="White" Text="{Binding ElementName=barWindow, Path=title, StringFormat=OKAY. HERE IS WHAT I KNOW ABOUT {0}: }" TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" FontSize="16" FontStyle="Italic"/>
+            <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/backarrow.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
 
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top">
             <StackPanel Orientation="Vertical" Height="Auto" Margin="0,0,0,75">
-                <Label Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="15,120,0,0"/>
+                <Label Foreground="White" Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="15,120,0,0"/>
                 
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="278" CornerRadius="10">
+                    <Border Background="#494949" BorderBrush="#494949" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="278" CornerRadius="10">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                         </Border.Effect>
-                        <TextBlock Text="{Binding ElementName=barWindow, Path=desc1}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
+                        <TextBlock Foreground="White" Text="{Binding ElementName=barWindow, Path=desc1}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="Auto" CornerRadius="10" Margin="10">
+                    <Border Background="#494949" BorderBrush="#494949" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="Auto" CornerRadius="10" Margin="10">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                         </Border.Effect>
-                        <TextBlock Text="{Binding ElementName=barWindow, Path=desc2}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
+                        <TextBlock Foreground="White" Text="{Binding ElementName=barWindow, Path=desc2}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
                     </Border>
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="Auto" CornerRadius="10" Margin="0">
+                    <Border Background="#494949" BorderBrush="#494949" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="Auto" CornerRadius="10" Margin="0">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                         </Border.Effect>
-                        <TextBlock Text="{Binding ElementName=barWindow, Path=desc3}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
+                        <TextBlock Foreground="White" Text="{Binding ElementName=barWindow, Path=desc3}" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0"/>
                     </Border>
                 </StackPanel>
 
                 <Label x:Name="Response" Content="Me" FontSize="9.5" FontWeight="Light" HorizontalAlignment="Right" FontStyle="Italic" Margin="0,5,20,-10" Visibility="Collapsed"/>
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,10,0,0" CornerRadius="10">
+                <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,10,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
-                    <Button BorderBrush ="#556D7A" BorderThickness="0,0,0,0" Background="#556D7A" Height="80" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click">
+                    <Button BorderBrush ="#7385AE" BorderThickness="0,0,0,0" Background="#7385AE" Height="80" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Button_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Please, tell me more!</TextBlock>
                     </Button>
                 </Border>
-                
 
-                <Border x:Name="GoBack" BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="75" Margin="0,10,0,0" CornerRadius="10">
+                <Border x:Name="GoBack" BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="75" Margin="0,10,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
-                    <Button x:Name="BackToMenu" BorderBrush ="#556D7A" Background="#556D7A" Height="45" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Click="BackToMenu_Click">
+                    <Button x:Name="BackToMenu" BorderBrush ="#7385AE" Background="#7385AE" Height="45" Width="270" VerticalAlignment="Center" HorizontalAlignment="Center" Click="BackToMenu_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I've heard enough, I want to learn about something else</TextBlock>
                     </Button>
                 </Border>
 
-                <StackPanel x:Name="Redirect" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" Margin="10">
-                    <Label Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="0,-5,0,0"/>
-                    <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="278" CornerRadius="10">
+                <StackPanel x:Name="Redirect" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" Margin="10">
+                    <Label Foreground="White" Content="The Barkeep" FontSize="9.5" FontWeight="Light" FontStyle="Italic" Margin="0,-5,0,0"/>
+                    <Border Background="#494949" BorderBrush="#494949" BorderThickness="1, 1, 1, 1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="Auto" Width="278" CornerRadius="10">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                         </Border.Effect>
-                        <TextBlock TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0">                            This area is under construction please 
-                            <Hyperlink NavigateUri="{Binding ElementName=barWindow, Path=redirect}" RequestNavigate="Hyperlink_RequestNavigate" Foreground="black" FontWeight="Bold">
+                        <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="Auto" Width="270" FontSize="14" FontWeight="Light" Margin="5,0,0,0">                            This area is under construction please 
+                            <Hyperlink Foreground="White" NavigateUri="{Binding ElementName=barWindow, Path=redirect}" RequestNavigate="Hyperlink_RequestNavigate" FontWeight="Bold">
                                 click here 
                             </Hyperlink>
                             to learn more about this topic.

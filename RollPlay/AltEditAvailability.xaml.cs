@@ -22,7 +22,6 @@ namespace RollPlay
     public partial class AltEditAvailabilityWindow : Window
     {
 
-        Color color = (Color)ColorConverter.ConvertFromString("#87A397");
         System.Drawing.Color myColor = System.Drawing.ColorTranslator.FromHtml("#87A397");
 
 
@@ -31,10 +30,12 @@ namespace RollPlay
 
         public Grid inputGrid = null;
 
+
         List<Button> UndoChanges = new List<Button>();
         List<Button> RedoChanges = new List<Button>();
 
         public string schedSession { get; set; }
+
 
 
 
@@ -62,10 +63,13 @@ namespace RollPlay
                 this.PartyName = PartyName;
                 this.PlayerName = PlayerName;
                 this.inputGrid = inputGrid;
+
+
                 Border border = new Border();
                 Label label = new Label();
                 Button button = new Button();
-                InitializeComponent();
+                InitializeComponent();               
+
 
                 for (int index = this.Calendar.Children.Count - 1; index >= 0; index--)
                 {
@@ -135,7 +139,7 @@ namespace RollPlay
 
                     }
 
-                    if (!(item is Label) && !(item is Border))
+                    if ((item is not Label) && (item is not Border))
                     {
 
                         Button itemButton = new Button();
@@ -316,9 +320,6 @@ namespace RollPlay
 
         public void SelectAll_Click(object sender, RoutedEventArgs e)
         {
-
-            UIElement timeLabel = null;
-
             foreach (UIElement item in Calendar.Children)
             {
                 if (item is Button)

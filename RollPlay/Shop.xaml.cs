@@ -65,6 +65,7 @@ namespace RollPlay
                     label1.Margin = new Thickness(15, 0, 0, 0);
                     label1.Width = 175;
                     label1.TextWrapping = TextWrapping.Wrap;
+                    label1.Foreground = Brushes.White;
 
                     TextBlock label2 = new TextBlock();
                     label2.Text = prices[i];
@@ -73,6 +74,7 @@ namespace RollPlay
                     label2.Margin = new Thickness(0, 0, 0, 0);
                     label2.Width = 75;
                     label2.TextWrapping = TextWrapping.Wrap;
+                    label2.Foreground = Brushes.White;
 
 
                     stackPanel.Children.Add(label1);

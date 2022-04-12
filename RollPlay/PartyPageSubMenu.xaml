@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="138" d:DesignWidth="320">
     <Grid>
-        <Rectangle  Fill="#FF504B43" RadiusX="10" RadiusY="10"/>
+        <Rectangle  Fill="#494949" RadiusX="10" RadiusY="10"/>
         <StackPanel>
             <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
@@ -26,7 +26,7 @@
             <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/leave.png"/>
-                    <Label Content="LEAVE PARTY" VerticalAlignment="Stretch" Foreground="#FFF35858" Width="246" VerticalContentAlignment="Center" FontSize="14" />
+                    <Label Content="LEAVE PARTY" VerticalAlignment="Stretch" Foreground="#CC3641" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
         </StackPanel>

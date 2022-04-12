@@ -94,8 +94,10 @@ namespace RollPlay
 
                      if (item is Button)
                      {
+
                         Button itemButton = item as Button;
                         Label itemLabel = new Label();
+
                         itemLabel.BorderBrush = itemButton.BorderBrush;
                         itemLabel.BorderThickness = itemButton.BorderThickness;
                         itemLabel.Content = itemButton.Content;

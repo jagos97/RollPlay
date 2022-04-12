@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="TavernMenuWindow" Height="568" Width="320">
 
-    <Grid>
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" Margin="0,271,0,0" Grid.Row="1">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+    <Grid Background="#2C2C2C">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#1C1C1D" Width="320" Margin="0,271,0,0" Grid.Row="1">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
                         <ImageBrush.RelativeTransform>
@@ -23,7 +23,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
                         <ImageBrush.RelativeTransform>
@@ -37,7 +37,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -51,7 +51,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -65,7 +65,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -82,37 +82,37 @@
         </StackPanel>
 
         <StackPanel Panel.ZIndex="10">
-            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="280" Height=" 110">
+            <Border Background="#2C2C2C" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,0" Width="280" Height=" 110">
                 
-                <Label Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
+                <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="16" FontStyle="Italic">WELCOME TO THE TAVERN. WHAT CAN I DO FOR YOU ADVENTURER?</TextBlock>
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="White" FontSize="16" FontStyle="Italic">WELCOME TO THE TAVERN. WHAT CAN I DO FOR YOU ADVENTURER?</TextBlock>
         </StackPanel>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+        <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,161,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>
         </Border>
-        <Button x:Name="CommonerMenuSelector"  BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,165,0,-1" Click="CommonerMenuSelector_Click">
+        <Button x:Name="CommonerMenuSelector"  BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,165,0,-1" Click="CommonerMenuSelector_Click">
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I would like to learn the basic rules of Dungeons and Dragons</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+        <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,321,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>
         </Border>
-        <Button x:Name="RPMenuSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,325,0,-1" Click="RPMenuSelector_Click">
+        <Button x:Name="RPMenuSelector" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,325,0,-1" Click="RPMenuSelector_Click">
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I want to hang out in the Tavern and roleplay with other random users - just for fun!</TextBlock>
         </Button>
 
-        <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+        <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="68" Margin="0,241,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
             <Border.Effect>
                 <DropShadowEffect Opacity=".35" />
             </Border.Effect>
         </Border>
-        <Button x:Name="FindfriendsSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,245,0,-1" Click="FindfriendsSelector_Click"
+        <Button x:Name="FindfriendsSelector" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="260" Margin="0,245,0,-1" Click="FindfriendsSelector_Click"
                 >
             <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">I'm looking for players and/or a dungeon master to play with</TextBlock>
         </Button>

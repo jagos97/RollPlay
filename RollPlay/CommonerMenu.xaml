@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="CommonerMenuWindow" Height="568" Width="320">
 
-    <Grid>
+    <Grid Background="#2C2C2C">
         <!-- navbar -->
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" Margin="0,271,0,0" Grid.Row="1">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#1C1C1D" Width="320" Margin="0,271,0,0" Grid.Row="1">
+            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
                         <ImageBrush.RelativeTransform>
@@ -24,7 +24,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
                         <ImageBrush.RelativeTransform>
@@ -38,7 +38,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -52,7 +52,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -66,7 +66,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
+            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="MenuNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -85,13 +85,13 @@
         <!--titles-->
 
         <StackPanel Panel.ZIndex="10">
-            <Border Background="White" BorderBrush="#FFE0E0E0" BorderThickness="0,0,0,2" Width="280" Height=" 110">
-                <Label Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
+            <Border Background="#2C2C2C" BorderThickness="0,0,0,2" Width="280" Height=" 110">
+                <Label Foreground="White" Content="THE TAVERN" HorizontalAlignment="Center" Height="35" Margin="0,20,0,0" VerticalAlignment="Top" Width="130" FontSize="20" FontWeight="Bold"/>
             </Border>
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" Foreground="#504b43" FontSize="16" FontStyle="Italic"><Run Text="SO YOU'RE NEW HERE, HUH? WHAT DO YOU WANT TO KNOW ABOUT?"/></TextBlock>
-            <Button x:Name="BackToMain" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
+            <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" Height="43" Margin="0,-55,0,0" VerticalAlignment="Top" Width="260" FontSize="16" FontStyle="Italic"><Run Text="SO YOU'RE NEW HERE, HUH? WHAT DO YOU WANT TO KNOW ABOUT?"/></TextBlock>
+            <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Margin="-270,-175,0,0" Click="BackToMain_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="/pics/backarrow.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
@@ -100,60 +100,60 @@
 
             <!--buttons-->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0, 135,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0, 135,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
-                    <Button x:Name="CombatSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="42" Width="112" Margin="-2" Click="CombatSelector_Click">
+                    <Button x:Name="CombatSelector" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="42" Width="112" Margin="-2" Click="CombatSelector_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">The rules of combat</TextBlock>
                     </Button>
                 </Border>
 
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,135,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,135,0,-1" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
-                    <Button x:Name="SpellSelector" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Top" Height="42" Width="112" Margin="-1" Click="SpellSelector_Click">
+                    <Button x:Name="SpellSelector" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Top" Height="42" Width="112" Margin="-1" Click="SpellSelector_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">The rules of spellcasting</TextBlock>
                     </Button>
                 </Border>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                     </Border.Effect>
-                    <Button x:Name="Roleplaying" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="112" Click="RoleplayingSelector_Click">
+                    <Button x:Name="Roleplaying" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="112" Click="RoleplayingSelector_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Roleplaying</TextBlock>
                     </Button>
                 </Border>
 
 
-                <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+                <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" Height="68" Margin="15,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" ShadowDepth="1.5" />
                     </Border.Effect>
-                    <Button x:Name="Adventuring" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="112" Click="AdventuringSelector_Click">
+                    <Button x:Name="Adventuring" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="112" Click="AdventuringSelector_Click">
                         <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Adventuring</TextBlock>
                     </Button>
                 </Border>
             </StackPanel>
 
-            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+            <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                 </Border.Effect>
-                <Button x:Name="RaceClass" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44" Width="260" Click="RaceClassSelector_Click">
+                <Button x:Name="RaceClass" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44" Width="260" Click="RaceClassSelector_Click">
                     <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Races and Classes</TextBlock>
                 </Button>
             </Border>
 
-            <Border BorderBrush="#556D7A" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
+            <Border BorderBrush="#7385AE" BorderThickness="15" HorizontalAlignment="Center" VerticalAlignment="Top" Width="278" Height="50" Margin="0,15,0,0" CornerRadius="10" RenderOptions.EdgeMode="Aliased">
                 <Border.Effect>
                     <DropShadowEffect Opacity=".35" ShadowDepth="1.5"/>
                 </Border.Effect>
-                <Button x:Name="DM" BorderBrush ="#556D7A" Background="#556D7A" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44" Width="260" Click="DMSelector_Click">
+                <Button x:Name="DM" BorderBrush ="#7385AE" Background="#7385AE" HorizontalAlignment="Center" VerticalAlignment="Center" Height="44" Width="260" Click="DMSelector_Click">
                     <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Center" FontSize="14">Becoming a Dungeon Master</TextBlock>
                 </Button>
             </Border>

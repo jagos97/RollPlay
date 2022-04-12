@@ -65,6 +65,7 @@ namespace RollPlay
                         StackPanel stack = new StackPanel();
                         stack.Orientation = Orientation.Vertical;
                         stack.HorizontalAlignment = HorizontalAlignment.Center;
+                        stack.MaxWidth = 320;
 
                         Button button = new Button();
                         button.Height = 75;
@@ -75,7 +76,7 @@ namespace RollPlay
                         BitmapImage bmi = new BitmapImage();
                         ImageBrush brush = new ImageBrush();
                         bmi.BeginInit();
-                        bmi.UriSource = new Uri("pack://application:,,,/pics/defaultCharacter.png", UriKind.Absolute);
+                        bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
                         bmi.EndInit();
                         brush.ImageSource = bmi;
                         button.Background = brush;
@@ -87,6 +88,7 @@ namespace RollPlay
                         textBlock.MaxWidth = 75;
                         textBlock.Text = friend;
                         textBlock.Margin = new Thickness(10, 5, 0, 0);
+                        textBlock.Foreground = Brushes.White;
 
                         stack.Children.Add(button);
                         stack.Children.Add(textBlock);
@@ -112,11 +114,11 @@ namespace RollPlay
                 Border border = new Border();
                 border.Background = Brushes.White;
                 border.BorderThickness = new Thickness(0, 0, 0, 0);
-                border.Height = 110;
+                border.Height = 120;
                 border.Width = 275;
                 border.HorizontalAlignment = HorizontalAlignment.Center;
                 border.CornerRadius = new CornerRadius(10);
-                border.Margin = new Thickness(0, 5, 0, 0);
+                border.Margin = new Thickness(0, 5, 0, 30);
                 DropShadowEffect effect = new DropShadowEffect();
                 effect.Opacity = .35;
                 effect.ShadowDepth = 1.5;
@@ -125,11 +127,12 @@ namespace RollPlay
                 Button button = new Button();
                 button.Background = Brushes.Transparent;
                 button.BorderBrush = Brushes.Transparent;
-                button.Height = 110;
+                button.Height = 120;
                 button.HorizontalContentAlignment = HorizontalAlignment.Left;
                 button.VerticalContentAlignment = VerticalAlignment.Top;
 
                 StackPanel stack = new StackPanel();
+                stack.MaxWidth = 320;
 
                 StackPanel stackHor = new StackPanel();
                 stackHor.Orientation = Orientation.Horizontal;
@@ -140,6 +143,7 @@ namespace RollPlay
                 label.FontSize = 14;
                 label.Width = 230;
                 label.Margin = new Thickness(10, 5, 0, 0);
+                label.Foreground = Brushes.White;
 
                 Button muteButton = new Button();
                 muteButton.Height = 20;
@@ -150,7 +154,7 @@ namespace RollPlay
                 BitmapImage bmi = new BitmapImage();
                 ImageBrush brush = new ImageBrush();
                 bmi.BeginInit();
-                bmi.UriSource = new Uri("pack://application:,,,/pics/mutenotifications.png", UriKind.Absolute);
+                bmi.UriSource = new Uri("pack://application:,,,/pics/silence.png", UriKind.Absolute);
                 bmi.EndInit();
                 brush.ImageSource = bmi;
                 muteButton.Background = brush;
@@ -165,6 +169,7 @@ namespace RollPlay
                 textBlock.Width = 225;
                 textBlock.FontWeight = FontWeights.Light;
                 textBlock.Margin = new Thickness(15, 0, 0, 0);
+                textBlock.FontSize = 13;
                 textBlock.Text = Description;
 
                 Button kebabButton = new Button();
@@ -310,7 +315,7 @@ namespace RollPlay
             BitmapImage bmi = new BitmapImage();
             ImageBrush brush = new ImageBrush();
             bmi.BeginInit();
-            bmi.UriSource = new Uri("pack://application:,,,/pics/defaultCharacter.png", UriKind.Absolute);
+            bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
             bmi.EndInit();
             brush.ImageSource = bmi;
             button.Background = brush;
@@ -322,6 +327,7 @@ namespace RollPlay
             textBlock.MaxWidth = 75;
             textBlock.Text = friendName;
             textBlock.Margin = new Thickness(10,5,0,0);
+            textBlock.Foreground = Brushes.White;
 
             stack.Children.Add(button);
             stack.Children.Add(textBlock);
@@ -349,9 +355,9 @@ namespace RollPlay
 
         private void DeleteSession_Click(object sender, RoutedEventArgs e)
         {
-            SessionText.Text = "No Session Scheduled";
-            this.schedSession = "No Session Scheduled";
-            TrashSched.Visibility = Visibility.Collapsed;
+            CancelSession areYouSure = new CancelSession();
+            overlay.Children.Clear();
+            overlay.Children.Add(areYouSure);
         }
 
         public void DeleteChat()
@@ -359,6 +365,16 @@ namespace RollPlay
             popupShown = false;
             Chats.Children.Remove(chatSelected);
             SubMenuHolder.Children.Clear();
+        }
+
+        private void ScheduleSession_Click(object sender, RoutedEventArgs e)
+        {
+            string sesh = SessionText.Text.ToString();
+            PartyAvailabilityWindow window = new PartyAvailabilityWindow(PartyName, PlayerName, sesh);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
     }
 }

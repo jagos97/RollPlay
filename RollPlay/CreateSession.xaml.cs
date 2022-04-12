@@ -154,13 +154,27 @@ namespace RollPlay
 
         }
 
-        private void Create_Click(object sender, RoutedEventArgs e) 
+        private void Create_Click(object sender, RoutedEventArgs e)
         {
-            string schedString = (SelectedDate.Content.ToString()) + " @ " + (SelectedStartHour.Content.ToString()) + ":" + (SelectedStartMinute.Content.ToString()) + (SelectedStartAMPM.Content.ToString()) + " - " + (SelectedEndHour.Content.ToString()) + ":" + (SelectedEndMinute.Content.ToString()) + (SelectedEndAMPM.Content.ToString());
-            PartyAvailabilityWindow window = Window.GetWindow(this) as PartyAvailabilityWindow;
-            window.ScheduledSession.Content = schedString;
-            window.schedSession = schedString;
-            window.InfoPanel.Children.Clear();
+
+            if ((SelectedDate.Content.ToString().Equals("--")) | (SelectedStartHour.Content.ToString().Equals("--")) | (SelectedEndAMPM.Content.ToString().Equals("")) | (SelectedEndHour.Content.ToString().Equals("--")) | (SelectedEndAMPM.Content.ToString().Equals("")))
+            {
+                ErrorMessage1.Visibility = Visibility.Visible;
+
+            } else if ( (SelectedStartAMPM.Content.Equals("PM") && SelectedEndAMPM.Content.Equals("AM") ) | (  (SelectedStartAMPM.Content.Equals(SelectedEndAMPM.Content) && (Int32.Parse(SelectedStartHour.Content.ToString()) > Int32.Parse(SelectedEndHour.Content.ToString()))))) 
+            {
+                ErrorMessage2.Visibility = Visibility.Visible;
+                StartButton.BorderBrush = Brushes.Red;
+                EndButton.BorderBrush = Brushes.Red;
+            }
+            else
+            {
+                string schedString = (SelectedDate.Content.ToString()) + " @ " + (SelectedStartHour.Content.ToString()) + ":" + (SelectedStartMinute.Content.ToString()) + (SelectedStartAMPM.Content.ToString()) + " - " + (SelectedEndHour.Content.ToString()) + ":" + (SelectedEndMinute.Content.ToString()) + (SelectedEndAMPM.Content.ToString());
+                PartyAvailabilityWindow window = Window.GetWindow(this) as PartyAvailabilityWindow;
+                window.ScheduledSession.Content = schedString;
+                window.schedSession = schedString;
+                window.InfoPanel.Children.Clear();
+            }
         }
     }
 
