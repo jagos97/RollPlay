@@ -114,8 +114,8 @@ namespace RollPlay
 
         public void Send_Message_Click(object sender, RoutedEventArgs e)
         {
-            Border bdr = MakeBorder("r" + UserName);
-            Label lbl = MakeLabel("r" + UserName);
+            Border bdr = MakeBorder(UserName);
+            Label lbl = MakeLabel(UserName);
             TextBlock tb = MakeTextBlock(MessageBar.Text);
             bdr.Child = tb;
             messsageHolder.Children.Add(lbl);
