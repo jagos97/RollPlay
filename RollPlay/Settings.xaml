@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:RollPlay"
         mc:Ignorable="d"
         Title="Login" Height="564" Width="320">
-    
+
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />
             <RowDefinition Height="20*" />
@@ -93,16 +93,48 @@
 
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" >
             <TextBlock FontSize="20"  Margin="100,75, 0, 0" Width="200" VerticalAlignment="Center" Text="Type to Search" />
+
         </StackPanel>
 
-        <Label Content="ACCOUNT INFORMATION" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+        <Label Content="ACCOUNT INFORMATION" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic" />
+        <Button x:Name="expand" Height="15" Width="15" BorderThickness="0,0,0,0" Grid.Row="1" Margin="250,-80,0,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow3.png" />
+            </Button.Background>
+        </Button>
+
         <Label Content="NOTIFICATIONS" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,115,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
 
-
         <Label Content="APPLICATION PREFERENCES" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+        <Button x:Name="expand2" Height="15" Width="15" BorderThickness="0,0,0,0" Grid.Row="2" Margin="250,-50,0,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow3.png" />
+            </Button.Background>
+        </Button>
+        <Button x:Name="expand3" Height="15" Width="15" BorderThickness="0,0,0,0" Grid.Row="1" Margin="250,158,00,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow3.png" />
+            </Button.Background>
+        </Button>
+
+
+
         <Label Content="PRIVACY AND SECURITY" Grid.Row ="1" HorizontalAlignment="Left" Margin="25,235,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic" Height="59" Grid.RowSpan="2" Width="185"/>
 
+        <Button x:Name="expand4" Height="15" Width="15" BorderThickness="0,0,0,0" Grid.Row="1" Margin="250,40,0,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow3.png" />
+            </Button.Background>
+        </Button>
+
         <Label Content="QUICK LINKS" Grid.Row ="2" HorizontalAlignment="Left" Margin="25,75,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15" FontFamily="Century Gothic"/>
+        <Button x:Name="expand5" Height="15" Width="15" BorderThickness="0,0,0,0" Grid.Row="2" Margin="250,68,0,0">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow3.png" />
+            </Button.Background>
+        </Button>
+
+
 
     </Grid>
 </Window>
