@@ -43,22 +43,46 @@
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
-
             </Border>
+
+            <RichTextBox Name="textbox_chat_wnd" Background="Transparent" IsReadOnly="True" BorderBrush="Transparent">
+                <FlowDocument Name="flowdoc_chat_wnd">
+                    
+                    <BlockUIContainer>
+                        <Label Foreground="White" Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="8" Margin="10,0,0,-3" Opacity=".5" FontStyle="Italic"/>
+                    </BlockUIContainer>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#494949" BorderThickness="5,5,5,5" CornerRadius="5" MaxWidth="200" HorizontalAlignment="Left" Margin="10,0,0,0" RenderOptions.EdgeMode="Aliased">
+                            <TextBlock Text="Hey there traveller, what can I do for you?" Background="#494949" Foreground="White" TextWrapping="Wrap" MaxWidth="200"/>
+                        </Border>
+                    </BlockUIContainer>
+
+                </FlowDocument>
+            </RichTextBox>
 
         </StackPanel>
 
         <StackPanel VerticalAlignment="Bottom" Panel.ZIndex="20">
             <Line X1="0" X2="290" StrokeThickness=".5" Stroke="#494949" Width="290" HorizontalAlignment="Center" Opacity=".5"/>
             <Label Foreground="White" Content="{Binding ElementName=MainShop, Path=ShopKeep}" FontSize="8" FontWeight="Light" Margin="25,0,0,-5" FontStyle="Italic" HorizontalAlignment="Left" Width="275"/>
-            <TextBox Height="35" Width="275" Margin="0,0,0,10" BorderBrush="#494949" Background="#494949">
-                <TextBox.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="10"/>
-                    </Style>
-                </TextBox.Resources>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <TextBox Foreground="White" Name="Message" Height="35" Width="250" Margin="0,0,0,10" BorderBrush="#494949" Background="#494949">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+
+                <Button  Height="25" Width="25" BorderThickness="0,0,0,0" Margin="10,0,0,10" Click="SendMessage_Click">
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="/pics/send.png"/>
+                    </Button.Background>
+                </Button>
                 
-            </TextBox>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />

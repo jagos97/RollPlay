@@ -145,7 +145,7 @@
                     <CheckBox BorderBrush="#494949" Foreground="white" Name="Hybrid" Content="Hybrid" FontSize="12" Margin="30, 10, 0, 0" Width="147" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
                     <Label Foreground="white" Content="LOCATION" FontWeight="Bold" FontSize="14" Margin="25,20,0,0"/>
-                    <TextBox Foreground="white" x:Name="Location" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Padding="5" Margin="30, 5" BorderBrush="#494949" Background="#494949" >
+                    <TextBox Foreground="white" x:Name="Location" Width="150" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Padding="5" Margin="30, 5" BorderBrush="#2C2C2C" Background="#2C2C2C" >
                         Your Location
                         <TextBox.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity=".1" />
@@ -156,7 +156,7 @@
                             </Style>
                         </TextBox.Resources>
                     </TextBox>
-                    <TextBox Foreground="White" Name="Within" Width="85" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" HorizontalAlignment="Left" Margin="30, 5" BorderBrush="#494949" Background="#494949">
+                    <TextBox Foreground="White" Name="Within" Width="85" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" HorizontalAlignment="Left" Margin="30, 5" BorderBrush="#2C2C2C" Background="#2C2C2C">
                         Within 0km
                         <TextBox.Effect>
                             <DropShadowEffect ShadowDepth="1" Opacity=".1" />

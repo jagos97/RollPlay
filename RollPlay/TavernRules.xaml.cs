@@ -55,7 +55,11 @@ namespace RollPlay
 
         private void Proceed_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            TavernChat window = new TavernChat();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
 
         private void BackToMain_Click(object sender, RoutedEventArgs e)
