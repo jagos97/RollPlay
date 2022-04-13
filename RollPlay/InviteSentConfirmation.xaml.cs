@@ -33,8 +33,16 @@ namespace RollPlay
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            Chat window = Window.GetWindow(this) as Chat;
-            window.ClearEverything();
+            if (Window.GetWindow(this) is Chat)
+            {
+                Chat window = Window.GetWindow(this) as Chat;
+                window.ClearEverything();
+            } else if (Window.GetWindow(this) is TavernChat)
+            {
+                TavernChat window = Window.GetWindow(this) as TavernChat;
+                window.confirmPanel.Children.Clear();
+            }
+            
         }
 
         

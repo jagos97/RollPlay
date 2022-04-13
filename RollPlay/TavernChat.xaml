@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:RollPlay"
         mc:Ignorable="d"
         Name="TavernChatWindow" Height="568" Width="320">
@@ -22,6 +23,7 @@
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/meatballmenu.png"/>
                 </Button.Background>
             </Button>
+                
             <Label Foreground="White" Content="TAVERN CHAT" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,0"/>
                 <Line X1="1" X2="295" Width="295" Stroke="#494949" Opacity=".35" HorizontalAlignment="Center" Margin="0,10,0,10"/>
             </StackPanel>
@@ -88,5 +90,184 @@
 
             </StackPanel>
         </StackPanel>
+       
+        <StackPanel Name="overlayPanel" Panel.ZIndex="30" Visibility="Collapsed">
+            <Grid>
+                <Rectangle Stroke="Black" Fill="#99000000" Height="568"/>
+                <Border BorderBrush="#2C2C2C" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="#2C2C2C" Height="394" Width="272"  CornerRadius="10">
+                <Grid Margin="-11,-31,-21,-40">
+                   
+                    <Label x:Name="ChatNameLabel" Content="MEMBERS IN CHAT" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
+
+                        <StackPanel Height="150" Width="225">
+                            <ListView Height="150" Background="#494949" BorderBrush="#494949" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                                <ListView.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </ListView.Resources>
+                                
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="The Witch of Stendarr" Width="175"/>
+                                        
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">
+                                                <Button.Background>
+                                                    <ImageBrush ImageSource="pics/kebab.png"/>
+                                                </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                        
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="The Daedra Acolyte" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="Bob" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="Death Eater of Cosmic Worlds" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="Dragon's Bane" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="Gemini" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                                <ListViewItem HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label Foreground="White" Content="Evelynous" Width="175"/>
+                                        <Button BorderThickness="0,0,0,0" Height="15" Width="15" Click="Menu_Click">>
+                                            <Button.Background>
+                                                <ImageBrush ImageSource="pics/kebab.png"/>
+                                            </Button.Background>
+                                            <Button.ContextMenu>
+                                                <ContextMenu BorderBrush="#2C2C2C" Background="#2C2C2C">
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View Character"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="View User"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Send Message"/>
+                                                    <MenuItem Margin="-20,0,0,0" Background="#2C2C2C" BorderBrush="#2C2C2C" Foreground="White" Header="Invite To Party" Click="InviteToParty_Click"/>
+                                                </ContextMenu>
+                                            </Button.ContextMenu>
+                                        </Button>
+                                    </StackPanel>
+                                </ListViewItem>
+
+                            </ListView>
+                        </StackPanel>
+
+                        <Button Content="INVITE USER(S) TO CHAT" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Background="#FF7685AB" Foreground="White" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Margin="0,305,0,0" >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Content="CLOSE" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Width="106" Background="#2C2C2C" Foreground="#FF7685AB" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Click="Close_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+            </Border>
+    </Grid>
+    </StackPanel>
+
+        <StackPanel Name="popupPanel" VerticalAlignment="Bottom" Height="274" Panel.ZIndex="30"/>
+        <StackPanel Name="confirmPanel" VerticalAlignment="Center" HorizontalAlignment="Center" Panel.ZIndex="40"/>
+
+
+
     </Grid>
 </Window>

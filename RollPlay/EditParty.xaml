@@ -26,17 +26,8 @@
                     </StackPanel>
 
                     <ScrollViewer Height="Auto" Width="Auto" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
-                        <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="125">
-                            <StackPanel Name="Player1" Orientation="Vertical" Height="Auto">
-                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="0,10">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/pics/user.png" Stretch="Uniform"/>
-                                    </Button.Background>
-                                </Button>
-                            <TextBlock Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" MaxWidth="75" Text="{Binding ElementName=EditWindow, Path=PlayerName}" Margin="-5"/>
-                        </StackPanel>
-                        </StackPanel>
-                    </ScrollViewer>
+                    <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="125"/>
+                </ScrollViewer>
 
                 <Line Y1="0" Y2="0" X1="275" Stroke="#494949" StrokeThickness="1" HorizontalAlignment="Center" Margin="0,20,0,20"/>
 
@@ -78,7 +69,7 @@
 
         <StackPanel Panel.ZIndex="5" Background="#2C2C2C" VerticalAlignment="Bottom" Height="100">
             <Line StrokeThickness=".5" X1="0" X2="300" Stroke="#494949" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <Button Width="145" Background="#3094CC" BorderBrush="#3094CC" Height="Auto" Margin="0,10" Click="Save_Click">
+            <Button Width="145" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,10" Click="Save_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>
@@ -87,13 +78,13 @@
                 <Label Content="SAVE CHANGES" Foreground="white" FontWeight="ExtraBold"/>
             </Button>
 
-            <Button Width="95" Background="white" BorderBrush="#3094CC" Height="Auto" BorderThickness="3" Margin="0,-5,0,0" Click="Cancel_Click">
+            <Button Width="95" Background="#2C2C2C" BorderBrush="#7385AE" Height="Auto" BorderThickness="3" Margin="0,-5,0,0" Click="Cancel_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>
                     </Style>
                 </Button.Resources>
-                <Label Content="CANCEL" Foreground="#3094CC" FontWeight="ExtraBold"/>
+                <Label Content="CANCEL" Foreground="#7385AE" FontWeight="ExtraBold"/>
             </Button>
         </StackPanel>
 

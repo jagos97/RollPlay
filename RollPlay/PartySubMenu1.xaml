@@ -23,14 +23,14 @@
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" >
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/leave.png"/>
                     <Label Content="LEAVE PARTY" VerticalAlignment="Stretch" Foreground="#CC3641" Width="246" VerticalContentAlignment="Center" FontSize="14" />
                 </StackPanel>
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
-            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0">
+            <Button Background="#00000000" Height="45" Foreground="{x:Null}" BorderBrush="#FFA7A5A1" Padding="0,0,0,0" BorderThickness="0,0,0,0" Click="LeaveParty_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/trashcan.png"/>
                     <Label Content="DELETE CHARACTER" VerticalAlignment="Stretch" Foreground="#CC3641" Width="246" VerticalContentAlignment="Center" FontSize="14" />

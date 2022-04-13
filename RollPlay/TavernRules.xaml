@@ -37,7 +37,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="ChatNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>

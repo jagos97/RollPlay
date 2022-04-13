@@ -4,11 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RollPlay"
-             mc:Ignorable="d" d:DesignWidth="320" Height="364">
+             mc:Ignorable="d" d:DesignWidth="320" Height="317">
+    
     <Grid>
-        <Rectangle  Fill="#FF494949" RadiusX="10" RadiusY="10" Margin="0,0,0,47"/>
-        <StackPanel Margin="0,0,0,47">
-            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="NotImplemented_Click">
+        <Rectangle  Fill="#FF494949" RadiusX="10" RadiusY="10"/>
+        
+        <StackPanel>
+            <Button Background="#00000000" Height="45" BorderThickness="0,0,0,0" BorderBrush="#00000000" Click="NotImplemented_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/swapCharacters.png"/>
                     <Label Content="SWAP CHARACTERS" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" BorderBrush="#FFCC1010" Height="44" />

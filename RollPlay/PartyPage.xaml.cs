@@ -36,6 +36,8 @@ namespace RollPlay
 
         public string schedSession { get; set; }
 
+        public string photo { get; set; }
+
         public static bool popupShown = false;
         public static Border partySelected = null;
         public List<string> friendsList = new List<string>();
@@ -58,6 +60,60 @@ namespace RollPlay
                     TrashSched.Visibility = Visibility.Visible;
                 }
 
+                StackPanel stack1 = new StackPanel();
+                stack1.Orientation = Orientation.Vertical;
+                stack1.HorizontalAlignment = HorizontalAlignment.Center;
+                stack1.MaxWidth = 320;
+
+                Button button1 = new Button();
+                button1.Height = 75;
+                button1.Width = 75;
+                button1.BorderThickness = new Thickness(0, 0, 0, 0);
+                button1.Margin = new Thickness(10, 10, 0, 0);
+
+                BitmapImage bmi1 = new BitmapImage();
+                ImageBrush brush1 = new ImageBrush();
+                bmi1.BeginInit();
+
+
+                if (PlayerName.Equals("JYNX BOPDAWDLE"))
+                {
+                    bmi1.UriSource = new Uri("pack://application:,,,/pics/jynx.png", UriKind.Absolute);
+                    bmi1.EndInit();
+                    brush1.ImageSource = bmi1;
+                    button1.Background = brush1;
+                }
+
+                else if (PlayerName.Equals("SCRAVEN MIZZRYM"))
+                {
+                    bmi1.UriSource = new Uri("pack://application:,,,/pics/scraven.png", UriKind.Absolute);
+                    bmi1.EndInit();
+                    brush1.ImageSource = bmi1;
+                    button1.Background = brush1;
+
+                }
+                else
+                {
+                    bmi1.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                    bmi1.EndInit();
+                    brush1.ImageSource = bmi1;
+                    button1.Background = brush1;
+
+                }
+
+                TextBlock textBlock1 = new TextBlock();
+                textBlock1.HorizontalAlignment = HorizontalAlignment.Center;
+                textBlock1.TextWrapping = TextWrapping.Wrap;
+                textBlock1.TextAlignment = TextAlignment.Center;
+                textBlock1.MaxWidth = 75;
+                textBlock1.Text = PlayerName;
+                textBlock1.Margin = new Thickness(10, 5, 0, 0);
+                textBlock1.Foreground = Brushes.White;
+
+                stack1.Children.Add(button1);
+                stack1.Children.Add(textBlock1);
+                PartyMembers.Children.Add(stack1);
+
                 if (friendsList.Count > 0)
                 {
                     foreach (string friend in friendsList)
@@ -76,11 +132,112 @@ namespace RollPlay
                         BitmapImage bmi = new BitmapImage();
                         ImageBrush brush = new ImageBrush();
                         bmi.BeginInit();
-                        bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
-                        bmi.EndInit();
-                        brush.ImageSource = bmi;
-                        button.Background = brush;
 
+                        if (friend.Equals("Michael"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/michael.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Pam"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/pam.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Phyllis"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/phyllis.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Dwight"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/dwight.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Kelly"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/kelly.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Stanley"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/stanley.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Creed"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/creed.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Jim"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/jim.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Ryan"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/ryan.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Daryl"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/daryl.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Angela"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/angela.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Oscar"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/oscar.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Kevin"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/kevin.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                        else if (friend.Equals("Meredith"))
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/meredith.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        } else
+                        {
+                            bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                            bmi.EndInit();
+                            brush.ImageSource = bmi;
+                            button.Background = brush;
+                        }
+                               
                         TextBlock textBlock = new TextBlock();
                         textBlock.HorizontalAlignment = HorizontalAlignment.Center;
                         textBlock.TextWrapping = TextWrapping.Wrap;
@@ -93,6 +250,8 @@ namespace RollPlay
                         stack.Children.Add(button);
                         stack.Children.Add(textBlock);
                         PartyMembers.Children.Add(stack);
+
+
                     }
                 }
             } else
@@ -107,6 +266,61 @@ namespace RollPlay
                     TrashSched.Visibility = Visibility.Visible;
                 }
 
+                StackPanel stack = new StackPanel();
+                stack.Orientation = Orientation.Vertical;
+                stack.HorizontalAlignment = HorizontalAlignment.Center;
+                stack.MaxWidth = 320;
+
+                Button button = new Button();
+                button.Height = 75;
+                button.Width = 75;
+                button.BorderThickness = new Thickness(0, 0, 0, 0);
+                button.Margin = new Thickness(10, 10, 0, 0);
+
+                BitmapImage bmi = new BitmapImage();
+                ImageBrush brush = new ImageBrush();
+                bmi.BeginInit();
+                
+
+                if (PlayerName.Equals("JYNX BOPDAWDLE"))
+                {
+                    bmi.UriSource = new Uri("pack://application:,,,/pics/jynx.png", UriKind.Absolute);
+                    bmi.EndInit();
+                    brush.ImageSource = bmi;
+                    button.Background = brush;
+                }
+
+                else if (PlayerName.Equals("SCRAVEN MIZZRYM"))
+                {
+                    bmi.UriSource = new Uri("pack://application:,,,/pics/scraven.png", UriKind.Absolute);
+                    bmi.EndInit();
+                    brush.ImageSource = bmi;
+                    button.Background = brush;
+
+                }
+                else
+                {
+                    bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                    bmi.EndInit();
+                    brush.ImageSource = bmi;
+                    button.Background = brush;
+
+                }
+
+                TextBlock textBlock = new TextBlock();
+                textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                textBlock.TextWrapping = TextWrapping.Wrap;
+                textBlock.TextAlignment = TextAlignment.Center;
+                textBlock.MaxWidth = 75;
+                textBlock.Text = PlayerName;
+                textBlock.Margin = new Thickness(10, 5, 0, 0);
+                textBlock.Foreground = Brushes.White;
+
+                stack.Children.Add(button);
+                stack.Children.Add(textBlock);
+                PartyMembers.Children.Add(stack);
+
+                
             }
 
             if (ChatName != null && Description != null)
@@ -296,7 +510,16 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
- 
+
+        private void ChatNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            PartyChats window = new PartyChats();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
         public void addFriend(string friendName)
         {
             this.friendName = friendName;
@@ -315,10 +538,112 @@ namespace RollPlay
             BitmapImage bmi = new BitmapImage();
             ImageBrush brush = new ImageBrush();
             bmi.BeginInit();
-            bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
-            bmi.EndInit();
-            brush.ImageSource = bmi;
-            button.Background = brush;
+
+            if (friendName.Equals("Michael"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/michael.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Pam"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/pam.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Phyllis"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/phyllis.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Dwight"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/dwight.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Kelly"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/kelly.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Stanley"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/stanley.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Creed"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/creed.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Jim"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/jim.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Ryan"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/ryan.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Daryl"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/daryl.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Angela"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/angela.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Oscar"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/oscar.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Kevin"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/kevin.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else if (friendName.Equals("Meredith"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/meredith.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+            else
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
 
             TextBlock textBlock = new TextBlock();
             textBlock.HorizontalAlignment = HorizontalAlignment.Center;

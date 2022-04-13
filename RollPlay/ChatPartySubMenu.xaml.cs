@@ -33,8 +33,20 @@ namespace RollPlay
         }
         public void ViewPeople_Click(object sender, RoutedEventArgs e)
         {
-            Chat parentWindow = Window.GetWindow(this) as Chat;
-            parentWindow.SeeMembersInChat();
+            if (Window.GetWindow(this) is Chat)
+            {
+                Chat parentWindow = Window.GetWindow(this) as Chat;
+                parentWindow.SeeMembersInChat();
+            }
+
+            else if (Window.GetWindow(this) is TavernChat)
+            {
+                TavernChat parentWindow = Window.GetWindow(this) as TavernChat;
+                parentWindow.overlayPanel.Visibility = Visibility.Visible;
+                parentWindow.popupPanel.Children.Clear();
+                parentWindow.SeeMembersInChat();
+
+            }
         }
     }
 }

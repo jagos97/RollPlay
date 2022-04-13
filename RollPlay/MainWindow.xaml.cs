@@ -27,6 +27,7 @@ namespace RollPlay
         private static bool popupShown = false;
         private static Thickness blank = new Thickness(0, 0, 0, 0);
         private static Thickness active = new Thickness(0, 4, 0, 0);
+        private Border selectedCharacter = null;
 
         public MainWindow()
         {
@@ -172,10 +173,22 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
+                selectedCharacter = (Border)((StackPanel)((Grid)((Button)sender).Parent).Parent).Parent;
             }
             e.Handled = true;
         }
 
+        public void LeaveParty()
+        {
+            popupShown = false;
+            AllCharacters.Children.Remove(selectedCharacter);
+            SubMenuHolder.Children.Clear();
+            if (AllCharacters.Children.Count < 2)
+            {
+                noCharacterMessage.Visibility = Visibility.Visible;
+            }
+
+        }
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {
             if (navBarMenuShown)

@@ -18,11 +18,20 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for PartySubMenu1.xaml
     /// </summary>
-    public partial class PartySubMenu1 : UserControl
+    public partial class CharacterSubMenu : UserControl
     {
-        public PartySubMenu1()
+        public CharacterSubMenu()
         {
             InitializeComponent();
+        }
+
+        private void LeaveParty_Click(object sender, RoutedEventArgs e)
+        {
+            if (Window.GetWindow(this) is MainWindow)
+            {
+                MainWindow window = Window.GetWindow(this) as MainWindow;
+                window.LeaveParty();
+            }
         }
     }
 }

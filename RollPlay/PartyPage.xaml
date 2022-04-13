@@ -38,7 +38,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="ChatNavBar_Click">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -130,17 +130,7 @@
                     </StackPanel>
 
                     <ScrollViewer Height="130" MaxWidth="1000" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
-                        <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="130">
-
-                            <StackPanel Name="Player1" Orientation="Vertical">
-                                <Button Height="75" Width="75" BorderThickness="0,0,0,0" Margin="0,10" Click="Button_Click">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/pics/user.png" Stretch="Uniform"/>
-                                    </Button.Background>
-                                </Button>
-                                <TextBlock Foreground="white" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Height="75" MaxWidth="75" Text="{Binding ElementName=PartyWindow, Path=PlayerName}" Margin="-5"/>
-                            </StackPanel>
-                        </StackPanel>
+                        <StackPanel Name="PartyMembers" Orientation="Horizontal" HorizontalAlignment="Center" Height="130"/>
                     </ScrollViewer>
 
                     <Border BorderThickness="10,8,8,8" CornerRadius="6" Width="150" Height="30" BorderBrush="#7385AE" Margin="0,0,0,20" RenderOptions.EdgeMode="Aliased">
