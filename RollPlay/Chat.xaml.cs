@@ -189,6 +189,42 @@ namespace RollPlay
                 e.Handled = true;
             }
         }
+
+        public void SeeMembersInChat()
+        {
+            SubMenuHolder.Children.Clear();
+            popupShown = false;
+            SeeChatMemebersOverlay.Visibility = Visibility.Visible;
+        }
+        public void OpenUserSubMenu()
+        {
+            SubMenuHolder.Children.Clear();
+            ChatMemberSubMenu window = new ChatMemberSubMenu();
+            SubMenuHolder.Children.Add(window);
+        }
+        public void ConfirmInviteSent()
+        {
+            InviteSentConfirmation window = new InviteSentConfirmation();
+            SubMenuHolder.Children.Clear();
+            SubMenuHolder.Children.Add(window);
+        }
+        internal void ClearEverything()
+        {
+            SubMenuHolder.Children.Clear();
+            SeeChatMemebersOverlay.Visibility=Visibility.Collapsed;
+        }
+
+        private void ExitOverlay_Click(object sender, RoutedEventArgs e)
+        {
+            SeeChatMemebersOverlay.Visibility = Visibility.Collapsed;
+        }
+
+        private void OpenCharacterSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ChatMemberSubMenu window = new ChatMemberSubMenu();
+            SubMenuHolder.Children.Clear();
+            SubMenuHolder.Children.Add(window);
+        }
     }
 }
 

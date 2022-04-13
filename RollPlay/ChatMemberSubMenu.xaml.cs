@@ -18,23 +18,26 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for CharacterSubMenu.xaml
     /// </summary>
-    public partial class ChatPartySubMenu : UserControl
+    public partial class ChatMemberSubMenu : UserControl
     {
 
         public static bool popupShown = false;
 
-        public ChatPartySubMenu()
+        public ChatMemberSubMenu()
         {
             InitializeComponent();
         }
+
         public void NotImplemented_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Under Construction");
         }
-        public void ViewPeople_Click(object sender, RoutedEventArgs e)
+        public void InviteToParty_Click(object sender, RoutedEventArgs e)
         {
-            Chat parentWindow = Window.GetWindow(this) as Chat;
-            parentWindow.SeeMembersInChat();
+            Chat window = Window.GetWindow(this) as Chat;
+            window.ConfirmInviteSent();
+            
         }
+
     }
 }

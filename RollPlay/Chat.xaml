@@ -8,7 +8,7 @@
         Name="GenericChat" Height="568" Width="320">
 
     <Grid Background="#FF2C2C2C">
-        
+
         <StackPanel Orientation="Vertical" Margin="0,0,0,72">
             <StackPanel Height="101">
                 <Button x:Name="Back" Height="25" Width="25" BorderThickness="0,0,0,0" Margin="-270,0,0,0" Click="Back_Click">
@@ -25,7 +25,7 @@
                 <Label x:Name="SubName"  Content="Azog" FontSize="12" FontWeight="Medium" HorizontalAlignment="Center" Foreground="White" Opacity=".5"/>
                 <Line X1="1" X2="295" Width="295" Stroke="black" Opacity=".35" HorizontalAlignment="Center" Margin="0,10,0,10"/>
             </StackPanel>
-            <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0,0,0,72" Height="377">
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0,0,0,72" Height="479">
                 <StackPanel x:Name="messsageHolder" Margin="20,20,20,20" Width="279">
                     <!-- 
                     <Label Content="DM" Padding="0,0,0,0" Margin="5,10,5,0"/>
@@ -57,6 +57,137 @@
                 <ImageBrush ImageSource="/pics/sendMessage.png"/>
             </Button.Background>
         </Button>
-        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Top" HorizontalAlignment="Right"/>
+
+        <Grid x:Name="SeeChatMemebersOverlay" Visibility="Collapsed" >
+            <Rectangle Stroke="Black" Fill="#99000000"/>
+            <Border BorderBrush="Black" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="20,40,20,39" Background="#FF2C2C2C" Height="394" Width="272"  CornerRadius="10">
+                <Grid Margin="-11,-31,-21,-40">
+                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Height="25" Width="25" Margin="0,10,10,2" BorderBrush="#00000000" Click="ExitOverlay_Click"  >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/pics/x.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="ChatNameLabel" Content="Chat" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
+                    <ScrollViewer Margin="0,71,0,96" HorizontalAlignment="Center" Width="242" VerticalScrollBarVisibility="Hidden">
+                        <StackPanel x:Name="MemberStack">
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949">
+                                <Button Content="Trezorg the Brute" Width="214" Foreground="White" Background="#FF494949" BorderBrush="Transparent" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="Transparent" Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949">
+                                <Button Content="The Witch of Stendarr" Width="214" Foreground="White" Background="#FF494949" BorderBrush="#00707070" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="#00000000" Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949">
+                                <Button Content="The Daedra Acolyte" Width="214" Foreground="White" Background="#FF494949" BorderBrush="#00707070" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="#00000000" Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949" Visibility="Visible">
+                                <Button Content="Bob" Width="214" Foreground="White" Background="#FF494949" BorderBrush="#00707070" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="#00000000" Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949">
+                                <Button Content="Death Eater of Cosmic Worlds" Width="214" Foreground="White" Background="#FF494949" BorderBrush="#00707070" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="#00000000"  Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+                            <StackPanel Height="43" Orientation="Horizontal" Background="#FF494949">
+                                <Button Content="Dragon's Bane" Width="214" Foreground="White" Background="#FF494949" BorderBrush="#00707070" FontSize="14"/>
+                                <Button Content="" Width="26" Height="9" RenderTransformOrigin="0.5,0.5" BorderBrush="#00000000" Click="OpenCharacterSubMenu_Click">
+                                    <Button.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="90.294"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </Button.RenderTransform>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/pics/meatball.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </StackPanel>
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+                    <Button Content="Add Users to Group" HorizontalAlignment="Center" VerticalAlignment="Top" Width="138" Background="#FF7685AB" Foreground="White" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Margin="0,305,0,0" >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Content="Close" HorizontalAlignment="Center" Margin="0,345,0,0" VerticalAlignment="Top" Width="106" Background="White" Foreground="#FF7685AB" BorderBrush="#FF7685AB" Height="28" FontWeight="Bold" BorderThickness="2,2,2,2" Click="ExitOverlay_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
+
     </Grid>
 </Window>

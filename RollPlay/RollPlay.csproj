@@ -172,6 +172,9 @@
     <Compile Update="ChatUserSubMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ChatMemberSubMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="InvitetoParty.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -196,6 +199,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ChatUserSubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChatMemberSubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InviteSentConfirmation.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
