@@ -15,7 +15,7 @@
             <StackPanel Width="278" Background="#2C2C2C" Margin="0,0,-10,-5">
 
                 <Label Foreground="White" Content="REQUEST SENT" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="20" Margin="0,5,0,0"/>
-                <TextBlock Foreground="White" Width="250" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Center" TextAlignment="Center" Text="Your party invite has been sent successfully" FontSize="14"/>
+                <TextBlock Foreground="White" Width="250" TextWrapping="Wrap" Margin="0,10,0,30" HorizontalAlignment="Center" TextAlignment="Center" Text="Your party invite has been sent!" FontSize="14"/>
                 <Button Width="90" Background="#7385AE" BorderBrush="#7385AE" Height="25" Content="OK" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">

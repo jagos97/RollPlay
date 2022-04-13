@@ -11,7 +11,7 @@
     <Grid>
         <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
 
-        <Border BorderBrush="#2C2C2C" BorderThickness="5,5,5,5" Height="298" Width="278" CornerRadius="6" Margin="0,0,17,0" RenderOptions.EdgeMode="Aliased">
+        <Border BorderBrush="#2C2C2C" BorderThickness="5,5,5,5" Height="298" Width="278" CornerRadius="6" RenderOptions.EdgeMode="Aliased">
             <StackPanel Height="298" Width="278" Background="#2C2C2C">
                 <StackPanel Orientation="Horizontal">
                     <Image Height="18" Width="18" Source="/pics/info.png" Margin="10,0,0,0"/>

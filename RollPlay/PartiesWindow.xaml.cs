@@ -28,6 +28,9 @@ namespace RollPlay
 
         private string schedSession = "No Session Scheduled";
 
+        private static Button partySelected = null;
+
+
         public PartiesWindow()
         {
             InitializeComponent();
@@ -40,6 +43,18 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        public void LeaveParty()
+        {
+            popupShown = false;
+            AllParties.Children.Remove(partySelected);
+            SubMenuHolder.Children.Clear();
+            if (AllParties.Children.Count < 2)
+            {
+                noCharacterMessage.Visibility = Visibility.Visible;
+
+            }
         }
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
@@ -68,6 +83,8 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(partySubMenu1);
                 popupShown = true;
+                partySelected = (Button)((StackPanel)((Border)((Grid)((Button)sender).Parent).Parent).Parent).Parent;
+
             }
             e.Handled = true;
         }

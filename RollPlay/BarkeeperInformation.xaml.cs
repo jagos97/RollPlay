@@ -99,5 +99,14 @@ namespace RollPlay
 
             }
         }
+
+        private void ChatNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            PartyChats window = new PartyChats();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
     }
 }

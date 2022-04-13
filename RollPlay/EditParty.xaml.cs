@@ -49,27 +49,183 @@ namespace RollPlay
             this.schedSession = schedSession;
             InitializeComponent();
 
-                if (friendsList.Count > 0)
+            StackPanel stack = new StackPanel();
+            stack.Orientation = Orientation.Vertical;
+            stack.HorizontalAlignment = HorizontalAlignment.Center;
+            stack.MaxWidth = 320;
+
+            Button button = new Button();
+            button.Height = 75;
+            button.Width = 75;
+            button.BorderThickness = new Thickness(0, 0, 0, 0);
+            button.Margin = new Thickness(10, 10, 0, 0);
+
+            BitmapImage bmi = new BitmapImage();
+            ImageBrush brush = new ImageBrush();
+            bmi.BeginInit();
+
+
+            if (PlayerName.Equals("JYNX BOPDAWDLE"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/jynx.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+            }
+
+            else if (PlayerName.Equals("SCRAVEN MIZZRYM"))
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/scraven.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+
+            }
+            else
+            {
+                bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                bmi.EndInit();
+                brush.ImageSource = bmi;
+                button.Background = brush;
+
+            }
+
+            TextBlock textBlock = new TextBlock();
+            textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+            textBlock.TextWrapping = TextWrapping.Wrap;
+            textBlock.TextAlignment = TextAlignment.Center;
+            textBlock.MaxWidth = 75;
+            textBlock.Text = PlayerName;
+            textBlock.Margin = new Thickness(10, 5, 0, 0);
+            textBlock.Foreground = Brushes.White;
+
+            stack.Children.Add(button);
+            stack.Children.Add(textBlock);
+            PartyMembers.Children.Add(stack);
+
+            if (friendsList.Count > 0)
             {
                 foreach (string friend in friendsList)
                 {
-                    StackPanel stack = new StackPanel();
-                    stack.Orientation = Orientation.Vertical;
-                    stack.HorizontalAlignment = HorizontalAlignment.Center;
+                    StackPanel stack1 = new StackPanel();
+                    stack1.Orientation = Orientation.Vertical;
+                    stack1.HorizontalAlignment = HorizontalAlignment.Center;
 
-                    Button button = new Button();
-                    button.Height = 75;
-                    button.Width = 75;
-                    button.BorderThickness = new Thickness(0, 0, 0, 0);
-                    button.Margin = new Thickness(10, 10, 0, 0);
+                    Button button1 = new Button();
+                    button1.Height = 75;
+                    button1.Width = 75;
+                    button1.BorderThickness = new Thickness(0, 0, 0, 0);
+                    button1.Margin = new Thickness(10, 10, 0, 0);
 
-                    BitmapImage bmi = new BitmapImage();
-                    ImageBrush brush = new ImageBrush();
-                    bmi.BeginInit();
-                    bmi.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
-                    bmi.EndInit();
-                    brush.ImageSource = bmi;
-                    button.Background = brush;
+                    BitmapImage bmi1 = new BitmapImage();
+                    ImageBrush brush1 = new ImageBrush();
+                    bmi1.BeginInit();
+
+                    if (friend.Equals("Michael"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/michael.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Pam"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/pam.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Phyllis"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/phyllis.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Dwight"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/dwight.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Kelly"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/kelly.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Stanley"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/stanley.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Creed"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/creed.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Jim"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/jim.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Ryan"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/ryan.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Daryl"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/daryl.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Angela"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/angela.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Oscar"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/oscar.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Kevin"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/kevin.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else if (friend.Equals("Meredith"))
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/meredith.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
+                    else
+                    {
+                        bmi1.UriSource = new Uri("pack://application:,,,/pics/user.png", UriKind.Absolute);
+                        bmi1.EndInit();
+                        brush1.ImageSource = bmi1;
+                        button1.Background = brush1;
+                    }
 
                     Button removeButton = new Button();
                     removeButton.Height = 30;
@@ -77,27 +233,27 @@ namespace RollPlay
                     removeButton.Click += RemovePlayer_Click;
                     removeButton.Margin = new Thickness(50, -125, 0, 0);
                     removeButton.BorderThickness = new Thickness(0, 0, 0, 0);
-                    BitmapImage bmi1 = new BitmapImage();
-                    ImageBrush brush1 = new ImageBrush();
-                    bmi1.BeginInit();
-                    bmi1.UriSource = new Uri("pack://application:,,,/pics/removeicon.png", UriKind.Absolute);
-                    bmi1.EndInit();
-                    brush1.ImageSource = bmi1;
-                    removeButton.Background = brush1;
+                    BitmapImage bmi2 = new BitmapImage();
+                    ImageBrush brush2 = new ImageBrush();
+                    bmi2.BeginInit();
+                    bmi2.UriSource = new Uri("pack://application:,,,/pics/removeicon.png", UriKind.Absolute);
+                    bmi2.EndInit();
+                    brush2.ImageSource = bmi2;
+                    removeButton.Background = brush2;
 
-                    TextBlock textBlock = new TextBlock();
-                    textBlock.HorizontalAlignment = HorizontalAlignment.Center;
-                    textBlock.TextWrapping = TextWrapping.Wrap;
-                    textBlock.TextAlignment = TextAlignment.Center;
-                    textBlock.MaxWidth = 75;
-                    textBlock.Text = friend;
-                    textBlock.Margin = new Thickness(10, 5, 0, 0);
-                    textBlock.Foreground = Brushes.White;
+                    TextBlock textBlock1 = new TextBlock();
+                    textBlock1.HorizontalAlignment = HorizontalAlignment.Center;
+                    textBlock1.TextWrapping = TextWrapping.Wrap;
+                    textBlock1.TextAlignment = TextAlignment.Center;
+                    textBlock1.MaxWidth = 75;
+                    textBlock1.Text = friend;
+                    textBlock1.Margin = new Thickness(10, 5, 0, 0);
+                    textBlock1.Foreground = Brushes.White;
 
-                    stack.Children.Add(button);
-                    stack.Children.Add(removeButton);
-                    stack.Children.Add(textBlock);
-                    PartyMembers.Children.Add(stack);
+                    stack1.Children.Add(button1);
+                    stack1.Children.Add(removeButton);
+                    stack1.Children.Add(textBlock1);
+                    PartyMembers.Children.Add(stack1);
                 }
 
             }

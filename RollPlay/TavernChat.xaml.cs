@@ -13,15 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace RollPlay
-{ 
+{
     public partial class TavernChat : Window
     {
         private static bool navBarMenuShown = false;
+        private static bool popupShown = false;
+
+
 
         public TavernChat()
         {
             InitializeComponent();
-
 
         }
 
@@ -34,12 +36,24 @@ namespace RollPlay
             this.Close();
         }
 
-        public void ChatSubMenu_Click(object sender, RoutedEventArgs e)
+        private void Menu_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            Button button = sender as Button;
+            ContextMenu menu = button.ContextMenu;
+            menu.PlacementTarget = button;
+            menu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            menu.HorizontalOffset = -150;
+            menu.IsOpen = true;
         }
 
-      
+        public void ChatSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+
+            popupPanel.Children.Clear();
+            ChatPartySubMenu menu = new ChatPartySubMenu();
+            popupPanel.Children.Add(menu);
+        }
+
 
         private void TavernNavBar_Click(object sender, RoutedEventArgs e)
         {
@@ -48,6 +62,23 @@ namespace RollPlay
             window.Top = this.Top;
             window.Left = this.Left;
             this.Close();
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            overlayPanel.Visibility = Visibility.Collapsed;
+        }
+
+        public void SeeMembersInChat()
+        {
+            popupShown = false;
+        }
+
+        public void InviteToParty_Click(object sender, RoutedEventArgs e)
+        {
+
+            InviteSentConfirmation sent = new InviteSentConfirmation();
+            confirmPanel.Children.Add(sent);
         }
 
         private void SendMessage_Click(object sender, RoutedEventArgs e)
