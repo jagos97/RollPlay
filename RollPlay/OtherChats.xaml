@@ -22,7 +22,7 @@
         <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Margin="0,90,0,0" Height="386">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Do you want to make a party for Call of Cthulhu">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
@@ -31,10 +31,10 @@
                         </Ellipse>
                         <Label Content="User1" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
                         <Label Content="Do you want to make a party for Call of Cthulu" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="209" Height="29" FontWeight="Bold" Foreground="White"/>
-                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF3094CC"/>
+                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="We will attack Thorin at midnight">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
@@ -43,10 +43,10 @@
                         </Ellipse>
                         <Label Content="Character Name" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
                         <Label Content="We will attack Thorin at midnight" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Bold" Foreground="White"/>
-                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF3094CC"/>
+                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChatParty_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Tell me stranger, what can you offer party?" >
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>

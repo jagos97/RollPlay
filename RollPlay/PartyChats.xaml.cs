@@ -56,10 +56,11 @@ namespace RollPlay
 
         private void PartyChat_Click(object sender, RoutedEventArgs e)
         {
-            List<string> messages = new List<string> { "Welcome", "Hey it's me. now it is a longer mdosgsdig nsdgonsd sodgn fn"};
-            List<string> senders = new List<string> { "lDM","rMe"};
+            string message = (sender as Button).Tag as string;
+            List<string> messages = new List<string> { message, "Nope"};
+            List<string> senders = new List<string> { "lUser1","rMe"};
 
-            Chat window = new Chat(messages: messages, senders: senders);
+            Chat window = new Chat(messages: messages, senders: senders, chatName: "Party", subname: "Vex", makePartyChat: true);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

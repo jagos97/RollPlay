@@ -126,11 +126,11 @@
                         <DropShadowEffect Opacity=".35" />
                     </Border.Effect>
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
-                        <Canvas Width="80" Height="80">
-                            <Canvas.Background>
-                                <ImageBrush ImageSource="/pics/defaultCharacter.png"/>
-                            </Canvas.Background>
-                        </Canvas>
+                        <Ellipse Width="80" Height="80">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/character1.jpg"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
                         <Grid Height="100" Width="150" VerticalAlignment="Top">
                             <Label Content="VEX" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
                             <Label Content="Answering Cthulu" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
@@ -158,11 +158,12 @@
                         <DropShadowEffect Opacity=".35" />
                     </Border.Effect>
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
-                        <Canvas Width="80" Height="80">
-                            <Canvas.Background>
-                                <ImageBrush ImageSource="/pics/defaultCharacter.png"/>
-                            </Canvas.Background>
-                        </Canvas>
+                        <Ellipse Width="80" Height="80">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/character3.jpg"/>
+                            </Ellipse.Fill>
+
+                        </Ellipse>
                         <Grid Height="100" Width="150" VerticalAlignment="Top">
                             <Label Content="Radaghast" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
                             <Label Content="Into The Abyss" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
