@@ -6,41 +6,45 @@
         xmlns:local="clr-namespace:RollPlay"
         mc:Ignorable="d"
         Title="Login" Height="564" Width="320">
-    <Grid Height="400" x:Name="grid1" Width="230">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="28*" />
-            <RowDefinition Height="20*" />
-            <RowDefinition Height="27*" />
-            <RowDefinition Height="32*" />
 
+    <Grid Background="#2C2C2C">
+        <Border Height="340" Width="280" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#494949" BorderBrush="#494949" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect Opacity=".35"/>
+            </Border.Effect>
+            <StackPanel>
+                <Label Foreground="white" Content="SIGN IN" FontWeight="Bold" VerticalAlignment="Center" FontSize="20" Width="90" Margin="0,15,0,0"/>
+                <Label Foreground="White" Content="EMAIL ADDRESS" FontSize="8" Margin="15,0,0,0"/>
+                <TextBox FontSize="16" Name ="email" Foreground="White" Background="#2C2C2C" BorderBrush="#2C2C2C" Width="240" Height="48">
+                </TextBox>
+                
+                <Label Foreground="White" Content="PASSWORD" FontSize="8" Margin="15,0,0,0"/>
+                <PasswordBox FontSize="16" Name="password" Foreground="White" Background="#2C2C2C" BorderBrush="#2C2C2C" Width="240" Height="48"/>
+                <Label Name="passError" Visibility="Collapsed" Foreground="#CC3641" FontSize="10" HorizontalAlignment="Center" Content="INCORRECT USERNAME/PASSWORD COMBINATION"/>
+                <RadioButton Content="Remember Me" Foreground="white" Margin="20,10,0,0"/>
 
-        </Grid.RowDefinitions>
+                <Button Width="145" Height="45" Content="SIGN IN" Background="#7385AE" Foreground="White" FontWeight="ExtraBold" FontSize="20" Margin="0,20,0,10" Click="Signin_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
 
-        <Label Content="SIGN IN" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="Century Gothic"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="NOT A MEMBER YET?" Foreground="White" FontSize="8"/>
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="-5,0,0,0" Click="Signup_Click">
+                        <TextBlock Text="SIGN UP" FontWeight="Bold" TextDecorations="Underline" Foreground="White" FontSize="8"/>
+                    </Button>
+                    <Label Content="FORGOT YOUR PASSWORD?" Foreground="White" FontSize="8"/>
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="-5,0,0,0">
+                        <TextBlock Text="CLICK HERE" FontWeight="Bold" TextDecorations="Underline" Foreground="White" FontSize="8"/>
+                    </Button>
+                </StackPanel>
 
-        <TextBlock  x:Name="textBlockLogin" Text="Email Address" Background="White" FontSize="18" HorizontalAlignment="Left" FontWeight="Bold" Height="21" VerticalAlignment="Bottom" Width="189" Margin="0,0,0,13"/>
-        <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" x:Name="textBoxLogin" Width="180" Margin="0,0,0,0" MaxLines="20" Height="40" TabIndex="5" FontSize="20"/>
-
-        <TextBlock x:Name="textBlockPass" Text="Password" Grid.Row="2" Background="White" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Width="189" Margin="0,-50,0,13" />
-        <PasswordBox Grid.Column="1" Grid.Row="2"  MaxLength="20" HorizontalAlignment="Left" x:Name="passwordBoxPass" Width="180" Margin="0,30,0,6" Height="40" TabIndex="5" FontSize="20" />
-
-        <Button Content="LOGIN" Foreground="White"  Grid.Column="1" Background="Blue" Grid.Row="3" Height="35" x:Name="buttonAccept" VerticalAlignment="Center" Margin="67,-20,0,30" HorizontalAlignment="Left" Width="100" IsDefault="True" TabIndex="4" Click="CharacterPage" />
-
-
-        <Label Content="NOT A MEMBER YET?" HorizontalAlignment="Left" Grid.Row="3" Margin="0,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8"/>
-
-        <TextBlock HorizontalAlignment="Left" Grid.Row="3" Margin="90,70,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8">           
-            <Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" >
-               SIGN UP
-            </Hyperlink>
-        </TextBlock>
+            </StackPanel>
+            
+        </Border>
         
-
-        <TextBlock HorizontalAlignment="Right" Grid.Row="3" Margin="0,70,-5,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="8">
-            <Hyperlink NavigateUri="" RequestNavigate="Hyperlink_RequestNavigate" >
-                FORGOT MY PASSWORD
-            </Hyperlink>
-        </TextBlock>
-
-    </Grid>
+    </Grid>       
 </Window>

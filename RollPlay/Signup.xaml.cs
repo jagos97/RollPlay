@@ -19,30 +19,29 @@ namespace RollPlay
     /// <summary>
     /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Signup : Window
     {
-        public Login()
+        public Signup()
         {
             InitializeComponent();
         }
 
-        private void CharacterPage(object sender, RoutedEventArgs e)
+        private void Signup_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
-
-        private void Signin_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrWhiteSpace(email.Text.ToString()) | String.IsNullOrWhiteSpace(password.Password.ToString()))
+            if (String.IsNullOrWhiteSpace(email.Text.ToString()) | String.IsNullOrWhiteSpace(password.Password.ToString()) | String.IsNullOrWhiteSpace(user.Text.ToString()) | String.IsNullOrWhiteSpace(password2.Password.ToString()))
             {
                 email.BorderBrush = Brushes.Red;
                 password.BorderBrush = Brushes.Red;
+                user.BorderBrush = Brushes.Red;
+                password2.BorderBrush = Brushes.Red;
+                genError.Visibility = Visibility.Visible;
+
+            } else if (!password.Password.ToString().Equals(password2.Password.ToString()))
+            {
+                password.BorderBrush = Brushes.Red;
+                password2.BorderBrush = Brushes.Red;
                 passError.Visibility = Visibility.Visible;
-            } else
+            }else
             {
                 MainWindow window = new MainWindow();
                 window.Show();
@@ -52,9 +51,9 @@ namespace RollPlay
             }
         }
 
-        private void Signup_Click(object sender, RoutedEventArgs e)
+        private void Signin_Click(object sender, RoutedEventArgs e)
         {
-            Signup window = new Signup();
+            Login window = new Login();
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

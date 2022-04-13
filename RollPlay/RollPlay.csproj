@@ -25,6 +25,8 @@
     <None Remove="pics\addtoparty.png" />
     <None Remove="pics\addUserToChat.png" />
     <None Remove="pics\arrow.png" />
+    <None Remove="pics\arrow2.png" />
+    <None Remove="pics\arrow3.png" />
     <None Remove="pics\black-remove.png" />
     <None Remove="pics\blockUser.png" />
     <None Remove="pics\calendar.png" />
@@ -56,6 +58,7 @@
     <None Remove="pics\removeFriend.png" />
     <None Remove="pics\removeicon.png" />
     <None Remove="pics\reportuser.png" />
+    <None Remove="pics\send.png" />
     <None Remove="pics\sendMessage.png" />
     <None Remove="pics\silence.png" />
     <None Remove="pics\swapCharacters.png" />
@@ -90,6 +93,8 @@
     <Resource Include="pics\addFriend.png" />
     <Resource Include="pics\addUserToChat.png" />
     <Resource Include="pics\arrow.png" />
+    <Resource Include="pics\arrow2.png" />
+    <Resource Include="pics\arrow3.png" />
     <Resource Include="pics\calendar.png" />
     <Resource Include="pics\character1.jpg" />
     <Resource Include="pics\character2.jpg" />
@@ -117,6 +122,7 @@
     <Resource Include="pics\removeFriend.png" />
     <Resource Include="pics\removeicon.png" />
     <Resource Include="pics\reportuser.png" />
+    <Resource Include="pics\send.png" />
     <Resource Include="pics\sendMessage.png" />
     <Resource Include="pics\silence.png" />
     <Resource Include="pics\swapCharacters.png" />
@@ -245,6 +251,9 @@
     <Page Update="EditParty.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+    <Page Update="Signup.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="PartyPageSubMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -283,10 +292,15 @@
     <Page Update="HamburgerMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
-    <Page Update="Shop.xaml">
+    <Page Update="RandomChat.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Update="TavernRules.xaml">
+    <Page Update="TavernChat.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Shop.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
   </ItemGroup>
