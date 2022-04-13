@@ -24,7 +24,7 @@
             </Button>
             <Border HorizontalAlignment="Right" Height="1" Width="240" BorderBrush="#FFA7A5A1" BorderThickness="0,0,0,1"/>
 
-            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="NotImplemented_Click">
+            <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="ViewPeople_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
                     <Image Width="22" Height="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,10,0" Source="/pics/viewmemebers.png"/>
                     <Label Content="VIEW USERS IN CHAT" VerticalAlignment="Stretch" Foreground="White" Width="246" VerticalContentAlignment="Center" FontSize="14" BorderBrush="#FFCC1010" Height="44" />
