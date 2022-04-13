@@ -24,20 +24,23 @@ namespace RollPlay
 
         private static bool navBarMenuShown = false;
         private static string UserName = "";
+        private static bool isPartyChat = true;
+        private static bool popupShown = false;
 
 
 
 
-        public Chat(List<string> messages = null, List<string> senders =null, string chatName = "User1", string subname = "Azog", string name = "Me")
+
+        public Chat(List<string> messages = null, List<string> senders =null, string chatName = "User1", string subname = "Azog", string name = "Me", bool makePartyChat = true)
         {
             InitializeComponent();
+            isPartyChat = makePartyChat;
+            this.KeyDown += new KeyEventHandler(OnKeyDownHandler);
             UserName = "r"+ name;
             if(messages == null)
             {
-                Label label = new Label();
-                label.Content = "DM";
-                label.Margin = new Thickness(5, 10, 15, 0);
-                Border bdr = MakeBorder("l");
+                Label label = MakeLabel("lDM");
+                Border bdr = MakeBorder("lDM");
                 TextBlock tb = MakeTextBlock("This is where the story begins. In the depth of the abyss. Where no one will come to your aid");
                 bdr.Child = tb;
                 messsageHolder.Children.Add(label);
@@ -61,6 +64,32 @@ namespace RollPlay
 
         }
 
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Tab)
+            {
+                SendMessage("lTrezorg the Brute", "Hmmmm, I think you might be a good fit");
+            }
+            else if (e.Key == Key.LeftCtrl)
+            {
+                SendMessage("lTrezorg the Brute", "Is that it, puny human?");
+            }
+            else if (e.Key == Key.Escape)
+            {
+                SubMenuHolder.Children.Clear();
+                popupShown = false;
+            }
+        }
+        private void SendMessage(string sender, string message)
+        {
+            Border bdr = MakeBorder(sender);
+            Label lbl = MakeLabel(sender);
+            TextBlock tb = MakeTextBlock(message);
+            bdr.Child = tb;
+            messsageHolder.Children.Add(lbl);
+            messsageHolder.Children.Add(bdr);
+        }
+
         private Label MakeLabel(string v)
         {
             Label label = new Label();
@@ -68,6 +97,7 @@ namespace RollPlay
             {
                 label.HorizontalAlignment = HorizontalAlignment.Right;
             }
+            label.Foreground = new SolidColorBrush(Colors.White);
             label.Content = v.Substring(1);
             label.Margin = new Thickness(5, 10, 15, 0);
             return label;
@@ -126,7 +156,74 @@ namespace RollPlay
 
         public void ChatSubMenu_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            if (isPartyChat)
+            {
+                if (popupShown)
+                {
+                    SubMenuHolder.Children.Clear();
+                    popupShown = false;
+                }
+                else
+                {
+                    ChatPartySubMenu partySubMenu1 = new ChatPartySubMenu();
+                    SubMenuHolder.Children.Clear();
+                    SubMenuHolder.Children.Add(partySubMenu1);
+                    popupShown = true;
+                }
+                e.Handled = true;
+            }
+            else
+            {
+                if (popupShown)
+                {
+                    SubMenuHolder.Children.Clear();
+                    popupShown = false;
+                }
+                else
+                {
+                    ChatUserSubMenu partySubMenu1 = new ChatUserSubMenu();
+                    SubMenuHolder.Children.Clear();
+                    SubMenuHolder.Children.Add(partySubMenu1);
+                    popupShown = true;
+                }
+                e.Handled = true;
+            }
+        }
+
+        public void SeeMembersInChat()
+        {
+            SubMenuHolder.Children.Clear();
+            popupShown = false;
+            SeeChatMemebersOverlay.Visibility = Visibility.Visible;
+        }
+        public void OpenUserSubMenu()
+        {
+            SubMenuHolder.Children.Clear();
+            ChatMemberSubMenu window = new ChatMemberSubMenu();
+            SubMenuHolder.Children.Add(window);
+        }
+        public void ConfirmInviteSent()
+        {
+            InviteSentConfirmation window = new InviteSentConfirmation();
+            SubMenuHolder.Children.Clear();
+            SubMenuHolder.Children.Add(window);
+        }
+        internal void ClearEverything()
+        {
+            SubMenuHolder.Children.Clear();
+            SeeChatMemebersOverlay.Visibility=Visibility.Collapsed;
+        }
+
+        private void ExitOverlay_Click(object sender, RoutedEventArgs e)
+        {
+            SeeChatMemebersOverlay.Visibility = Visibility.Collapsed;
+        }
+
+        private void OpenCharacterSubMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ChatMemberSubMenu window = new ChatMemberSubMenu();
+            SubMenuHolder.Children.Clear();
+            SubMenuHolder.Children.Add(window);
         }
     }
 }

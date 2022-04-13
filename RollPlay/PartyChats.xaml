@@ -70,7 +70,7 @@
         <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Margin="0,206,0,0" Background="#FF2C2C2C" Height="270">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" Tag="Let's go to kill that dragon!!!"  HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
@@ -83,7 +83,7 @@
                         <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="16" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Sovengarde awaits!!!">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
@@ -96,7 +96,7 @@
                         <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="16" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Do you know where I can get eye of newt?">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
@@ -105,10 +105,10 @@
                         </Ellipse>
                         <Label Content="P" HorizontalAlignment="Left" Margin="8,7,0,0" VerticalAlignment="Top" Background="Transparent" Foreground="Black" FontSize="25"/>
                         <Label Content="Party 3" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Normal" FontSize="16" Foreground="White"/>
-                        <Label Content="User1: Where can I get eye of newt?" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Normal" Foreground="White"/>
+                        <Label Content="User1: Do you know where I can get eye of newt?" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Normal" Foreground="White"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Height="59" Background="#FF494949" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="PartyChat_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Tag="Anyone know what a newt is?">
                     <Grid Width="285" Height="54">
                         <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>

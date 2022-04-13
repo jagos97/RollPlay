@@ -23,6 +23,7 @@
     <None Remove="pics\addcircle.png" />
     <None Remove="pics\addFriend.png" />
     <None Remove="pics\addtoparty.png" />
+    <None Remove="pics\addUserToChat.png" />
     <None Remove="pics\arrow.png" />
     <None Remove="pics\arrow2.png" />
     <None Remove="pics\arrow3.png" />
@@ -60,6 +61,7 @@
     <None Remove="pics\send.png" />
     <None Remove="pics\sendMessage.png" />
     <None Remove="pics\silence.png" />
+    <None Remove="pics\swapCharacters.png" />
     <None Remove="pics\tavern.jpeg" />
     <None Remove="pics\trash.png" />
     <None Remove="pics\trashcan.png" />
@@ -67,11 +69,16 @@
     <None Remove="pics\undo.png" />
     <None Remove="pics\user.png" />
     <None Remove="pics\Vector.svg" />
+    <None Remove="pics\viewmemebers.png" />
     <None Remove="pics\whitebackarrow.png" />
     <None Remove="pics\whitedirectional.png" />
     <None Remove="pics\x.png" />
     <None Remove="settings.png" />
     <None Remove="star.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pics\viewmemebers.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,6 +91,7 @@
     <Resource Include="pics\add.png" />
     <Resource Include="pics\addcircle.png" />
     <Resource Include="pics\addFriend.png" />
+    <Resource Include="pics\addUserToChat.png" />
     <Resource Include="pics\arrow.png" />
     <Resource Include="pics\arrow2.png" />
     <Resource Include="pics\arrow3.png" />
@@ -117,6 +125,7 @@
     <Resource Include="pics\send.png" />
     <Resource Include="pics\sendMessage.png" />
     <Resource Include="pics\silence.png" />
+    <Resource Include="pics\swapCharacters.png" />
     <Resource Include="pics\tavern.jpeg" />
     <Resource Include="pics\trash.png" />
   </ItemGroup>
@@ -151,6 +160,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ChatPartySubMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreateParty.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="DeleteBlock.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -158,6 +173,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="CreatePartyChat.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChatUserSubMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChatMemberSubMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="InvitetoParty.xaml.cs">
@@ -175,6 +196,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="ChatPartySubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreateParty.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChatUserSubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChatMemberSubMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InviteSentConfirmation.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RequestAvailOverlay.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CancelSessionOverlay.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>

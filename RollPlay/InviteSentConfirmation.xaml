@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="RollPlay.InviteSentConfirmation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RollPlay"
+             mc:Ignorable="d" 
+             Height="Auto" MinHeight="405" Width="320"
+             Name="InviteConfirmationOverlay">
+
+    <Grid>
+        <Rectangle Height="658" Width="320" Fill="Black" Opacity=".25"/>
+
+        <Border BorderBrush="#2C2C2C" BorderThickness="5,5,5,5" Height="160" Width="278" CornerRadius="6" Margin="0,0,0,0" >
+            <StackPanel Width="278" Background="#2C2C2C" Margin="0,0,-10,-5">
+
+                <Label Foreground="White" Content="REQUEST SENT" HorizontalAlignment="Center" FontWeight="SemiBold" FontSize="20" Margin="0,5,0,0"/>
+                <TextBlock Foreground="White" Width="250" TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Center" TextAlignment="Center" Text="Your party invite has been sent successfully" FontSize="14"/>
+                <Button Width="90" Background="#7385AE" BorderBrush="#7385AE" Height="25" Content="OK" Foreground="White" FontWeight="ExtraBold" Click="OK_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

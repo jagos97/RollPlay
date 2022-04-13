@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="180" d:DesignWidth="320">
     <Grid>
-        <Rectangle  Fill="#FF504B43" RadiusX="10" RadiusY="10"/>
+        <Rectangle  Fill="#FF494949" RadiusX="10" RadiusY="10"/>
         <StackPanel>
             <Button Background="#00000000" Height="45"  Padding="0,0,0,0" BorderBrush="#00000000" Click="AddUserToParty_Click">
                 <StackPanel Orientation="Horizontal" Height="45" HorizontalAlignment="Left" Width="320">
