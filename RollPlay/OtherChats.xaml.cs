@@ -46,7 +46,27 @@ namespace RollPlay
 
         private void OtherChat_Click(object sender, RoutedEventArgs e)
         {
+            string message = (sender as Button).Tag as string;
+            List<string> messages = new List<string> { message };
+            List<string> senders = new List<string> { "lUser1"};
 
+            Chat window = new Chat(messages: messages, senders: senders, chatName: "User1", subname: "", makePartyChat: false);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+        private void OtherChatParty_Click(object sender, RoutedEventArgs e)
+        {
+            string message = (sender as Button).Tag as string;
+            List<string> messages = new List<string> { message };
+            List<string> senders = new List<string> { "lTrezorg the Brute" };
+
+            Chat window = new Chat(messages: messages, senders: senders, chatName: "Tavern Chat", subname: "Vex", makePartyChat: true);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
         private void PartyChats_Click(object sender, RoutedEventArgs e)
         {

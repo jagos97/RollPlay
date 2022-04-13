@@ -187,7 +187,7 @@ namespace RollPlay
             string person = (((sender as Button).Parent as StackPanel).Children[0] as Button).Content as string;
             List<string> list = new List<string> { "Hey man. You ready for Call of Cthulu" };
             List<string> list2 = new List<string> { "l"+person};
-            Chat window = new Chat(chatName: person, messages: list, senders: list2, subname: "");
+            Chat window = new Chat(chatName: person, messages: list, senders: list2, subname: "", makePartyChat: false);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
