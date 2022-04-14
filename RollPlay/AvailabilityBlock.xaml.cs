@@ -226,7 +226,7 @@ namespace RollPlay
             } else
             {
                 int startRow = int.Parse(startHourString);
-                int endRow =int.Parse(endHourString);
+                int endRow =int.Parse(endHourString) + 1;
                 int col;
 
                 Brush brush = Brushes.Black;

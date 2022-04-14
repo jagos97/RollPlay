@@ -326,7 +326,6 @@ namespace RollPlay
             if (ChatName != null && Description != null)
             {
                 Border border = new Border();
-                border.Background = Brushes.White;
                 border.BorderThickness = new Thickness(0, 0, 0, 0);
                 border.Height = 120;
                 border.Width = 275;
