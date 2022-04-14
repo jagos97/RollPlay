@@ -250,8 +250,6 @@ namespace RollPlay
                         stack.Children.Add(button);
                         stack.Children.Add(textBlock);
                         PartyMembers.Children.Add(stack);
-
-
                     }
                 }
             } else

@@ -157,7 +157,15 @@ namespace RollPlay
             }
             else
             {
-                CharacterSubMenu subMenu = new CharacterSubMenu();
+                string Name = (string)CharacterName1.Content;
+                string Party = (string)CharacterParty1.Content;
+                string Class = (string)CharacterClass1.Content;
+                string Race = (string)CharacterRace1.Content;
+                string Level = (string)CharacterLevel1.Content;
+                int[] Stats = new int[] {1, 8, 3, 7, 5, 0};
+
+
+                CharacterSubMenu subMenu = new CharacterSubMenu(Name, Party, Class, Race, Level, Stats);
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
@@ -186,8 +194,9 @@ namespace RollPlay
             string Class = (string)CharacterClass1.Content;
             string Race = (string)CharacterRace1.Content;
             string Level = (string)CharacterLevel1.Content;
+            int[] Stats = new int[] {1, 8, 3, 7, 5, 0};
 
-            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level);
+            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -201,9 +210,9 @@ namespace RollPlay
             string Class = (string)CharacterClass2.Content;
             string Race = (string)CharacterRace2.Content;
             string Level = (string)CharacterLevel2.Content;
+            int[] Stats = new int[] {1, 4, 3, 7, 5, 3};
 
-
-            CharacterPageWindow2 window = new CharacterPageWindow2(Name, Party, Class, Race, Level);
+            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

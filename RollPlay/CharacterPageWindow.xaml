@@ -1,4 +1,5 @@
 <Window x:Class="RollPlay.CharacterPageWindow"
+        WindowStyle="None"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -107,15 +108,15 @@
                     <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
                         <Ellipse Width="80" Height="80" Margin="5,0,0,8">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/jynx.png"/>
+                                <ImageBrush ImageSource="{Binding photo}"/>
                             </Ellipse.Fill>
                         </Ellipse>
                         <Grid Height="100" Width="150" VerticalAlignment="Top">
-                            <Label x:Name="CharacterName1" Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                            <Label x:Name="CharacterParty1" Content="Curse of Strahd" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
-                            <Label x:Name="CharacterClass1" Content="Wizard | Illusionist " HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
-                            <Label x:Name="CharacterRace1" Content="Gnome" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
-                            <Label x:Name="CharacterLevel1" Content="Level 10" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
+                            <Label x:Name="CharacterName" Content="{Binding NameCharacter}" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+                            <Label x:Name="CharacterParty" Content="{Binding PartyName}" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
+                            <Label x:Name="CharacterClass" Content="{Binding Class}" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
+                            <Label x:Name="CharacterRace" Content="{Binding Race}" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
+                            <Label x:Name="CharacterLevel" Content="{Binding Level}" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
                             <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
                                 <Label.Background>
                                     <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
@@ -127,7 +128,49 @@
                     <StackPanel x:Name="contentWrapper" Orientation="Vertical" Margin="0,0,30,15" HorizontalAlignment="Center" Width="225">
                         <StackPanel x:Name="firstPanel" Orientation="Horizontal">
                             <Label x:Name="STR" Content="STR" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal" Width="60">
+                            <StackPanel Orientation="Horizontal" Width="60" Name="StrStat">
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -144,7 +187,7 @@
                                 </Rectangle>
                             </StackPanel>
                             <Label x:Name="INT" Content="INT" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Name="IntStat">
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -206,7 +249,28 @@
 
                         <StackPanel x:Name="secondPanel" Orientation="Horizontal">
                             <Label x:Name="DEX" Content="DEX" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal" Width="60">
+                            <StackPanel Orientation="Horizontal" Width="60" Name="DexStat">
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -244,7 +308,35 @@
                                 </Rectangle>
                             </StackPanel>
                             <Label x:Name="WIS" Content="WIS" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Name="WisStat">
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -278,7 +370,21 @@
 
                         <StackPanel x:Name="thirdPanel" Orientation="Horizontal">
                             <Label x:Name="CON" Content="CON" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal" Width="60">
+                            <StackPanel Orientation="Horizontal" Width="60" Name="ConStat">
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -323,7 +429,42 @@
                                 </Rectangle>
                             </StackPanel>
                             <Label x:Name="CHA" Content="CHA" HorizontalAlignment="Left" Margin="15,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="40"/>
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal" Name="ChaStat">
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
+                                            <GradientStop Offset="0.5" Color="#7385AE"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
                                 <Rectangle Width="3" Height="20" Margin="5, 0, 0,0">
                                     <Rectangle.Fill>
                                         <LinearGradientBrush SpreadMethod="Reflect" StartPoint="0 0" EndPoint="0 0.05">
@@ -357,9 +498,7 @@
                             <Grid>
                                 <Label x:Name="Bio" Content="BIO" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
 
-                                <TextBlock Foreground="White" TextWrapping="Wrap" Width="225" FontWeight="light" Margin="15, 35, 0, 0" FontSize="12">
-                                    What is there to say about little ol'me? I love gardening and a good magic show.
-                                </TextBlock>
+                                <TextBlock Foreground="White" TextWrapping="Wrap" Width="225" FontWeight="light" Margin="15, 35, 0, 0" FontSize="12" Text="{Binding bio}"/>
                             </Grid>
                         </StackPanel>
                     </Border>

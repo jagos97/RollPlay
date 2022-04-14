@@ -15,14 +15,31 @@ using System.Windows.Shapes;
 
 namespace RollPlay
 {
-    /// <summary>
-    /// Interaction logic for PartySubMenu1.xaml
-    /// </summary>
+
     public partial class CharacterSubMenu : UserControl
     {
-        public CharacterSubMenu()
+        public string NameCharacter { get; set; }
+
+        public string PartyName { get; set; }
+
+        public string Class { get; set; }
+
+        public string Race { get; set; }
+
+        public string Level { get; set; }
+
+        public int[] Stats {get;set;} 
+           
+        public CharacterSubMenu(string Name, string Party, string Class, string Race, string Level, int[] Stats)
         {
             InitializeComponent();
+            this.DataContext = this;
+
+            this.NameCharacter = Name;
+            this.PartyName = Party;
+            this.Class = Class;
+            this.Race = Race;
+            this.Level = Level;
         }
 
         private void UnderConstruction_Click(object sender, RoutedEventArgs e)
@@ -32,7 +49,7 @@ namespace RollPlay
 
         private void EditCharacter_Click(object sender, RoutedEventArgs e)
         {
-            EditCharacterWindow window = new EditCharacterWindow();
+            EditCharacterWindow window = new EditCharacterWindow(NameCharacter, PartyName, Class, Race, Level, null, Stats);
             window.Show();
             window.Top = Window.GetWindow(this).Top;
             window.Left = Window.GetWindow(this).Left;

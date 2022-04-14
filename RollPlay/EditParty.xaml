@@ -13,9 +13,9 @@
         <StackPanel Panel.ZIndex="10" Height="100" VerticalAlignment="Top">
             <Border Background="#2C2C2C" BorderThickness="0,0,0,0" Height="75">
                 <TextBox Background="#494949" Foreground="White" Name="NewName" TextAlignment="Center" Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" BorderBrush="#494949" Width="275"/>
-                </Border>
+            </Border>
             <Label Name="NameError" Content="Party Name is required" Foreground="#CC3641" HorizontalAlignment="Center" FontSize="10" Margin="0,-20,0,0" Visibility="Collapsed"/>
-            </StackPanel>
+        </StackPanel>
 
         <ScrollViewer MaxHeight="{Binding Path=ActualHeight, ElementName=stack, Mode=OneWay}" VerticalScrollBarVisibility="Hidden">
             <StackPanel Orientation="Vertical" Name="stack" Height="Auto" Margin="0,0,0,100">

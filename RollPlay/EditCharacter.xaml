@@ -1,0 +1,129 @@
+<Window x:Class="RollPlay.EditCharacterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RollPlay"
+        mc:Ignorable="d"
+        Title="EditCharacterWindow" Height="568" Width="320">
+
+    <Grid x:Name="MainGrid"  Visibility="Visible" Focusable="True" Background="#FF2C2C2C">
+        <Grid Margin="0,20,0,0" Height="700">
+            <StackPanel Panel.ZIndex="10" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15, 0,0,0">
+                <Border Background="#2C2C2C" BorderThickness="0,0,0,0" Height="50">
+                    <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
+                        </Button.Background>
+                    </Button>
+                </Border>
+            </StackPanel>
+
+            <ScrollViewer x:Name="Character" Margin="0,0,0,0" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Height="420">
+                <StackPanel Name="TextInfo" Margin="20,0,0,0">
+                    <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
+                        <Ellipse Width="80" Height="80" Margin="5,0,0,8" >
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="/pics/scraven.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+
+                        <Grid Height="100" Width="150" VerticalAlignment="Top">
+                            <Label x:Name="CharacterName2" Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+                            <Label x:Name="CharacterParty2" Content="Out of the Abyss" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
+                            <Label x:Name="CharacterClass2" Content="Warlock | Undead" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
+                            <Label x:Name="CharacterRace2" Content="Drow" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
+                            <Label x:Name="CharacterLevel2" Content="Level 3" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
+                            <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
+                                </Label.Background>
+                            </Label>
+                        </Grid>
+                    </StackPanel>
+
+                   <StackPanel x:Name="contentWrapper" Orientation="Vertical" Margin="0,0,30,15" HorizontalAlignment="Center" Width="175">
+                        <Label Content="Please insert a number between 0-8" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="10" Foreground="White" Width="200"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="STR" Content="Strength" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="StrStat" TextAlignment="Center"    Text="{Binding CharacterName, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="INT" Content="Intelligence" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="IntStat" TextAlignment="Center"    Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="DEX" Content="Dexterity" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="DexStat" TextAlignment="Center"    Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="WIS" Content="Wisdom" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="WisStat" TextAlignment="Center"    Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="CON" Content="Constitution" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="ConStat" TextAlignment="Center"    Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label x:Name="CHA" Content="Charisma" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="ChaStat" TextAlignment="Center" Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="200" Width="257" Margin="0,5,20,5" CornerRadius="10,10,10,10">
+                        <Border.Effect>
+                            <DropShadowEffect Opacity=".35" />
+                        </Border.Effect>
+                        <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
+                            <Grid>
+                                <Label x:Name="Bio" Content="BIO" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+
+                                <TextBox  Background="#494949" Foreground="White" Name="NewBio" Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" BorderBrush="#7385AE" Width="200" Height="60" TextWrapping="Wrap" Margin="25,40,0,0"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <StackPanel Panel.ZIndex="5" Background="#2C2C2C" VerticalAlignment="Bottom" Height="100">
+            <Line StrokeThickness=".5" X1="0" X2="300" Stroke="#494949" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            <Button Width="145" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,10">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="SAVE CHANGES" Foreground="white" FontWeight="ExtraBold"/>
+            </Button>
+
+            <Button Width="95" Background="#2C2C2C" BorderBrush="#7385AE" Height="Auto" BorderThickness="3" Margin="0,-5,0,0" Click="BackToCharacter_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="6.25"/>
+                    </Style>
+                </Button.Resources>
+                <Label Content="CANCEL" Foreground="#7385AE" FontWeight="ExtraBold"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
+    </Grid>
+</Window>
