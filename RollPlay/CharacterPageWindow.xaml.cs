@@ -43,7 +43,7 @@ public partial class CharacterPageWindow : Window
 
             public static bool popupShown = false;
 
-            public CharacterPageWindow (string Name, string Party, string Class, string Race, string Level, string Bio, int[] Stats)
+            public CharacterPageWindow (string Name, string Party, string Class, string Race, string Level, string Bio, int[] Stats, string Photo)
             {
                 InitializeComponent();
                 this.DataContext = this;
@@ -57,18 +57,24 @@ public partial class CharacterPageWindow : Window
 
                 if (NameCharacter.Equals("JYNX BOPDAWDLE"))
                 {
-                    this.photo = "/pics/jynx.png";
-
+                    if (Photo == null) {
+                        this.photo = "/pics/jynx.png";
+                    } else {
+                        this.photo = Photo;
+                    }
                     if (Bio == null) {
                         this.bio="What is there to say about little ol'me? I love gardening and a good magic show.";
                     } else {
                         this.bio = Bio;
                     }
                 }
-
                 else if (NameCharacter.Equals("SCRAVEN MIZZRYM"))
                 {
-                    this.photo = "/pics/scraven.png";
+                    if (Photo == null) {
+                        this.photo = "/pics/scraven.png";
+                    } else {
+                        this.photo = Photo;
+                    }
                     if (Bio == null) {
                         this.bio="Love to spend quiet nights in the graveyard, making new friends with the dead.";
                     } else {

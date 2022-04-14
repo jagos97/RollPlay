@@ -25,11 +25,20 @@ namespace RollPlay
     { 
           private static bool navBarMenuShown = false;
 
+            public string DefaultName { get; set; }
+            public string DefaultParty { get; set; }
+            public string DefaultClass { get; set; }
+            public string DefaultRace { get; set; }
+            public string DefaultLevel { get; set; }
+            public int[] DefaultStats { get; set; }
+            public string DefaultBio { get; set; }
+
             public string NameCharacter { get; set; }
 
             public string PartyName { get; set; }
 
             public string Class { get; set; }
+            public string SubClass { get; set; }
 
             public string Race { get; set; }
 
@@ -43,49 +52,76 @@ namespace RollPlay
 
           public static bool popupShown = false;
 
-          public EditCharacterWindow(string Name, string Party, string Class, string Race, string Level, string Bio, int[] Stats)
+          public EditCharacterWindow(string Name, string Party, string Class, string Race, string Level, string Bio, int[] Stats, string Photo)
           {
               InitializeComponent();
 
-              this.DataContext = this;
+                if (Name != null) {
 
-                this.NameCharacter = Name;
-                this.PartyName = Party;
-                this.Class = Class;
-                this.Race = Race;
-                this.Level = Level;
-                this.CharStats = Stats;
+                this.DataContext = this;
 
-                if (NameCharacter.Equals("JYNX BOPDAWDLE"))
-                {
-                    this.photo = "/pics/jynx.png";
+                    this.DefaultName = Name;
+                    this.DefaultParty = Party;
+                    this.DefaultClass = Class;
+                    this.DefaultRace = Race;
+                    this.DefaultLevel = Level;
+                    this.DefaultStats = Stats;
 
-                    if (bio == null) {
-                        this.bio="What is there to say about little ol'me? I love gardening and a good magic show.";
-                    } else {
-                        this.bio = Bio;
+                    if (DefaultName.Equals("JYNX BOPDAWDLE"))
+                    {
+                        if (Photo == null) {
+                            this.photo = "/pics/jynx.png";
+                        } else {
+                            this.photo = Photo;
+                        }
+                        if (bio == null) {
+                            this.DefaultBio="What is there to say about little ol'me? I love gardening and a good magic show.";
+                        } else {
+                            this.DefaultBio = Bio;
+                        }
                     }
-                }
 
-                else if (NameCharacter.Equals("SCRAVEN MIZZRYM"))
-                {
-                    this.photo = "/pics/scraven.png";
-                    if (bio == null) {
-                        this.bio="Love to spend quiet nights in the graveyard, making new friends with the dead.";
-                    } else {
-                        this.bio = Bio;
+                    else if (DefaultName.Equals("SCRAVEN MIZZRYM"))
+                    {
+                        if (Photo == null) {
+                            this.photo = "/pics/scraven.png";
+                        } else {
+                            this.photo = Photo;
+                        }
+                        if (bio == null) {
+                            this.DefaultBio="Love to spend quiet nights in the graveyard, making new friends with the dead.";
+                        } else {
+                            this.DefaultBio = Bio;
+                        }
                     }
+                } else {
+                    this.DefaultName = null;
                 }
           }
 
-          private void BackToCharacter_Click(object sender, RoutedEventArgs e)
-          {
-            CharacterPageWindow window = new CharacterPageWindow(this.NameCharacter, this.PartyName, this.Class, this.Race, this.Level, null, this.CharStats);
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-          }
+        private void BackToCharacter_Click(object sender, RoutedEventArgs e)
+        {
+            if (DefaultName == null) {
+                MainWindow window = new MainWindow();
+                window.Show();
+                window.Top = this.Top;
+                window.Left = this.Left;
+                this.Close();
+            } else {
+                int[] thisStats = new int[6];
+                if (DefaultName.Equals("ToCharacter1")) {
+                    thisStats = new int[] {1, 8, 3, 7, 5, 0};
+                } else {
+                    thisStats = new int[] {1, 4, 3, 7, 5, 3};
+                }
+
+                CharacterPageWindow window = new CharacterPageWindow(this.DefaultName, this.DefaultParty, this.DefaultClass, this.DefaultRace, this.DefaultLevel, DefaultBio, thisStats, this.photo);
+                window.Show();
+                window.Top = this.Top;
+                window.Left = this.Left;
+                this.Close();
+            }
+        }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
@@ -95,18 +131,28 @@ namespace RollPlay
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            int str = Int32.Parse(StrStat.Text);
-            int inte = Int32.Parse(IntStat.Text);
-            int dex = Int32.Parse(DexStat.Text);
-            int wis = Int32.Parse(WisStat.Text);
-            int con = Int32.Parse(ConStat.Text);
-            int cha = Int32.Parse(ChaStat.Text);
 
-            int[] tempStats= {str, inte, dex, wis, con, cha};
+            this.NameCharacter = NewName.Text;
+            this.Class = NewClass.Text;
+            this.SubClass = NewSubClass.Text;
+            string tempClass = Class + " | " + SubClass;
+            this.Race = NewRace.Text;
+            this.Level = NewCharLevel.Text;
+            string tempLevel = "Level " + Level;
+            this.bio = NewBio.Text;
 
-            string tempBio = NewBio.Text;
+            int[] thisStats = new int[6];
 
-            CharacterPageWindow window = new CharacterPageWindow(this.NameCharacter, this.PartyName, this.Class, this.Race, this.Level, tempBio, tempStats);
+
+            // if (DefaultName.Equals("ToCharacter1")) {
+            //     thisStats = new int[] {1, 8, 3, 7, 5, 0};
+            // } else {
+            //     thisStats = new int[] {1, 4, 3, 7, 5, 3};
+            // }
+
+
+
+            CharacterPageWindow window = new CharacterPageWindow(this.NameCharacter, this.DefaultParty, tempClass, this.Race, tempLevel, this.bio, thisStats, this.photo);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

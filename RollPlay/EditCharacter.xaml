@@ -11,7 +11,7 @@
         <Grid Margin="0,20,0,0" Height="700">
             <StackPanel Panel.ZIndex="10" Height="75" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15, 0,0,0">
                 <Border Background="#2C2C2C" BorderThickness="0,0,0,0" Height="50">
-                    <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Click="CollectionNavBar_Click">
+                    <Button x:Name="BackToMain" Height="15" Width="15" BorderThickness="0,0,0,0" Click="BackToCharacter_Click">
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="/pics/arrow.png"/>
                         </Button.Background>
@@ -21,34 +21,51 @@
 
             <ScrollViewer x:Name="Character" Margin="0,0,0,0" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Height="420">
                 <StackPanel Name="TextInfo" Margin="20,0,0,0">
-                    <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
-                        <Ellipse Width="80" Height="80" Margin="5,0,0,8" >
+                    <StackPanel Height="275" Width="250" Orientation="Vertical" VerticalAlignment="Top">
+                        <Ellipse Width="80" Height="80" Margin="5,0,0,8">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/scraven.png"/>
+                                <ImageBrush ImageSource="{Binding photo}"/>
                             </Ellipse.Fill>
                         </Ellipse>
-
-                        <Grid Height="100" Width="150" VerticalAlignment="Top">
-                            <Label x:Name="CharacterName2" Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                            <Label x:Name="CharacterParty2" Content="Out of the Abyss" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
-                            <Label x:Name="CharacterClass2" Content="Warlock | Undead" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
-                            <Label x:Name="CharacterRace2" Content="Drow" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
-                            <Label x:Name="CharacterLevel2" Content="Level 3" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
-                            <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
-                                <Label.Background>
-                                    <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
-                                </Label.Background>
-                            </Label>
-                        </Grid>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label Content="Name" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="32" Name="NewName" Background="#494949" Foreground="White" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="150"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label Content="Class" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="32" Name="NewClass" Background="#494949" Foreground="White"  Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="150"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label Content="Sub-Class" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="32" Name="NewSubClass" Background="#494949" Foreground="White"  Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="150"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label Content="Race" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox MaxLength="32" Name="NewRace" Background="#494949" Foreground="White"  Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="150"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <Label Content="Level" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBox Name="NewCharLevel" MaxLength="2" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" TextAlignment="Center"    Text="{Binding Level, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                            </StackPanel>
+                        </StackPanel>
                     </StackPanel>
-
+                    
                    <StackPanel x:Name="contentWrapper" Orientation="Vertical" Margin="0,0,30,15" HorizontalAlignment="Center" Width="175">
                         <Label Content="Please insert a number between 0-8" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="10" Foreground="White" Width="200"/>
 
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                             <Label x:Name="STR" Content="Strength" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Width="100"/>
                             <StackPanel Orientation="Horizontal" >
-                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" Background="#494949" Foreground="White" Name="StrStat" TextAlignment="Center"    Text="{Binding CharacterName, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
+                                <TextBox MaxLength="1" PreviewTextInput="NumberValidationTextBox" TextAlignment="Center"  Background="#494949" Foreground="White" Name="StrStat"  Text="{Binding CharacterName, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"  BorderBrush="#7385AE" Width="75"/>
                             </StackPanel>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
@@ -85,18 +102,20 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="200" Width="257" Margin="0,5,20,5" CornerRadius="10,10,10,10">
+                <StackPanel Height="200">
+                    <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="150" Width="257" Margin="0,5,20,5" CornerRadius="10,10,10,10">
                         <Border.Effect>
                             <DropShadowEffect Opacity=".35" />
                         </Border.Effect>
-                        <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
+                        <StackPanel Height="130" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
                             <Grid>
                                 <Label x:Name="Bio" Content="BIO" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
 
-                                <TextBox  Background="#494949" Foreground="White" Name="NewBio" Text="{Binding ElementName=EditWindow, Path=InitialName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" BorderBrush="#7385AE" Width="200" Height="60" TextWrapping="Wrap" Margin="25,40,0,0"/>
+                                <TextBox  Background="#494949" Foreground="White" Name="NewBio" Text="" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="13" BorderBrush="#7385AE" Width="200" Height="80" TextWrapping="Wrap" Margin="25,40,0,0"/>
                             </Grid>
                         </StackPanel>
                     </Border>
+                </StackPanel>
 
                 </StackPanel>
             </ScrollViewer>
@@ -104,7 +123,7 @@
 
         <StackPanel Panel.ZIndex="5" Background="#2C2C2C" VerticalAlignment="Bottom" Height="100">
             <Line StrokeThickness=".5" X1="0" X2="300" Stroke="#494949" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <Button Width="145" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,10">
+            <Button Width="145" Background="#7385AE" BorderBrush="#7385AE" Height="Auto" Margin="0,10" Click="Save_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="6.25"/>

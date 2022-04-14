@@ -157,21 +157,43 @@ namespace RollPlay
             }
             else
             {
-                string Name = (string)CharacterName1.Content;
-                string Party = (string)CharacterParty1.Content;
-                string Class = (string)CharacterClass1.Content;
-                string Race = (string)CharacterRace1.Content;
-                string Level = (string)CharacterLevel1.Content;
-                int[] Stats = new int[] {1, 8, 3, 7, 5, 0};
+                selectedCharacter = (Button)((StackPanel)((Border)((StackPanel)((Grid)((Button)sender).Parent).Parent).Parent).Parent).Parent;
+                    string Name = "";
+                    string Party = "";
+                    string Class = "";
+                    string Race = "";
+                    string Level = "";
+                    int[] Stats = new int[6];
 
+                if (selectedCharacter.Name.Equals("ToCharacter1")) {
+                    Name = (string)CharacterName1.Content;
+                    Party = (string)CharacterParty1.Content;
+                    Class = (string)CharacterClass1.Content;
+                    Race = (string)CharacterRace1.Content;
+                    Level = (string)CharacterLevel1.Content;
+                    Stats = new int[] {1, 8, 3, 7, 5, 0};
+                } else {
+                    Party = (string)CharacterParty2.Content;
+                    Class = (string)CharacterClass2.Content;
+                    Race = (string)CharacterRace2.Content;
+                    Level = (string)CharacterLevel2.Content;
+                    Stats = new int[] {1, 4, 3, 7, 5, 3};
+                }
 
                 CharacterSubMenu subMenu = new CharacterSubMenu(Name, Party, Class, Race, Level, Stats);
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
-                selectedCharacter = (Button)((StackPanel)((Border)((StackPanel)((Grid)((Button)sender).Parent).Parent).Parent).Parent).Parent;
             }
             e.Handled = true;
+        }
+
+        private void CreateCharacter_Click(object sender, RoutedEventArgs e) {
+            EditCharacterWindow window = new EditCharacterWindow(null, null, null, null, null, null, null, null);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
         }
 
         public void LeaveParty()
@@ -196,7 +218,7 @@ namespace RollPlay
             string Level = (string)CharacterLevel1.Content;
             int[] Stats = new int[] {1, 8, 3, 7, 5, 0};
 
-            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats);
+            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
@@ -212,7 +234,7 @@ namespace RollPlay
             string Level = (string)CharacterLevel2.Content;
             int[] Stats = new int[] {1, 4, 3, 7, 5, 3};
 
-            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats);
+            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level, null, Stats, null);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

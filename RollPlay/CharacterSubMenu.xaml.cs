@@ -49,7 +49,7 @@ namespace RollPlay
 
         private void EditCharacter_Click(object sender, RoutedEventArgs e)
         {
-            EditCharacterWindow window = new EditCharacterWindow(NameCharacter, PartyName, Class, Race, Level, null, Stats);
+            EditCharacterWindow window = new EditCharacterWindow(NameCharacter, PartyName, Class, Race, Level, null, Stats, null);
             window.Show();
             window.Top = Window.GetWindow(this).Top;
             window.Left = Window.GetWindow(this).Left;

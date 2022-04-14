@@ -88,7 +88,7 @@
             </Button.Background>
         </Button>
         <Label Content="MyUsername" HorizontalAlignment="Center" Height="43" Margin="0,17,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="White"/>
-        <Button x:Name="CreateNewCharacter" Content="CREATE CHARACTER" VerticalAlignment="Bottom" BorderThickness="0,1,0,1" BorderBrush="#FF7685AB" Foreground="White" Background="#FF7685AB" Height="30" FontWeight="Bold" Margin="0,0,0,80" HorizontalAlignment="Center" Width="154">
+        <Button x:Name="CreateNewCharacter" Content="CREATE CHARACTER" VerticalAlignment="Bottom" BorderThickness="0,1,0,1" BorderBrush="#FF7685AB" Foreground="White" Background="#FF7685AB" Height="30" FontWeight="Bold" Margin="0,0,0,80" HorizontalAlignment="Center" Width="154" Click="CreateCharacter_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
