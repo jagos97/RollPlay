@@ -134,7 +134,7 @@
                     </StackPanel>
                     
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" MaxHeight="280" Margin="0,-30,0,0">
-                        <StackPanel Margin="0,0,0,-27">
+                        <StackPanel Margin="0,0,0,-45">
                             <Grid Name="Calendar" Background="#494949">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="40" />

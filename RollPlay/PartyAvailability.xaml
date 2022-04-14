@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Height="568" Width="320">
 
-   
+
     <Grid>
 
         <StackPanel Orientation="Vertical" Background="#2C2C2C">
@@ -130,7 +130,7 @@
                     </StackPanel>
 
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
-                        <StackPanel Name="CalendarHolder" Margin="0,0,0,30">
+                        <StackPanel Name="CalendarHolder" Margin="0,0,0,3">
                             <Grid Name="Calendar" Background="#494949">
 
                                 <Grid.ColumnDefinitions>
