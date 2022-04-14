@@ -19,7 +19,7 @@ Once logged in, you will see your characters. You're going to want to move to th
 3. Now that you created a party you will automatically directed to the party page. You are all alone in there for now. 
 4. Click the `+` on top of your character and as many friends as you want. They are all really excited they'll accept your request right away 
 5. Click on availability and go to party availability. 
-6. Click on the request availability button at the bottom
+6. You will see that it is empty so click on the request availability button at the bottom.
 7. Now if you scroll down you will notice that there are some blocks with availabilities (They were always there just didn't want to ruin the illusion) 
 8. Click on any of the blocks and you will see who is available at each time 
 9. Decide a time 
@@ -34,7 +34,7 @@ Let's pretend you got a party but you need that one last person to complete your
 3. Click `Filter Users` at the bottom.
 4. Make sure you read all the rules of the Tavern because those are very important.
 5. Proceed.
-6. Divulge your deepest darkest secrets in the chat.
+6. Divulge your deepest darkest secrets in the chat. The juicier, the better.
 7. Click on the meatball menu on the top right
 8. Click on view users in chat.
 9. Invite one of them to your party. Not Bob though he didn't even come up with a good name.
@@ -50,3 +50,18 @@ Now, let's say you are new to D&D and you want to learn how to play. You're goin
 4. Repeat this for every section so you are caught up with all the latest info on D&D
 
 ## Chatting
+Now let's say you want to have a normal chat with one of your friends on the app. There are many ways to chat along with different types of chat. You can open your party chat in the parties page or talk to one of your friends in the friends page. There is also a lot of chat options in the chat menu at the bottom. Let's try the most interative one we have though.
+
+1. Click on the chat button on the nav bar
+2. Click on `Other Chats` at the top
+3. Click on the second chat there with `Dragon's Bane`
+4. Tell him about your hesitation to kill Thorin.
+5. Press `F1`
+6. Tell him he has nothing to worry about. You'll do what has to be done. Momma didn't raise no quitter right?
+7. Press `F2`
+8. You are well prepared so make sure `Dragon's Bane` knows that.
+9. Press `F3`
+10. Give him some closing remarks.
+
+
+There are a few other things you can do. Explore and have fun. Check out some of your parties and add people to them maybe even create another party or delete them all. Check out what characters you have, create one delete them, you choose. Same thing with your friends because why not add some and then delete them all anyways. Try updating your availability and see what the other side of the scheduling works. Not everything is implemented but there are still a few things you can try out.
