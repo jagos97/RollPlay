@@ -29,9 +29,9 @@ namespace RollPlay
         private void CharacterPage(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
-            window.Show();
             window.Top = this.Top;
             window.Left = this.Left;
+            window.Show();
             this.Close();
         }
 

@@ -7,7 +7,7 @@
              mc:Ignorable="d">
     
         <Grid>
-        <StackPanel Background="#1C1C1D" Orientation="Vertical" Width="200" Height="458">
+        <StackPanel Background="#1C1C1D" Orientation="Vertical" Width="200" Height="478">
             <Button Content="MY CHARACTERS" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="SemiBold" FontSize="20" Background="#1C1C1D" Margin="0,20,10,0" Click="CharacterPage_Click"/>
             <Button Content="+ Add New Character" Foreground="white" BorderThickness="0,0,0,0" Width="Auto" Height="Auto" HorizontalAlignment="Right" FontWeight="semiBold" FontSize="16" Background="#1C1C1D" Margin="0,0,10,10" Click="CreateCharacter_Click"/>
 

@@ -1,4 +1,5 @@
 ﻿<Window x:Class="RollPlay.PartyAvailabilityWindow"
+        WindowStyle="None"
         x:Name="PartyAvailability"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
