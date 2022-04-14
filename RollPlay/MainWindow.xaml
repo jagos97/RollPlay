@@ -53,7 +53,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="NotificationsNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -102,8 +102,7 @@
             <Button x:Name="FriendsCollectionSubMenuSelector" Content="Friends" Background="#FF2C2C2C" BorderThickness="0,0,0,3" BorderBrush="#002C2C2C" Width="70" Margin="5,0,5,0" Click="FriendsCollectionSubMenuSelector_Click" Foreground="White" />
         </StackPanel>
         <ScrollViewer x:Name="Characters" Margin="0,120,0,0" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Height="285">
-            <StackPanel Name="AllCharacters">
-                
+            <StackPanel x:Name="AllCharacters">
                 <Border Visibility="Collapsed" x:Name="noCharacterMessage" Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="96" Width="264" Margin="0,5,0,5" CornerRadius="10,10,10,10">
                     <Border.Effect>
                         <DropShadowEffect Opacity=".35" />
@@ -124,80 +123,88 @@
                     </StackPanel>
                 </Border>
                 
-                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" CornerRadius="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Opacity=".35" />
-                    </Border.Effect>
-                    <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
-                        <Ellipse Width="80" Height="80" Margin="5,0,0,8">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/jynx.png"/>
-                            </Ellipse.Fill>
-                        </Ellipse>
-                        <Grid Height="100" Width="150" VerticalAlignment="Top">
-                            <Label Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                            <Label Content="Curse of Strahd" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
-                            <Button Margin="125,73,0,15" BorderBrush="#00000000" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
-                                <Button.Foreground>
-                                    <ImageBrush/>
-                                </Button.Foreground>
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                            <Label Content="Wizard | Illusionist " HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
-                            <Label Content="Gnome" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
-                            <Label Content="Level 10" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
-                            <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
-                                <Label.Background>
-                                    <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
-                                </Label.Background>
-                            </Label>
-                        </Grid>
-                    </StackPanel>
-                </Border>
-                <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" CornerRadius="10,10,10,10">
-                    <Border.Effect>
-                        <DropShadowEffect Opacity=".35" />
-                    </Border.Effect>
-                    <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
-                        <Ellipse Width="80" Height="80" Margin="5,0,0,8">
-                            <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/scraven.png"/>
-                            </Ellipse.Fill>
 
-                        </Ellipse>
-                        <Grid Height="100" Width="150" VerticalAlignment="Top">
-                            <Label Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                            <Label Content="Out of the Abyss" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
-                            <Button Margin="125,73,0,15" BorderBrush="#00000000" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
-                                <Button.Foreground>
-                                    <ImageBrush/>
-                                </Button.Foreground>
-                                <Button.Background>
-                                    <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
-                                </Button.Background>
-                            </Button>
-                            <Label Content="Warlock | Undead" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
-                            <Label Content="Drow" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
-                            <Label Content="Level 14" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
-                            <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
-                                <Label.Background>
-                                    <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
-                                </Label.Background>
-                            </Label>
-                        </Grid>
+                <Button x:Name="ToCharacter1" BorderThickness="0,0,0,0" BorderBrush="Transparent" Background="Transparent" Click="ToCharacter1_Click">
+                    <StackPanel>
+                        <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" CornerRadius="10,10,10,10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity=".35" />
+                            </Border.Effect>
+                            <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
+                                <Ellipse Width="80" Height="80" Margin="5,0,0,8">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="/pics/jynx.png"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Grid Height="100" Width="150" VerticalAlignment="Top">
+                                    <Label x:Name="CharacterName1" Content="JYNX BOPDAWDLE" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+                                    <Label x:Name="CharacterParty1" Content="Curse of Strahd" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
+                                    <Button Margin="125,73,0,15" BorderBrush="#00000000" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
+                                        <Button.Foreground>
+                                            <ImageBrush/>
+                                        </Button.Foreground>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Label x:Name="CharacterClass1" Content="Wizard | Illusionist " HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
+                                    <Label x:Name="CharacterRace1" Content="Gnome" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
+                                    <Label x:Name="CharacterLevel1" Content="Level 10" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
+                                    <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
+                                        <Label.Background>
+                                            <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
+                                        </Label.Background>
+                                    </Label>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
-                </Border>
+                </Button>
+
+                <Button x:Name="ToCharacter2" BorderThickness="0,0,0,0" BorderBrush="Transparent" Background="Transparent" Click="ToCharacter2_Click">
+                    <StackPanel>
+                        <Border Background="#FF494949" BorderBrush="#FF494949" BorderThickness="1,1,1,1" Height="96" Width="257" Margin="0,5,0,5" CornerRadius="10,10,10,10">
+                            <Border.Effect>
+                                <DropShadowEffect Opacity=".35" />
+                            </Border.Effect>
+                            <StackPanel Height="103" Width="247" Orientation="Horizontal" VerticalAlignment="Top">
+                                <Ellipse Width="80" Height="80" Margin="5,0,0,8">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="/pics/scraven.png"/>
+                                    </Ellipse.Fill>
+
+                                </Ellipse>
+                                <Grid Height="100" Width="150" VerticalAlignment="Top">
+                                    <Label x:Name="CharacterName2" Content="SCRAVEN MIZZRYM" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+                                    <Label x:Name="CharacterParty2" Content="Out of the Abyss" HorizontalAlignment="Left" Margin="27,23,0,0" VerticalAlignment="Top" Background="{x:Null}" Width="104" Foreground="White"/>
+                                    <Button Margin="125,73,0,15" BorderBrush="#00000000" Height="12" RenderTransformOrigin="1.02,-0.08" Click="CharacterSubMenu_Click">
+                                        <Button.Foreground>
+                                            <ImageBrush/>
+                                        </Button.Foreground>
+                                        <Button.Background>
+                                            <ImageBrush ImageSource="/pics/meatball.png" Stretch="Uniform"/>
+                                        </Button.Background>
+                                    </Button>
+                                    <Label x:Name="CharacterClass2" Content="Warlock | Undead" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" BorderBrush="Black" Foreground="White"/>
+                                    <Label x:Name="CharacterRace2" Content="Drow" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" Foreground="White"/>
+                                    <Label x:Name="CharacterLevel2" Content="Level 3" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="11" RenderTransformOrigin="0.552,0.196" Foreground="White"/>
+                                    <Label Content="" HorizontalAlignment="Left" Margin="16,30,0,0" VerticalAlignment="Top" Height="11" Width="11">
+                                        <Label.Background>
+                                            <ImageBrush ImageSource="/pics/defaultpartyicon.png"/>
+                                        </Label.Background>
+                                    </Label>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Button>
 
             </StackPanel>
         </ScrollViewer>
+
         <StackPanel x:Name="SubMenuHolder"  VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>
-        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="492" Panel.ZIndex="20" />
         <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
-
-
-
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="492" Panel.ZIndex="20" />
     </Grid>
 </Window>
     

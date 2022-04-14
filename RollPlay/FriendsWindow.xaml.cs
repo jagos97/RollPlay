@@ -163,8 +163,14 @@ namespace RollPlay
             friendSelectedButton = btn;
             btn.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF7685AB"));
         }
-
-
+        private void NotificationsNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }        
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {
             if (navBarMenuShown)

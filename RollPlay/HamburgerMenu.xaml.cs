@@ -89,6 +89,15 @@ namespace RollPlay
             Window.GetWindow(this).Close();
         }
 
+        private void NotificationPage_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = Window.GetWindow(this).Top;
+            window.Left = Window.GetWindow(this).Left;
+            Window.GetWindow(this).Close();
+        }
+
         private void NotificationsPage_Click(object sender, RoutedEventArgs e)
         {
             //TODO

@@ -52,7 +52,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFEAA1" BorderThickness="0,0,0,0" Click="NotificationsNavBar_Click">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>

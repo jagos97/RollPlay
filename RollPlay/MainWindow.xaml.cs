@@ -27,7 +27,7 @@ namespace RollPlay
         private static bool popupShown = false;
         private static Thickness blank = new Thickness(0, 0, 0, 0);
         private static Thickness active = new Thickness(0, 4, 0, 0);
-        private Border selectedCharacter = null;
+        private Button selectedCharacter = null;
 
         public MainWindow()
         {
@@ -36,8 +36,6 @@ namespace RollPlay
             ChangNavBarSelected();
 
         }
-
-
 
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
@@ -150,16 +148,6 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
-
-        private void TavernNavBar_Click(object sender, RoutedEventArgs e)
-        {
-            TavernMenuWindow window = new TavernMenuWindow();
-            window.Show();
-            window.Top = this.Top;
-            window.Left = this.Left;
-            this.Close();
-        }
-
         private void CharacterSubMenu_Click(object sender, RoutedEventArgs e)
         {
             if (popupShown)
@@ -173,7 +161,7 @@ namespace RollPlay
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(subMenu);
                 popupShown = true;
-                selectedCharacter = (Border)((StackPanel)((Grid)((Button)sender).Parent).Parent).Parent;
+                selectedCharacter = (Button)((StackPanel)((Border)((StackPanel)((Grid)((Button)sender).Parent).Parent).Parent).Parent).Parent;
             }
             e.Handled = true;
         }
@@ -189,6 +177,50 @@ namespace RollPlay
             }
 
         }
+
+        // Characters Functions
+        private void ToCharacter1_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)CharacterName1.Content;
+            string Party = (string)CharacterParty1.Content;
+            string Class = (string)CharacterClass1.Content;
+            string Race = (string)CharacterRace1.Content;
+            string Level = (string)CharacterLevel1.Content;
+
+            CharacterPageWindow window = new CharacterPageWindow(Name, Party, Class, Race, Level);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
+        private void ToCharacter2_Click(object sender, RoutedEventArgs e)
+        {
+            string Name = (string)CharacterName2.Content;
+            string Party = (string)CharacterParty2.Content;
+            string Class = (string)CharacterClass2.Content;
+            string Race = (string)CharacterRace2.Content;
+            string Level = (string)CharacterLevel2.Content;
+
+
+            CharacterPageWindow2 window = new CharacterPageWindow2(Name, Party, Class, Race, Level);
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+            e.Handled = true;
+        }
+
+        // Navbar Navigate
+        private void TavernNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            TavernMenuWindow window = new TavernMenuWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }
+
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {
             if (navBarMenuShown)
@@ -206,7 +238,14 @@ namespace RollPlay
             }
         }
 
-        
+        private void NotificationsNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }        
 
         private void ChatNavBar_Click(object sender, RoutedEventArgs e)
         {

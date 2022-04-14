@@ -16,23 +16,39 @@ using System.Windows.Shapes;
 namespace RollPlay
 {
     /// <summary>
-    /// Interaction logic for CharacterSubMenu.xaml
+    /// Interaction logic for PartySubMenu1.xaml
     /// </summary>
-    public partial class PartySubMenu1 : UserControl
+    public partial class CharacterSubMenu : UserControl
     {
-        public PartySubMenu1()
+        public CharacterSubMenu()
         {
             InitializeComponent();
         }
 
+        private void UnderConstruction_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Under Construction");
+         }
+
+        private void EditCharacter_Click(object sender, RoutedEventArgs e)
+        {
+            EditCharacterWindow window = new EditCharacterWindow();
+            window.Show();
+            window.Top = Window.GetWindow(this).Top;
+            window.Left = Window.GetWindow(this).Left;
+            Window.GetWindow(this).Close();
+        }
+
         private void LeaveParty_Click(object sender, RoutedEventArgs e)
         {
-            if (Window.GetWindow(this) is PartiesWindow)
+            if (Window.GetWindow(this) is MainWindow)
             {
-                PartiesWindow window = Window.GetWindow(this) as PartiesWindow;
+                MainWindow window = Window.GetWindow(this) as MainWindow;
                 ConfirmDelete confirm = new ConfirmDelete();
                 window.overlay.Children.Clear();
                 window.overlay.Children.Add(confirm);
+            } else {
+                MessageBox.Show("Under Construction");
             }
         }
     }

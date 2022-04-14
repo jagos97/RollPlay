@@ -74,6 +74,15 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
+
+        private void NotificationsNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }        
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {
             if (navBarMenuShown)
