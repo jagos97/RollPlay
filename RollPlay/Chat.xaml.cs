@@ -22,13 +22,9 @@ namespace RollPlay
     {
 
 
-        private static bool navBarMenuShown = false;
         private static string UserName = "";
         private static bool isPartyChat = true;
         private static bool popupShown = false;
-
-
-
 
 
         public Chat(List<string> messages = null, List<string> senders =null, string chatName = "User1", string subname = "Azog", string name = "Me", bool makePartyChat = true)

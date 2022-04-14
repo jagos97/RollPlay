@@ -16,7 +16,6 @@ namespace RollPlay
 { 
     public partial class RandomChat : Window
     {
-        private static bool navBarMenuShown = false;
 
         public string prompt { get; set; }
 

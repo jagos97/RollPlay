@@ -16,7 +16,6 @@ namespace RollPlay
 {
     public partial class TavernChat : Window
     {
-        private static bool navBarMenuShown = false;
         private static bool popupShown = false;
 
 

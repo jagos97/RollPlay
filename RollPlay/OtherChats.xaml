@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="OtherChats" Height="564" Width="320">
     <Grid Background="#FF2C2C2C">
-        <Button HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="30" Height="30" BorderBrush="#01707070">
+        <Button HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Width="20" Height="20" BorderBrush="#01707070">
             <Button.Background>
                 <ImageBrush ImageSource="/pics/newMessage.png"/>
             </Button.Background>
@@ -17,44 +17,44 @@
                 <ImageBrush ImageSource="/pics/meatball.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Other Chats" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#FF7685AB" FontWeight="Bold" Foreground="White" BorderThickness="0,0,0,3"/>
+        <Button Content="Other Chats" HorizontalAlignment="Left" Margin="160,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="#00DDDDDD" BorderBrush="#FFEAA1" FontWeight="Bold" Foreground="White" BorderThickness="0,0,0,3"/>
         <Button Content="Party Chats" HorizontalAlignment="Left" Margin="70,50,0,0" VerticalAlignment="Top" Width="90" Height="20" Background="Transparent" BorderBrush="#FFBCBAB8" BorderThickness="0,0,0,0" FontWeight="Normal" Click="PartyChats_Click" Foreground="White"/>
-        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,84,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+        <Rectangle HorizontalAlignment="Center" Height="1" Margin="0,84,0,0" Stroke="#494949" VerticalAlignment="Top" Width="300"/>
         <ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Margin="0,90,0,0" Height="386">
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Do you want to make a party for Call of Cthulhu">
+                <Button Height="59" Background="Transparent" BorderThickness="0,0,0,.25" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Do you want to make a party for Call of Cthulhu">
                     <Grid Width="285" Height="54">
-                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#7385AE" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/character1.jpg"/>
+                                <ImageBrush ImageSource="/pics/character1.jpg" Stretch="UniformToFill"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Label Content="User1" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
-                        <Label Content="Do you want to make a party for Call of Cthulu" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="209" Height="29" FontWeight="Bold" Foreground="White"/>
-                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF7685AB"/>
+                        <Label Content="User1" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontSize="16" Foreground="White"/>
+                        <Label Content="Do you want to make a party for Call of Cthulu" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="209" Height="29" FontWeight="Light" Foreground="White"/>
+                        <Ellipse HorizontalAlignment="Left" Height="12" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="12" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="We will attack Thorin at midnight">
+                <Button Height="59" Background="Transparent" BorderThickness="0,0,0,.25" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChat_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="We will attack Thorin at midnight">
                     <Grid Width="285" Height="54">
-                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#7385AE" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/character2.jpg"/>
+                                <ImageBrush ImageSource="/pics/character2.jpg" Stretch="UniformToFill"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Label Content="Character Name" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
-                        <Label Content="We will attack Thorin at midnight" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Bold" Foreground="White"/>
-                        <Ellipse HorizontalAlignment="Left" Height="16" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="15" Fill="#FF7685AB"/>
+                        <Label Content="Character Name" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontSize="16" Foreground="White"/>
+                        <Label Content="We will attack Thorin at midnight" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Light" Foreground="White"/>
+                        <Ellipse HorizontalAlignment="Left" Height="12" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="12" Fill="#FF7685AB"/>
                     </Grid>
                 </Button>
-                <Button Height="59" Background="#03DDDDDD" BorderThickness="0,0,0,1" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChatParty_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Tell me stranger, what can you offer party?" >
+                <Button Height="59" Background="Transparent" BorderThickness="0,0,0,.25" Width="285" BorderBrush="#FFE5E4E3" Click="OtherChatParty_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Tag="Tell me stranger, what can you offer party?" >
                     <Grid Width="285" Height="54">
-                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#FF494949" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
+                        <Ellipse HorizontalAlignment="Left" Height="40" Stroke="#7385AE" VerticalAlignment="Top" Width="40" Margin="0,10,0,0">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/pics/character4.jpg"/>
+                                <ImageBrush ImageSource="/pics/character4.jpg" Stretch="UniformToFill"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Label Content="Tavern Chat" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontWeight="Bold" FontSize="16" Foreground="White"/>
-                        <Label Content="User1: Tell me stranger, what can you offer party?" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Normal" Foreground="White"/>
+                        <Label Content="Tavern Chat" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontSize="16" Foreground="White"/>
+                        <Label Content="User1: Tell me stranger, what can you offer party?" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Light" Foreground="White"/>
                     </Grid>
                 </Button>
             </StackPanel>
@@ -88,7 +88,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFEAA1" BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
