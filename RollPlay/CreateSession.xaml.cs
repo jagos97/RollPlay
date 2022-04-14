@@ -161,7 +161,7 @@ namespace RollPlay
             {
                 ErrorMessage1.Visibility = Visibility.Visible;
 
-            } else if ( (SelectedStartAMPM.Content.Equals("PM") && SelectedEndAMPM.Content.Equals("AM") ) | (  (SelectedStartAMPM.Content.Equals(SelectedEndAMPM.Content) && (Int32.Parse(SelectedStartHour.Content.ToString()) > Int32.Parse(SelectedEndHour.Content.ToString()))))) 
+            } else if ( (SelectedStartAMPM.Content.Equals("PM") && SelectedEndAMPM.Content.Equals("AM") ) | ((SelectedStartAMPM.Content.Equals(SelectedEndAMPM.Content) && (Int32.Parse(SelectedStartHour.Content.ToString()) > Int32.Parse(SelectedEndHour.Content.ToString()))))) 
             {
                 ErrorMessage2.Visibility = Visibility.Visible;
                 StartButton.BorderBrush = Brushes.Red;
