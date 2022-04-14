@@ -89,6 +89,7 @@
         </StackPanel>
 
         <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />
+        <StackPanel x:Name="overlay" VerticalAlignment="Center" HorizontalAlignment="Center" Width="320" Panel.ZIndex="30" Height="Auto"/>
 
     </Grid>
 </Window>

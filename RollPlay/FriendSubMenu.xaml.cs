@@ -31,7 +31,10 @@ namespace RollPlay
         public void DeleteFriend_Click(object sender, RoutedEventArgs e)
         {
             FriendsWindow parentWindow = Window.GetWindow(this) as FriendsWindow;
-            parentWindow.DeleteFriend();
+            ConfirmDelete confirm = new ConfirmDelete();
+            parentWindow.overlay.Children.Clear();
+            parentWindow.overlay.Children.Add(confirm);
+            //parentWindow.DeleteFriend();
         }
         public void AddUserToParty_Click(object sender, RoutedEventArgs e)
         {
