@@ -42,7 +42,7 @@
                                 <ImageBrush ImageSource="/pics/character2.jpg" Stretch="UniformToFill"/>
                             </Ellipse.Fill>
                         </Ellipse>
-                        <Label Content="Character Name" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontSize="16" Foreground="White"/>
+                        <Label Content="Dragon's Bane" HorizontalAlignment="Left" Margin="51,-1,0,0" VerticalAlignment="Top" Background="Transparent" FontSize="16" Foreground="White"/>
                         <Label Content="We will attack Thorin at midnight" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" Width="217" Height="29" FontWeight="Light" Foreground="White"/>
                         <Ellipse HorizontalAlignment="Left" Height="12" Margin="260,0,0,0" Stroke="#00000000" VerticalAlignment="Center" Width="12" Fill="#FF7685AB"/>
                     </Grid>

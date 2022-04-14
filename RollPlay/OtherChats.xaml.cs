@@ -48,9 +48,9 @@ namespace RollPlay
         {
             string message = (sender as Button).Tag as string;
             List<string> messages = new List<string> { message };
-            List<string> senders = new List<string> { "lUser1"};
+            List<string> senders = new List<string> { "lDragon's Bane"};
 
-            Chat window = new Chat(messages: messages, senders: senders, chatName: "User1", subname: "", makePartyChat: false);
+            Chat window = new Chat(messages: messages, senders: senders, chatName: "Dragon's Bane", subname: "", makePartyChat: false);
             window.Show();
             window.Top = this.Top;
             window.Left = this.Left;

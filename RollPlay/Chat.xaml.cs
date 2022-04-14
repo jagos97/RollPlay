@@ -62,13 +62,17 @@ namespace RollPlay
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Tab)
+            if (e.Key == Key.F1)
             {
-                SendMessage("lTrezorg the Brute", "Hmmmm, I think you might be a good fit");
+                SendMessage("lDragon's Bane", "Don't get whimper out on me now. It's now or never"); 
             }
-            else if (e.Key == Key.LeftCtrl)
+            else if (e.Key == Key.F2)
             {
-                SendMessage("lTrezorg the Brute", "Is that it, puny human?");
+                SendMessage("lDragon's Bane", "Thats the spirit. Prepare your blade. It will need to be sharp");
+            }
+            else if(e.Key == Key.F3)
+            {
+                SendMessage("lDragon's Bane", "Good. You better make it out alive or I'll kill you myself");
             }
             else if (e.Key == Key.Escape)
             {
