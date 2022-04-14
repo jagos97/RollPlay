@@ -40,6 +40,9 @@ namespace RollPlay
 
         public string schedSession { get; set; }
 
+        public StackPanel memberSelected = null;
+        public string nameOfSelected = null;
+
         public EditPartyWindow(string PartyName, string PlayerName, List<string> friendsList, string schedSession)
         {
             this.friendsList = friendsList;
@@ -326,28 +329,30 @@ namespace RollPlay
 
         private void RemovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button)
+            memberSelected = (StackPanel)((Button)sender).Parent;
+
+            foreach(UIElement item in memberSelected.Children)
             {
-                Button remove = sender as Button;
-                if (remove.Parent is StackPanel)
+                if (item is TextBlock)
                 {
-                    StackPanel stack = remove.Parent as StackPanel;
-                    if (stack != null)
-                    {
-                        foreach (UIElement item in stack.Children)
-                        {
-                            if (item is TextBlock)
-                            {
-                                TextBlock friendBlock = item as TextBlock;
-                                string friend = friendBlock.Text.ToString();
-                                friendsList.Remove(friend);
-                                stack.Visibility = Visibility.Collapsed;
-                            }
-                        }
-                    }
+                    TextBlock textBlock = item as TextBlock;
+                    nameOfSelected = textBlock.Text.ToString();
+                    System.Diagnostics.Debug.WriteLine(nameOfSelected);
                 }
             }
+
+            ConfirmDelete confirm = new ConfirmDelete();
+            overlay.Children.Clear();
+            overlay.Children.Add(confirm);
         }
+
+        public void RemovePlayer()
+        {
+            PartyMembers.Children.Remove(memberSelected);
+            friendsList.Remove(nameOfSelected);
+            overlay.Children.Clear();
+        }
+
 
         private void MenuNavBar_Click(object sender, RoutedEventArgs e)
         {

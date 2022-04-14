@@ -61,9 +61,13 @@ namespace RollPlay
 
         private void Request_Click(object sender, RoutedEventArgs e)
         {
-            RequestAvail popup = new RequestAvail();
+            ConfirmDelete confirm = new ConfirmDelete();
             InfoPanel.Children.Clear();
-            InfoPanel.Children.Add(popup);
+            InfoPanel.Children.Add(confirm);
+
+            //RequestAvail popup = new RequestAvail();
+            //InfoPanel.Children.Clear();
+            //InfoPanel.Children.Add(popup);
         }
 
         private void MyAvail_Click(object sender, RoutedEventArgs e)

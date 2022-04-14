@@ -30,7 +30,9 @@ namespace RollPlay
             if (Window.GetWindow(this) is MainWindow)
             {
                 MainWindow window = Window.GetWindow(this) as MainWindow;
-                window.LeaveParty();
+                ConfirmDelete confirm = new ConfirmDelete();
+                window.overlay.Children.Clear();
+                window.overlay.Children.Add(confirm);
             }
         }
     }
