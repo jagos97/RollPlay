@@ -16,20 +16,20 @@ using System.Windows.Shapes;
 namespace RollPlay
 {
     /// <summary>
-    /// Interaction logic for PartySubMenu1.xaml
+    /// Interaction logic for CharacterSubMenu.xaml
     /// </summary>
-    public partial class CharacterSubMenu : UserControl
+    public partial class PartySubMenu : UserControl
     {
-        public CharacterSubMenu()
+        public PartySubMenu()
         {
             InitializeComponent();
         }
 
         private void LeaveParty_Click(object sender, RoutedEventArgs e)
         {
-            if (Window.GetWindow(this) is MainWindow)
+            if (Window.GetWindow(this) is PartiesWindow)
             {
-                MainWindow window = Window.GetWindow(this) as MainWindow;
+                PartiesWindow window = Window.GetWindow(this) as PartiesWindow;
                 ConfirmDelete confirm = new ConfirmDelete();
                 window.overlay.Children.Clear();
                 window.overlay.Children.Add(confirm);

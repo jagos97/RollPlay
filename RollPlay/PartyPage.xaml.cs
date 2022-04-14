@@ -250,8 +250,6 @@ namespace RollPlay
                         stack.Children.Add(button);
                         stack.Children.Add(textBlock);
                         PartyMembers.Children.Add(stack);
-
-
                     }
                 }
             } else
@@ -509,6 +507,16 @@ namespace RollPlay
             window.Left = this.Left;
             this.Close();
         }
+
+        private void NotificationsNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }        
+
 
         private void ChatNavBar_Click(object sender, RoutedEventArgs e)
         {

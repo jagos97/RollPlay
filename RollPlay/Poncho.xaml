@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RollPlay"
         mc:Ignorable="d"
-        Title="Tavern" Height="568" Width="320">
+        Title="Notifications" Height="568" Width="320">
+    
     <Grid>
-        <StackPanel x:Name="NavBar" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Margin="0,0,6,0" Width="320" HorizontalAlignment="Left">
-            <Button x:Name="CollectionNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+        <StackPanel x:Name="NavBar"  Grid.Row="6" Height="72" VerticalAlignment="Bottom" Orientation="Horizontal" Background="#FF504B43" Width="320" HorizontalAlignment="Stretch">
+            <Button x:Name="CollectionNavBar" Width="62"  BorderThickness="0,4,0,0">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/star.png">
                         <ImageBrush.RelativeTransform>
@@ -22,7 +23,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TavernNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,4,0,0">
+            <Button x:Name="TavernNavBar" Width="62" BorderThickness="0,0,0,0" >
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/pics/mug.png">
                         <ImageBrush.RelativeTransform>
@@ -36,7 +37,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="ChatNavBar" Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="ChatNavBar" Width="62"  BorderThickness="0,0,0,0" >
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="/pics/chats.png">
                         <ImageBrush.RelativeTransform>
@@ -50,7 +51,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="NotificationNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="NotificationNavBar"  Width="62" BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/notifications.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -64,7 +65,7 @@
                     </ImageBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="MenuNavBar"  Width="62" BorderBrush="#FFFFD166" BorderThickness="0,0,0,0">
+            <Button x:Name="MenuNavBar"  Width="62"  BorderThickness="0,0,0,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/pics/hamburger.png" Stretch="Uniform">
                         <ImageBrush.RelativeTransform>
@@ -79,5 +80,11 @@
                 </Button.Background>
             </Button>
         </StackPanel>
+
+        <ScrollViewer x:Name="Notifications" Margin="0,120,0,0" VerticalScrollBarVisibility="Hidden" VerticalAlignment="Top" Height="285">
+            
+
+        </ScrollViewer>
+        <StackPanel Name="navBarMenuHolder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Height="458" Panel.ZIndex="20" />        
     </Grid>
 </Window>

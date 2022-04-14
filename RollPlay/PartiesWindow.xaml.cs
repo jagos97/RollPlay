@@ -79,7 +79,7 @@ namespace RollPlay
             }
             else
             {
-                PartySubMenu1 partySubMenu1 = new PartySubMenu1();
+                PartySubMenu partySubMenu1 = new PartySubMenu();
                 SubMenuHolder.Children.Clear();
                 SubMenuHolder.Children.Add(partySubMenu1);
                 popupShown = true;
@@ -98,6 +98,15 @@ namespace RollPlay
             this.Close();
 
         }
+        
+        private void NotificationsNavBar_Click(object sender, RoutedEventArgs e)
+        {
+            NotificationsWindow window = new NotificationsWindow();
+            window.Show();
+            window.Top = this.Top;
+            window.Left = this.Left;
+            this.Close();
+        }        
         private void ChatNavBar_Click(object sender, RoutedEventArgs e)
         {
             PartyChats window = new PartyChats();
