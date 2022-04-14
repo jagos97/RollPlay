@@ -110,7 +110,7 @@
                     </StackPanel>
 
                     <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Height="Auto" Width="Auto" MaxHeight="325">
-                        <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto">
+                        <StackPanel Name="CalendarHolder" Height="Auto" Width="Auto" Margin="0,0,0,-25">
                             <Grid Name="Calendar" Background="#494949">
 
                                 <Grid.ColumnDefinitions>
