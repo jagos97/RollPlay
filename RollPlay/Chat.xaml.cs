@@ -64,7 +64,7 @@ namespace RollPlay
         {
             if (e.Key == Key.F1)
             {
-                SendMessage("lDragon's Bane", "Don't get whimper out on me now. It's now or never"); 
+                SendMessage("lDragon's Bane", "Don't whimper out on me now. It's now or never"); 
             }
             else if (e.Key == Key.F2)
             {

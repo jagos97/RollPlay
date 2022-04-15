@@ -78,5 +78,5 @@ Now let's say you want to have a normal chat with one of your friends on the app
 9. Press `F3`
 10. Give him some closing remarks.
 
-There are a few other things you can do. Explore and have fun. Check out some of your parties and add people to them maybe even create another party or delete them all. Check out what characters you have, create one then delete them, you choose. Same thing with your friends. Because why not add some and then delete them all anyways. Try updating your availability and see what the other side of the scheduling works. Not everything is implemented but there are still a few things you can try out. You can also check out the notifications. You can clear them and see where they link to and the interactions they have. Enjoy.
+There are a few other things you can do. Explore and have fun. Check out some of your parties and add people to them. Maybe even create another party and then delete them all. Check out what characters you have, create one then delete them, you choose. Same thing with your friends. Because why not add some and then delete them all anyways. Try updating your availability and see what the other side of the scheduling works. However, not everything is implemented. Most of the submenu buttons do not work. The settings are not implemented yet and you cannot look at other peoples profile.
 
