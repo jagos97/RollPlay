@@ -20,14 +20,14 @@ Alternatively, if you’ve installed successfully installed .NET onto your syste
 ## Use Cases
 
 ### Signing In and Signing Up
-Each time you start the program, you will be automatically brought to the Sign In page. On this page you are prompted for two inputs, your email and password. For the sake of the demo, to access the rest of the application you must simply enter non-empty strings in **both** input fields. To disregard the input fields and immediately click "Sign In," will result in an error message appearing.
+Each time you start the program, you will be automatically brought to the Sign In page. On this page you are prompted for two inputs, your email and password. For the sake of the demo, to access the rest of the application you must simply enter non-empty strings in **both** input fields. To disregard the input fields and immediately click `Sign In,` will result in an error message appearing.
 
 From the Sign In page, you can also access the Sign-Up page. It functions under the same premise as the Sign In page. You must provide valid arguments (ie. Non-empty strings) for all input fields and also ensure the passwords are identical, failure to meet these requirements will result in an error message.
 
 Successful sign in or sign up will then redirect you to the application’s main pages (ie. The collections page). 
 
 ### Managing Collections
-Within this page you can manage your Characters, Parties, and Friends. To toggle between these different categories, you must simply click the respective subnav item. Upon clicking the desired subview, the page will automatically update.<br/>
+Upon signing in for the session, you will automatically be brought to the Collections page. Within this page you can manage your Characters, Parties, and Friends. To toggle between these different categories, you must simply click the respective subnav item. Upon clicking the desired subview, the page will automatically update.<br/>
 ![image](https://user-images.githubusercontent.com/33527005/163526341-27729cf0-adde-4663-a707-9d404becf6e6.png)
 
 While focusing on the Character content, you will be to click on the characters to reveal more information about them and click on the meatball menu (`…`) to edit or remove them. The Party content is essentially identical in functionality to the Character subview, however, it focuses on Parties as the name so aptly applies. 
@@ -35,9 +35,9 @@ While focusing on the Character content, you will be to click on the characters 
 From within the Friends view, you should be able to review the friends you currently have, review your pending friend requests, remove friends, and send out friend requests. 
 
 #### Editing Characters
-On the note of editing existing characters, the current implementation restricts input based on the argument it represents in the Character info. However, if no data is provided for any arguments and the "Save" button is clicked, all values of the original character will be overwritten with empty fields.
+On the note of editing existing characters, the current implementation restricts input based on the argument it represents in the Character info. However, if no data is provided for any arguments and the `Save` button is clicked, all values of the original character will be overwritten with empty fields.
 
-### Scheduling a session
+### Scheduling a Session
 Once logged in, you will see your characters. You're going to want to move to the party section on that page by clicking the Party button at the top there. You will see some parties in there already but let's start fresh. 
 
 1. Click create a party button at the bottom of the page 
@@ -106,3 +106,7 @@ Now let's say you want to have a normal chat with one of your friends on the app
 
 There are a few other things you can do. Explore and have fun. Check out some of your parties and add people to them. Maybe even create another party and then delete them all. Check out what characters you have, create one then delete them, you choose. Same thing with your friends. Because why not add some and then delete them all anyways. Try updating your availability and see what the other side of the scheduling works. However, not everything is implemented. Most of the submenu buttons do not work. The settings are not implemented yet and you cannot look at other peoples profile.
 
+### Managing Notifications
+Notifications are where you can go to see an overview of upcoming sessions and other notifcations like pending invites or message updates. It's a pretty standard implementation for most applications and the Notifications page in our application is no different. To access the page, you must simply click on the bell icon in the nav bar. Within this page, you can interact with notifications by clearing individual or all notifications by clicking `Clear All` or the `X`, respectively. 
+
+As with the industry standard style of notifications, you should be able to to click on either the notification cards or the buttons to be directed to the relevant page that spawned the notification. In the case of the application currently, for the `Scheduling Request` notification, you should be able to click `See Availability` to be directed to the respective parties scheduling page.
