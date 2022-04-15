@@ -40,7 +40,7 @@ On the note of editing existing characters, the current implementation restricts
 ### Scheduling a Session
 To schedule a session, you must first login where you'll find yourself on the Characters Collection page. You're then going to want to move to the Party subview by clicking the `Party` option in the subnav at the top of the page. You will see some parties in there already but let's start fresh. 
 
-1. Click create a Party button at the bottom of the page 
+1. Click `Create a Party` button at the bottom of the page 
 2. Give your party a name. Be cool and join with a character. 
 3. Now that you created a party you will automatically be directed to the Party Page. You are all alone in there for now. 
 4. Click the `+` on top of your character and as many friends as you want. They are all really excited they'll accept your request right away 
@@ -71,25 +71,27 @@ Now we'll take a look at the other side of this process. The DM will be the one 
 12. You should now see your updated availability show up in the `My Availability` page
 
 ### Finding Someone in the Tavern
-Let's pretend you got a party, but you need that one last person to complete your party. To do this you're going to want to click on the Tavern icon at the bottom
+Let's pretend you've currently have a party, in need of that one last person. But you don't have any more friends who play, so you've got to reach out to random individuals on the internet. To find the one, you're going to want to click on the beer icon at the bottom to visit the Tavern
 
 1. Click `I'm looking for players` button.
-2. Enter whatever filters you want.
-3. Click `Filter Users` at the bottom.
-4. Make sure you read all the rules of the Tavern because those are very important.
-5. Proceed.
+2. Enter whatever filters you want, you may leave all options as not selected if you're desperate to find anyone.
+3. Scroll down and click the `Filter Users` button at the bottom.
+4. Make sure you read all the rules of the Tavern to understand what is expected of you.
+5. Scroll down and click on the `Proceed` button. Doing so will automatically find people for you and put you all in a chat together.
 6. Divulge your deepest darkest secrets in the chat. The juicier, the better.
-7. Click on the meatball menu on the top right
-8. Click on view users in chat.
-9. Invite one of them to your party. Not Bob though he didn't even come up with a good name.
+7. Click on the meatball menu (`...`) on the top right
+8. Click on the `View Users in Chat` submenu option to open a modal containing all characters.
+9. Click on the kebab icon associated with each user and click the `Invite to Party` option. Don't invite Bob though, he didn't even come up with a good name. 
+
+Upon successfully inviting the user to a party a modal will appear to inform you that they have recieved the invitation. Now all you can do is sit and wait for the other user to accept your invite.
 
 ### Learning about D&D
-Now, let's say you are new to D&D and you want to learn how to play. You're going to need to start at the Tavern again so head over there.
+Now, let's say you are new to D&D and you want to learn how to play. You're going to need to start at the Tavern again so head lets head on over.
 
 1. Click on the `I'm new to D&D` button at the top.
-2. Choose something that you want to learn about.
-3. once you read everything, you can click the back button on the top or the `I've heard enough` button at the bottom to go back and learn about something else.
-4. You can also click `Tell me more` to get some more information.
+2. Choose on one of the buttons representating a topic you want to learn about.
+3. Once you read everything, you can click the back button on the top or the `I've heard enough` button at the bottom to go back and learn about something else.
+4. With this new topic selected, click on the click `Tell me more` option to get some more information.
 5. Click on the link to be redirected to `D&D Beyond` for some more in-depth information
 4. Repeat this for every section so you are caught up with all the latest info on D&D
 
