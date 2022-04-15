@@ -1,17 +1,32 @@
 # RollPlay
-
-Brittany Pysar  ||  brittany.kinden@ucalgary.ca  
-Ines Rosito     ||  ines.rosito@ucalgary.ca  
-Julio Agostini  ||  julio.agostini@ucalgary.ca  
-Shreya Patel    ||  shreya.patel1@ucalgary.ca  
+_Developed by the Dungeon and Designers team (Group 11)_:<br/>
+- **Brittany Pysar**  (brittany.kinden@ucalgary.ca)  
+- **Ines Rosito**     (ines.rosito@ucalgary.ca)  
+- **Julio Agostini**  (julio.agostini@ucalgary.ca)  
+- **Shreya Patel**    (shreya.patel1@ucalgary.ca)  
 
 ## Running the App
-To run the app, make sure you are using the latest version of Visual Studio and WPF. Open the project in Visual Studio and build the solution. If everything works fine you should be able to click the play button to run the app.
+Due to compatibility issues that can arise, please ensure that you are attempting to run the program using a Windows environment. 
 
-## Logging in
-When you press play, the first page you will see will be the login page. All you only need to enter nonempty strings in the boxes, and you should be good to go. There will be error messages if you leave them empty. You can also choose to sign up by pressing the link at the bottom. Again, just putting nonempty values should be good, but you need to make sure the passwords match or you will get another error.
+For this application to run correctly, we have to have .NET installed in our environment. So, if you  don’t have an IDE downloaded already, you can download the Visual Studios Community version with .Net, found [here](https://visualstudio.microsoft.com/downloads/), or you can download .NET directly from [here](https://dotnet.microsoft.com/en-us/download).
 
-## Scheduling a session
+Say you have gone the route of installing VS, you will be prompted to select potential add-ons. In this scenario you should click `.NET desktop development`.
+Now if you open the code base using Visual Studios, you should be able to build the solution and click the `play` button to run the program. 
+
+Alternatively, if you’ve installed successfully installed .NET onto your system directly, navigate to the directory you’ve downloaded the code base to and enter the `\RollPlay` directory (ie. `<File Path\RollPlay\RollPlay>`. From there you should then be able to run the program by typing `dotnet run` into the console.
+
+<hr />
+
+## Use Cases
+
+### Signing In and Signing Up
+Each time you start the program, you will be automatically brought to the Sign In page. On this page you are prompted for two inputs, your email and password. For the sake of the demo, to access the rest of the application you must simply enter non-empty strings in **both** input fields. To disregard the input fields and immediately click "Sign In," will result in an error message appearing.
+
+From the Sign In page, you can also access the Sign-Up page. It functions under the same premise as the Sign In page. You must provide valid arguments (ie. Non-empty strings) for all input fields and also ensure the passwords are identical, failure to meet these requirements will result in an error message.
+
+Successful sign in or sign up will then redirect you to the application’s main pages (ie. The collections page). 
+
+### Scheduling a session
 Once logged in, you will see your characters. You're going to want to move to the party section on that page by clicking the Party button at the top there. You will see some parties in there already but let's start fresh. 
 
 1. Click create a party button at the bottom of the page 
@@ -26,7 +41,7 @@ Once logged in, you will see your characters. You're going to want to move to th
 10. Click schedule session and select the time and date. 
 11. Click create session and you will see the next session under upcoming sessions.
 
-## Updating Your Availability
+### Updating Your Availability
 Now we'll take a look at the other side of this process. The DM will schedule a session, now you, will give him your availability. Let's start in the notifications page. You can go there by clicking the bell icon on the navbar.
 
 1. Click on the notification that says that the DM has requested your availability.
@@ -41,7 +56,7 @@ Now we'll take a look at the other side of this process. The DM will schedule a 
 10. Click on the update button.
 11. You should now see your updated availability show up in the `My Availability` page
 
-## Finding Someone in the Tavern
+### Finding Someone in the Tavern
 Let's pretend you got a party, but you need that one last person to complete your party. To do this you're going to want to click on the Tavern icon at the bottom
 
 1. Click `I'm looking for players` button.
@@ -54,7 +69,7 @@ Let's pretend you got a party, but you need that one last person to complete you
 8. Click on view users in chat.
 9. Invite one of them to your party. Not Bob though he didn't even come up with a good name.
 
-## Learning about D&D
+### Learning about D&D
 Now, let's say you are new to D&D and you want to learn how to play. You're going to need to start at the Tavern again so head over there.
 
 1. Click on the `I'm new to D&D` button at the top.
@@ -64,7 +79,7 @@ Now, let's say you are new to D&D and you want to learn how to play. You're goin
 5. Click on the link to be redirected to `D&D Beyond` for some more in-depth information
 4. Repeat this for every section so you are caught up with all the latest info on D&D
 
-## Chatting
+### Chatting
 Now let's say you want to have a normal chat with one of your friends on the app. There are many ways to chat, along with different types of chat. You can open your party chat in the parties page or talk to one of your friends in the friends page. There is also a lot of chat options in the chat menu at the bottom. Let's try the most interactive one we have though.
 
 1. Click on the chat button on the nav bar
