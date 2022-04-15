@@ -26,6 +26,17 @@ From the Sign In page, you can also access the Sign-Up page. It functions under 
 
 Successful sign in or sign up will then redirect you to the application’s main pages (ie. The collections page). 
 
+### Managing Collections
+Within this page you can manage your Characters, Parties, and Friends. To toggle between these different categories, you must simply click the respective subnav item. Upon clicking the desired subview, the page will automatically update.<br/>
+![image](https://user-images.githubusercontent.com/33527005/163526341-27729cf0-adde-4663-a707-9d404becf6e6.png)
+
+While focusing on the Character content, you will be to click on the characters to reveal more information about them and click on the meatball menu (`…`) to edit or remove them. The Party content is essentially identical in functionality to the Character subview, however, it focuses on Parties as the name so aptly applies. 
+
+From within the Friends view, you should be able to review the friends you currently have, review your pending friend requests, remove friends, and send out friend requests. 
+
+#### Editing Characters
+On the note of editing existing characters, the current implementation restricts input based on the argument it represents in the Character info. However, if no data is provided for any arguments and the "Save" button is clicked, all values of the original character will be overwritten with empty fields.
+
 ### Scheduling a session
 Once logged in, you will see your characters. You're going to want to move to the party section on that page by clicking the Party button at the top there. You will see some parties in there already but let's start fresh. 
 
