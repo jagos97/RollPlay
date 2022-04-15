@@ -35,37 +35,40 @@ While focusing on the Character content, you will be to click on the characters 
 From within the Friends view, you should be able to review the friends you currently have, review your pending friend requests, remove friends, and send out friend requests. 
 
 #### Editing Characters
-On the note of editing existing characters, the current implementation restricts input based on the argument it represents in the Character info. However, if no data is provided for any arguments and the `Save` button is clicked, all values of the original character will be overwritten with empty fields.
+On the note of editing existing characters, the current implementation restricts input based on the argument it represents in the Character info (ie. Stats and level can only be numbers, all other fields have a 32 character limit). However, if no data is provided for any arguments and the `Save` button is clicked, all values of the original character will be overwritten with empty fields.
 
 ### Scheduling a Session
-Once logged in, you will see your characters. You're going to want to move to the party section on that page by clicking the Party button at the top there. You will see some parties in there already but let's start fresh. 
+To schedule a session, you must first login where you'll find yourself on the Characters Collection page. You're then going to want to move to the Party subview by clicking the `Party` option in the subnav at the top of the page. You will see some parties in there already but let's start fresh. 
 
-1. Click create a party button at the bottom of the page 
+1. Click create a Party button at the bottom of the page 
 2. Give your party a name. Be cool and join with a character. 
-3. Now that you created a party you will automatically directed to the party page. You are all alone in there for now. 
+3. Now that you created a party you will automatically be directed to the Party Page. You are all alone in there for now. 
 4. Click the `+` on top of your character and as many friends as you want. They are all really excited they'll accept your request right away 
-5. Click on availability and go to party availability. 
-6. You will see that it is empty so click on the request availability button at the bottom.
-7. Now if you scroll down, you will notice that there are some blocks with availabilities (They were always there just didn't want to ruin the illusion) 
-8. Click on any of the blocks and you will see who is available at each time 
-9. Decide a time 
-10. Click schedule session and select the time and date. 
-11. Click create session and you will see the next session under upcoming sessions.
+5. Click on `Availability` and click on `Party Availability` on the subnav at the top of the page. 
+6. You will see that it is empty so click on the `Request Availability` button at the bottom.
+7. Now if you scroll down and to the right, you will notice that there are some blocks with availabilities (They were always there, just didn't want to ruin the illusion) 
+8. Click on any of the blocks right where the text is and you will see who is available at each time 
+9. Based on the overall Party availability, decide on a date and time. 
+10. Click `Schedule Session` 
+11. Select your desired Date and see the text under the calendar automatically update.
+12. Then click on the `Time` subnav at the top of the modal and fill out the time slots appropriately! Be sure that your start time is after your end time, or else you will be provided with an error message. 
+13. Once content with the time set, click `Create Session` and you will see the next session appear under "Upcoming Sessions".
 
 ### Updating Your Availability
-Now we'll take a look at the other side of this process. The DM will schedule a session, now you, will give him your availability. Let's start in the notifications page. You can go there by clicking the bell icon on the navbar.
+Now we'll take a look at the other side of this process. The DM will be the one to schedule a session for the group, but you must now provide him with your availability. Let's start in the Notifications Page. You can go there by clicking the bell icon on the navbar.
 
-1. Click on the notification that says that the DM has requested your availability.
-2. Click on edit availability
-3. Click and drag on the boxes to select times you're available. 
-4. Undo your previous change with the undo button
-5. Redo what you just Undid to check it out.
-6. Add a block for all day Saturday and Sunday
-7. Remove those same blocks you just add it.
-8. Clear your entire availability because you're indecisive
-9. Select all since you realized you don't really have a life.
-10. Click on the update button.
-11. You should now see your updated availability show up in the `My Availability` page
+1. Identify the notification that is for a Scheduling Request
+2. From that notification click on the `See Availability` option to be redirected to the Party's respective scheduling view
+3. Click on the `Edit Availability` button
+4. Click and drag on the boxes to select times you're available. 
+5. Undo your previous change with the `Undo` button
+6. Click on `Redo` to redo what you just undid to check it out.
+7. Add blocks that cover the duration of all of Saturday and Sunday.
+8. Click one block you've just added to remove your availability for one time slot.
+9. Click on the `Clear All` button to clear your entire availability because you're indecisive
+10. Click on `Select All` since you've realized you don't really have a life.
+11. Click on the `Update` button.
+12. You should now see your updated availability show up in the `My Availability` page
 
 ### Finding Someone in the Tavern
 Let's pretend you got a party, but you need that one last person to complete your party. To do this you're going to want to click on the Tavern icon at the bottom
@@ -93,7 +96,7 @@ Now, let's say you are new to D&D and you want to learn how to play. You're goin
 ### Chatting
 Now let's say you want to have a normal chat with one of your friends on the app. There are many ways to chat, along with different types of chat. You can open your party chat in the parties page or talk to one of your friends in the friends page. There is also a lot of chat options in the chat menu at the bottom. Let's try the most interactive one we have though.
 
-1. Click on the chat button on the nav bar
+1. Click on the chat button on the navbar
 2. Click on `Other Chats` at the top
 3. Click on the second chat there with `Dragon's Bane`
 4. Tell him about your hesitation to kill Thorin.
@@ -107,6 +110,6 @@ Now let's say you want to have a normal chat with one of your friends on the app
 There are a few other things you can do. Explore and have fun. Check out some of your parties and add people to them. Maybe even create another party and then delete them all. Check out what characters you have, create one then delete them, you choose. Same thing with your friends. Because why not add some and then delete them all anyways. Try updating your availability and see what the other side of the scheduling works. However, not everything is implemented. Most of the submenu buttons do not work. The settings are not implemented yet and you cannot look at other peoples profile.
 
 ### Managing Notifications
-Notifications are where you can go to see an overview of upcoming sessions and other notifcations like pending invites or message updates. It's a pretty standard implementation for most applications and the Notifications page in our application is no different. To access the page, you must simply click on the bell icon in the nav bar. Within this page, you can interact with notifications by clearing individual or all notifications by clicking `Clear All` or the `X`, respectively. 
+Notifications are where you can go to see an overview of upcoming sessions and other notifcations like pending invites or message updates. It's a pretty standard implementation for most applications and the Notifications page in our application is no different. To access the page, you must simply click on the bell icon in the navbar. Within this page, you can interact with notifications by clearing individual or all notifications by clicking `Clear All` or the `X`, respectively. 
 
 As with the industry standard style of notifications, you should be able to to click on either the notification cards or the buttons to be directed to the relevant page that spawned the notification. In the case of the application currently, for the `Scheduling Request` notification, you should be able to click `See Availability` to be directed to the respective parties scheduling page.
