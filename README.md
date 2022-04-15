@@ -86,7 +86,7 @@ Let's pretend you've currently have a party, in need of that one last person. Bu
 Upon successfully inviting the user to a party a modal will appear to inform you that they have recieved the invitation. Now all you can do is sit and wait for the other user to accept your invite.
 
 ### Learning about D&D
-Now, let's say you are new to D&D and you want to learn how to play. You're going to need to start at the Tavern again so head lets head on over.
+Now, let's say you are new to D&D and you want to learn how to play. You're going to need to start at the Tavern again so lets head on over.
 
 1. Click on the `I'm new to D&D` button at the top.
 2. Choose on one of the buttons representating a topic you want to learn about.
